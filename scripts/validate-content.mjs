@@ -175,12 +175,20 @@ for (const { file, data } of sources) {
 }
 
 /* ---- rubrics: weights sum 100, criterion integrity, remediation resolves ---- */
+const DIMENSIONS = new Set(['knowledge', 'application', 'reasoning']);
 for (const { file, data } of rubrics) {
   const sum = (data.criteria ?? []).reduce((s, c) => s + (c.weight ?? 0), 0);
   if (sum !== 100) fail('QM-04', `${file}: משקלים מסתכמים ל-${sum}`);
   for (const criterion of data.criteria ?? []) {
     if (criterion.weight !== criterion.max_points)
       fail('QM-04', `${file}/${criterion.criterion_id}: weight≠max_points`);
+    // RB-01 (docs/09 §2): a criterion with no dimension contributes to no
+    // progress measure, so the skill it belongs to would silently under-report.
+    if (!DIMENSIONS.has(criterion.dimension))
+      fail(
+        'RB-01',
+        `${file}/${criterion.criterion_id}: ממד חסר או לא מוכר: ${criterion.dimension}`,
+      );
     const musts = (criterion.expected_components ?? []).filter((c) => c.class === 'must');
     if (musts.length === 0)
       fail('QM-13', `${file}/${criterion.criterion_id}: אין רכיב חובה`);

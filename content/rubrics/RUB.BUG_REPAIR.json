@@ -3,7 +3,9 @@
   "version": 1,
   "kind": "criteria",
   "status": "active",
-  "appliesTo": ["repair_defect_report"],
+  "appliesTo": [
+    "repair_defect_report"
+  ],
   "maxScore": 100,
   "created_at": "2026-07-29",
   "approved_at": "2026-07-29",
@@ -17,20 +19,77 @@
       "description": "זיהוי מה היה חסר או שגוי בדיווח הנתון. המיומנות הנמדדת היא אבחון, לא כתיבה מחדש.",
       "weight": 25,
       "max_points": 25,
-      "skill_ids": ["DOC.BUG"],
-      "full_examples": ["זוהו כל הליקויים המהותיים: אין תוצאה מצופה, הצעדים לא ניתנים לביצוע, הסביבה חסרה"],
-      "partial_examples": ["זוהה ליקוי אחד מתוך שלושה"],
-      "missing_examples": ["\"הדיווח לא טוב\" בלי לומר מה חסר"],
+      "skill_ids": [
+        "DOC.BUG"
+      ],
+      "full_examples": [
+        "זוהו כל הליקויים המהותיים: אין תוצאה מצופה, הצעדים לא ניתנים לביצוע, הסביבה חסרה"
+      ],
+      "partial_examples": [
+        "זוהה ליקוי אחד מתוך שלושה"
+      ],
+      "missing_examples": [
+        "\"הדיווח לא טוב\" בלי לומר מה חסר"
+      ],
       "critical_errors": [
-        { "kind": "wrong_options_selected", "validOptionIds": ["missing-expected", "vague-steps", "no-environment", "blame-language"], "maxWrong": 1, "labelHe": "סומנו ליקויים שאינם קיימים בדיווח המקורי" }
+        {
+          "kind": "wrong_options_selected",
+          "validOptionIds": [
+            "missing-expected",
+            "vague-steps",
+            "no-environment",
+            "blame-language"
+          ],
+          "maxWrong": 1,
+          "labelHe": "סומנו ליקויים שאינם קיימים בדיווח המקורי"
+        }
       ],
       "expected_components": [
-        { "component_id": "c1.k1", "label": "זוהה: חסרה תוצאה מצופה", "class": "must", "weight": 2, "detection": { "kind": "selected_option", "optionId": "missing-expected" } },
-        { "component_id": "c1.k2", "label": "זוהה: צעדי שחזור מעורפלים", "class": "must", "weight": 2, "detection": { "kind": "selected_option", "optionId": "vague-steps" } },
-        { "component_id": "c1.k3", "label": "זוהה: סביבת בדיקה חסרה", "class": "should", "weight": 1, "detection": { "kind": "selected_option", "optionId": "no-environment" } },
-        { "component_id": "c1.k4", "label": "זוהה: ניסוח מאשים", "class": "should", "weight": 1, "detection": { "kind": "selected_option", "optionId": "blame-language" } }
+        {
+          "component_id": "c1.k1",
+          "label": "זוהה: חסרה תוצאה מצופה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "selected_option",
+            "optionId": "missing-expected"
+          }
+        },
+        {
+          "component_id": "c1.k2",
+          "label": "זוהה: צעדי שחזור מעורפלים",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "selected_option",
+            "optionId": "vague-steps"
+          }
+        },
+        {
+          "component_id": "c1.k3",
+          "label": "זוהה: סביבת בדיקה חסרה",
+          "class": "should",
+          "weight": 1,
+          "detection": {
+            "kind": "selected_option",
+            "optionId": "no-environment"
+          }
+        },
+        {
+          "component_id": "c1.k4",
+          "label": "זוהה: ניסוח מאשים",
+          "class": "should",
+          "weight": 1,
+          "detection": {
+            "kind": "selected_option",
+            "optionId": "blame-language"
+          }
+        }
       ],
-      "remediation": { "ref": "DOC-defects.SUM.001" }
+      "remediation": {
+        "ref": "DOC-defects.SUM.001"
+      },
+      "dimension": "reasoning"
     },
     {
       "criterion_id": "c2",
@@ -38,17 +97,59 @@
       "description": "הצעדים בגרסה המתוקנת קונקרטיים, ממוספרים וניתנים לביצוע עצמאי.",
       "weight": 25,
       "max_points": 25,
-      "skill_ids": ["DOC.BUG"],
-      "full_examples": ["שלושה צעדים, כל אחד פעולה אחת עם ערכים מפורשים"],
-      "partial_examples": ["שני צעדים כלליים"],
-      "missing_examples": ["הצעדים הועתקו מהמקור כפי שהם"],
+      "skill_ids": [
+        "DOC.BUG"
+      ],
+      "full_examples": [
+        "שלושה צעדים, כל אחד פעולה אחת עם ערכים מפורשים"
+      ],
+      "partial_examples": [
+        "שני צעדים כלליים"
+      ],
+      "missing_examples": [
+        "הצעדים הועתקו מהמקור כפי שהם"
+      ],
       "critical_errors": [],
       "expected_components": [
-        { "component_id": "c2.k1", "label": "לפחות שני צעדים", "class": "must", "weight": 2, "detection": { "kind": "min_items", "field": "steps", "n": 2 } },
-        { "component_id": "c2.k2", "label": "כל צעד קונקרטי", "class": "must", "weight": 2, "detection": { "kind": "each_item_min_length", "field": "steps", "n": 8 } },
-        { "component_id": "c2.k3", "label": "רצף מלא", "class": "should", "weight": 1, "detection": { "kind": "min_items", "field": "steps", "n": 3 } }
+        {
+          "component_id": "c2.k1",
+          "label": "לפחות שני צעדים",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_items",
+            "field": "steps",
+            "n": 2
+          }
+        },
+        {
+          "component_id": "c2.k2",
+          "label": "כל צעד קונקרטי",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "each_item_min_length",
+            "field": "steps",
+            "n": 8
+          }
+        },
+        {
+          "component_id": "c2.k3",
+          "label": "רצף מלא",
+          "class": "should",
+          "weight": 1,
+          "detection": {
+            "kind": "min_items",
+            "field": "steps",
+            "n": 3
+          }
+        }
       ],
-      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-steps" }
+      "remediation": {
+        "ref": "DOC-defects.LE.001",
+        "anchor": "sec-steps"
+      },
+      "dimension": "application"
     },
     {
       "criterion_id": "c3",
@@ -56,17 +157,63 @@
       "description": "שתי התוצאות קיימות, מובחנות זו מזו, ומנוסחות כתצפיות.",
       "weight": 20,
       "max_points": 20,
-      "skill_ids": ["DOC.BUG"],
-      "full_examples": ["בפועל: ההזמנה נשלחה פעמיים. מצופה: הזמנה אחת בלבד ונעילת הכפתור אחרי לחיצה."],
-      "partial_examples": ["רק תוצאה בפועל"],
-      "missing_examples": ["\"לא עובד\" בשני השדות"],
-      "critical_errors": [{ "kind": "expected_equals_actual" }],
-      "expected_components": [
-        { "component_id": "c3.k1", "label": "תוצאה בפועל", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "actual", "n": 10 } },
-        { "component_id": "c3.k2", "label": "תוצאה מצופה", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "expected", "n": 10 } },
-        { "component_id": "c3.k3", "label": "המצופה שונה מהבפועל", "class": "must", "weight": 1, "detection": { "kind": "differs_from", "field": "expected", "other": "actual" } }
+      "skill_ids": [
+        "DOC.BUG"
       ],
-      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-expected" }
+      "full_examples": [
+        "בפועל: ההזמנה נשלחה פעמיים. מצופה: הזמנה אחת בלבד ונעילת הכפתור אחרי לחיצה."
+      ],
+      "partial_examples": [
+        "רק תוצאה בפועל"
+      ],
+      "missing_examples": [
+        "\"לא עובד\" בשני השדות"
+      ],
+      "critical_errors": [
+        {
+          "kind": "expected_equals_actual"
+        }
+      ],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "תוצאה בפועל",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "actual",
+            "n": 10
+          }
+        },
+        {
+          "component_id": "c3.k2",
+          "label": "תוצאה מצופה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "expected",
+            "n": 10
+          }
+        },
+        {
+          "component_id": "c3.k3",
+          "label": "המצופה שונה מהבפועל",
+          "class": "must",
+          "weight": 1,
+          "detection": {
+            "kind": "differs_from",
+            "field": "expected",
+            "other": "actual"
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-defects.LE.001",
+        "anchor": "sec-expected"
+      },
+      "dimension": "application"
     },
     {
       "criterion_id": "c4",
@@ -74,16 +221,46 @@
       "description": "הגרסה המתוקנת מוסיפה את הסביבה ואת הראיות שחסרו במקור.",
       "weight": 10,
       "max_points": 10,
-      "skill_ids": ["MGMT.CONF"],
-      "full_examples": ["Chrome 141 / Android 15, Production, גרסה 3.8; צילום מסך של שתי ההזמנות"],
-      "partial_examples": ["צוינה סביבה בלי גרסה"],
-      "missing_examples": [""],
+      "skill_ids": [
+        "MGMT.CONF"
+      ],
+      "full_examples": [
+        "Chrome 141 / Android 15, Production, גרסה 3.8; צילום מסך של שתי ההזמנות"
+      ],
+      "partial_examples": [
+        "צוינה סביבה בלי גרסה"
+      ],
+      "missing_examples": [
+        ""
+      ],
       "critical_errors": [],
       "expected_components": [
-        { "component_id": "c4.k1", "label": "סביבה הושלמה", "class": "must", "weight": 1, "detection": { "kind": "non_empty", "field": "environment" } },
-        { "component_id": "c4.k2", "label": "ראיות הושלמו", "class": "should", "weight": 1, "detection": { "kind": "non_empty", "field": "evidence" } }
+        {
+          "component_id": "c4.k1",
+          "label": "סביבה הושלמה",
+          "class": "must",
+          "weight": 1,
+          "detection": {
+            "kind": "non_empty",
+            "field": "environment"
+          }
+        },
+        {
+          "component_id": "c4.k2",
+          "label": "ראיות הושלמו",
+          "class": "should",
+          "weight": 1,
+          "detection": {
+            "kind": "non_empty",
+            "field": "evidence"
+          }
+        }
       ],
-      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-env" }
+      "remediation": {
+        "ref": "DOC-defects.LE.001",
+        "anchor": "sec-env"
+      },
+      "dimension": "knowledge"
     },
     {
       "criterion_id": "c5",
@@ -91,16 +268,46 @@
       "description": "חומרה נבחרה ונומקה מהשפעה — לא הועתקה מהמקור בלי בחינה.",
       "weight": 10,
       "max_points": 10,
-      "skill_ids": ["DOC.ADV"],
-      "full_examples": ["גבוהה — חיוב כפול הוא פגיעה כספית ישירה בלקוח"],
-      "partial_examples": ["גבוהה, בלי נימוק"],
-      "missing_examples": [""],
+      "skill_ids": [
+        "DOC.ADV"
+      ],
+      "full_examples": [
+        "גבוהה — חיוב כפול הוא פגיעה כספית ישירה בלקוח"
+      ],
+      "partial_examples": [
+        "גבוהה, בלי נימוק"
+      ],
+      "missing_examples": [
+        ""
+      ],
       "critical_errors": [],
       "expected_components": [
-        { "component_id": "c5.k1", "label": "חומרה נבחרה", "class": "must", "weight": 1, "detection": { "kind": "severity_selected" } },
-        { "component_id": "c5.k2", "label": "נימוק לחומרה", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "severityJustification", "n": 20 } }
+        {
+          "component_id": "c5.k1",
+          "label": "חומרה נבחרה",
+          "class": "must",
+          "weight": 1,
+          "detection": {
+            "kind": "severity_selected"
+          }
+        },
+        {
+          "component_id": "c5.k2",
+          "label": "נימוק לחומרה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "severityJustification",
+            "n": 20
+          }
+        }
       ],
-      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-severity" }
+      "remediation": {
+        "ref": "DOC-defects.LE.001",
+        "anchor": "sec-severity"
+      },
+      "dimension": "reasoning"
     },
     {
       "criterion_id": "c6",
@@ -108,16 +315,68 @@
       "description": "השפה המאשימה וההנחות הלא מבוססות מהמקור אינן בגרסה המתוקנת.",
       "weight": 10,
       "max_points": 10,
-      "skill_ids": ["DOC.ADV", "FUND.PSY"],
-      "full_examples": ["תיאור עובדתי בלי ייחוס אשמה ובלי קביעת סיבה"],
-      "partial_examples": ["הוסרה ההאשמה אך נשארה קביעת סיבה"],
-      "missing_examples": ["\"שוב המפתחים העצלנים\" נשאר בתיקון"],
+      "skill_ids": [
+        "DOC.ADV",
+        "FUND.PSY"
+      ],
+      "full_examples": [
+        "תיאור עובדתי בלי ייחוס אשמה ובלי קביעת סיבה"
+      ],
+      "partial_examples": [
+        "הוסרה ההאשמה אך נשארה קביעת סיבה"
+      ],
+      "missing_examples": [
+        "\"שוב המפתחים העצלנים\" נשאר בתיקון"
+      ],
       "critical_errors": [],
       "expected_components": [
-        { "component_id": "c6.k1", "label": "ללא שפה מאשימה", "class": "must", "weight": 2, "detection": { "kind": "not_contains", "fields": ["title", "actual", "expected", "severityJustification"], "phrases": ["אשמת", "רשלנות", "קוד גרוע", "עצלנים", "שברו שוב"] } },
-        { "component_id": "c6.k2", "label": "ללא קביעת סיבה לא מבוססת", "class": "must", "weight": 1, "detection": { "kind": "not_contains", "fields": ["title", "actual"], "phrases": ["בגלל שהקוד", "הסיבה היא ש", "כנראה בגלל", "ברור שהבעיה ב"] } }
+        {
+          "component_id": "c6.k1",
+          "label": "ללא שפה מאשימה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "not_contains",
+            "fields": [
+              "title",
+              "actual",
+              "expected",
+              "severityJustification"
+            ],
+            "phrases": [
+              "אשמת",
+              "רשלנות",
+              "קוד גרוע",
+              "עצלנים",
+              "שברו שוב"
+            ]
+          }
+        },
+        {
+          "component_id": "c6.k2",
+          "label": "ללא קביעת סיבה לא מבוססת",
+          "class": "must",
+          "weight": 1,
+          "detection": {
+            "kind": "not_contains",
+            "fields": [
+              "title",
+              "actual"
+            ],
+            "phrases": [
+              "בגלל שהקוד",
+              "הסיבה היא ש",
+              "כנראה בגלל",
+              "ברור שהבעיה ב"
+            ]
+          }
+        }
       ],
-      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-neutral" }
+      "remediation": {
+        "ref": "DOC-defects.LE.001",
+        "anchor": "sec-neutral"
+      },
+      "dimension": "reasoning"
     }
   ]
 }

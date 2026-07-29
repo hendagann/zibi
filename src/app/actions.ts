@@ -16,6 +16,19 @@ import {
 } from '@/storage/attempts';
 import { approveItem, publishItem, saveItemEdit } from '@/storage/contentWriter';
 
+/**
+ * The client reports elapsed time since the form mounted. A learner who opens
+ * an exercise and comes back tomorrow would otherwise record a duration that
+ * says nothing about their speed, so implausible values are dropped rather
+ * than stored — docs/09 §7 then takes a median over what remains.
+ */
+function sanitiseDuration(seconds: number | undefined): number | null {
+  if (typeof seconds !== 'number' || !Number.isFinite(seconds)) return null;
+  const rounded = Math.round(seconds);
+  if (rounded < 1 || rounded > 2 * 60 * 60) return null;
+  return rounded;
+}
+
 export interface SubmitResult {
   readonly ok: boolean;
   readonly error?: string;
@@ -30,6 +43,7 @@ export interface SubmitResult {
 export async function submitAnswer(
   itemId: string,
   answer: DefectReportAnswer,
+  timeSpentSeconds?: number,
 ): Promise<SubmitResult> {
   const item = await getItem(itemId);
   if (!item || !isExercise(item)) {
@@ -69,6 +83,7 @@ export async function submitAnswer(
     userId: LOCAL_USER,
     submittedAt,
     requiresEvidence: item.requiresEvidence,
+    timeSpentSeconds: sanitiseDuration(timeSpentSeconds),
   });
 
   await appendAttempt({
@@ -124,6 +139,7 @@ export async function runSqlQuery(itemId: string, sql: string): Promise<SqlRunVi
 export async function submitSqlAnswer(
   itemId: string,
   sql: string,
+  timeSpentSeconds?: number,
 ): Promise<SubmitResult> {
   const item = await getItem(itemId);
   if (!item || !isExercise(item) || item.questionType !== 'sql_query' || !item.sqlSpec) {
@@ -155,6 +171,7 @@ export async function submitSqlAnswer(
     attemptNumber: previous.length + 1,
     userId: LOCAL_USER,
     submittedAt,
+    timeSpentSeconds: sanitiseDuration(timeSpentSeconds),
   });
 
   await appendAttempt({

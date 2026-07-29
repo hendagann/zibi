@@ -1,0 +1,192 @@
+/* ---- dimensions ---- */
+.dimList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.dimRow {
+  display: grid;
+  grid-template-columns: 9rem 1fr 2.5rem;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+}
+
+.dimLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.dimHint {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.dimTrack {
+  block-size: 0.5rem;
+  background-color: var(--color-skeleton);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.dimFill {
+  display: block;
+  block-size: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.dimValue {
+  text-align: end;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+
+.dimEmpty {
+  grid-column: 2 / -1;
+  color: var(--color-text-subtle);
+  font-size: var(--text-xs);
+}
+
+/* ---- skill card ---- */
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.skillHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.skillName {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+}
+
+.headline {
+  display: flex;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.abilityBlock {
+  display: flex;
+  flex-direction: column;
+}
+
+.abilityValue {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.abilityLabel {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.abilityHint {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  max-inline-size: 32ch;
+}
+
+.meanBlock {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-text-subtle);
+}
+
+.meanValue {
+  font-size: var(--text-xl);
+  font-variant-numeric: tabular-nums;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  gap: var(--space-3);
+}
+
+.signal {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.signalLabel {
+  font-size: var(--text-xs);
+  color: var(--color-text-muted);
+}
+
+.signalValue {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+}
+
+.signalDetail {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.reviewBox {
+  border: 1px solid var(--color-warning);
+  background-color: var(--color-warning-soft);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.reviewTitle {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+  color: var(--color-warning);
+}
+
+.reviewList {
+  margin: 0;
+  padding-inline-start: var(--space-5);
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.errorList {
+  margin: 0;
+  padding-inline-start: var(--space-5);
+  font-size: var(--text-sm);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.errorLink {
+  font-size: var(--text-xs);
+}
+
+.topicHead {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-block-end: var(--space-4);
+}
+
+.topicAbility {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  font-variant-numeric: tabular-nums;
+}

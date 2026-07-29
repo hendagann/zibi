@@ -56,6 +56,7 @@ export interface SqlEvaluateInput {
   readonly attemptNumber: number;
   readonly userId: string;
   readonly submittedAt: string;
+  readonly timeSpentSeconds?: number | null;
 }
 
 interface SqlArtifacts {
@@ -230,7 +231,7 @@ export async function evaluateSql(input: SqlEvaluateInput): Promise<EvaluationRe
     submitted_at: input.submittedAt,
     evaluated_at: input.submittedAt,
     answer_hash: createHash('sha256').update(input.sql).digest('hex').slice(0, 16),
-    time_spent_seconds: null,
+    time_spent_seconds: input.timeSpentSeconds ?? null,
   };
 
   if (rubric.status !== 'active' || rubric.criteria.reduce((s, c) => s + c.weight, 0) !== 100) {
@@ -323,6 +324,7 @@ export async function evaluateSql(input: SqlEvaluateInput): Promise<EvaluationRe
       return {
         criterion_id: criterion.criterion_id,
         criterion_name: criterion.name,
+        dimension: criterion.dimension,
         skill_ids: criterion.skill_ids,
         weight: maxPoints,
         performance_level: level,

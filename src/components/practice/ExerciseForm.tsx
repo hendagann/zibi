@@ -5,6 +5,7 @@ import { useState, useTransition } from 'react';
 import type { DefectReportAnswer } from '@/content/blocks';
 import { emptyDefectReport } from '@/content/blocks';
 import { submitAnswer } from '@/app/actions';
+import { useElapsedSeconds } from '@/hooks/useElapsedSeconds';
 import { t } from '@/i18n';
 import styles from './practice.module.css';
 
@@ -37,6 +38,7 @@ export function ExerciseForm({ itemId, initialAnswer, diagnosisOptions }: Exerci
   );
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const elapsed = useElapsedSeconds();
 
   function set<K extends keyof DefectReportAnswer>(key: K, value: DefectReportAnswer[K]) {
     setAnswer((a) => ({ ...a, [key]: value }));
@@ -52,7 +54,7 @@ export function ExerciseForm({ itemId, initialAnswer, diagnosisOptions }: Exerci
   function submit() {
     setError(null);
     startTransition(async () => {
-      const result = await submitAnswer(itemId, answer);
+      const result = await submitAnswer(itemId, answer, elapsed());
       if (!result.ok) {
         setError(t.report.submitError);
         return;

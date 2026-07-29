@@ -3,6 +3,7 @@
 import { useRouter } from 'next/navigation';
 import { useState, useTransition } from 'react';
 import { runSqlQuery, submitSqlAnswer, type SqlRunView } from '@/app/actions';
+import { useElapsedSeconds } from '@/hooks/useElapsedSeconds';
 import { t } from '@/i18n';
 import styles from './practice.module.css';
 import sqlStyles from './SqlExerciseForm.module.css';
@@ -26,6 +27,7 @@ export function SqlExerciseForm({ itemId, initialSql }: SqlExerciseFormProps) {
   const [runResult, setRunResult] = useState<SqlRunView | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
+  const elapsed = useElapsedSeconds();
 
   function run() {
     setError(null);
@@ -38,7 +40,7 @@ export function SqlExerciseForm({ itemId, initialSql }: SqlExerciseFormProps) {
   function submit() {
     setError(null);
     startTransition(async () => {
-      const result = await submitSqlAnswer(itemId, sql);
+      const result = await submitSqlAnswer(itemId, sql, elapsed());
       if (!result.ok) {
         setError(t.report.submitError);
         return;

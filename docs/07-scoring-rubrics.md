@@ -213,6 +213,7 @@ points by arithmetic.
 | `criterion_id` | ✔ | stable within the rubric |
 | `name` | ✔ | Hebrew, shown in results |
 | `description` | ✔ | professional definition of what is being judged |
+| `dimension` | ✔ | `knowledge` · `application` · `reasoning` — which progress dimension this criterion feeds ([09](09-progress-model.md) §2). Enforced by `RB-01`; copied into every `criterion_result` so a later re-tag cannot rewrite what past attempts measured |
 | `weight` | ✔ | share of 100 |
 | `max_points` | ✔ | equals `weight` when the rubric totals 100 |
 | `levels` | ✔ | the five levels of §4.1, with any declared intermediates |

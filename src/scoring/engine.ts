@@ -213,6 +213,7 @@ export function evaluateCriterion(
   return {
     criterion_id: criterion.criterion_id,
     criterion_name: criterion.name,
+    dimension: criterion.dimension,
     skill_ids: criterion.skill_ids,
     weight: criterion.weight,
     performance_level: level,

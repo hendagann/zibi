@@ -51,10 +51,14 @@ export interface RubricComponent {
   readonly detection: DetectionRule;
 }
 
+/** The progress dimension a criterion contributes to — docs/09 §2. */
+export type Dimension = 'knowledge' | 'application' | 'reasoning';
+
 export interface RubricCriterion {
   readonly criterion_id: string;
   readonly name: string;
   readonly description: string;
+  readonly dimension: Dimension;
   readonly weight: number;
   readonly max_points: number;
   readonly skill_ids: readonly string[];
@@ -99,6 +103,12 @@ export interface DeterministicCheckResult {
 export interface CriterionResult {
   readonly criterion_id: string;
   readonly criterion_name: string;
+  /**
+   * Copied from the rubric at evaluation time, not looked up later: a rubric
+   * that re-tags a criterion must not silently rewrite what past attempts are
+   * taken to have measured (the same reason docs/06 §9 stores rubricVersion).
+   */
+  readonly dimension: Dimension;
   readonly skill_ids: readonly string[];
   readonly weight: number;
   readonly performance_level: 0 | 1 | 2 | 3 | 4;
