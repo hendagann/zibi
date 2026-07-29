@@ -1,0 +1,220 @@
+.shell {
+  min-block-size: 100dvh;
+}
+
+/* ---- skip link ---- */
+.skipLink {
+  position: absolute;
+  inset-inline-start: var(--space-4);
+  inset-block-start: var(--space-4);
+  z-index: calc(var(--z-drawer) + 1);
+  padding-inline: var(--space-4);
+  padding-block: var(--space-2);
+  background-color: var(--color-surface-raised);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  transform: translateY(-200%);
+}
+
+.skipLink:focus-visible {
+  transform: translateY(0);
+}
+
+/* ---- top bar (mobile only) ---- */
+.topbar {
+  position: sticky;
+  inset-block-start: 0;
+  z-index: var(--z-topbar);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  block-size: var(--topbar-height);
+  padding-inline: var(--space-4);
+  background-color: var(--color-surface-raised);
+  border-block-end: 1px solid var(--color-border);
+}
+
+.menuButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2.25rem;
+  block-size: 2.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.menuButton:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.topbarBrand {
+  font-weight: var(--weight-semibold);
+}
+
+/* ---- sidebar ---- */
+.sidebar {
+  position: fixed;
+  inset-block: 0;
+  inset-inline-start: 0;
+  z-index: var(--z-drawer);
+  inline-size: var(--sidebar-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-4);
+  background-color: var(--color-surface-raised);
+  border-inline-end: 1px solid var(--color-border);
+  overflow-y: auto;
+  transform: var(--offcanvas-hidden);
+  /*
+   * `visibility` removes the closed drawer from the tab order without
+   * JavaScript, so a keyboard user cannot reach an off-canvas panel even
+   * before hydration. It is delayed on the way out so the slide is visible.
+   */
+  visibility: hidden;
+  transition: transform var(--transition-base), visibility 0s linear var(--transition-base);
+}
+
+.sidebarOpen {
+  transform: translateX(0);
+  visibility: visible;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), visibility 0s;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.brandName {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.closeButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2rem;
+  block-size: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background-color: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+}
+
+.closeButton:hover {
+  background-color: var(--color-surface-hover);
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-inline: var(--space-3);
+  padding-block: var(--space-2);
+  border-radius: var(--radius-md);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  text-decoration: none;
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.navLink:hover {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.navLinkActive {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+}
+
+.navIcon {
+  flex-shrink: 0;
+}
+
+.sidebarFooter {
+  margin-block-start: auto;
+  padding-block-start: var(--space-4);
+  border-block-start: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+/* ---- backdrop ---- */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-overlay);
+  background-color: rgb(20 24 31 / 0.45);
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* ---- main ---- */
+.main {
+  padding-inline: var(--space-4);
+  padding-block: var(--space-5) var(--space-8);
+}
+
+.mainInner {
+  max-inline-size: var(--content-max-width);
+  margin-inline: auto;
+}
+
+/* ---- desktop ---- */
+@media (min-width: 64rem) {
+  .topbar {
+    display: none;
+  }
+
+  .sidebar {
+    transform: none;
+    transition: none;
+    visibility: visible;
+    box-shadow: none;
+  }
+
+  .closeButton {
+    display: none;
+  }
+
+  .backdrop {
+    display: none;
+  }
+
+  .main {
+    padding-inline-start: calc(var(--sidebar-width) + var(--space-6));
+    padding-inline-end: var(--space-6);
+    padding-block: var(--space-6) var(--space-8);
+  }
+}

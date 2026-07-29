@@ -1,0 +1,42 @@
+.skeleton {
+  display: block;
+  background-color: var(--color-skeleton);
+  border-radius: var(--radius-sm);
+  background-image: linear-gradient(
+    90deg,
+    var(--color-skeleton) 0%,
+    var(--color-skeleton-sheen) 50%,
+    var(--color-skeleton) 100%
+  );
+  background-size: 200% 100%;
+  animation: sheen 1.4s ease-in-out infinite;
+}
+
+.text {
+  block-size: 0.85rem;
+  margin-block: 0.35rem;
+}
+
+.title {
+  block-size: 1.5rem;
+  inline-size: 40%;
+}
+
+.block {
+  block-size: 6rem;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+@keyframes sheen {
+  from {
+    background-position: 200% 0;
+  }
+  to {
+    background-position: -200% 0;
+  }
+}
