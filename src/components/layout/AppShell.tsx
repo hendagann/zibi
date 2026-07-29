@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react';
+import { MAIN_CONTENT_ID } from '@/lib/constants';
 import { t } from '@/i18n';
 import { AppNav } from './AppNav';
 import styles from './AppShell.module.css';
 
-export const MAIN_CONTENT_ID = 'main-content';
+export { MAIN_CONTENT_ID };
 
 interface AppShellProps {
   readonly children: ReactNode;

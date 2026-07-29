@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCallback, useEffect, useId, useRef, useState } from 'react';
 import { MOBILE_NAV_QUERY, useMediaQuery } from '@/hooks/useMediaQuery';
+import { MAIN_CONTENT_ID } from '@/lib/constants';
 import { primaryNav } from '@/lib/navigation';
 import { isActiveRoute, routes } from '@/lib/routes';
 import { t } from '@/i18n';
@@ -52,6 +53,14 @@ export function AppNav() {
     // opened the drawer, which is the same node for the drawer's whole life.
     const toggle = toggleRef.current;
 
+    // `aria-modal` hides the page from a screen reader but does nothing to the
+    // tab order, which is DOM order. Without this, Tab walks straight out of
+    // the drawer and into the page behind it. Marking the main landmark inert
+    // is the whole focus trap — no key interception, and it also stops mouse
+    // and pointer interaction with content the overlay is covering.
+    const main = document.getElementById(MAIN_CONTENT_ID);
+    main?.setAttribute('inert', '');
+
     const onKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') close();
     };
@@ -64,6 +73,9 @@ export function AppNav() {
     return () => {
       document.removeEventListener('keydown', onKeyDown);
       document.body.style.overflow = previousOverflow;
+      // Inert must come off before focus moves back, or the focus call is
+      // silently dropped.
+      main?.removeAttribute('inert');
       toggle?.focus();
     };
   }, [isOpen, isMobile, close]);
@@ -101,11 +113,15 @@ export function AppNav() {
       </header>
 
       {isOpen && isMobile ? (
-        <button
-          type="button"
+        // Not a button. A focusable full-screen element sitting outside the
+        // dialog is an extra tab stop that leads nowhere useful, and it was
+        // the seam through which Tab escaped the drawer. Pointer users click
+        // it; keyboard users press Escape, which is the documented way to
+        // dismiss a dialog anyway.
+        <div
           className={styles.backdrop}
-          aria-label={t.common.close}
           onClick={close}
+          aria-hidden="true"
         />
       ) : null}
 

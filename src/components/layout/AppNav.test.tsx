@@ -112,6 +112,36 @@ describe('AppNav on a narrow screen', () => {
     });
   });
 
+  it('marks the main landmark inert so Tab cannot leave the drawer', async () => {
+    useMobileViewport();
+    // aria-modal hides the page from a screen reader but does nothing to the
+    // tab order, so the trap has to come from inert on the main landmark.
+    const main = document.createElement('main');
+    main.id = 'main-content';
+    document.body.appendChild(main);
+
+    render(<AppNav />);
+    await userEvent.click(screen.getByRole('button', { name: t.nav.menu }));
+    await waitFor(() => expect(main.hasAttribute('inert')).toBe(true));
+
+    await userEvent.keyboard('{Escape}');
+    await waitFor(() => expect(main.hasAttribute('inert')).toBe(false));
+
+    main.remove();
+  });
+
+  it('does not put a focusable backdrop outside the dialog', async () => {
+    useMobileViewport();
+    render(<AppNav />);
+    await userEvent.click(screen.getByRole('button', { name: t.nav.menu }));
+
+    await waitFor(() => {
+      // Exactly two controls: the toggle and the drawer's close button. A
+      // focusable backdrop would be a third, and it was how Tab escaped.
+      expect(screen.getAllByRole('button')).toHaveLength(2);
+    });
+  });
+
   it('reflects the open state on the toggle', async () => {
     useMobileViewport();
     render(<AppNav />);
