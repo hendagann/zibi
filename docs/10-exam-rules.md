@@ -220,6 +220,42 @@ signal for the learner, not a penalty.
    single sitting and an interrupted one is recorded as submitted-with-missing-parts, which
    `DC-GEN-04` already handles per [07](07-scoring-rubrics.md) §8.16.
 
+### 7.1 The sitting, and where its state lives
+
+The plan is **frozen into a session record** when the exam starts, and the sitting is driven
+from that record plus the stored attempts. This is not an implementation convenience — it is
+what rule 1 requires. The planner excludes items the learner has already attempted (§3.2), so
+re-planning after the first answer would legitimately return a *different* item for a later
+segment. A plan that is recomputed mid-exam is not a fixed plan.
+
+Consequently:
+
+- The session stores the ordered segments, the blueprint's `durationMinutes` and `passMark`.
+- Progress through the exam is **derived**, never stored twice: the current segment is the first
+  one whose item has no attempt in this session. Nothing can drift.
+- Each answer is stored as an ordinary attempt carrying `context: 'exam'` and its `session_id`,
+  so [09](09-progress-model.md) weights it like any other evidence and §3.3 can exclude it from
+  a later sitting exactly rather than approximately.
+- The exam is complete when every segment has an attempt. There is no separate submit event to
+  get out of step with the answers.
+
+### 7.2 The exam score
+
+```
+segment_score = the attempt's final_score
+exam_score    = round_half_up(mean(segment_scores))
+passed        = exam_score ≥ passMark
+```
+
+The mean is **unweighted**, and deliberately so. Each segment is one item and therefore one
+equal unit of evidence. Weighting by the segment's minutes would quietly turn a pacing
+instrument into a scoring instrument, and §6 has already committed to the opposite: time is
+recorded, not scored. An unevaluable segment ([07](07-scoring-rubrics.md) §16.18) is excluded
+from the mean rather than counted as zero — a broken item is our defect, not the learner's.
+
+Recorded as **Q-10-5**: whether a later version should weight segments explicitly, in which case
+the weight belongs in the blueprint as its own field and never as a re-reading of `minutes`.
+
 ---
 
 ## 8. Determinism

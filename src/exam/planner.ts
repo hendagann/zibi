@@ -186,17 +186,20 @@ export function planExam(
   /**
    * Items the learner has already met.
    *
-   * `excludeAttempted` covers docs/10 §3.2 outright. The narrower
-   * `noRepeatWithinDays` window of §3.3 is meant to apply to EXAM sittings
-   * specifically, but the stored attempt record carries no `context` field yet
-   * (docs/06 §9 defines one; `AttemptRecord` does not implement it), so the
-   * window is applied to all attempts. That is the conservative direction — it
-   * can only exclude more — and it becomes exact when `context` is stored.
+   * `excludeAttempted` covers docs/10 §3.2 outright: an item attempted at all,
+   * in any context, is out. The narrower `noRepeatWithinDays` window of §3.3
+   * applies to EXAM sittings specifically — practising an item is governed by
+   * §3.2, while re-seeing it in an exam is what the window is about. An attempt
+   * with no `context` predates exams and is practice by definition.
    */
   const cutoff = options.now.getTime() - rules.noRepeatWithinDays * DAY_MS;
   const seen = new Set(
     attempts
-      .filter((a) => rules.excludeAttempted || Date.parse(a.submitted_at) >= cutoff)
+      .filter(
+        (a) =>
+          rules.excludeAttempted ||
+          ((a.context ?? 'practice') === 'exam' && Date.parse(a.submitted_at) >= cutoff),
+      )
       .map((a) => a.item_id),
   );
 

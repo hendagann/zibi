@@ -2,7 +2,12 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useTransition } from 'react';
-import { runSqlQuery, submitSqlAnswer, type SqlRunView } from '@/app/actions';
+import {
+  runSqlQuery,
+  submitExamAnswer,
+  submitSqlAnswer,
+  type SqlRunView,
+} from '@/app/actions';
 import { useElapsedSeconds } from '@/hooks/useElapsedSeconds';
 import { t } from '@/i18n';
 import styles from './practice.module.css';
@@ -12,6 +17,8 @@ interface SqlExerciseFormProps {
   readonly itemId: string;
   /** Prefill — the learner's last submitted query, for revision. */
   readonly initialSql?: string | undefined;
+  /** Present only inside an exam sitting — see ExerciseForm. */
+  readonly examSessionId?: string | undefined;
 }
 
 /**
@@ -21,7 +28,7 @@ interface SqlExerciseFormProps {
  * learner can iterate freely. Submission evaluates for real (visible plus
  * hidden fixtures, server side) and appends the attempt.
  */
-export function SqlExerciseForm({ itemId, initialSql }: SqlExerciseFormProps) {
+export function SqlExerciseForm({ itemId, initialSql, examSessionId }: SqlExerciseFormProps) {
   const router = useRouter();
   const [sql, setSql] = useState(initialSql ?? '');
   const [runResult, setRunResult] = useState<SqlRunView | null>(null);
@@ -40,7 +47,9 @@ export function SqlExerciseForm({ itemId, initialSql }: SqlExerciseFormProps) {
   function submit() {
     setError(null);
     startTransition(async () => {
-      const result = await submitSqlAnswer(itemId, sql, elapsed());
+      const result = examSessionId
+        ? await submitExamAnswer(examSessionId, itemId, { sql }, elapsed())
+        : await submitSqlAnswer(itemId, sql, elapsed());
       if (!result.ok) {
         setError(t.report.submitError);
         return;

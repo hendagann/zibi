@@ -162,6 +162,31 @@ export const he = {
     },
   },
 
+  /** The sitting itself and its result — docs/10 §7. */
+  sitting: {
+    questionOf: (current: number, total: number) => `שאלה ${current} מתוך ${total}`,
+    segmentLabel: 'מקטע',
+    budgetLabel: 'תקציב זמן למקטע',
+    noFeedbackNotice:
+      'במבחן אין משוב עד הסיום — לא ציון, לא תיקון ולא קישור לחומר. הכול ייפתח בבת אחת בסוף.',
+    finalAnswerNotice: 'תשובה במבחן היא סופית. אין ניסיון חוזר על אותה שאלה.',
+    answeredLabel: 'נענו',
+    startExam: 'התחלת מבחן',
+    starting: 'מתחיל…',
+    startFailed: 'לא ניתן להתחיל את המבחן.',
+    resultTitle: 'תוצאת המבחן',
+    examScoreLabel: 'ציון המבחן',
+    passMarkLabel: 'ציון עובר',
+    passed: 'עברת',
+    failed: 'לא עברת',
+    perSegmentLabel: 'ציון לפי מקטע',
+    unevaluableNote: 'לא ניתן להעריך — לא נספר בממוצע',
+    meanNote: 'ציון המבחן הוא ממוצע לא משוקלל של המקטעים — כל מקטע הוא פריט אחד',
+    submittedAtLabel: 'הוגש',
+    backToExams: 'חזרה למבחנים',
+    reviewInPractice: 'המשוב המלא זמין עכשיו בכל שאלה',
+  },
+
   progress: {
     title: 'התקדמות',
     subtitle: 'יכולת שהוכחה, לא עמודים שנקראו',

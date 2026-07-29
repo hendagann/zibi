@@ -4,7 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useState, useTransition } from 'react';
 import type { DefectReportAnswer } from '@/content/blocks';
 import { emptyDefectReport } from '@/content/blocks';
-import { submitAnswer } from '@/app/actions';
+import { submitAnswer, submitExamAnswer } from '@/app/actions';
 import { useElapsedSeconds } from '@/hooks/useElapsedSeconds';
 import { t } from '@/i18n';
 import styles from './practice.module.css';
@@ -19,6 +19,12 @@ interface ExerciseFormProps {
   /** Prefill — the learner's latest stored answer, for revision. */
   readonly initialAnswer?: DefectReportAnswer | undefined;
   readonly diagnosisOptions?: readonly DiagnosisOption[] | undefined;
+  /**
+   * Present only inside an exam sitting. The submission then goes through the
+   * exam action, whose result carries no evaluation — no feedback is released
+   * until the exam ends (docs/10 §7).
+   */
+  readonly examSessionId?: string | undefined;
 }
 
 /**
@@ -31,7 +37,12 @@ interface ExerciseFormProps {
  * refreshes the page so the stored result renders. Refreshing mid-work keeps
  * the last *submitted* answer — submission is what stores.
  */
-export function ExerciseForm({ itemId, initialAnswer, diagnosisOptions }: ExerciseFormProps) {
+export function ExerciseForm({
+  itemId,
+  initialAnswer,
+  diagnosisOptions,
+  examSessionId,
+}: ExerciseFormProps) {
   const router = useRouter();
   const [answer, setAnswer] = useState<DefectReportAnswer>(
     initialAnswer ?? emptyDefectReport(),
@@ -54,7 +65,9 @@ export function ExerciseForm({ itemId, initialAnswer, diagnosisOptions }: Exerci
   function submit() {
     setError(null);
     startTransition(async () => {
-      const result = await submitAnswer(itemId, answer, elapsed());
+      const result = examSessionId
+        ? await submitExamAnswer(examSessionId, itemId, answer, elapsed())
+        : await submitAnswer(itemId, answer, elapsed());
       if (!result.ok) {
         setError(t.report.submitError);
         return;

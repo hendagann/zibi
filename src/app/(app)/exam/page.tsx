@@ -5,6 +5,7 @@ import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { EmptyState } from '@/components/states/EmptyState';
 import { examTypeLabel, refusalText } from '@/components/exam/refusalText';
+import { StartExamButton } from '@/components/exam/StartExamButton';
 import { getBlueprints, getExamItems, getSkills } from '@/content/loader';
 import { isExercise } from '@/content/exercise';
 import type { ExerciseItem } from '@/content/exercise';
@@ -108,6 +109,7 @@ export default async function ExamPage() {
                 <p className={styles.signalDetail}>
                   {t.examPlan.openQuestionsLabel}: {plan.openCount}
                 </p>
+                <StartExamButton blueprintId={blueprint.id} />
               </>
             ) : (
               <div className={styles.reviewBox}>

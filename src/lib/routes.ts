@@ -13,6 +13,7 @@ export const routes = {
   topic: (topicId: TopicId) => `/topics/${toTopicSlug(topicId)}`,
   practice: '/practice',
   exam: '/exam',
+  examSession: (sessionId: string) => `/exam/${sessionId}`,
   progress: '/progress',
   admin: '/admin',
   adminContent: '/admin/content',

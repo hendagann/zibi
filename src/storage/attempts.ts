@@ -31,6 +31,14 @@ export interface AttemptRecord {
   readonly item_version: number;
   readonly attempt_number: number;
   readonly submitted_at: string;
+  /**
+   * Where the attempt happened (docs/06 §9). Absent on records written before
+   * exams existed, which are all practice by definition — readers must treat a
+   * missing value as `practice` rather than as unknown.
+   */
+  readonly context?: 'practice' | 'exam';
+  /** Set for `exam` attempts: the sitting this answer belongs to (docs/10 §7.1). */
+  readonly session_id?: string;
   /** Raw as submitted, never normalised — re-scoring needs the original. */
   readonly answer: DefectReportAnswer | SqlAnswer;
   readonly evaluation: EvaluationResult;
@@ -67,6 +75,17 @@ export async function attemptsForItem(
 export async function attemptsForUser(userId: string): Promise<AttemptRecord[]> {
   const all = await readAttempts();
   return all.filter((a) => a.user_id === userId);
+}
+
+/** Attempts belonging to one exam sitting, oldest first — docs/10 §7.1. */
+export async function attemptsForSession(
+  userId: string,
+  sessionId: string,
+): Promise<AttemptRecord[]> {
+  const all = await readAttempts();
+  return all
+    .filter((a) => a.user_id === userId && a.session_id === sessionId)
+    .sort((a, b) => Date.parse(a.submitted_at) - Date.parse(b.submitted_at));
 }
 
 /**

@@ -4,7 +4,17 @@ import { randomUUID } from 'node:crypto';
 import { revalidatePath } from 'next/cache';
 import type { DefectReportAnswer } from '@/content/blocks';
 import { isExercise } from '@/content/exercise';
-import { getActiveRubric, getDataset, getItem } from '@/content/loader';
+import type { ExerciseItem } from '@/content/exercise';
+import {
+  getActiveRubric,
+  getBlueprints,
+  getDataset,
+  getExamItems,
+  getItem,
+  getSkills,
+} from '@/content/loader';
+import { planExam } from '@/exam/planner';
+import { computeProgress } from '@/progress/compute';
 import { evaluate } from '@/scoring/engine';
 import { evaluateSql } from '@/scoring/sqlEngine';
 import type { EvaluationResult } from '@/scoring/types';
@@ -12,8 +22,11 @@ import { executeSql } from '@/sql/executor';
 import {
   appendAttempt,
   attemptsForItem,
+  attemptsForSession,
+  attemptsForUser,
   LOCAL_USER,
 } from '@/storage/attempts';
+import { appendSession, getSession } from '@/storage/examSessions';
 import { approveItem, publishItem, saveItemEdit } from '@/storage/contentWriter';
 import { t } from '@/i18n';
 
@@ -189,6 +202,158 @@ export async function submitSqlAnswer(
   revalidatePath('/practice');
   revalidatePath('/progress');
   return { ok: true, evaluation };
+}
+
+/* ---------------- exams — docs/10 ---------------- */
+
+export interface StartExamResult {
+  readonly ok: boolean;
+  readonly error?: string;
+  readonly sessionId?: string;
+}
+
+/**
+ * Start an exam: plan it once, freeze the plan into a session, and return the
+ * session id. The plan is never recomputed afterwards (docs/10 §7.1) — the
+ * planner excludes already-attempted items, so re-planning mid-exam would
+ * legitimately change a later segment, and a plan that changes is not a plan.
+ *
+ * A blueprint the pool cannot satisfy does not start. It never starts partially.
+ */
+export async function startExam(blueprintId: string): Promise<StartExamResult> {
+  const [blueprints, examItems, attempts, skills] = await Promise.all([
+    getBlueprints(),
+    getExamItems(),
+    attemptsForUser(LOCAL_USER),
+    getSkills(),
+  ]);
+
+  const blueprint = blueprints.find((b) => b.id === blueprintId);
+  if (!blueprint) return { ok: false, error: 'blueprint-not-found' };
+
+  const progress = computeProgress(
+    attempts,
+    skills.map((s) => s.id),
+    { now: new Date(), topicBySkill: Object.fromEntries(skills.map((s) => [s.id, s.topic])) },
+  );
+
+  const plan = planExam(blueprint, examItems.filter(isExercise) as ExerciseItem[], attempts, {
+    now: new Date(),
+    skills,
+    progress: progress.skills,
+  });
+  if (!plan.ok) return { ok: false, error: 'not-assemblable' };
+
+  const sessionId = randomUUID();
+  await appendSession({
+    session_id: sessionId,
+    user_id: LOCAL_USER,
+    blueprint_id: blueprint.id,
+    exam_type: blueprint.examType,
+    title: blueprint.title,
+    started_at: new Date().toISOString(),
+    duration_minutes: blueprint.durationMinutes,
+    pass_mark: blueprint.passMark,
+    segments: plan.segments,
+  });
+
+  revalidatePath('/exam');
+  return { ok: true, sessionId };
+}
+
+/**
+ * Submit one exam answer.
+ *
+ * The return type carries **no evaluation**, and that is the enforcement of
+ * docs/10 §7 rule 2: no feedback of any kind is released until the exam ends.
+ * There is nowhere in this signature to put a score, so no surface can leak one
+ * mid-exam even by accident.
+ */
+export async function submitExamAnswer(
+  sessionId: string,
+  itemId: string,
+  answer: DefectReportAnswer | { readonly sql: string },
+  timeSpentSeconds?: number,
+): Promise<{ ok: boolean; error?: string }> {
+  const session = await getSession(LOCAL_USER, sessionId);
+  if (!session) return { ok: false, error: 'session-not-found' };
+
+  const segment = session.segments.find((s) => s.itemId === itemId);
+  if (!segment) return { ok: false, error: 'item-not-in-exam' };
+
+  const alreadyAnswered = await attemptsForSession(LOCAL_USER, sessionId);
+  if (alreadyAnswered.some((a) => a.item_id === itemId)) {
+    // An exam answer is final. Re-submitting would let a learner iterate with
+    // the clock running, which the pool-isolation rule exists to prevent.
+    return { ok: false, error: 'already-answered' };
+  }
+
+  const item = await getItem(itemId);
+  if (!item || !isExercise(item) || item.pool !== 'exam') {
+    return { ok: false, error: 'exam-item-not-found' };
+  }
+  const exercise = item as ExerciseItem;
+  const rubric = await getActiveRubric(exercise.rubricRef);
+  const inactiveRubric = {
+    rubric_id: exercise.rubricRef, version: 0, kind: 'criteria' as const, status: 'draft' as const,
+    appliesTo: [], maxScore: 100, created_at: '', criteria: [],
+  };
+
+  const previous = await attemptsForItem(LOCAL_USER, itemId);
+  const attemptId = randomUUID();
+  const submittedAt = new Date().toISOString();
+  const attemptNumber = previous.length + 1;
+
+  let evaluation: EvaluationResult;
+  if (exercise.questionType === 'sql_query' && exercise.sqlSpec) {
+    const dataset = await getDataset(exercise.sqlSpec.datasetRef);
+    if (!dataset) return { ok: false, error: 'dataset-not-found' };
+    evaluation = await evaluateSql({
+      sql: (answer as { sql: string }).sql,
+      spec: exercise.sqlSpec,
+      rubric: rubric ?? inactiveRubric,
+      dataset,
+      questionId: exercise.id,
+      itemVersion: exercise.version,
+      attemptId,
+      attemptNumber,
+      userId: LOCAL_USER,
+      submittedAt,
+      timeSpentSeconds: sanitiseDuration(timeSpentSeconds),
+    });
+  } else {
+    evaluation = evaluate({
+      answer: answer as DefectReportAnswer,
+      rubric: rubric ?? inactiveRubric,
+      questionId: exercise.id,
+      itemVersion: exercise.version,
+      questionType: exercise.questionType,
+      attemptId,
+      attemptNumber,
+      userId: LOCAL_USER,
+      submittedAt,
+      requiresEvidence: exercise.requiresEvidence,
+      timeSpentSeconds: sanitiseDuration(timeSpentSeconds),
+    });
+  }
+
+  await appendAttempt({
+    attempt_id: attemptId,
+    user_id: LOCAL_USER,
+    item_id: exercise.id,
+    item_version: exercise.version,
+    attempt_number: attemptNumber,
+    submitted_at: submittedAt,
+    context: 'exam',
+    session_id: sessionId,
+    answer: answer as DefectReportAnswer,
+    evaluation,
+  });
+
+  revalidatePath(`/exam/${sessionId}`);
+  revalidatePath('/exam');
+  revalidatePath('/progress');
+  return { ok: true };
 }
 
 export async function adminSaveItem(
