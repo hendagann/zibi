@@ -13,7 +13,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "verify": "npm run lint && npm run typecheck && npm run check:boundary && npm run check:content && npm run test && npm run build",
-    "check:content": "node scripts/validate-content.mjs"
+    "check:content": "node scripts/validate-content.mjs",
+    "content:import": "node scripts/import-content.mjs"
   },
   "dependencies": {
     "next": "^15.1.6",

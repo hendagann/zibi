@@ -171,7 +171,7 @@ describe('the vertical slice', () => {
     // The edit is live on disk and the learner no longer sees the item.
     const afterEdit = await loader.getItem('DOC-defects.EX.002');
     expect(afterEdit).toBeNull();
-    const onDisk = JSON.parse((await readFile(join(contentDir!, 'items', 'DOC-defects.EX.002.json'), 'utf8')));
+    const onDisk = JSON.parse((await readFile(join(contentDir!, 'exercises', 'DOC-defects.EX.002.json'), 'utf8')));
     expect(onDisk.title).toContain('נוסח מעודכן');
     expect(onDisk.version).toBe(2);
 
@@ -192,7 +192,7 @@ describe('the vertical slice', () => {
     edited.review = { status: 'approved' };
     await mods.writer.saveItemEdit('DOC-defects.EX.003', JSON.stringify(edited));
     const onDisk = JSON.parse(
-      await readFile(join(contentDir!, 'items', 'DOC-defects.EX.003.json'), 'utf8'),
+      await readFile(join(contentDir!, 'exercises', 'DOC-defects.EX.003.json'), 'utf8'),
     );
     expect(onDisk.review.status).toBe('needs_update');
   });

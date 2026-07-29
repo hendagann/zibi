@@ -89,8 +89,8 @@ describe('approved-only serving (docs/05 §7)', () => {
   it('serves approved items only, and getTopic misses a draft topic', async () => {
     const loader = await loaderWithFixture({
       'topics/a.json': topic('TD/black-box', 'draft'),
-      'items/e1.json': item('TD-black-box.EX.001', 'exercise', 'practice', 'approved'),
-      'items/e2.json': item('TD-black-box.EX.002', 'exercise', 'practice', 'draft'),
+      'exercises/TD-black-box.EX.001.json': item('TD-black-box.EX.001', 'exercise', 'practice', 'approved'),
+      'exercises/TD-black-box.EX.002.json': item('TD-black-box.EX.002', 'exercise', 'practice', 'draft'),
     });
     const items = await loader.getItems();
     expect(items.map((i) => i.id)).toEqual(['TD-black-box.EX.001']);
@@ -100,8 +100,8 @@ describe('approved-only serving (docs/05 §7)', () => {
 
   it('actually separates the pools when both contain approved items', async () => {
     const loader = await loaderWithFixture({
-      'items/p.json': item('TD-black-box.EX.001', 'exercise', 'practice', 'approved'),
-      'items/x.json': item('TD-black-box.XM.001', 'exam_item', 'exam', 'approved'),
+      'exercises/TD-black-box.EX.001.json': item('TD-black-box.EX.001', 'exercise', 'practice', 'approved'),
+      'exams/TD-black-box.XM.001.json': item('TD-black-box.XM.001', 'exam_item', 'exam', 'approved'),
     });
     const practice = await loader.getPracticeExercises();
     const exam = await loader.getExamItems();
@@ -109,12 +109,23 @@ describe('approved-only serving (docs/05 §7)', () => {
     expect(exam.map((i) => i.id)).toEqual(['TD-black-box.XM.001']);
   });
 
+  it('serves published items and withholds every authoring status', async () => {
+    const loader = await loaderWithFixture({
+      'exercises/TD-black-box.EX.010.json': item('TD-black-box.EX.010', 'exercise', 'practice', 'published'),
+      'exercises/TD-black-box.EX.011.json': item('TD-black-box.EX.011', 'exercise', 'practice', 'ai_generated'),
+      'exercises/TD-black-box.EX.012.json': item('TD-black-box.EX.012', 'exercise', 'practice', 'needs_professional_review'),
+      'exercises/TD-black-box.EX.013.json': item('TD-black-box.EX.013', 'exercise', 'practice', 'archived'),
+    });
+    const items = await loader.getItems();
+    expect(items.map((i) => i.id)).toEqual(['TD-black-box.EX.010']);
+  });
+
   it('filters retired items even when approved', async () => {
     const retired = {
       ...item('TD-black-box.EX.003', 'exercise', 'practice', 'approved'),
       status: 'retired',
     };
-    const loader = await loaderWithFixture({ 'items/r.json': retired });
+    const loader = await loaderWithFixture({ 'exercises/TD-black-box.EX.003.json': retired });
     await expect(loader.getItems()).resolves.toEqual([]);
   });
 });

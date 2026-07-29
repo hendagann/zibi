@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 import { useState, useTransition } from 'react';
-import { adminApproveItem, adminSaveItem } from '@/app/actions';
+import { adminApproveItem, adminPublishItem, adminSaveItem } from '@/app/actions';
 import { t } from '@/i18n';
 import styles from './ItemEditor.module.css';
 
@@ -36,6 +36,20 @@ export function ItemEditor({ itemId, rawJson, status }: ItemEditorProps) {
         return;
       }
       setMessage(t.adminEdit.saved);
+      router.refresh();
+    });
+  }
+
+  function publish() {
+    setMessage(null);
+    setError(null);
+    startTransition(async () => {
+      const result = await adminPublishItem(itemId);
+      if (!result.ok) {
+        setError(result.error ?? '—');
+        return;
+      }
+      setMessage(t.adminEdit.published);
       router.refresh();
     });
   }
@@ -91,6 +105,18 @@ export function ItemEditor({ itemId, rawJson, status }: ItemEditorProps) {
         </button>
       </div>
       <p className={styles.note}>{t.adminEdit.approveNote}</p>
+
+      <div className={styles.actions}>
+        <button
+          type="button"
+          className={styles.secondary}
+          onClick={publish}
+          disabled={pending || status !== 'approved'}
+        >
+          {t.adminEdit.publish}
+        </button>
+      </div>
+      <p className={styles.note}>{t.adminEdit.publishNote}</p>
 
       {message ? <p className={styles.success} role="status">{message}</p> : null}
       {error ? <p className={styles.error} role="alert">{error}</p> : null}

@@ -41,7 +41,14 @@ import type {
 const CONTENT_ROOT =
   process.env.ZIBI_CONTENT_ROOT ?? join(process.cwd(), 'content');
 
-type Collection = 'domains' | 'topics' | 'skills' | 'items' | 'rubrics' | 'sources';
+type Collection =
+  | 'domains' | 'topics' | 'skills' | 'rubrics' | 'sources'
+  | 'lessons' | 'examples' | 'exercises' | 'exams';
+
+/** The collections that hold content items, per the content/ layout. */
+const ITEM_COLLECTIONS: readonly Collection[] = [
+  'lessons', 'examples', 'exercises', 'exams',
+];
 
 async function readCollection<T>(collection: Collection): Promise<T[]> {
   const dir = join(CONTENT_ROOT, collection);
@@ -67,7 +74,16 @@ async function readCollection<T>(collection: Collection): Promise<T[]> {
 }
 
 function isServable(item: { review?: { status?: string } }): boolean {
-  return item.review?.status === 'approved';
+  // approved = professionally reviewed; published = also passed the
+  // structural gate. Everything else is authoring-side only.
+  return item.review?.status === 'approved' || item.review?.status === 'published';
+}
+
+async function readItemCollections(): Promise<ContentItem[]> {
+  const collections = await Promise.all(
+    ITEM_COLLECTIONS.map((c) => readCollection<ContentItem>(c)),
+  );
+  return collections.flat();
 }
 
 export async function getDomains(): Promise<Domain[]> {
@@ -98,7 +114,7 @@ export async function getSkillsForTopic(topicId: TopicId): Promise<Skill[]> {
 }
 
 export async function getItems(): Promise<ContentItem[]> {
-  const items = await readCollection<ContentItem>('items');
+  const items = await readItemCollections();
   return items.filter((item) => item.status === 'active').filter(isServable);
 }
 
@@ -145,7 +161,7 @@ export async function getActiveRubric(rubricId: string): Promise<RubricDoc | nul
  * a learner may come from here — learner surfaces go through getItems().
  */
 export async function getAllItemsForAdmin(): Promise<ContentItem[]> {
-  return readCollection<ContentItem>('items');
+  return readItemCollections();
 }
 
 export async function getAllTopicsForAdmin(): Promise<Topic[]> {

@@ -33,9 +33,15 @@ async function readAll(dir) {
   }
 }
 
-const [domains, topics, skills, items, rubrics, sources] = await Promise.all(
-  ['domains', 'topics', 'skills', 'items', 'rubrics', 'sources'].map(readAll),
+const [domains, topics, skills, rubrics, sources, ...itemDirs] = await Promise.all(
+  ['domains', 'topics', 'skills', 'rubrics', 'sources',
+   'lessons', 'examples', 'exercises', 'exams'].map(readAll),
 );
+const items = itemDirs.flat();
+
+/** approved או published — שני הסטטוסים היחידים שמוגשים ללומדים. */
+const SERVABLE = new Set(['approved', 'published']);
+const isServable = (d) => SERVABLE.has(d?.review?.status);
 
 const itemById = new Map(items.map((i) => [i.data.id, i.data]));
 const skillIds = new Set(skills.map((s) => s.data.id));
@@ -58,13 +64,24 @@ for (const { file, data } of items) {
   const code = id.split('.')[1];
   if (TYPE_CODE[data.type] && code !== TYPE_CODE[data.type])
     fail('CM-02', `${file}: קוד סוג ${code} לא תואם type=${data.type}`);
-  if (id.replace('/', '-') !== `${file.replace('items/', '').replace('.json', '')}`)
-    fail('CM-02', `${file}: שם הקובץ אינו המזהה`);
+  const basename = file.split('/').pop().replace('.json', '');
+  if (id !== basename) fail('CM-02', `${file}: שם הקובץ אינו המזהה`);
 }
 
-/* ---- CM-03/04/05/06: envelope references ---- */
+const topicIds = new Set(topics.map((t) => t.data.id));
+
+/* ---- CM-03/04/05/06 + CM-29/30 + QM-18: envelope references ---- */
 for (const { file, data } of items) {
+  // CM-30: תוכן מוגש חייב אישור מקצועי בשם — לכל סוגי הפריטים.
+  if (isServable(data) && !data.review?.reviewedBy)
+    fail('CM-30', `${file}: תוכן ${data.review?.status} ללא שם מאשרת`);
+  // CM-29: קישור לנושא שאינו קיים.
+  if (data.topic && !topicIds.has(data.topic))
+    fail('CM-29', `${file}: הפריט מפנה לנושא שאינו קיים: ${data.topic}`);
   if (data.type === 'exam_blueprint') continue;
+  // QM-18: שאלה מנוקדת חייבת מיומנות נמדדת.
+  if (['exercise', 'exam_item'].includes(data.type) && !data.skills?.primary)
+    fail('QM-18', `${file}: שאלה ללא מיומנות נמדדת`);
   if (data.skills?.primary && !skillIds.has(data.skills.primary))
     fail('CM-03', `${file}: מיומנות ראשית לא קיימת: ${data.skills.primary}`);
   for (const src of data.source ?? [])
@@ -88,13 +105,16 @@ for (const { file, data } of topics) {
   for (const ref of [data.summaryRef, ...(data.lessonRefs ?? []), ...(data.exerciseRefs ?? [])]) {
     if (ref && !itemById.has(ref)) fail('CM-03', `${file}: הפניה לפריט שאינו קיים: ${ref}`);
   }
-  if (data.review?.status === 'approved') {
+  if (isServable(data)) {
     for (const ref of [data.summaryRef, ...(data.lessonRefs ?? []), ...(data.exerciseRefs ?? [])]) {
       const target = ref && itemById.get(ref);
-      if (target && target.review?.status !== 'approved')
+      if (target && !isServable(target))
         fail('CM-17', `${file}: נושא מאושר מפנה לפריט לא מאושר: ${ref}`);
     }
   }
+  // CM-28: דף נושא חייב לפחות שני תרגילים.
+  if ((data.exerciseRefs ?? []).length < 2)
+    fail('CM-28', `${file}: לנושא פחות משני תרגילים (${(data.exerciseRefs ?? []).length})`);
   for (const skillId of data.measuredSkills ?? [])
     if (!skillIds.has(skillId)) fail('CM-03', `${file}: מיומנות נמדדת לא קיימת: ${skillId}`);
 }
@@ -136,10 +156,22 @@ for (const { file, data } of items.filter((i) => ['exercise', 'exam_item'].inclu
   for (const ref of data.revisionRefs ?? []) {
     const target = itemById.get(ref);
     if (!target) fail('QM-12', `${file}: קישור חזרה לפריט לא קיים: ${ref}`);
-    else if (target.review?.status !== 'approved')
+    else if (!isServable(target))
       fail('QM-12', `${file}: קישור חזרה לפריט לא מאושר: ${ref}`);
   }
   if (!data.modelAnswer) fail('QM-09', `${file}: חסרה תשובת מופת`);
+}
+
+/* ---- EX-01: מבחן נושא מוגבל ל-20 דקות ---- */
+for (const { file, data } of items.filter((i) => i.data.type === 'exam_blueprint')) {
+  if (typeof data.durationMinutes !== 'number' || data.durationMinutes > 20)
+    fail('EX-01', `${file}: משך המבחן ${data.durationMinutes} דק׳ חורג מ-20`);
+}
+
+/* ---- SRC-01: לכל מקור חייב להיות מצב רישיון ---- */
+for (const { file, data } of sources) {
+  if (data.imported && !data.licence?.status)
+    fail('SRC-01', `${file}: מקור מיובא ללא מצב רישיון`);
 }
 
 /* ---- rubrics: weights sum 100, criterion integrity, remediation resolves ---- */

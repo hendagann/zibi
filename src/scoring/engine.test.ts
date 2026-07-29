@@ -18,10 +18,13 @@ async function loadRubric(id: string): Promise<RubricDoc> {
 }
 
 async function loadExercises() {
-  const files = (await readdir(join(CONTENT, 'items'))).filter((f) => f.endsWith('.json'));
-  const items = await Promise.all(
-    files.map(async (f) => JSON.parse(await readFile(join(CONTENT, 'items', f), 'utf8'))),
-  );
+  const items = [];
+  for (const dir of ['exercises', 'exams']) {
+    const files = (await readdir(join(CONTENT, dir))).filter((f) => f.endsWith('.json'));
+    for (const f of files) {
+      items.push(JSON.parse(await readFile(join(CONTENT, dir, f), 'utf8')));
+    }
+  }
   return items.filter((i) => i.type === 'exercise' || i.type === 'exam_item');
 }
 

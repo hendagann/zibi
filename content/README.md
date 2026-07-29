@@ -1,30 +1,59 @@
 # content/
 
-Authored learning data. **Not code.**
+ספריית התוכן — נתונים כתובים, לא קוד. כל מה שהלומדת קוראת או עונה עליו נמצא
+כאן כ-JSON, נטען דרך `src/content/loader.ts`, ולעולם אינו כתוב ברכיבי ממשק
+(docs/05 §2).
 
-Everything the learner reads or answers lives here as JSON, loaded by
-`src/content/loader.ts` and passed into components as props. No component may
-contain learning content, and nothing here may contain UI logic — the boundary
-and its rationale are in [docs/05-content-model.md](../docs/05-content-model.md) §2.
-
-## Layout
+## מבנה
 
 ```
 content/
-  domains/    one file per domain      (docs/03 §7)
-  topics/     one file per topic       (docs/05 §9)
-  skills/     one file per skill       (docs/03 §7)
-  items/      summaries, lessons, guided examples, exercises, exam items
-  rubrics/    scoring rubrics          (docs/07 §15)
-  sources/    the source registry      (docs/14 §2)
+  domains/     תחומים                       (docs/03 §7)
+  topics/      נושאים                        (docs/05 §9)
+  skills/      מיומנויות ממפת המיומנויות     (docs/03 §7)
+  lessons/     דפי סיכום ושיעורים            (SUM, LE)
+  examples/    דוגמאות מודרכות               (GE)
+  exercises/   תרגילים — מאגר תרגול          (EX)
+  exams/       פריטי מבחן ומתווים — מאגר מבחן (XM, BP)
+  rubrics/     מחוונים                       (docs/07 §15)
+  sources/     רישום מקורות ורישוי            (docs/14 §2)
+  datasets/    נתוני תרגול להרצה (SQL בעתיד)
 ```
 
-## Status
+שם כל קובץ הוא המזהה של הישות שבו (`/` במזהה נושא הופך ל-`-`).
+מאגר התרגול ומאגר המבחן מופרדים פיזית — פריט לעולם אינו בשניהם (docs/05 §14).
 
-Empty. No content has been authored yet, so every surface in the application
-renders its empty state. That is the correct behaviour, not a gap to be filled
-with sample data — `CLAUDE.md` forbids mock data in production flows, and
-`docs/05` §7 serves only `approved` items.
+## צינור התוכן
 
-Directories are created as the first file in each is authored; the loader
-treats a missing directory as an empty collection.
+```
+חומר מחקרי → הערות מסודרות → טיוטה (draft / ai_generated)
+      → בדיקה מקצועית (approved, בשם מאשרת)
+      → בדיקת מבנה (הוולידטור עובר)
+      → פרסום (published)
+```
+
+| שלב | איך מבצעים |
+| --- | --- |
+| ייבוא טיוטות | `npm run content:import -- bundle.json` — צרור JSON אחד עם items/rubrics/topics/skills/sources. סטטוס נכנס תמיד כ-draft / ai_generated / needs_professional_review; אי אפשר לייבא תוכן מאושר. |
+| עריכה | מסך הניהול `/admin/content` — שמירה מעלה גרסה ומחזירה ל-needs_update |
+| אישור מקצועי | כפתור האישור, עם שם המאשרת — חובה (CM-30) |
+| בדיקת מבנה | `npm run check:content` — רץ גם בכל verify וגם כשער הפרסום |
+| פרסום | כפתור הפרסום במסך הניהול; נחסם אם הוולידטור נכשל |
+
+## סטטוסים
+
+`draft` · `ai_generated` · `needs_professional_review` · `needs_update` ·
+`approved` · `published` · `archived`
+
+**רק `approved` ו-`published` מוצגים ללומדים.** הסינון בטוען, לא ברכיבים.
+
+## בודק התקינות
+
+`npm run check:content` נכשל, בין השאר, על: מזהים כפולים · תרגיל בלי מחוון ·
+מחוון שמשקליו אינם 100 · נושא עם פחות משני תרגילים · הפניה לנושא שאינו קיים ·
+שאלה בלי מיומנות נמדדת · מבחן נושא מעל 20 דקות · שאלה בלי תשובת מופת ·
+מקור מיובא בלי מצב רישיון · תוכן מוגש בלי שם מאשרת · קישור חזרה שבור.
+
+לכל חוק יש בדיקה שמוכיחה שהוא באמת תופס (`scripts/validate-content.test.ts`),
+ותשובות המופת נבדקות בנפרד: כל תשובת מופת חייבת לקבל בדיוק 100 מול המחוון
+שלה (`src/scoring/engine.test.ts`).

@@ -15,12 +15,20 @@ export type TopicId = string;
 export type SkillId = string;
 export type ContentItemId = string;
 
+/**
+ * The content pipeline statuses. Order of travel:
+ * draft / ai_generated → needs_professional_review → approved → published
+ * needs_update re-enters after an edit; archived is the end state.
+ * Only approved and published content is ever served to a learner.
+ */
 export type ReviewStatus =
   | 'draft'
-  | 'in_review'
-  | 'approved'
+  | 'ai_generated'
+  | 'needs_professional_review'
   | 'needs_update'
-  | 'retired';
+  | 'approved'
+  | 'published'
+  | 'archived';
 
 export type Tier = 'foundation' | 'applied' | 'advanced';
 export type CognitiveLevel = 'K1' | 'K2' | 'K3' | 'K4';

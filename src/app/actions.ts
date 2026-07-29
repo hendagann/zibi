@@ -12,7 +12,7 @@ import {
   attemptsForItem,
   LOCAL_USER,
 } from '@/storage/attempts';
-import { approveItem, saveItemEdit } from '@/storage/contentWriter';
+import { approveItem, publishItem, saveItemEdit } from '@/storage/contentWriter';
 
 export interface SubmitResult {
   readonly ok: boolean;
@@ -90,6 +90,18 @@ export async function adminSaveItem(
   rawJson: string,
 ): Promise<{ ok: boolean; error?: string; newStatus?: string }> {
   const result = await saveItemEdit(itemId, rawJson);
+  if (result.ok) {
+    revalidatePath('/admin/content');
+    revalidatePath('/topics');
+    revalidatePath('/practice');
+  }
+  return result;
+}
+
+export async function adminPublishItem(
+  itemId: string,
+): Promise<{ ok: boolean; error?: string; newStatus?: string }> {
+  const result = await publishItem(itemId);
   if (result.ok) {
     revalidatePath('/admin/content');
     revalidatePath('/topics');

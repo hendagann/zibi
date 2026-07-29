@@ -8,13 +8,20 @@
   "dir": "rtl",
   "scope": "topic",
   "scopeRef": "DOC/defects",
-  "skillWeights": { "DOC.BUG": 70, "DOC.ADV": 30 },
+  "skillWeights": {
+    "DOC.BUG": 70,
+    "DOC.ADV": 30
+  },
   "itemCount": 2,
-  "durationMinutes": 25,
+  "durationMinutes": 20,
   "passMark": 70,
   "selectionRules": {
     "poolRef": "exam",
     "noRepeatWithinDays": 90
   },
-  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" }
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-29"
+  }
 }
