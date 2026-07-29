@@ -93,7 +93,9 @@ describe('the vertical slice', () => {
     const topics = await loader.getTopics();
     expect(topics.map((topic) => topic.id)).toContain('DOC/defects');
     const exercises = await loader.getPracticeExercises();
-    expect(exercises).toHaveLength(5);
+    // Five bug-report exercises plus five SQL exercises.
+    expect(exercises).toHaveLength(10);
+    expect(exercises.filter((e) => e.topic === 'TECH/data')).toHaveLength(5);
     const summary = await loader.getItem('DOC-defects.SUM.001');
     expect(summary?.type).toBe('summary');
   });
@@ -107,7 +109,7 @@ describe('the vertical slice', () => {
     expect(first.score_cap).toBe(60);
 
     const item = (await loader.getItem('DOC-defects.EX.001')) as import('@/content/exercise').ExerciseItem;
-    const second = await submit(mods, 'DOC-defects.EX.001', item.modelAnswer);
+    const second = await submit(mods, 'DOC-defects.EX.001', item.modelAnswer as import('@/content/blocks').DefectReportAnswer);
     expect(second.final_score).toBe(100);
     expect(second.attempt_number).toBe(2);
 

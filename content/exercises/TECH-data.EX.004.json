@@ -1,0 +1,51 @@
+{
+  "id": "TECH-data.EX.004",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQLV", "secondary": ["TECH.SQL"] },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "כל הלקוחות, כולל מי שלא הזמין — LEFT JOIN",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": ["TECH-data.GE.002", "TECH-data.LE.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "צוות השימור רוצה לאתר לקוחות רדומים, ולכן צריך דוח של כל הלקוחות עם מספר ההזמנות של כל אחד — כולל לקוחות שמעולם לא הזמינו, שאצלם המספר צריך להיות 0. זה בדיוק הדוח מהדוגמה המודרכת — עכשיו תורך לכתוב אותו." }
+  ],
+  "prompt": [
+    { "kind": "paragraph", "text": "כתבי שאילתה שמחזירה את שם הלקוח (name) ואת מספר ההזמנות שלו, עבור כל שמונת הלקוחות — כולל מי שלא הזמין מעולם (0). הסדר אינו חשוב." }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT customers.name, COUNT(orders.id) AS order_count FROM customers LEFT JOIN orders ON orders.customer_id = customers.id GROUP BY customers.id, customers.name",
+    "orderMatters": false,
+    "requiredTables": ["customers", "orders"],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-orderless",
+        "labelHe": "לקוח חדש בלי הזמנות — חייב להופיע עם 0 (מלכודת COUNT(*))",
+        "extraRows": { "customers": [{ "id": 40, "name": "אריק ששון", "city": "חולון", "joined_at": "2026-04-04" }] }
+      },
+      {
+        "id": "hf-multi",
+        "labelHe": "שתי הזמנות חדשות לאותו לקוח — הספירה חייבת לגדול נכון",
+        "extraRows": { "orders": [
+          { "id": 140, "customer_id": 4, "order_date": "2026-06-01", "status": "completed", "shipped_date": "2026-06-03" },
+          { "id": 141, "customer_id": 4, "order_date": "2026-06-10", "status": "pending", "shipped_date": null }
+        ] }
+      }
+    ]
+  },
+  "modelAnswer": { "sql": "SELECT customers.name, COUNT(orders.id) AS order_count FROM customers LEFT JOIN orders ON orders.customer_id = customers.id GROUP BY customers.id, customers.name" }
+}

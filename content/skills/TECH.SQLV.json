@@ -1,0 +1,12 @@
+{
+  "id": "TECH.SQLV",
+  "topic": "TECH/data",
+  "titleHe": "אימות עקביות נתונים",
+  "titleEn": "Data validation via SQL",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Confirms or refutes consistency between what an interface displays and what the database holds, and states which of the two is wrong.",
+  "prerequisites": ["TECH.SQL", "DOC.REQ"],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

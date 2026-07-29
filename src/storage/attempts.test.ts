@@ -48,7 +48,7 @@ describe('attempt storage', () => {
     const second = await import('./attempts');
     const stored = await second.attemptsForItem('local', 'DOC-defects.EX.001');
     expect(stored).toHaveLength(1);
-    expect(stored[0]?.answer.title).toBe('attempt 1');
+    expect((stored[0]?.answer as { title: string }).title).toBe('attempt 1');
     expect(stored[0]?.evaluation.final_score).toBe(10);
   });
 
@@ -61,8 +61,8 @@ describe('attempt storage', () => {
     expect(stored).toHaveLength(3);
     expect(stored.map((a) => a.attempt_number)).toEqual([1, 2, 3]);
     // The earlier answers are intact, not overwritten.
-    expect(stored[0]?.answer.title).toBe('attempt 1');
-    expect(stored[1]?.answer.title).toBe('attempt 2');
+    expect((stored[0]?.answer as { title: string }).title).toBe('attempt 1');
+    expect((stored[1]?.answer as { title: string }).title).toBe('attempt 2');
   });
 
   it('exposes no update or delete surface at all', async () => {

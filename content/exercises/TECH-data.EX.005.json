@@ -1,0 +1,51 @@
+{
+  "id": "TECH-data.EX.005",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQLV", "secondary": ["TECH.SQL"] },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "ערים עם רכישות — DISTINCT מול כפילויות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 540,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": ["TECH-data.SUM.001", "TECH-data.LE.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "מחלקת הלוגיסטיקה בוחנת פריסת מרכזי חלוקה ושואלת: באילו ערים יש לקוחות שביצעו הזמנה שהושלמה? כל עיר צריכה להופיע פעם אחת בדיוק — גם אם יש בה כמה לקוחות קונים או כמה הזמנות." }
+  ],
+  "prompt": [
+    { "kind": "paragraph", "text": "כתבי שאילתה שמחזירה את רשימת הערים (city) שבהן קיים לפחות לקוח אחד עם הזמנה בסטטוס completed. כל עיר פעם אחת. הסדר אינו חשוב." }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT DISTINCT customers.city FROM customers INNER JOIN orders ON orders.customer_id = customers.id WHERE orders.status = 'completed'",
+    "orderMatters": false,
+    "requiredTables": ["customers", "orders"],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-dup",
+        "labelHe": "הזמנה נוספת שהושלמה בעיר קיימת — הכפילות חייבת להישאר מכווצת",
+        "extraRows": { "orders": [{ "id": 150, "customer_id": 7, "order_date": "2026-06-25", "status": "completed", "shipped_date": "2026-06-27" }] }
+      },
+      {
+        "id": "hf-pending-city",
+        "labelHe": "עיר חדשה שבה רק הזמנה ממתינה — אסור שתופיע",
+        "extraRows": {
+          "customers": [{ "id": 50, "name": "שרון קדם", "city": "אשדוד", "joined_at": "2026-05-05" }],
+          "orders": [{ "id": 151, "customer_id": 50, "order_date": "2026-06-28", "status": "pending", "shipped_date": null }]
+        }
+      }
+    ]
+  },
+  "modelAnswer": { "sql": "SELECT DISTINCT customers.city FROM customers INNER JOIN orders ON orders.customer_id = customers.id WHERE orders.status = 'completed'" }
+}

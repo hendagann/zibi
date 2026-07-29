@@ -1,0 +1,35 @@
+{
+  "id": "TECH-data.GE.002",
+  "type": "guided_example",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQLV", "secondary": ["TECH.SQL"] },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "דוגמה מודרכת — למה INNER JOIN העלים לקוחות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "lesson": "TECH-data.LE.001",
+  "scenario": [
+    { "kind": "paragraph", "text": "הדוח במסך הניהול מציג 'מספר הזמנות לכל לקוח', ובו שישה לקוחות. אבל במסך הלקוחות רשומים שמונה. שני לקוחות נעלמו מהדוח — באג בממשק? נבדוק את זה כמו בודקות: נכתוב בעצמנו את השאילתה הנכונה ונשווה." }
+  ],
+  "steps": [
+    { "action": "מנסחים מה הדוח אמור להציג: כל לקוח, עם מספר ההזמנות שלו — כולל אפס.", "reasoning": "זו ההגדרה של התוצאה המצופה, לפני שנוגעים ב-SQL. 'כולל אפס' היא ההכרעה: לקוח בלי הזמנות הוא חלק מהתשובה." },
+    { "action": "בוחרים LEFT JOIN: ‏customers LEFT JOIN orders ON orders.customer_id = customers.id.", "reasoning": "INNER JOIN מחזיר רק לקוחות שיש להם התאמה בהזמנות — מי שלא הזמין מעולם פשוט לא יופיע. LEFT JOIN שומר את כל הלקוחות וממלא NULL כשאין הזמנה." },
+    { "action": "סופרים נכון: COUNT(orders.id) ולא COUNT(*).", "reasoning": "אצל לקוח בלי הזמנות, שורת ה-LEFT JOIN קיימת אבל עמודות ההזמנה בה הן NULL. ‏COUNT(orders.id) מדלג על NULL ומחזיר 0 — בדיוק מה שרצינו. COUNT(*) היה סופר את השורה עצמה ומחזיר 1 שגוי." },
+    { "action": "מריצים ומשווים: השאילתה שלנו מחזירה שמונה שורות; הדוח מציג שש.", "reasoning": "עכשיו יש ראיה: דנה וליאת — שהצטרפו ולא הזמינו — חסרות בדוח. הפער משוחזר, מדויק, וניתן לצירוף לדוח פגם: כנראה שהדוח בנוי על INNER JOIN." }
+  ],
+  "outcome": [
+    { "kind": "code", "lang": "sql", "text": "SELECT customers.name, COUNT(orders.id) AS order_count\nFROM customers\nLEFT JOIN orders ON orders.customer_id = customers.id\nGROUP BY customers.id, customers.name;" },
+    { "kind": "callout", "tone": "info", "text": "שימו לב מה עשה כאן ה-SQL: הוא הפך ויכוח (\"נראה לי שחסרים לקוחות\") לעובדה נבדקת עם תוצאה מצופה ותוצאה בפועל. זה בדיוק החיבור בין הנושא הזה לדיווח פגמים." }
+  ],
+  "commonMistakes": [
+    { "mistake": "COUNT(*) אחרי LEFT JOIN", "whyTempting": "עובד נכון ללקוחות עם הזמנות — הטעות מופיעה רק אצל מי שאין לו" },
+    { "mistake": "לשים את תנאי החיבור ב-WHERE במקום ב-ON", "whyTempting": "נראה שקול, אבל WHERE אחרי LEFT JOIN מסנן החוצה את שורות ה-NULL והופך אותו בפועל ל-INNER" }
+  ]
+}

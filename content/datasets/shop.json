@@ -1,0 +1,99 @@
+{
+  "id": "DS-SHOP",
+  "titleHe": "חנות מקוונת — לקוחות, מוצרים והזמנות",
+  "descriptionHe": "דאטהסט קבוע של חנות מקוונת קטנה. יש בו בכוונה לקוחות בלי הזמנות, הזמנה שבוטלה, משלוח שטרם יצא (NULL), ושמות ערים חוזרים — בדיוק המקרים שבודקים מבינים דרכם JOIN, קיבוץ ו-NULL.",
+  "schema": {
+    "tables": [
+      {
+        "name": "customers",
+        "he": "לקוחות",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "name", "type": "TEXT", "he": "שם" },
+          { "name": "city", "type": "TEXT", "he": "עיר" },
+          { "name": "joined_at", "type": "TEXT", "he": "תאריך הצטרפות" }
+        ]
+      },
+      {
+        "name": "products",
+        "he": "מוצרים",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "name", "type": "TEXT", "he": "שם מוצר" },
+          { "name": "category", "type": "TEXT", "he": "קטגוריה" },
+          { "name": "price", "type": "REAL", "he": "מחיר בש\"ח" }
+        ]
+      },
+      {
+        "name": "orders",
+        "he": "הזמנות",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "customer_id", "type": "INTEGER", "he": "מזהה לקוח" },
+          { "name": "order_date", "type": "TEXT", "he": "תאריך הזמנה" },
+          { "name": "status", "type": "TEXT", "he": "סטטוס (completed/pending/cancelled)" },
+          { "name": "shipped_date", "type": "TEXT", "he": "תאריך משלוח (NULL אם טרם נשלח)" }
+        ]
+      },
+      {
+        "name": "order_items",
+        "he": "פריטי הזמנה",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "order_id", "type": "INTEGER", "he": "מזהה הזמנה" },
+          { "name": "product_id", "type": "INTEGER", "he": "מזהה מוצר" },
+          { "name": "quantity", "type": "INTEGER", "he": "כמות" }
+        ]
+      }
+    ]
+  },
+  "rows": {
+    "customers": [
+      { "id": 1, "name": "נועה לוי", "city": "תל אביב", "joined_at": "2025-01-15" },
+      { "id": 2, "name": "אבי כהן", "city": "חיפה", "joined_at": "2025-02-03" },
+      { "id": 3, "name": "מאיה מזרחי", "city": "תל אביב", "joined_at": "2025-03-22" },
+      { "id": 4, "name": "יוסי פרץ", "city": "באר שבע", "joined_at": "2025-04-10" },
+      { "id": 5, "name": "רות שמעוני", "city": "חיפה", "joined_at": "2025-05-01" },
+      { "id": 6, "name": "דנה ברק", "city": "ירושלים", "joined_at": "2025-06-18" },
+      { "id": 7, "name": "עומר אשכנזי", "city": "תל אביב", "joined_at": "2025-07-07" },
+      { "id": 8, "name": "ליאת גולן", "city": "אילת", "joined_at": "2025-08-25" }
+    ],
+    "products": [
+      { "id": 1, "name": "מקלדת מכנית", "category": "ציוד היקפי", "price": 349.9 },
+      { "id": 2, "name": "עכבר אלחוטי", "category": "ציוד היקפי", "price": 129.9 },
+      { "id": 3, "name": "מסך 27 אינץ'", "category": "מסכים", "price": 1190.0 },
+      { "id": 4, "name": "מעמד למחשב נייד", "category": "אביזרים", "price": 89.9 },
+      { "id": 5, "name": "אוזניות עם ביטול רעשים", "category": "שמע", "price": 799.0 },
+      { "id": 6, "name": "כבל HDMI", "category": "אביזרים", "price": 39.9 },
+      { "id": 7, "name": "מצלמת רשת", "category": "ציוד היקפי", "price": 249.9 },
+      { "id": 8, "name": "רמקול שולחני", "category": "שמע", "price": 189.9 }
+    ],
+    "orders": [
+      { "id": 101, "customer_id": 1, "order_date": "2026-01-05", "status": "completed", "shipped_date": "2026-01-07" },
+      { "id": 102, "customer_id": 2, "order_date": "2026-01-12", "status": "completed", "shipped_date": "2026-01-14" },
+      { "id": 103, "customer_id": 1, "order_date": "2026-02-02", "status": "completed", "shipped_date": "2026-02-04" },
+      { "id": 104, "customer_id": 3, "order_date": "2026-02-20", "status": "cancelled", "shipped_date": null },
+      { "id": 105, "customer_id": 5, "order_date": "2026-03-03", "status": "completed", "shipped_date": "2026-03-06" },
+      { "id": 106, "customer_id": 2, "order_date": "2026-03-15", "status": "pending", "shipped_date": null },
+      { "id": 107, "customer_id": 7, "order_date": "2026-04-01", "status": "completed", "shipped_date": "2026-04-03" },
+      { "id": 108, "customer_id": 1, "order_date": "2026-04-22", "status": "pending", "shipped_date": null },
+      { "id": 109, "customer_id": 5, "order_date": "2026-05-10", "status": "completed", "shipped_date": "2026-05-12" },
+      { "id": 110, "customer_id": 3, "order_date": "2026-05-28", "status": "completed", "shipped_date": "2026-05-30" }
+    ],
+    "order_items": [
+      { "id": 1, "order_id": 101, "product_id": 1, "quantity": 1 },
+      { "id": 2, "order_id": 101, "product_id": 6, "quantity": 2 },
+      { "id": 3, "order_id": 102, "product_id": 3, "quantity": 1 },
+      { "id": 4, "order_id": 103, "product_id": 5, "quantity": 1 },
+      { "id": 5, "order_id": 103, "product_id": 2, "quantity": 1 },
+      { "id": 6, "order_id": 104, "product_id": 7, "quantity": 1 },
+      { "id": 7, "order_id": 105, "product_id": 4, "quantity": 3 },
+      { "id": 8, "order_id": 106, "product_id": 2, "quantity": 1 },
+      { "id": 9, "order_id": 107, "product_id": 8, "quantity": 2 },
+      { "id": 10, "order_id": 108, "product_id": 6, "quantity": 5 },
+      { "id": 11, "order_id": 109, "product_id": 1, "quantity": 1 },
+      { "id": 12, "order_id": 109, "product_id": 5, "quantity": 1 },
+      { "id": 13, "order_id": 110, "product_id": 2, "quantity": 2 }
+    ]
+  }
+}

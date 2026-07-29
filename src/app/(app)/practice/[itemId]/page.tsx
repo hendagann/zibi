@@ -7,8 +7,10 @@ import { Card } from '@/components/ui/Card';
 import { BlockRenderer } from '@/components/content/BlockRenderer';
 import { ExerciseForm } from '@/components/practice/ExerciseForm';
 import { FeedbackView } from '@/components/practice/FeedbackView';
-import { isExercise, type ExerciseItem } from '@/content/exercise';
-import { getItem } from '@/content/loader';
+import { SchemaView } from '@/components/practice/SchemaView';
+import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
+import { isExercise, isSqlAnswer, type ExerciseItem } from '@/content/exercise';
+import { getDataset, getItem } from '@/content/loader';
 import { attemptsForItem, LOCAL_USER } from '@/storage/attempts';
 import { t } from '@/i18n';
 
@@ -36,6 +38,10 @@ export default async function ExercisePage({ params }: PageProps) {
   const previous = attempts[attempts.length - 2];
   const topicId = exercise.topic ?? '';
 
+  const isSql = exercise.questionType === 'sql_query';
+  const dataset =
+    isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
+
   return (
     <>
       <PageHeader
@@ -50,6 +56,14 @@ export default async function ExercisePage({ params }: PageProps) {
         </Card>
       </Section>
 
+      {isSql && dataset ? (
+        <Section title={t.sqlModule.schemaLabel}>
+          <Card>
+            <SchemaView dataset={dataset} />
+          </Card>
+        </Section>
+      ) : null}
+
       {latest ? (
         <Section
           title={t.feedback.title}
@@ -63,13 +77,24 @@ export default async function ExercisePage({ params }: PageProps) {
         </Section>
       ) : null}
 
-      <Section title={latest ? t.report.revise : t.report.formTitle}>
+      <Section title={latest ? t.report.revise : isSql ? t.sqlModule.queryLabel : t.report.formTitle}>
         <Card>
-          <ExerciseForm
-            itemId={exercise.id}
-            initialAnswer={latest?.answer}
-            diagnosisOptions={exercise.diagnosisOptions}
-          />
+          {isSql ? (
+            <SqlExerciseForm
+              itemId={exercise.id}
+              initialSql={
+                latest && isSqlAnswer(latest.answer) ? latest.answer.sql : undefined
+              }
+            />
+          ) : (
+            <ExerciseForm
+              itemId={exercise.id}
+              initialAnswer={
+                latest && !isSqlAnswer(latest.answer) ? latest.answer : undefined
+              }
+              diagnosisOptions={exercise.diagnosisOptions}
+            />
+          )}
         </Card>
       </Section>
     </>

@@ -1,0 +1,35 @@
+{
+  "id": "TECH-data.GE.001",
+  "type": "guided_example",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQL" },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "דוגמה מודרכת — משאלה עסקית לשאילתה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 360,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "lesson": "TECH-data.LE.001",
+  "scenario": [
+    { "kind": "paragraph", "text": "מנהלת המוצר שואלת: \"אילו מוצרים מעל 200 ש\"ח יש לנו, מהיקר לזול?\" נתרגם את השאלה לשאילתה, החלטה-החלטה." }
+  ],
+  "steps": [
+    { "action": "מזהים את הטבלה: המידע על מוצרים ומחירים נמצא ב-products בלבד.", "reasoning": "שאלה על ישות אחת = טבלה אחת. אין צורך ב-JOIN כשכל הנתונים במקום אחד — JOIN מיותר הוא מקור קלאסי לכפילויות." },
+    { "action": "בוחרים עמודות: SELECT name, price.", "reasoning": "המנהלת שאלה 'אילו מוצרים' ו'כמה' — שם ומחיר. לא SELECT *: מזהה פנימי וקטגוריה אינם חלק מהתשובה לשאלה ששאלה." },
+    { "action": "מסננים: WHERE price > 200.", "reasoning": "'מעל 200' פירושו שמוצר שעולה בדיוק 200 אינו נכלל — לכן > ולא >=. זו בדיוק שאלת ערך הגבול מתכן בדיקות, רק בכיוון השני." },
+    { "action": "ממיינים: ORDER BY price DESC.", "reasoning": "'מהיקר לזול' היא דרישת סדר מפורשת. בלעדיה בסיס הנתונים רשאי להחזיר כל סדר — והתשובה לא תענה על מה שנשאל." }
+  ],
+  "outcome": [
+    { "kind": "code", "lang": "sql", "text": "SELECT name, price\nFROM products\nWHERE price > 200\nORDER BY price DESC;" },
+    { "kind": "paragraph", "text": "על הדאטהסט של החנות זה מחזיר ארבע שורות: המסך, האוזניות, המקלדת המכנית ומצלמת הרשת — בסדר הזה." }
+  ],
+  "commonMistakes": [
+    { "mistake": "price >= 200 במקום >", "whyTempting": "'מעל' ו'מ-200 ומעלה' נשמעים דומה — אבל שורת הגבול שונה" },
+    { "mistake": "להשמיט את ORDER BY כי 'זה יצא מסודר'", "whyTempting": "בהרצה על נתונים קטנים הסדר נראה יציב במקרה" }
+  ]
+}

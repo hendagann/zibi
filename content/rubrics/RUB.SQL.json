@@ -1,0 +1,133 @@
+{
+  "rubric_id": "RUB.SQL",
+  "version": 1,
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": ["sql_query"],
+  "maxScore": 100,
+  "created_at": "2026-07-29",
+  "approved_at": "2026-07-29",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-29",
+  "change_reason": "השלמת רכיבי זיהוי למחוון docs/07 §8.6 — כל זיהוי מבוסס על הרצה בפועל והשוואת תוצאות, לא על טקסט השאילתה",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "הבנת המשימה",
+      "description": "השאילתה פונה לנתונים הנכונים ומתייחסת למה שנשאל.",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": ["TECH.SQL"],
+      "full_examples": ["שאילתה שרצה ופונה לכל הטבלאות שהמשימה דורשת"],
+      "partial_examples": ["פונה לטבלה הנכונה אבל לא רצה בגלל שגיאת תחביר"],
+      "missing_examples": ["שאילתה על טבלה שאינה קשורה למשימה"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c1.k1", "label": "פנייה לטבלאות הנדרשות", "class": "must", "weight": 2, "detection": { "kind": "references_required_tables" } },
+        { "component_id": "c1.k2", "label": "השאילתה רצה בהצלחה", "class": "should", "weight": 1, "detection": { "kind": "query_executes" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-select" }
+    },
+    {
+      "criterion_id": "c2",
+      "name": "בחירת טבלאות ושדות",
+      "description": "התוצאה מחזירה בדיוק את העמודות שנדרשו — לא פחות ולא SELECT * גורף.",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": ["TECH.SQL"],
+      "full_examples": ["SELECT name, price — בדיוק העמודות שנשאלו"],
+      "partial_examples": ["SELECT * כשנדרשו שתי עמודות"],
+      "missing_examples": ["עמודות שאינן קשורות לשאלה"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c2.k1", "label": "מספר העמודות תואם את הנדרש", "class": "must", "weight": 2, "detection": { "kind": "column_count_match" } },
+        { "component_id": "c2.k2", "label": "עמודות מפורשות ולא SELECT *", "class": "should", "weight": 1, "detection": { "kind": "no_select_star" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-select" }
+    },
+    {
+      "criterion_id": "c3",
+      "name": "חיבור בין טבלאות",
+      "description": "הטבלאות מחוברות על המפתח הנכון וסוג ה-JOIN מתאים לשאלה.",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": ["TECH.SQL"],
+      "full_examples": ["JOIN על customer_id עם התוצאה הנכונה, כולל לקוחות בלי הזמנות כשנדרש LEFT JOIN"],
+      "partial_examples": ["INNER JOIN במקום LEFT JOIN — נעלמים הלקוחות בלי הזמנות"],
+      "missing_examples": ["מכפלה קרטזית ללא תנאי חיבור"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c3.k1", "label": "כל טבלאות החיבור נמצאות בשאילתה", "class": "must", "weight": 2, "detection": { "kind": "references_required_tables" } },
+        { "component_id": "c3.k2", "label": "מספר השורות תואם — החיבור לא מכפיל ולא מאבד", "class": "must", "weight": 2, "detection": { "kind": "visible_row_count_match" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-join" }
+    },
+    {
+      "criterion_id": "c4",
+      "name": "תנאי סינון",
+      "description": "ה-WHERE/HAVING מסננים בדיוק את מה שנשאל — לא יותר ולא פחות.",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": ["TECH.SQL"],
+      "full_examples": ["מספר השורות תואם את הצפוי גם בנתונים הגלויים וגם במוסתרים"],
+      "partial_examples": ["תנאי גבול שגוי — >= במקום > משנה את מספר השורות"],
+      "missing_examples": ["ללא סינון כשנדרש"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c4.k1", "label": "מספר השורות בתוצאה נכון", "class": "must", "weight": 2, "detection": { "kind": "visible_row_count_match" } },
+        { "component_id": "c4.k2", "label": "השאילתה רצה", "class": "should", "weight": 1, "detection": { "kind": "query_executes" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-where" }
+    },
+    {
+      "criterion_id": "c5",
+      "name": "נכונות התוצאה",
+      "description": "התוצאה זהה לתוצאת הפתרון — ערכים, שורות, וסדר כשנדרש. מושווית תוצאה, לא טקסט.",
+      "weight": 25,
+      "max_points": 25,
+      "skill_ids": ["TECH.SQLV"],
+      "full_examples": ["תוצאה זהה על הנתונים הגלויים ועל כל המקרים המוסתרים"],
+      "partial_examples": ["נכון על הנתונים הגלויים, נכשל על מקרה מוסתר — רמה 2 לכל היותר"],
+      "missing_examples": ["תוצאה שגויה על הנתונים הגלויים — רמה 0"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c5.k1", "label": "התוצאה תואמת על הנתונים הגלויים", "class": "must", "weight": 2, "detection": { "kind": "visible_match" } },
+        { "component_id": "c5.k2", "label": "סדר התוצאות נכון כאשר נדרש", "class": "must", "weight": 1, "detection": { "kind": "order_match" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-order" }
+    },
+    {
+      "criterion_id": "c6",
+      "name": "טיפול במקרי קצה",
+      "description": "כפילויות, NULL וגבולות — נבדקים במקרי בדיקה מוסתרים שהלומדת אינה רואה.",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": ["TECH.SQLV"],
+      "full_examples": ["כל המקרים המוסתרים עוברים — כולל שורות חדשות עם NULL וכפילויות"],
+      "partial_examples": ["נופל על מקרה מוסתר של כפילויות — חסר DISTINCT"],
+      "missing_examples": ["השאילתה נכונה רק במקרה על הנתונים שראתה"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c6.k1", "label": "כל מקרי הבדיקה המוסתרים עוברים", "class": "must", "weight": 2, "detection": { "kind": "hidden_match_all" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-null" }
+    },
+    {
+      "criterion_id": "c7",
+      "name": "בהירות השאילתה",
+      "description": "משפט יחיד, קריא ובאורך סביר.",
+      "weight": 5,
+      "max_points": 5,
+      "skill_ids": ["TECH.SQL"],
+      "full_examples": ["שאילתה אחת ממוקדת"],
+      "partial_examples": ["שאילתה ארוכה ומפותלת שעדיין נכונה"],
+      "missing_examples": ["ניסיון להריץ כמה משפטים"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c7.k1", "label": "משפט קריאה יחיד ונקי", "class": "must", "weight": 1, "detection": { "kind": "single_clean_statement" } },
+        { "component_id": "c7.k2", "label": "אורך סביר", "class": "should", "weight": 1, "detection": { "kind": "query_length_sane" } }
+      ],
+      "remediation": { "ref": "TECH-data.LE.001", "anchor": "sec-select" }
+    }
+  ]
+}

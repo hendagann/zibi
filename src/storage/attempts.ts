@@ -1,6 +1,7 @@
 import { appendFile, mkdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { DefectReportAnswer } from '@/content/blocks';
+import type { SqlAnswer } from '@/content/exercise';
 import type { EvaluationResult } from '@/scoring/types';
 
 /**
@@ -31,7 +32,7 @@ export interface AttemptRecord {
   readonly attempt_number: number;
   readonly submitted_at: string;
   /** Raw as submitted, never normalised — re-scoring needs the original. */
-  readonly answer: DefectReportAnswer;
+  readonly answer: DefectReportAnswer | SqlAnswer;
   readonly evaluation: EvaluationResult;
 }
 

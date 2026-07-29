@@ -1,0 +1,48 @@
+{
+  "id": "TECH-data.EX.001",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQL" },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "מוצרים במחיר נגיש — SELECT, WHERE, ORDER BY",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": ["TECH-data.SUM.001", "TECH-data.GE.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "צוות השיווק מכין מבצע למוצרים נגישים ומבקש: כל המוצרים שמחירם נמוך מ-200 ש\"ח, מהזול ליקר. בדוח שיוצג להם צריכים להופיע שם המוצר והמחיר בלבד." }
+  ],
+  "prompt": [
+    { "kind": "paragraph", "text": "כתבי שאילתה שמחזירה את שם המוצר (name) ואת המחיר (price) לכל מוצר שמחירו נמוך מ-200, ממוין ממחיר נמוך לגבוה." }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT name, price FROM products WHERE price < 200 ORDER BY price ASC",
+    "orderMatters": true,
+    "requiredTables": ["products"],
+    "notApplicableCriteria": ["c3"],
+    "hiddenFixtures": [
+      {
+        "id": "hf-boundary",
+        "labelHe": "מוצר שמחירו בדיוק 200 — אסור שייכלל",
+        "extraRows": { "products": [{ "id": 90, "name": "כיסוי למקלדת", "category": "אביזרים", "price": 200.0 }] }
+      },
+      {
+        "id": "hf-cheapest",
+        "labelHe": "מוצר זול חדש — חייב להופיע ראשון",
+        "extraRows": { "products": [{ "id": 91, "name": "מדבקות למקשים", "category": "אביזרים", "price": 12.5 }] }
+      }
+    ]
+  },
+  "modelAnswer": { "sql": "SELECT name, price FROM products WHERE price < 200 ORDER BY price ASC" }
+}

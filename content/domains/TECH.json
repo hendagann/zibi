@@ -1,0 +1,8 @@
+{
+  "id": "TECH",
+  "nameHe": "הקשר טכני",
+  "nameEn": "Technical context",
+  "description": "הכלים הטכניים שבודקת ידנית משתמשת בהם כדי לאמת נתונים ולאבחן תקלות: SQL, API, כלי דפדפן ולוגים.",
+  "order": 7,
+  "status": "active"
+}

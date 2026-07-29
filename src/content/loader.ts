@@ -167,3 +167,21 @@ export async function getAllItemsForAdmin(): Promise<ContentItem[]> {
 export async function getAllTopicsForAdmin(): Promise<Topic[]> {
   return readCollection<Topic>('topics');
 }
+
+/** Educational SQL datasets, by id (content/datasets/). */
+export async function getDataset(
+  datasetId: string,
+): Promise<import('@/sql/executor').SqlDataset & { id: string; titleHe: string; descriptionHe: string } | null> {
+  const dir = join(CONTENT_ROOT, 'datasets');
+  let entries: string[];
+  try {
+    entries = await readdir(dir);
+  } catch {
+    return null;
+  }
+  for (const file of entries.filter((f) => f.endsWith('.json'))) {
+    const parsed = JSON.parse(await readFile(join(dir, file), 'utf8'));
+    if (parsed.id === datasetId) return parsed;
+  }
+  return null;
+}

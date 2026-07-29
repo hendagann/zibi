@@ -4,9 +4,11 @@ import { randomUUID } from 'node:crypto';
 import { revalidatePath } from 'next/cache';
 import type { DefectReportAnswer } from '@/content/blocks';
 import { isExercise } from '@/content/exercise';
-import { getActiveRubric, getItem } from '@/content/loader';
+import { getActiveRubric, getDataset, getItem } from '@/content/loader';
 import { evaluate } from '@/scoring/engine';
+import { evaluateSql } from '@/scoring/sqlEngine';
 import type { EvaluationResult } from '@/scoring/types';
+import { executeSql } from '@/sql/executor';
 import {
   appendAttempt,
   attemptsForItem,
@@ -77,6 +79,92 @@ export async function submitAnswer(
     attempt_number: previous.length + 1,
     submitted_at: submittedAt,
     answer,
+    evaluation,
+  });
+
+  revalidatePath('/practice');
+  revalidatePath('/progress');
+  return { ok: true, evaluation };
+}
+
+export interface SqlRunView {
+  readonly ok: boolean;
+  readonly columns: readonly string[];
+  readonly rows: readonly (readonly unknown[])[];
+  readonly truncated: boolean;
+  readonly errorHe: string | null;
+}
+
+/**
+ * Try-out execution: runs the learner's query on the VISIBLE dataset only
+ * and returns the result. Nothing is scored and nothing is stored — this is
+ * the "הרצת השאילתה" step of the exercise loop. Hidden fixtures never run
+ * here; they exist only inside evaluation.
+ */
+export async function runSqlQuery(itemId: string, sql: string): Promise<SqlRunView> {
+  const item = await getItem(itemId);
+  if (!item || !isExercise(item) || item.questionType !== 'sql_query' || !item.sqlSpec) {
+    return { ok: false, columns: [], rows: [], truncated: false, errorHe: 'התרגיל לא נמצא' };
+  }
+  const dataset = await getDataset(item.sqlSpec.datasetRef);
+  if (!dataset) {
+    return { ok: false, columns: [], rows: [], truncated: false, errorHe: 'הדאטהסט לא נמצא' };
+  }
+  const result = await executeSql(sql, dataset);
+  return {
+    ok: result.ok,
+    columns: result.columns,
+    rows: result.rows,
+    truncated: result.truncated,
+    errorHe: result.errorHe,
+  };
+}
+
+/** Submit a SQL answer: evaluate against the rubric (visible + hidden), store, return. */
+export async function submitSqlAnswer(
+  itemId: string,
+  sql: string,
+): Promise<SubmitResult> {
+  const item = await getItem(itemId);
+  if (!item || !isExercise(item) || item.questionType !== 'sql_query' || !item.sqlSpec) {
+    return { ok: false, error: 'exercise-not-found' };
+  }
+  if (item.pool !== 'practice') return { ok: false, error: 'not-practicable' };
+
+  const [rubric, dataset] = await Promise.all([
+    getActiveRubric(item.rubricRef),
+    getDataset(item.sqlSpec.datasetRef),
+  ]);
+  if (!dataset) return { ok: false, error: 'dataset-not-found' };
+
+  const previous = await attemptsForItem(LOCAL_USER, itemId);
+  const attemptId = randomUUID();
+  const submittedAt = new Date().toISOString();
+
+  const evaluation = await evaluateSql({
+    sql,
+    spec: item.sqlSpec,
+    rubric: rubric ?? {
+      rubric_id: item.rubricRef, version: 0, kind: 'criteria', status: 'draft',
+      appliesTo: [], maxScore: 100, created_at: '', criteria: [],
+    },
+    dataset,
+    questionId: item.id,
+    itemVersion: item.version,
+    attemptId,
+    attemptNumber: previous.length + 1,
+    userId: LOCAL_USER,
+    submittedAt,
+  });
+
+  await appendAttempt({
+    attempt_id: attemptId,
+    user_id: LOCAL_USER,
+    item_id: item.id,
+    item_version: item.version,
+    attempt_number: previous.length + 1,
+    submitted_at: submittedAt,
+    answer: { sql },
     evaluation,
   });
 

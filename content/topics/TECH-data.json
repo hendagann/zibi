@@ -1,0 +1,22 @@
+{
+  "id": "TECH/data",
+  "nameHe": "SQL לבודקות — אימות נתונים",
+  "nameEn": "SQL for testers",
+  "domain": "TECH",
+  "description": "כשהממשק מציג מספר, הדרך היחידה לדעת אם הוא נכון היא לשאול את בסיס הנתונים בעצמך. בנושא הזה כותבים שאילתות אמיתיות על דאטהסט קבוע, מריצים אותן, והמערכת משווה את התוצאה — לא את הניסוח.",
+  "learningObjectives": [
+    "לשלוף נתונים עם SELECT, לסנן עם WHERE ולמיין עם ORDER BY",
+    "לסכם עם פונקציות צבירה, GROUP BY ו-HAVING",
+    "לחבר טבלאות עם INNER JOIN ו-LEFT JOIN ולדעת מתי כל אחד נכון",
+    "לזהות מלכודות של NULL וכפילויות לפני שהן מטות מסקנה"
+  ],
+  "prerequisites": [],
+  "difficulty": 2,
+  "estimatedMinutes": 120,
+  "measuredSkills": ["TECH.SQL", "TECH.SQLV"],
+  "summaryRef": "TECH-data.SUM.001",
+  "lessonRefs": ["TECH-data.LE.001"],
+  "exerciseRefs": ["TECH-data.EX.001", "TECH-data.EX.002", "TECH-data.EX.003", "TECH-data.EX.004", "TECH-data.EX.005"],
+  "topicExamRef": null,
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" }
+}

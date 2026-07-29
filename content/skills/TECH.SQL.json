@@ -1,0 +1,12 @@
+{
+  "id": "TECH.SQL",
+  "topic": "TECH/data",
+  "titleHe": "שאילתות לאיתור נתונים",
+  "titleEn": "SQL querying",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Writes a query returning the data needed to answer a stated question, using filtering, grouping and joins across related tables.",
+  "prerequisites": [],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

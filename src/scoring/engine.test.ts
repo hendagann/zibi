@@ -25,7 +25,11 @@ async function loadExercises() {
       items.push(JSON.parse(await readFile(join(CONTENT, dir, f), 'utf8')));
     }
   }
-  return items.filter((i) => i.type === 'exercise' || i.type === 'exam_item');
+  return items.filter(
+    (i) =>
+      (i.type === 'exercise' || i.type === 'exam_item') &&
+      i.questionType !== 'sql_query',
+  );
 }
 
 function input(

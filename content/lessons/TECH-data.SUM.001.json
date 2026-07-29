@@ -1,0 +1,34 @@
+{
+  "id": "TECH-data.SUM.001",
+  "type": "summary",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQL", "secondary": ["TECH.SQLV"] },
+  "title": "דף סיכום — SQL לבודקות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original", "note": "SQL אינו פרק רשמי בסילבוס; הצורך המעשי מתועד ב-docs/14" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "keyPoints": [
+    "שאילתה נשפטת לפי התוצאה שהיא מחזירה — יש הרבה ניסוחים נכונים לאותה שאלה",
+    "INNER JOIN מחזיר רק התאמות; LEFT JOIN שומר את כל הצד השמאלי — לקוח בלי הזמנות נעלם ב-INNER",
+    "NULL אינו אפס ואינו מחרוזת ריקה: משווים אליו רק עם IS NULL / IS NOT NULL",
+    "WHERE מסנן שורות לפני קיבוץ; HAVING מסנן קבוצות אחריו"
+  ],
+  "body": [
+    { "kind": "paragraph", "bid": "sum-why", "text": "בודקת שיודעת SQL לא צריכה לחכות שמפתח יבדוק בשבילה אם המספר במסך נכון. היא שולפת את האמת מבסיס הנתונים, משווה, וקובעת מי משני הצדדים שגוי. זו מיומנות האימות — והיא מתחילה בלכתוב שאילתה שמחזירה בדיוק את מה ששאלת." },
+    { "kind": "table", "bid": "sum-clauses", "headers": ["פסוקית", "מה היא עושה", "מלכודת נפוצה"], "rows": [
+      ["SELECT", "אילו עמודות יחזרו", "SELECT * כשנדרשו עמודות מסוימות"],
+      ["WHERE", "אילו שורות ייכנסו", "גבול שגוי: > במקום >="],
+      ["ORDER BY", "באיזה סדר", "להניח סדר בלי לבקש אותו"],
+      ["GROUP BY", "קיבוץ שורות לסיכום", "עמודה בתוצאה שאינה בקיבוץ"],
+      ["HAVING", "סינון קבוצות אחרי קיבוץ", "בלבול עם WHERE"],
+      ["JOIN", "חיבור טבלאות על מפתח", "INNER כשצריך LEFT — שורות נעלמות"]
+    ] },
+    { "kind": "callout", "tone": "pitfall", "bid": "sum-null", "text": "NULL הוא ההיעדר של ערך. shipped_date = NULL לעולם לא יחזיר שורות — גם כשיש הזמנות שלא נשלחו. כותבים shipped_date IS NULL. וב-COUNT: ‏COUNT(*) סופר שורות, COUNT(עמודה) מדלג על NULL." },
+    { "kind": "callout", "tone": "info", "bid": "sum-verify", "text": "הרגל של בודקת: אחרי שכתבת שאילתה, שאלי מה יקרה אם יתווספו מחר נתונים חדשים — לקוח בלי הזמנות, מוצר בקטגוריה חדשה, כפילות בשם. שאילתה נכונה נשארת נכונה גם אז. המערכת כאן בודקת בדיוק את זה עם מקרי בדיקה מוסתרים." }
+  ]
+}

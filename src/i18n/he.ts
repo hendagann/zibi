@@ -196,6 +196,25 @@ export const he = {
     submitError: 'ההגשה נכשלה. נסי שוב.',
   },
 
+  sqlModule: {
+    schemaLabel: 'מבנה הטבלאות',
+    sampleDataLabel: 'נתונים לדוגמה',
+    moreRows: 'שורות נוספות…',
+    columnLabel: 'עמודה',
+    typeLabel: 'סוג',
+    queryLabel: 'השאילתה שלך',
+    queryPlaceholder: 'SELECT ...',
+    run: 'הרצת השאילתה',
+    running: 'מריץ…',
+    submitForGrade: 'הגשה להערכה',
+    resultLabel: 'תוצאת ההרצה',
+    emptyResult: 'השאילתה רצה והחזירה 0 שורות.',
+    truncatedNote: 'מוצגות 200 השורות הראשונות בלבד.',
+    rowsCount: 'שורות',
+    runFirstHint: 'אפשר להריץ כמה פעמים שרוצים לפני ההגשה — ההרצה אינה נשמרת ואינה משפיעה על הציון.',
+    hiddenNote: 'ההערכה בודקת את השאילתה גם על נתונים מוסתרים שאינם מוצגים כאן.',
+  },
+
   feedback: {
     title: 'משוב',
     scoreLabel: 'ציון',
