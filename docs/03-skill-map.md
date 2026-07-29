@@ -67,7 +67,9 @@ in [05](05-content-model.md) and [06](06-question-model.md) still resolves.
 Rules:
 
 - Skill IDs are **stable forever** — never renumbered, never reused after retirement.
-- Pattern `^[A-Z]{2,4}\.[A-Z0-9]{2,8}$`; topics `^[A-Z]{2,4}/[a-z-]{3,20}$`.
+- Pattern `^[A-Z]{2,4}\.[A-Z0-9]{2,8}$`; topics `^[A-Z]{2,4}/[a-z-]{2,24}$`.
+  The slug lower bound is 2, not 3, because `TECH/ai` is a legitimate topic — an earlier
+  bound of 3 excluded a topic this map already contains.
 - Retiring a skill sets `status: retired`; it keeps its ID and stops being scheduled.
 - Splitting a skill creates two new IDs and retires the old one. Never silently redefine —
   historical attempt records would otherwise re-attribute evidence to a skill the learner
