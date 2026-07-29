@@ -1,6 +1,7 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { RubricDoc } from '@/scoring/types';
+import type { ExamBlueprint } from '@/exam/types';
 import type {
   ContentItem,
   ContentItemId,
@@ -137,6 +138,16 @@ export async function getPracticeExercises(): Promise<ContentItem[]> {
 export async function getExamItems(): Promise<ContentItem[]> {
   const items = await getItems();
   return items.filter((item) => item.type === 'exam_item' && item.pool === 'exam');
+}
+
+/**
+ * Exam blueprints (docs/10 §2). Blueprints carry no `status` field — they are
+ * plans, not items — so they need their own accessor rather than coming through
+ * `getItems()`. Only reviewed blueprints are served, as with any content.
+ */
+export async function getBlueprints(): Promise<ExamBlueprint[]> {
+  const all = await readCollection<ExamBlueprint & { review?: { status?: string } }>('exams');
+  return all.filter((b) => b.type === 'exam_blueprint').filter(isServable);
 }
 
 export async function getItem(id: ContentItemId): Promise<ContentItem | null> {

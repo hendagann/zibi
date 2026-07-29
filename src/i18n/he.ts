@@ -129,6 +129,39 @@ export const he = {
     start: 'התחלת מבחן',
   },
 
+  /** Exam plans and refusals — docs/10. */
+  examPlan: {
+    planLabel: 'תכנית המבחן',
+    minutesLabel: 'דקות',
+    totalTimeLabel: 'זמן כולל',
+    passMarkLabel: 'ציון עובר',
+    openQuestionsLabel: 'שאלות פתוחות',
+    judgementBadge: 'שיקול דעת',
+    runnable: 'אפשר להתחיל',
+    notRunnable: 'לא ניתן להרכיב את המבחן',
+    notRunnableHint:
+      'מבחן לא נבנה חלקית — עדיף להגיד מה חסר מלהגיש מבחן שאינו לפי התכנית. זה מה שחסר:',
+    typeLabel: 'סוג מבחן',
+    typeTopic: 'מבחן לפי נושא',
+    typeRandom: 'מבחן אקראי',
+    typeWeakness: 'מבחן ממוקד חולשות',
+    typeSenior: 'מבחן Senior',
+    typeReadiness: 'מבחן מוכנות סופי',
+    refusal: {
+      noItemForFamily: (family: string) => `אין פריט מבחן מהסוג ${family}`,
+      allCandidatesSeen: (found: number) =>
+        `כל ${found} הפריטים מהסוג הזה נפתרו כבר — מבחן לא חוזר על שאלה שתורגלה`,
+      segmentOverBudget: (budget: number, shortest: number) =>
+        `הפריט הקצר ביותר לוקח ${Math.round(shortest / 60)} דק׳ אך למקטע יש ${Math.round(budget / 60)} דק׳`,
+      overTotalBudget: (total: number, budget: number) =>
+        `סכום הזמנים ${Math.round(total / 60)} דק׳ חורג ממשך המבחן ${Math.round(budget / 60)} דק׳`,
+      tooFewOpenQuestions: (required: number, found: number) =>
+        `נדרשות ${required} שאלות פתוחות, נמצאו ${found}`,
+      noJudgementItem: 'אין שאלה ברמת שיקול דעת (מיומנות מתקדמת / K4)',
+      blueprintInvalid: (rule: string) => `המתווה אינו תקין (${rule})`,
+    },
+  },
+
   progress: {
     title: 'התקדמות',
     subtitle: 'יכולת שהוכחה, לא עמודים שנקראו',

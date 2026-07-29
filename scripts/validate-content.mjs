@@ -162,10 +162,47 @@ for (const { file, data } of items.filter((i) => ['exercise', 'exam_item'].inclu
   if (!data.modelAnswer) fail('QM-09', `${file}: חסרה תשובת מופת`);
 }
 
-/* ---- EX-01: מבחן נושא מוגבל ל-20 דקות ---- */
+/* ---- EX-01..EX-07: מתווה מבחן — docs/10 §9 ---- */
 for (const { file, data } of items.filter((i) => i.data.type === 'exam_blueprint')) {
   if (typeof data.durationMinutes !== 'number' || data.durationMinutes > 20)
     fail('EX-01', `${file}: משך המבחן ${data.durationMinutes} דק׳ חורג מ-20`);
+
+  const segments = data.segments;
+  if (!Array.isArray(segments) || segments.length === 0) {
+    fail('EX-02', `${file}: למתווה אין מקטעים`);
+    continue;
+  }
+  if (data.itemCount !== segments.length)
+    fail('EX-02', `${file}: itemCount=${data.itemCount} אינו מספר המקטעים (${segments.length})`);
+
+  const segmentMinutes = segments.reduce((s, seg) => s + (seg.minutes ?? 0), 0);
+  if (segmentMinutes !== data.durationMinutes)
+    fail(
+      'EX-03',
+      `${file}: סכום המקטעים ${segmentMinutes} דק׳ אינו משך המבחן ${data.durationMinutes} דק׳`,
+    );
+
+  const ids = segments.map((seg) => seg.segmentId);
+  if (new Set(ids).size !== ids.length) fail('EX-04', `${file}: מזהה מקטע כפול`);
+  for (const seg of segments) {
+    if (!seg.questionFamily) fail('EX-02', `${file}/${seg.segmentId}: חסרה משפחת שאלה`);
+    if (typeof seg.open !== 'boolean' || typeof seg.judgement !== 'boolean')
+      fail('EX-02', `${file}/${seg.segmentId}: חסר open או judgement`);
+  }
+
+  const rules = data.selectionRules ?? {};
+  if (rules.poolRef !== 'exam')
+    fail('EX-05', `${file}: מתווה חייב לשאוב מ-pool exam, לא ${rules.poolRef}`);
+
+  if (data.skillWeights) {
+    const sum = Object.values(data.skillWeights).reduce((s, w) => s + w, 0);
+    if (sum !== 100) fail('EX-06', `${file}: skillWeights מסתכמים ל-${sum}`);
+    for (const skillId of Object.keys(data.skillWeights))
+      if (!skillIds.has(skillId)) fail('EX-06', `${file}: מיומנות לא קיימת: ${skillId}`);
+  }
+
+  if (rules.requireJudgementItem && !segments.some((seg) => seg.judgement))
+    fail('EX-07', `${file}: המתווה דורש שאלת שיקול דעת אך אין מקטע judgement`);
 }
 
 /* ---- SRC-01: לכל מקור חייב להיות מצב רישיון ---- */

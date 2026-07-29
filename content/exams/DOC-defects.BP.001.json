@@ -2,6 +2,7 @@
   "id": "DOC-defects.BP.001",
   "type": "exam_blueprint",
   "schemaVersion": 1,
+  "examType": "topic",
   "topic": "DOC/defects",
   "title": "מבחן נושא — דיווח פגמים מקצועי",
   "lang": "he",
@@ -15,9 +16,38 @@
   "itemCount": 2,
   "durationMinutes": 20,
   "passMark": 70,
+  "segments": [
+    {
+      "segmentId": "report-1",
+      "titleHe": "דיווח פגם ראשון",
+      "minutes": 10,
+      "questionFamily": "author_defect_report",
+      "open": true,
+      "judgement": false,
+      "skillHint": "DOC.BUG"
+    },
+    {
+      "segmentId": "report-2",
+      "titleHe": "דיווח פגם והצדקת חומרה",
+      "minutes": 10,
+      "questionFamily": "author_defect_report",
+      "open": true,
+      "judgement": false,
+      "skillHint": "DOC.ADV"
+    }
+  ],
   "selectionRules": {
     "poolRef": "exam",
-    "noRepeatWithinDays": 90
+    "noRepeatWithinDays": 90,
+    "excludeAttempted": true,
+    "minOpenQuestions": 2,
+    "requireJudgementItem": false,
+    "maxItemsPerSkill": 2,
+    "difficultyBand": [
+      1,
+      5
+    ],
+    "experienceBand": null
   },
   "review": {
     "status": "approved",

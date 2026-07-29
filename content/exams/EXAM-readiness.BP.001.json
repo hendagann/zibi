@@ -1,0 +1,83 @@
+{
+  "id": "EXAM-readiness.BP.001",
+  "type": "exam_blueprint",
+  "schemaVersion": 1,
+  "examType": "readiness",
+  "scope": "full",
+  "title": "מבחן מוכנות סופי — 20 דקות",
+  "lang": "he",
+  "dir": "rtl",
+  "durationMinutes": 20,
+  "passMark": 70,
+  "itemCount": 6,
+  "segments": [
+    {
+      "segmentId": "req-analysis",
+      "titleHe": "ניתוח דרישה",
+      "minutes": 4,
+      "questionFamily": "analyse_requirement",
+      "open": true,
+      "judgement": false
+    },
+    {
+      "segmentId": "defect-report",
+      "titleHe": "דיווח תקלה",
+      "minutes": 3,
+      "questionFamily": "author_defect_report",
+      "open": true,
+      "judgement": false,
+      "skillHint": "DOC.BUG"
+    },
+    {
+      "segmentId": "sql",
+      "titleHe": "SQL",
+      "minutes": 4,
+      "questionFamily": "sql_query",
+      "open": true,
+      "judgement": false,
+      "skillHint": "TECH.SQL"
+    },
+    {
+      "segmentId": "investigation",
+      "titleHe": "תחקור תקלה",
+      "minutes": 4,
+      "questionFamily": "investigate_failure",
+      "open": true,
+      "judgement": false
+    },
+    {
+      "segmentId": "prioritisation",
+      "titleHe": "תעדוף",
+      "minutes": 2,
+      "questionFamily": "prioritise_defects",
+      "open": true,
+      "judgement": true
+    },
+    {
+      "segmentId": "decision",
+      "titleHe": "החלטה מקצועית",
+      "minutes": 3,
+      "questionFamily": "professional_decision",
+      "open": true,
+      "judgement": true
+    }
+  ],
+  "selectionRules": {
+    "poolRef": "exam",
+    "noRepeatWithinDays": 90,
+    "excludeAttempted": true,
+    "minOpenQuestions": 3,
+    "requireJudgementItem": true,
+    "maxItemsPerSkill": 1,
+    "difficultyBand": [
+      2,
+      5
+    ],
+    "experienceBand": null
+  },
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}
