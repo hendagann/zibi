@@ -1,0 +1,115 @@
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-inline-size: 70ch;
+}
+
+.callout {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-sunken);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.calloutWarning {
+  border-color: var(--color-warning);
+  background-color: var(--color-warning-soft);
+}
+
+.calloutPitfall {
+  border-color: var(--color-danger);
+  background-color: var(--color-danger-soft);
+}
+
+.calloutTitle {
+  font-weight: var(--weight-semibold);
+  font-size: var(--text-sm);
+}
+
+.tableWrap {
+  overflow-x: auto;
+}
+
+.table {
+  border-collapse: collapse;
+  inline-size: 100%;
+  font-size: var(--text-sm);
+}
+
+.table th,
+.table td {
+  border: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
+  text-align: start;
+  vertical-align: top;
+}
+
+.table th {
+  background-color: var(--color-surface-sunken);
+  font-weight: var(--weight-semibold);
+}
+
+.term {
+  display: inline-flex;
+  gap: var(--space-2);
+  align-items: baseline;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+}
+
+.termEn {
+  unicode-bidi: isolate;
+  direction: ltr;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+}
+
+/* ---- rendered defect report (artifactSample + learner answers) ---- */
+.report {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  font-size: var(--text-sm);
+}
+
+.reportRow {
+  display: grid;
+  grid-template-columns: 9rem 1fr;
+  border-block-end: 1px solid var(--color-border);
+}
+
+.reportRow:last-child {
+  border-block-end: 0;
+}
+
+.reportLabel {
+  padding: var(--space-2) var(--space-3);
+  background-color: var(--color-surface-sunken);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-muted);
+}
+
+.reportValue {
+  padding: var(--space-2) var(--space-3);
+  white-space: pre-wrap;
+}
+
+.reportValue ol {
+  margin: 0;
+  padding-inline-start: var(--space-5);
+}
+
+.reportEmpty {
+  color: var(--color-danger);
+  font-style: italic;
+}
+
+@media (max-width: 40rem) {
+  .reportRow {
+    grid-template-columns: 1fr;
+  }
+}

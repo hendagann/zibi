@@ -1,0 +1,39 @@
+{
+  "id": "DOC-defects.EX.003",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": { "primary": "DOC.BUG", "secondary": ["DOC.ADV"] },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "שדות מתהפכים בטופס עברית-אנגלית",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 660,
+  "pool": "practice",
+  "questionType": "author_defect_report",
+  "requiresEvidence": true,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.BUG_REPORT",
+  "revisionRefs": ["DOC-defects.SUM.001", "DOC-defects.GE.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "טופס פרטי משלוח בעברית, סביבת Production גרסה 7.0.2, Safari 18 על iPhone 16 (iOS 18). משתמשת מחוברת מילאה כתובת: ברחוב הזינה \"הרצל 15\" ובהערות למשליח הזינה טקסט שמתחיל באנגלית: \"Ring twice בבקשה\". אחרי שמירה, שדה ההערות מציג \"בבקשה Ring twice\" — סדר המילים התהפך. בנוסף, כשחוזרים לעריכת הכתובת, הספרות בשדה הרחוב קופצות לצד שמאל של השדה. שמרתם צילומי מסך לפני ואחרי השמירה." }
+  ],
+  "prompt": [
+    { "kind": "paragraph", "text": "כתבו דוח פגם אחד על תקלת ההיפוך בשדה ההערות (את תקלת היישור של הספרות תדווחו בנפרד — לא כאן). דייקו בתוצאה בפועל: מה בדיוק מוצג." }
+  ],
+  "modelAnswer": {
+    "title": "טקסט דו-כיווני בהערות למשליח מוצג בסדר מילים הפוך אחרי שמירת הטופס",
+    "environment": "Safari 18, iPhone 16, iOS 18, סביבת Production, גרסה 7.0.2",
+    "preconditions": "משתמשת מחוברת; טופס פרטי משלוח בעברית פתוח לעריכה",
+    "steps": ["להזין בשדה ההערות למשליח טקסט שמתחיל באנגלית: \"Ring twice בבקשה\"", "לשמור את הטופס בלחיצה על \"שמירה\"", "לפתוח מחדש את פרטי המשלוח ולבדוק את תצוגת שדה ההערות"],
+    "actual": "אחרי השמירה השדה מציג \"בבקשה Ring twice\" — סדר הרצפים התהפך ביחס למה שהוזן. הטקסט שהוזן לפני השמירה הוצג נכון.",
+    "expected": "השדה מציג את הטקסט בדיוק כפי שהוזן: \"Ring twice בבקשה\", גם אחרי שמירה וטעינה מחדש.",
+    "evidence": "צילום מסך של השדה לפני השמירה וצילום אחריה, מאותו מכשיר",
+    "severity": "medium",
+    "severityJustification": "ההוראות למשליח משתבשות ועלולות להטעות — הנזק תפעולי ותלוי בתוכן ההערה. משפיע על כל הערה שמערבת עברית ואנגלית, תרחיש שכיח בכתובות בישראל."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "MGMT.CONF",
+  "topic": "MGMT/infrastructure",
+  "titleHe": "ניהול תצורה",
+  "titleEn": "Configuration management",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Determines which build and configuration a defect was observed on, and what must be recorded for it to be reproducible.",
+  "prerequisites": ["FUND.PROC"],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

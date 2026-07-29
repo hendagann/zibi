@@ -1,0 +1,22 @@
+{
+  "id": "DOC/defects",
+  "nameHe": "דיווח פגמים מקצועי",
+  "nameEn": "Professional Bug Reporting",
+  "domain": "DOC",
+  "description": "דוח פגם טוב הוא זה שמפתח יכול לשחזר בלי לשאול אף שאלה — והוא ההבדל בין באג שמתוקן לבאג שנסגר כ'לא משוחזר'. בנושא הזה כותבים דוחות אמיתיים ומקבלים עליהם ציון ומשוב לפי מחוון קבוע.",
+  "learningObjectives": [
+    "לכתוב דוח פגם שמפתח משחזר ממנו את התקלה בניסיון הראשון",
+    "להבחין בין תוצאה בפועל לתוצאה מצופה ולנסח את שתיהן כתצפיות",
+    "לנמק חומרה מהשפעה על המשתמש והעסק, לא מתחושה",
+    "לזהות ולתקן דוח פגם לקוי"
+  ],
+  "prerequisites": [],
+  "difficulty": 2,
+  "estimatedMinutes": 90,
+  "measuredSkills": ["DOC.BUG", "DOC.ADV"],
+  "summaryRef": "DOC-defects.SUM.001",
+  "lessonRefs": ["DOC-defects.LE.001"],
+  "exerciseRefs": ["DOC-defects.EX.001", "DOC-defects.EX.002", "DOC-defects.EX.003", "DOC-defects.EX.004", "DOC-defects.EX.005"],
+  "topicExamRef": "DOC-defects.BP.001",
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" }
+}

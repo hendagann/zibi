@@ -1,0 +1,21 @@
+{
+  "id": "SRC-BBST-RIMGEN",
+  "title": "BBST RIMGEN defect reporting frame",
+  "publisher": "BBST / Altom",
+  "year": null,
+  "language": "en",
+  "format": "pdf",
+  "imported": true,
+  "licence": {
+    "status": "unclear",
+    "commercialUse": "unknown",
+    "derivativesAllowed": "unknown",
+    "attributionRequired": true,
+    "verifiedAt": "2026-07-29",
+    "verifiedBy": "hendagan"
+  },
+  "attribution": {
+    "text": "עקרונות הדיווח מושפעים ממסגרת RIMGEN של BBST; התוכן נכתב במקור.",
+    "placement": "page"
+  }
+}

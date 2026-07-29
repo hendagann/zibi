@@ -34,3 +34,6 @@ yarn-error.log*
 
 # local tooling
 .claude/
+
+# learner data (attempts) — user data, never committed
+/data/

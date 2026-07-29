@@ -1,0 +1,22 @@
+{
+  "id": "SRC-ITCB-CTFL-HE",
+  "title": "סילבוס CTFL 4.0 בעברית (ITCB)",
+  "publisher": "ITCB / ISTQB",
+  "year": 2024,
+  "url": "https://www.itcb.org.il/",
+  "language": "he",
+  "format": "pdf",
+  "imported": true,
+  "licence": {
+    "status": "permitted-attribution",
+    "commercialUse": false,
+    "derivativesAllowed": "unknown",
+    "attributionRequired": true,
+    "verifiedAt": "2026-07-29",
+    "verifiedBy": "hendagan"
+  },
+  "attribution": {
+    "text": "מבוסס על מושגי הסילבוס הרשמי של ISTQB/ITCB, בניסוח מקורי.",
+    "placement": "page"
+  }
+}

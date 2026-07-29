@@ -1,0 +1,175 @@
+{
+  "rubric_id": "RUB.BUG_REPORT",
+  "version": 1,
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": ["author_defect_report"],
+  "maxScore": 100,
+  "created_at": "2026-07-29",
+  "approved_at": "2026-07-29",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-29",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "כותרת",
+      "description": "הכותרת מציינת את התקלה ואת התנאי שמפעיל אותה, לא רק את האזור שבו היא קרתה.",
+      "weight": 8,
+      "max_points": 8,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": [
+        "עדכון כמות בעגלה מעדכן את הפריט השגוי כאשר בעגלה יותר מפריט אחד",
+        "חשבון לא ננעל אחרי חמישה ניסיונות כניסה כושלים ברצף"
+      ],
+      "partial_examples": ["באג בעדכון כמות בעגלה", "בעיה בכניסה למערכת"],
+      "missing_examples": ["באג", "לא עובד", "דחוף!!"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c1.k1", "label": "כותרת בעלת תוכן", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "title", "n": 10 } },
+        { "component_id": "c1.k2", "label": "כותרת לא גנרית", "class": "should", "weight": 1, "detection": { "kind": "not_generic", "field": "title", "banned": ["באג", "בעיה", "לא עובד", "תקלה", "שגיאה"] } },
+        { "component_id": "c1.k3", "label": "הכותרת מציינת תקלה ותנאי", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "title", "n": 28 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-title" }
+    },
+    {
+      "criterion_id": "c2",
+      "name": "סביבת בדיקה",
+      "description": "דפדפן/מכשיר, מערכת הפעלה, סביבה וגרסת מוצר — מה שנדרש כדי לשחזר באותם תנאים.",
+      "weight": 8,
+      "max_points": 8,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["Chrome 141, Windows 11, סביבת Staging, גרסה 4.2.1"],
+      "partial_examples": ["Chrome, Staging"],
+      "missing_examples": ["", "אצלי במחשב"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c2.k1", "label": "סביבה צוינה", "class": "must", "weight": 1, "detection": { "kind": "non_empty", "field": "environment" } },
+        { "component_id": "c2.k2", "label": "סביבה מפורטת — דפדפן, מערכת, סביבה וגרסה", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "environment", "n": 20 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-env" }
+    },
+    {
+      "criterion_id": "c3",
+      "name": "תנאים מקדימים",
+      "description": "המצב שחייב להתקיים לפני הצעד הראשון: משתמש, נתונים, הרשאות.",
+      "weight": 7,
+      "max_points": 7,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["משתמש מחובר, בעגלה 3 פריטים שונים"],
+      "partial_examples": ["בעגלה כמה פריטים"],
+      "missing_examples": [""],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c3.k1", "label": "תנאים מקדימים צוינו", "class": "must", "weight": 1, "detection": { "kind": "non_empty", "field": "preconditions" } },
+        { "component_id": "c3.k2", "label": "תנאים ספציפיים ומדידים", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "preconditions", "n": 15 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-pre" }
+    },
+    {
+      "criterion_id": "c4",
+      "name": "צעדי שחזור",
+      "description": "רצף ממוספר שאדם אחר יכול לבצע בלי לשאול שאלה — כל צעד פעולה אחת קונקרטית.",
+      "weight": 22,
+      "max_points": 22,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["1. להיכנס לעגלה. 2. לשנות את כמות הפריט השני מ-1 ל-3. 3. ללחוץ \"עדכן כמות\"."],
+      "partial_examples": ["לנסות לעדכן כמות בעגלה"],
+      "missing_examples": ["", "פשוט לשחק עם העגלה עד שזה קורה"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c4.k1", "label": "לפחות שני צעדים", "class": "must", "weight": 2, "detection": { "kind": "min_items", "field": "steps", "n": 2 } },
+        { "component_id": "c4.k2", "label": "כל צעד קונקרטי וניתן לביצוע", "class": "must", "weight": 2, "detection": { "kind": "each_item_min_length", "field": "steps", "n": 8 } },
+        { "component_id": "c4.k3", "label": "רצף מלא משלושה צעדים ומעלה", "class": "should", "weight": 1, "detection": { "kind": "min_items", "field": "steps", "n": 3 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-steps" }
+    },
+    {
+      "criterion_id": "c5",
+      "name": "תוצאה בפועל",
+      "description": "מה קרה בפועל — כולל מה שקרה לרכיבים שלא היו אמורים להשתנות.",
+      "weight": 12,
+      "max_points": 12,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["הכמות של הפריט הראשון השתנתה ל-3. הכמות של הפריט השני נשארה 1."],
+      "partial_examples": ["הכמות השתנתה בפריט הלא נכון"],
+      "missing_examples": ["", "לא עובד"],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c5.k1", "label": "תוצאה בפועל תוארה", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "actual", "n": 10 } },
+        { "component_id": "c5.k2", "label": "התוצאה מפורטת — מה השתנה ומה לא", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "actual", "n": 40 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-actual" }
+    },
+    {
+      "criterion_id": "c6",
+      "name": "תוצאה מצופה",
+      "description": "מה היה צריך לקרות — תצפית מדידה, לא חזרה על הצעד. בלעדיה אי אפשר לדעת מה נחשב \"מתוקן\".",
+      "weight": 12,
+      "max_points": 12,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["הכמות של הפריט השני משתנה ל-3, שאר הפריטים ללא שינוי."],
+      "partial_examples": ["שהעדכון יעבוד"],
+      "missing_examples": [""],
+      "critical_errors": [{ "kind": "expected_equals_actual" }],
+      "expected_components": [
+        { "component_id": "c6.k1", "label": "תוצאה מצופה תוארה", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "expected", "n": 10 } },
+        { "component_id": "c6.k2", "label": "המצופה שונה מהתוצאה בפועל", "class": "must", "weight": 1, "detection": { "kind": "differs_from", "field": "expected", "other": "actual" } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-expected" }
+    },
+    {
+      "criterion_id": "c7",
+      "name": "ראיות",
+      "description": "צילומי מסך, וידאו, לוג — מה צורף ומה הוא מוכיח.",
+      "weight": 8,
+      "max_points": 8,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["צילום מסך לפני ואחרי העדכון; ייצוא בקשת ה-API מה-Network"],
+      "partial_examples": ["צילום מסך"],
+      "missing_examples": [""],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c7.k1", "label": "ראיות צוינו", "class": "must", "weight": 1, "detection": { "kind": "non_empty", "field": "evidence" } },
+        { "component_id": "c7.k2", "label": "הראיה ממוקדת — מה היא מראה", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "evidence", "n": 20 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-evidence" }
+    },
+    {
+      "criterion_id": "c8",
+      "name": "חומרה והנמקתה",
+      "description": "רמת חומרה עם נימוק מהשפעה על המשתמש והעסק — הנימוק הוא הנמדד, לא התווית.",
+      "weight": 13,
+      "max_points": 13,
+      "skill_ids": ["DOC.ADV"],
+      "full_examples": ["גבוהה — הלקוח מחויב על כמות שלא הזמין, וזה קורה בכל עגלה עם יותר מפריט אחד."],
+      "partial_examples": ["בינונית."],
+      "missing_examples": [""],
+      "critical_errors": [],
+      "expected_components": [
+        { "component_id": "c8.k1", "label": "חומרה נבחרה", "class": "must", "weight": 1, "detection": { "kind": "severity_selected" } },
+        { "component_id": "c8.k2", "label": "נימוק לחומרה", "class": "must", "weight": 2, "detection": { "kind": "min_length", "field": "severityJustification", "n": 20 } },
+        { "component_id": "c8.k3", "label": "נימוק מהשפעה ותדירות", "class": "should", "weight": 1, "detection": { "kind": "min_length", "field": "severityJustification", "n": 45 } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-severity" }
+    },
+    {
+      "criterion_id": "c9",
+      "name": "ניסוח ניטרלי והימנעות מהנחות",
+      "description": "עובדות בלבד: בלי האשמות, ובלי לקבוע סיבת שורש שהראיות לא תומכות בה.",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": ["DOC.ADV", "FUND.PSY"],
+      "full_examples": ["תיאור עובדתי של מה שנצפה, בלי ייחוס סיבה"],
+      "partial_examples": ["\"כנראה בעיית קאש\" — השערה שמנוסחת כעובדה"],
+      "missing_examples": ["\"המפתחים שברו את העגלה שוב\""],
+      "critical_errors": [
+        { "kind": "contains_phrases", "fields": ["title", "actual", "expected", "severityJustification"], "phrases": ["אשמת", "רשלנות", "קוד גרוע", "המפתחים שברו", "עצלנות"], "labelHe": "שפה מאשימה בדיווח" }
+      ],
+      "expected_components": [
+        { "component_id": "c9.k1", "label": "ללא שפה מאשימה", "class": "must", "weight": 2, "detection": { "kind": "not_contains", "fields": ["title", "actual", "expected", "severityJustification"], "phrases": ["אשמת", "רשלנות", "קוד גרוע", "המפתחים שברו", "עצלנות"] } },
+        { "component_id": "c9.k2", "label": "ללא קביעת סיבת שורש לא מבוססת", "class": "must", "weight": 1, "detection": { "kind": "not_contains", "fields": ["title", "actual"], "phrases": ["בגלל שהקוד", "הסיבה היא ש", "כנראה בגלל", "ברור שהבעיה ב"] } }
+      ],
+      "remediation": { "ref": "DOC-defects.LE.001", "anchor": "sec-neutral" }
+    }
+  ]
+}

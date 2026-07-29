@@ -1,0 +1,12 @@
+{
+  "id": "DOC.BUG",
+  "topic": "DOC/defects",
+  "titleHe": "כתיבת דוח פגם",
+  "titleEn": "Defect report authoring",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Writes a defect report a developer can reproduce without a follow-up question — steps, actual versus expected, environment, evidence.",
+  "prerequisites": ["FUND.ERR", "DOC.REQ"],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

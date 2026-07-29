@@ -1,5 +1,6 @@
 import { readdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import type { RubricDoc } from '@/scoring/types';
 import type {
   ContentItem,
   ContentItemId,
@@ -40,7 +41,7 @@ import type {
 const CONTENT_ROOT =
   process.env.ZIBI_CONTENT_ROOT ?? join(process.cwd(), 'content');
 
-type Collection = 'domains' | 'topics' | 'skills' | 'items';
+type Collection = 'domains' | 'topics' | 'skills' | 'items' | 'rubrics' | 'sources';
 
 async function readCollection<T>(collection: Collection): Promise<T[]> {
   const dir = join(CONTENT_ROOT, collection);
@@ -120,4 +121,33 @@ export async function getPracticeExercises(): Promise<ContentItem[]> {
 export async function getExamItems(): Promise<ContentItem[]> {
   const items = await getItems();
   return items.filter((item) => item.type === 'exam_item' && item.pool === 'exam');
+}
+
+export async function getItem(id: ContentItemId): Promise<ContentItem | null> {
+  const items = await getItems();
+  return items.find((item) => item.id === id) ?? null;
+}
+
+/**
+ * Rubrics have their own lifecycle (docs/07 §15): only `active` may score a
+ * new evaluation, so that is all this accessor returns.
+ */
+export async function getActiveRubric(rubricId: string): Promise<RubricDoc | null> {
+  const rubrics = await readCollection<RubricDoc>('rubrics');
+  return (
+    rubrics.find((r) => r.rubric_id === rubricId && r.status === 'active') ?? null
+  );
+}
+
+/**
+ * Authoring surface ONLY. Returns every item regardless of review status, so
+ * the admin area can list drafts and needs_update items. Nothing rendered to
+ * a learner may come from here — learner surfaces go through getItems().
+ */
+export async function getAllItemsForAdmin(): Promise<ContentItem[]> {
+  return readCollection<ContentItem>('items');
+}
+
+export async function getAllTopicsForAdmin(): Promise<Topic[]> {
+  return readCollection<Topic>('topics');
 }

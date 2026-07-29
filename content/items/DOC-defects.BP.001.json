@@ -1,0 +1,20 @@
+{
+  "id": "DOC-defects.BP.001",
+  "type": "exam_blueprint",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "title": "מבחן נושא — דיווח פגמים מקצועי",
+  "lang": "he",
+  "dir": "rtl",
+  "scope": "topic",
+  "scopeRef": "DOC/defects",
+  "skillWeights": { "DOC.BUG": 70, "DOC.ADV": 30 },
+  "itemCount": 2,
+  "durationMinutes": 25,
+  "passMark": 70,
+  "selectionRules": {
+    "poolRef": "exam",
+    "noRepeatWithinDays": 90
+  },
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" }
+}

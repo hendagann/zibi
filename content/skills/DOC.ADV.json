@@ -1,0 +1,12 @@
+{
+  "id": "DOC.ADV",
+  "topic": "DOC/defects",
+  "titleHe": "הצדקת חומרת פגם ותקשורת מול פיתוח",
+  "titleEn": "Defect advocacy",
+  "tier": "applied",
+  "cognitiveLevel": "K4",
+  "behaviour": "Justifies a severity and priority from user and business impact, and defends the assessment when it is disputed.",
+  "prerequisites": ["DOC.BUG", "MGMT.RISK"],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

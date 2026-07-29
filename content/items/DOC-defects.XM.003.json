@@ -1,0 +1,37 @@
+{
+  "id": "DOC-defects.XM.003",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": { "primary": "DOC.ADV", "secondary": ["DOC.BUG"] },
+  "cognitiveLevel": "K4",
+  "difficulty": 3,
+  "title": "פריט מבחן — מחיר שונה בין רשימה לעמוד מוצר",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 660,
+  "pool": "exam",
+  "questionType": "author_defect_report",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.BUG_REPORT",
+  "revisionRefs": ["DOC-defects.SUM.001", "DOC-defects.GE.002"],
+  "scenario": [
+    { "kind": "paragraph", "text": "אתר מסחר, Production גרסה 6.2.4, Chrome 141 על Android 15. מוצר מופיע ברשימת הקטגוריה במחיר 199 ₪, אבל בעמוד המוצר עצמו המחיר 249 ₪. בקופה החיוב הוא 249 ₪. הפער קיים רק במוצרים שהשתתפו במבצע שהסתיים אתמול. נבדקו חמישה מוצרים כאלה — בכולם אותו פער." }
+  ],
+  "prompt": [{ "kind": "paragraph", "text": "כתבו דוח פגם מלא, כולל נימוק חומרה שמתייחס להשלכה הצרכנית." }],
+  "modelAnswer": {
+    "title": "מוצרים ממבצע שהסתיים מציגים מחיר ישן ברשימת הקטגוריה ומחיר גבוה יותר בעמוד ובקופה",
+    "environment": "Chrome 141, Android 15, סביבת Production, גרסה 6.2.4",
+    "preconditions": "מוצרים שהשתתפו במבצע שהסתיים אתמול; משתמש אינו נדרש להתחבר",
+    "steps": ["לפתוח רשימת קטגוריה עם מוצר שהשתתף במבצע שהסתיים ולתעד את המחיר המוצג", "לפתוח את עמוד המוצר ולתעד את המחיר", "להוסיף לעגלה ולהגיע לקופה ולתעד את סכום החיוב"],
+    "actual": "ברשימה מוצג 199 ₪; בעמוד המוצר ובקופה 249 ₪. הפער חוזר בכל חמשת המוצרים שנבדקו מהמבצע שהסתיים.",
+    "expected": "המחיר זהה ברשימה, בעמוד המוצר ובקופה; בתום מבצע כל התצוגות מתעדכנות יחד.",
+    "evidence": "צילומי מסך של הרשימה, עמוד המוצר והקופה עבור אותו מוצר",
+    "severity": "critical",
+    "severityJustification": "הצגת מחיר נמוך וגבייה גבוהה ממנו היא הטעיית מחיר בייצור — חשיפה צרכנית ורגולטורית מיידית, בכל המוצרים שהשתתפו במבצע."
+  }
+}

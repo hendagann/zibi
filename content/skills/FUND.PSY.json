@@ -1,0 +1,12 @@
+{
+  "id": "FUND.PSY",
+  "topic": "FUND/people",
+  "titleHe": "פסיכולוגיה של בדיקות ותקשורת",
+  "titleEn": "Psychology of testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Identifies what caused a breakdown in a tester-developer exchange, and names a communication choice that preserves both the finding and the relationship.",
+  "prerequisites": ["FUND.WHAT"],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

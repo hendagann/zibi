@@ -1,0 +1,80 @@
+.editor {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.textarea {
+  min-block-size: 24rem;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.primary {
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-action);
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  cursor: pointer;
+}
+
+.primary:disabled,
+.secondary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.secondary {
+  padding: var(--space-2) var(--space-5);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--radius-action);
+  background: transparent;
+  color: var(--color-primary);
+  font-size: var(--text-sm);
+  cursor: pointer;
+}
+
+.approveRow {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.reviewerInput {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-surface);
+  font-size: var(--text-sm);
+  inline-size: 16rem;
+}
+
+.note {
+  font-size: var(--text-xs);
+  color: var(--color-text-subtle);
+}
+
+.success {
+  color: var(--color-success);
+  font-size: var(--text-sm);
+}
+
+.error {
+  color: var(--color-danger);
+  font-size: var(--text-sm);
+}

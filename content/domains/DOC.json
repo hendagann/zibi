@@ -1,0 +1,8 @@
+{
+  "id": "DOC",
+  "nameHe": "תוצרי בדיקה ודיווח",
+  "nameEn": "Test artifacts and reporting",
+  "description": "כתיבת התוצרים שמתרגמים עבודת בדיקות לפעולה: מקרי בדיקה, דוחות פגמים, עקיבות ודיווח לבעלי עניין.",
+  "order": 6,
+  "status": "active"
+}

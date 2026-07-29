@@ -1,0 +1,37 @@
+{
+  "id": "DOC-defects.XM.001",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": { "primary": "DOC.BUG" },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "פריט מבחן — טיימר שממשיך לרוץ אחרי עצירה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "exam",
+  "questionType": "author_defect_report",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.BUG_REPORT",
+  "revisionRefs": ["DOC-defects.SUM.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "אפליקציית מעקב זמן עבודה, Android 15, גרסה 4.4.2, סביבת Production. משתמשת מחוברת מפעילה טיימר משימה, לוחצת \"עצור\" — התצוגה נעצרת, אבל אחרי יציאה מהאפליקציה וחזרה אליה הטיימר מציג זמן שהמשיך להצטבר. הדבר חוזר בכל משימה שנבדקה." }
+  ],
+  "prompt": [{ "kind": "paragraph", "text": "כתבו דוח פגם מלא. במבחן לא יוצג משוב עד לסיום." }],
+  "modelAnswer": {
+    "title": "טיימר משימה ממשיך לצבור זמן אחרי לחיצה על \"עצור\" ויציאה מהאפליקציה",
+    "environment": "Android 15, אפליקציה גרסה 4.4.2, סביבת Production",
+    "preconditions": "משתמשת מחוברת; קיימת משימה פעילה עם טיימר",
+    "steps": ["להפעיל טיימר על משימה", "ללחוץ \"עצור\" ולוודא שהתצוגה נעצרה", "לצאת מהאפליקציה, להמתין דקה, ולחזור למסך המשימה"],
+    "actual": "אחרי חזרה לאפליקציה הטיימר מציג זמן גבוה מזה שבו נעצר — הזמן המשיך להצטבר ברקע. חוזר בכל משימה שנבדקה.",
+    "expected": "הזמן המוצג אחרי חזרה זהה לזמן שבו נלחץ \"עצור\"; עצירה היא סופית עד הפעלה מחודשת.",
+    "evidence": "צילום מסך של הטיימר בעת העצירה וצילום אחרי החזרה, עם הפרש הזמן",
+    "severity": "high",
+    "severityJustification": "דיווחי הזמן הם בסיס לחיוב לקוחות — זמן שנצבר אחרי עצירה מנפח חיובים ופוגע באמינות הנתונים של כל המשתמשים."
+  }
+}

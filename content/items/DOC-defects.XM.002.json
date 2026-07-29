@@ -1,0 +1,37 @@
+{
+  "id": "DOC-defects.XM.002",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": { "primary": "DOC.BUG", "secondary": ["DOC.ADV"] },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "פריט מבחן — קובץ מצורף נעלם בשליחה חוזרת",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "exam",
+  "questionType": "author_defect_report",
+  "requiresEvidence": false,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.BUG_REPORT",
+  "revisionRefs": ["DOC-defects.SUM.001"],
+  "scenario": [
+    { "kind": "paragraph", "text": "מערכת פניות שירות, Chrome 141 על Windows 11, Staging גרסה 9.1.0. משתמש מחובר פותח פנייה, מצרף קובץ PDF, ולוחץ \"שליחה\". השליחה נכשלת עם הודעת שגיאת רשת. המשתמש לוחץ \"שליחה\" שוב — הפעם הפנייה נשלחת, אבת ללא הקובץ המצורף, ובלי שום חיווי על כך. הפנייה מופיעה אצל הנציג בלי הקובץ." }
+  ],
+  "prompt": [{ "kind": "paragraph", "text": "כתבו דוח פגם מלא." }],
+  "modelAnswer": {
+    "title": "שליחה חוזרת של פנייה אחרי שגיאת רשת מאבדת את הקובץ המצורף ללא חיווי",
+    "environment": "Chrome 141, Windows 11, סביבת Staging, גרסה 9.1.0",
+    "preconditions": "משתמש מחובר; טופס פנייה חדש עם קובץ PDF מצורף; שליחה ראשונה נכשלת בשגיאת רשת",
+    "steps": ["לפתוח פנייה חדשה ולצרף קובץ PDF", "ללחוץ \"שליחה\" בזמן כשל רשת ולקבל את הודעת השגיאה", "ללחוץ \"שליחה\" פעם נוספת ולבדוק את הפנייה שנוצרה אצל הנציג"],
+    "actual": "הפנייה נשלחה בהצלחה אך ללא הקובץ המצורף, בלי כל הודעה למשתמש. אצל הנציג הפנייה מופיעה בלי קובץ.",
+    "expected": "הקובץ נשלח עם הפנייה גם בשליחה חוזרת, או שמוצגת הודעה מפורשת שהצירוף אבד ויש לצרפו מחדש.",
+    "evidence": "צילום הטופס עם הקובץ לפני השליחה וצילום הפנייה אצל הנציג ללא הקובץ",
+    "severity": "high",
+    "severityJustification": "המשתמש בטוח שהקובץ הגיע והנציג מטפל בפנייה חסרה — אובדן מידע שקט שמאריך טיפול ופוגע בשירות, בתרחיש שכיח של רשת לא יציבה."
+  }
+}
