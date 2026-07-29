@@ -70,11 +70,76 @@ async function* walk(dir) {
   }
 }
 
-/** Remove block and line comments so documentation is not scanned. */
+/**
+ * Remove block and line comments so documentation is not scanned.
+ *
+ * A character-level scanner, not a regex: a naive `\/\*[\s\S]*?\*\//` eats
+ * from a `/*` that appears *inside a string literal* to the next `*​/`
+ * anywhere in the file, deleting real code — including any Hebrew in it —
+ * from the scan. A checker with a blind spot like that reads as a control
+ * while enforcing nothing, so comments are recognised only outside strings.
+ * Stripped spans are replaced with spaces to keep line numbers stable.
+ */
 function stripComments(source) {
-  return source
-    .replace(/\/\*[\s\S]*?\*\//g, '')
-    .replace(/(^|[^:])\/\/.*$/gm, '$1');
+  let out = '';
+  let i = 0;
+  let mode = 'code'; // code | line | block | single | double | template
+  while (i < source.length) {
+    const ch = source[i];
+    const next = source[i + 1];
+    if (mode === 'code') {
+      if (ch === '/' && next === '/') {
+        mode = 'line';
+        out += '  ';
+        i += 2;
+      } else if (ch === '/' && next === '*') {
+        mode = 'block';
+        out += '  ';
+        i += 2;
+      } else {
+        if (ch === "'") mode = 'single';
+        else if (ch === '"') mode = 'double';
+        else if (ch === '`') mode = 'template';
+        out += ch;
+        i += 1;
+      }
+    } else if (mode === 'line') {
+      if (ch === '\n') {
+        mode = 'code';
+        out += ch;
+      } else {
+        out += ' ';
+      }
+      i += 1;
+    } else if (mode === 'block') {
+      if (ch === '*' && next === '/') {
+        mode = 'code';
+        out += '  ';
+        i += 2;
+      } else {
+        out += ch === '\n' ? '\n' : ' ';
+        i += 1;
+      }
+    } else {
+      // Inside a string: comment markers are data. A backslash escapes the
+      // next character, including the closing quote.
+      if (ch === '\\') {
+        out += ch + (next ?? '');
+        i += 2;
+        continue;
+      }
+      if (
+        (mode === 'single' && (ch === "'" || ch === '\n')) ||
+        (mode === 'double' && (ch === '"' || ch === '\n')) ||
+        (mode === 'template' && ch === '`')
+      ) {
+        mode = 'code';
+      }
+      out += ch;
+      i += 1;
+    }
+  }
+  return out;
 }
 
 function isAllowed(relPath) {

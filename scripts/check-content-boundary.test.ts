@@ -75,6 +75,23 @@ describe('content boundary checker', () => {
     expect(code).toBe(0);
   });
 
+  it('is not blinded by a /* inside a string literal', async () => {
+    // A naive comment-stripping regex would delete from the '/*' in the
+    // string to the next '*/' anywhere below it — hiding the Hebrew that
+    // follows. The scanner must treat comment markers inside strings as data.
+    const dir = await fixture({
+      'src/components/Thing.tsx': [
+        `const glob = 'src/**' + '/*';`,
+        `export const Thing = () => <p>טקסט עברי שאסור לפספס</p>;`,
+        `// */`,
+        ``,
+      ].join('\n'),
+    });
+    const { code, out } = await check(dir);
+    expect(code).not.toBe(0);
+    expect(out).toContain('CM-20');
+  });
+
   it('catches a slash-separated topic id in a conditional (CM-21)', async () => {
     // The separator that a previous ESLint selector missed.
     const dir = await fixture({

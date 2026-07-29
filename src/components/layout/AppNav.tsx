@@ -152,11 +152,20 @@ export function AppNav() {
           {primaryNav.map((item) => {
             const Icon = navIcons[item.icon];
             const active = isActiveRoute(pathname, item.href);
+            // `page` only on an exact match. On /admin/content both the
+            // sidebar's /admin and the sub-nav's /admin/content are "active",
+            // but two links cannot both be the current page — the ancestor
+            // gets `true` (current section), the exact match gets `page`.
+            const current = active
+              ? pathname === item.href
+                ? ('page' as const)
+                : ('true' as const)
+              : undefined;
             return (
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  aria-current={active ? 'page' : undefined}
+                  aria-current={current}
                   className={[
                     styles.navLink,
                     active ? styles.navLinkActive : undefined,

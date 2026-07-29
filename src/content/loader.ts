@@ -30,7 +30,15 @@ import type {
  *    material.
  */
 
-const CONTENT_ROOT = join(process.cwd(), 'content');
+/**
+ * Overridable for tests only. Loader tests must be able to point at a fixture
+ * library containing draft items and prove they are filtered out — without
+ * this the approved-only rule (docs/05 §7) would be untestable, and the tests
+ * asserting empty results could not tell an empty library from a loader that
+ * throws everything away.
+ */
+const CONTENT_ROOT =
+  process.env.ZIBI_CONTENT_ROOT ?? join(process.cwd(), 'content');
 
 type Collection = 'domains' | 'topics' | 'skills' | 'items';
 

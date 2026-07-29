@@ -80,14 +80,24 @@
    * before hydration. It is delayed on the way out so the slide is visible.
    */
   visibility: hidden;
-  transition: transform var(--transition-base), visibility 0s linear var(--transition-base);
+  /*
+   * The delay must be a bare duration. `--transition-base` is `200ms ease`,
+   * and substituting it after `linear` produced a five-component shorthand —
+   * invalid, so the whole declaration was silently dropped and the drawer
+   * snapped instead of sliding. Durations live in their own token now.
+   */
+  transition:
+    transform var(--transition-base-duration) var(--transition-base-easing),
+    visibility 0s linear var(--transition-base-duration);
 }
 
 .sidebarOpen {
   transform: translateX(0);
   visibility: visible;
   box-shadow: var(--shadow-lg);
-  transition: transform var(--transition-base), visibility 0s;
+  transition:
+    transform var(--transition-base-duration) var(--transition-base-easing),
+    visibility 0s;
 }
 
 .brand {
