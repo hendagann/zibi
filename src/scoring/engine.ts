@@ -12,6 +12,7 @@
 
 import { createHash } from 'node:crypto';
 import type { DefectReportAnswer } from '@/content/blocks';
+import { t } from '@/i18n';
 import type {
   CriterionResult,
   CriticalRule,
@@ -72,18 +73,18 @@ export function runDeterministicChecks(
   const identifiable = (answer.title.trim() + answer.actual.trim()).length >= 25;
 
   return [
-    check('DC-GEN-01', 'E-GEN-001', anything, { gate: true, details: 'תשובה לא ריקה' }),
-    check('DC-BUG-01', 'E-BUG-001', steps.length > 0, { cap: 60, details: 'צעדי שחזור' }),
+    check('DC-GEN-01', 'E-GEN-001', anything, { gate: true, details: t.checks.notEmpty }),
+    check('DC-BUG-01', 'E-BUG-001', steps.length > 0, { cap: 60, details: t.checks.steps }),
     check('DC-BUG-02', 'E-BUG-002', answer.actual.trim().length > 0, { cap: 60, details: 'Actual Result' }),
     check('DC-BUG-03', 'E-BUG-003', answer.expected.trim().length > 0, { cap: 60, details: 'Expected Result' }),
-    check('DC-BUG-04', 'E-BUG-004', identifiable, { cap: 40, details: 'התקלה ניתנת לזיהוי מהדיווח' }),
-    check('DC-BUG-05', 'E-BUG-005', answer.environment.trim().length > 0, { cap: 80, details: 'סביבת בדיקה' }),
-    check('DC-BUG-06', 'E-BUG-006', answer.severity !== '', { cap: 90, details: 'חומרה' }),
+    check('DC-BUG-04', 'E-BUG-004', identifiable, { cap: 40, details: t.checks.identifiable }),
+    check('DC-BUG-05', 'E-BUG-005', answer.environment.trim().length > 0, { cap: 80, details: t.checks.environment }),
+    check('DC-BUG-06', 'E-BUG-006', answer.severity !== '', { cap: 90, details: t.checks.severity }),
     // Structured form: steps are an ordered array by construction.
-    check('DC-BUG-07', 'E-BUG-007', true, { details: 'צעדים ממוספרים (מובנה)' }),
+    check('DC-BUG-07', 'E-BUG-007', true, { details: t.checks.numberedSteps }),
     check('DC-BUG-08', 'E-BUG-008', !requiresEvidence || answer.evidence.trim().length > 0, {
       cap: 100,
-      details: 'ראיות',
+      details: t.checks.evidence,
       na: !requiresEvidence,
     }),
   ];
@@ -114,7 +115,7 @@ export function detect(rule: DetectionRule, answer: DefectReportAnswer): Detecti
     case 'min_items':
       return {
         detected: realSteps(answer).length >= rule.n,
-        evidence: `${realSteps(answer).length} צעדים`,
+        evidence: t.detect.steps(realSteps(answer).length),
       };
     case 'each_item_min_length': {
       const steps = realSteps(answer);
@@ -134,7 +135,7 @@ export function detect(rule: DetectionRule, answer: DefectReportAnswer): Detecti
     case 'not_contains': {
       const joined = rule.fields.map((f) => fieldText(answer, f)).join(' ');
       const hit = rule.phrases.find((p) => joined.includes(p));
-      return { detected: !hit, evidence: hit ? `נמצא: "${hit}"` : 'ניסוח נקי' };
+      return { detected: !hit, evidence: hit ? t.detect.found(hit) : t.detect.clean };
     }
     case 'severity_selected':
       return { detected: answer.severity !== '', evidence: answer.severity || '—' };
@@ -151,7 +152,7 @@ function criticalTriggered(rule: CriticalRule, answer: DefectReportAnswer): { hi
     case 'expected_equals_actual': {
       const a = answer.actual.trim();
       const e = answer.expected.trim();
-      return { hit: a.length > 0 && a === e, label: 'התוצאה המצופה זהה לתוצאה בפועל' };
+      return { hit: a.length > 0 && a === e, label: t.detect.expectedEqualsActual };
     }
     case 'contains_phrases': {
       const joined = rule.fields.map((f) => fieldText(answer, f)).join(' ');
@@ -264,11 +265,11 @@ export function evaluate(input: EvaluateInput): EvaluationResult {
 
   if (rubric.status !== 'active') {
     // docs/07 §15: only an active rubric may score. AT-SC-31/39.
-    return unevaluable(input, 'E-GEN-008', `מחוון ${rubric.rubric_id} אינו active`);
+    return unevaluable(input, 'E-GEN-008', t.engineNotes.rubricNotActive(rubric.rubric_id));
   }
   const weightSum = rubric.criteria.reduce((s, c) => s + c.weight, 0);
   if (weightSum !== 100) {
-    return unevaluable(input, 'E-GEN-008', `משקלי המחוון מסתכמים ל-${weightSum}`);
+    return unevaluable(input, 'E-GEN-008', t.engineNotes.weightsSum(weightSum));
   }
 
   const checks = runDeterministicChecks(answer, input.requiresEvidence);
@@ -283,7 +284,7 @@ export function evaluate(input: EvaluateInput): EvaluationResult {
       cap_source: failedGate.error_code,
       final_score: 0,
       confidence_level: 'high',
-      confidence_reasons: ['שער דטרמיניסטי נכשל'],
+      confidence_reasons: [t.engineNotes.gateFailed],
       human_review_required: false,
       unevaluable: false,
       skills_measured: skillsOf(rubric),

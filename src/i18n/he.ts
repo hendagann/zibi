@@ -157,6 +157,99 @@ export const he = {
     close: 'סגירה',
     count: 'סך הכול',
     comingSoon: 'בפיתוח',
+    minutesShort: 'דק׳',
+  },
+
+  /**
+   * Deterministic-check labels (docs/07 §3). These name what a check tested and
+   * are shown in the feedback "בדיקות סף" list. The checks themselves are
+   * defined in code, not authored, so their labels are interface text.
+   */
+  checks: {
+    notEmpty: 'תשובה לא ריקה',
+    steps: 'צעדי שחזור',
+    identifiable: 'התקלה ניתנת לזיהוי מהדיווח',
+    environment: 'סביבת בדיקה',
+    severity: 'חומרה',
+    numberedSteps: 'צעדים ממוספרים (מובנה)',
+    evidence: 'ראיות',
+    queryEntered: 'הוזנה שאילתה',
+    readOnlySingle: 'קריאה בלבד, משפט יחיד',
+    parsesAndRuns: 'השאילתה מתפרשת ורצה',
+    withinTimeout: 'בתוך מגבלת הזמן',
+    resultShape: 'מבנה התוצאה',
+    correctVisible: 'תוצאה נכונה על הנתונים הגלויים',
+    correctHidden: 'תוצאה נכונה על מקרי הבדיקה המוסתרים',
+  },
+
+  /** Evidence phrases recorded per detected component (docs/07 §4.2). */
+  detect: {
+    steps: (n: number) => `${n} צעדים`,
+    found: (phrase: string) => `נמצא: "${phrase}"`,
+    clean: 'ניסוח נקי',
+    expectedEqualsActual: 'התוצאה המצופה זהה לתוצאה בפועל',
+    missingTables: (list: string) => `חסרות: ${list}`,
+    executed: 'השאילתה רצה',
+    notExecuted: 'לא רצה',
+    columns: (n: number) => `${n} עמודות`,
+    selectStar: 'SELECT * במקום עמודות מפורשות',
+    explicitColumns: 'עמודות מפורשות',
+    rows: (n: number) => `${n} שורות`,
+    resultMatches: 'התוצאה תואמת',
+    resultDiffers: 'התוצאה שונה מהמצופה',
+    orderRequired: 'סדר התוצאות',
+    orderNotRequired: 'סדר אינו נדרש',
+    hiddenCases: (passed: number, total: number) => `${passed}/${total} מקרים מוסתרים`,
+    singleStatement: 'משפט יחיד',
+    chars: (n: number) => `${n} תווים`,
+    unknownRule: (kind: string) => `כלל זיהוי לא מוכר: ${kind}`,
+  },
+
+  /** Why an evaluation could not be produced, or why confidence dropped. */
+  engineNotes: {
+    rubricNotActive: (rubricId: string) => `מחוון ${rubricId} אינו active`,
+    weightsSum: (sum: number) => `משקלי המחוון מסתכמים ל-${sum}`,
+    gateFailed: 'שער דטרמיניסטי נכשל',
+    rubricInactiveOrWeights: 'מחוון לא פעיל או משקלים שגויים',
+    unsafeBlocked: 'שאילתה לא בטוחה נחסמה ולא הורצה',
+  },
+
+  /** SQL execution failures explained to the learner (docs/07 §9). */
+  sqlErrors: {
+    empty: 'לא הוזנה שאילתה.',
+    multiStatementLong: 'מותרת שאילתה אחת בלבד — הסירי את נקודה-פסיק והפקודות הנוספות.',
+    readOnlyLong: 'מותרות שאילתות קריאה (SELECT) בלבד. פקודות שינוי נתונים חסומות.',
+    mustStartSelect: 'השאילתה חייבת להתחיל ב-SELECT.',
+    syntax: 'שגיאת תחביר — בדקי פסיקים, סוגריים ומילות מפתח. ה-SQL לא הצליח להתפרש.',
+    unnamed: 'שצוינה',
+    noTable: (name: string) =>
+      `הטבלה ${name} אינה קיימת. בדקי את שמות הטבלאות בסכימה שמוצגת למעלה.`,
+    noColumn: (name: string) => `העמודה ${name} אינה קיימת. בדקי את שמות העמודות בסכימה.`,
+    ambiguous: 'שם עמודה דו-משמעי — כשמחברים טבלאות, ציוני את הטבלה: לדוגמה orders.id.',
+    multiStatement: 'מותרת שאילתה אחת בלבד.',
+    readOnly: 'מותרות שאילתות קריאה (SELECT) בלבד.',
+    failed: (message: string) => `השאילתה נכשלה: ${message}`,
+    timeout: (seconds: number) => `השאילתה חרגה ממגבלת הזמן (${seconds} שניות) והופסקה.`,
+    executorFailed: 'הרצת השאילתה נכשלה. נסי שוב.',
+    exerciseNotFound: 'התרגיל לא נמצא',
+    datasetNotFound: 'הדאטהסט לא נמצא',
+  },
+
+  /** Authoring-surface messages from the content writer (admin only). */
+  writer: {
+    idImmutable: 'אסור לשנות את מזהה הפריט',
+    missingType: 'חסר שדה type',
+    missingTitle: 'חסרה כותרת',
+    missingSource: 'כל פריט חייב לציין מקור (docs/05 §6)',
+    missingReviewStatus: 'חסר סטטוס בדיקה',
+    missingVersion: 'חסר מספר גרסה',
+    invalidId: 'מזהה פריט לא חוקי',
+    invalidJson: 'JSON לא תקין',
+    notFound: 'הפריט לא נמצא',
+    reviewerRequired: 'אישור דורש שם בודקת (docs/05 §7)',
+    approvalRequired: 'פרסום דורש אישור מקצועי קודם (סטטוס approved)',
+    structuralFailed: (firstError: string) => `בדיקת המבנה נכשלה: ${firstError}`,
+    seeValidatorOutput: 'ראו פלט הוולידציה',
   },
 
   content: {

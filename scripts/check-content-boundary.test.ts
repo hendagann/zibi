@@ -92,6 +92,25 @@ describe('content boundary checker', () => {
     expect(out).toContain('CM-20');
   });
 
+  it('skips test files — fixtures are not shipped text', async () => {
+    const dir = await fixture({
+      'src/scoring/engine.test.ts': `it('detects', () => { expect('צעדי שחזור').toBeTruthy(); });\n`,
+    });
+    const { code } = await check(dir);
+    expect(code).toBe(0);
+  });
+
+  it('still catches the same Hebrew when it is NOT a test file', async () => {
+    // The exemption is by filename, so this is the pair that proves it is an
+    // exemption and not a hole: identical content, non-test path, must fail.
+    const dir = await fixture({
+      'src/scoring/engine.ts': `export const label = 'צעדי שחזור';\n`,
+    });
+    const { code, out } = await check(dir);
+    expect(code).not.toBe(0);
+    expect(out).toContain('CM-20');
+  });
+
   it('catches a slash-separated topic id in a conditional (CM-21)', async () => {
     // The separator that a previous ESLint selector missed.
     const dir = await fixture({

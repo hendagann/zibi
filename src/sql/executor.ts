@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import { join } from 'node:path';
+import { t } from '@/i18n';
 
 /**
  * SQL execution — parent side.
@@ -50,31 +51,31 @@ function strippedSql(sql: string): string {
 export function safetyCheck(sql: string): { safe: boolean; reasonHe?: string } {
   const stripped = strippedSql(sql);
   const statements = stripped.split(';').map((s) => s.trim()).filter(Boolean);
-  if (statements.length === 0) return { safe: false, reasonHe: 'לא הוזנה שאילתה.' };
+  if (statements.length === 0) return { safe: false, reasonHe: t.sqlErrors.empty };
   if (statements.length > 1)
-    return { safe: false, reasonHe: 'מותרת שאילתה אחת בלבד — הסירי את נקודה-פסיק והפקודות הנוספות.' };
+    return { safe: false, reasonHe: t.sqlErrors.multiStatementLong };
   if (BANNED.test(stripped))
-    return { safe: false, reasonHe: 'מותרות שאילתות קריאה (SELECT) בלבד. פקודות שינוי נתונים חסומות.' };
+    return { safe: false, reasonHe: t.sqlErrors.readOnlyLong };
   if (!/^\s*(SELECT|WITH)\b/i.test(stripped))
-    return { safe: false, reasonHe: 'השאילתה חייבת להתחיל ב-SELECT.' };
+    return { safe: false, reasonHe: t.sqlErrors.mustStartSelect };
   return { safe: true };
 }
 
 const ERROR_HE: Record<string, (message: string) => string> = {
-  syntax: () => 'שגיאת תחביר — בדקי פסיקים, סוגריים ומילות מפתח. ה-SQL לא הצליח להתפרש.',
+  syntax: () => t.sqlErrors.syntax,
   no_table: (m) => {
     const table = /no such table:\s*(\S+)/i.exec(m)?.[1];
-    return `הטבלה ${table ?? 'שצוינה'} אינה קיימת. בדקי את שמות הטבלאות בסכימה שמוצגת למעלה.`;
+    return t.sqlErrors.noTable(table ?? t.sqlErrors.unnamed);
   },
   no_column: (m) => {
     const column = /no such column:\s*(\S+)/i.exec(m)?.[1];
-    return `העמודה ${column ?? 'שצוינה'} אינה קיימת. בדקי את שמות העמודות בסכימה.`;
+    return t.sqlErrors.noColumn(column ?? t.sqlErrors.unnamed);
   },
-  ambiguous: () => 'שם עמודה דו-משמעי — כשמחברים טבלאות, ציוני את הטבלה: לדוגמה orders.id.',
-  multi_statement: () => 'מותרת שאילתה אחת בלבד.',
-  unsafe: () => 'מותרות שאילתות קריאה (SELECT) בלבד.',
-  not_select: () => 'השאילתה חייבת להתחיל ב-SELECT.',
-  sql_error: (m) => `השאילתה נכשלה: ${m}`,
+  ambiguous: () => t.sqlErrors.ambiguous,
+  multi_statement: () => t.sqlErrors.multiStatement,
+  unsafe: () => t.sqlErrors.readOnly,
+  not_select: () => t.sqlErrors.mustStartSelect,
+  sql_error: (m) => t.sqlErrors.failed(m),
 };
 
 export async function executeSql(
@@ -105,14 +106,14 @@ export async function executeSql(
     return {
       ok: false, columns: [], rows: [], truncated: false,
       errorCode: 'timeout',
-      errorHe: `השאילתה חרגה ממגבלת הזמן (${TIMEOUT_MS / 1000} שניות) והופסקה.`,
+      errorHe: t.sqlErrors.timeout(TIMEOUT_MS / 1000),
       timedOut: true, unsafe: false,
     };
   }
   if (child.failed) {
     return {
       ok: false, columns: [], rows: [], truncated: false,
-      errorCode: 'executor_error', errorHe: 'הרצת השאילתה נכשלה. נסי שוב.',
+      errorCode: 'executor_error', errorHe: t.sqlErrors.executorFailed,
       timedOut: false, unsafe: false,
     };
   }
@@ -126,7 +127,7 @@ export async function executeSql(
   } catch {
     return {
       ok: false, columns: [], rows: [], truncated: false,
-      errorCode: 'executor_error', errorHe: 'הרצת השאילתה נכשלה. נסי שוב.',
+      errorCode: 'executor_error', errorHe: t.sqlErrors.executorFailed,
       timedOut: false, unsafe: false,
     };
   }

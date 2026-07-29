@@ -1,6 +1,7 @@
 import { createHash } from 'node:crypto';
 import type { SqlDataset, SqlRunResult } from '@/sql/executor';
 import { executeSql, resultsMatch } from '@/sql/executor';
+import { t } from '@/i18n';
 import { deriveLevel, roundHalfUp } from './engine';
 import type {
   CriterionResult,
@@ -137,54 +138,61 @@ function detectSql(
   switch (kind) {
     case 'references_required_tables': {
       const missing = spec.requiredTables.filter(
-        (t) => !artifacts.referencedTables.includes(t),
+        (table) => !artifacts.referencedTables.includes(table),
       );
       return {
         detected: missing.length === 0,
-        evidence: missing.length ? `חסרות: ${missing.join(', ')}` : spec.requiredTables.join(', '),
+        evidence: missing.length
+          ? t.detect.missingTables(missing.join(', '))
+          : spec.requiredTables.join(', '),
       };
     }
     case 'query_executes':
       return {
         detected: artifacts.executed,
-        evidence: artifacts.executed ? 'השאילתה רצה' : (artifacts.learnerVisible.errorHe ?? 'לא רצה'),
+        evidence: artifacts.executed
+          ? t.detect.executed
+          : (artifacts.learnerVisible.errorHe ?? t.detect.notExecuted),
       };
     case 'column_count_match':
       return {
         detected: artifacts.columnCountMatch,
-        evidence: `${artifacts.learnerVisible.columns.length} עמודות`,
+        evidence: t.detect.columns(artifacts.learnerVisible.columns.length),
       };
     case 'no_select_star':
       return {
         detected: !/select\s+\*/i.test(sql),
-        evidence: /select\s+\*/i.test(sql) ? 'SELECT * במקום עמודות מפורשות' : 'עמודות מפורשות',
+        evidence: /select\s+\*/i.test(sql) ? t.detect.selectStar : t.detect.explicitColumns,
       };
     case 'visible_row_count_match':
       return {
         detected: artifacts.visibleRowCountMatch,
-        evidence: `${artifacts.learnerVisible.rows.length} שורות`,
+        evidence: t.detect.rows(artifacts.learnerVisible.rows.length),
       };
     case 'visible_match':
       return {
         detected: artifacts.visibleMatch,
-        evidence: artifacts.visibleMatch ? 'התוצאה תואמת' : 'התוצאה שונה מהמצופה',
+        evidence: artifacts.visibleMatch ? t.detect.resultMatches : t.detect.resultDiffers,
       };
     case 'order_match':
       return {
         detected: artifacts.orderMatch,
-        evidence: spec.orderMatters ? 'סדר התוצאות' : 'סדר אינו נדרש',
+        evidence: spec.orderMatters ? t.detect.orderRequired : t.detect.orderNotRequired,
       };
     case 'hidden_match_all':
       return {
         detected: artifacts.hiddenAllMatch,
-        evidence: `${artifacts.hiddenResults.filter((h) => h.match).length}/${artifacts.hiddenResults.length} מקרים מוסתרים`,
+        evidence: t.detect.hiddenCases(
+          artifacts.hiddenResults.filter((h) => h.match).length,
+          artifacts.hiddenResults.length,
+        ),
       };
     case 'single_clean_statement':
-      return { detected: !artifacts.learnerVisible.unsafe, evidence: 'משפט יחיד' };
+      return { detected: !artifacts.learnerVisible.unsafe, evidence: t.detect.singleStatement };
     case 'query_length_sane':
-      return { detected: sql.trim().length <= 600, evidence: `${sql.trim().length} תווים` };
+      return { detected: sql.trim().length <= 600, evidence: t.detect.chars(sql.trim().length) };
     default:
-      return { detected: false, evidence: `כלל זיהוי לא מוכר: ${kind}` };
+      return { detected: false, evidence: t.detect.unknownRule(kind) };
   }
 }
 
@@ -240,7 +248,7 @@ export async function evaluateSql(input: SqlEvaluateInput): Promise<EvaluationRe
       deterministic_checks: [], criterion_results: [],
       raw_score: 0, penalties: [], score_cap: 100, cap_source: 'E-GEN-008', final_score: 0,
       confidence_level: 'requires_human_review',
-      confidence_reasons: ['מחוון לא פעיל או משקלים שגויים'],
+      confidence_reasons: [t.engineNotes.rubricInactiveOrWeights],
       human_review_required: true, unevaluable: true,
       skills_measured: [], per_skill_scores: {},
     };
@@ -252,20 +260,20 @@ export async function evaluateSql(input: SqlEvaluateInput): Promise<EvaluationRe
   const timedOut = artifacts?.learnerVisible.timedOut ?? false;
 
   const checks: DeterministicCheckResult[] = [
-    check('DC-GEN-01', 'E-GEN-001', !empty, { gate: true, details: 'הוזנה שאילתה' }),
-    check('DC-SQL-02', 'E-SQL-002', !unsafe, { gate: true, details: 'קריאה בלבד, משפט יחיד' }),
+    check('DC-GEN-01', 'E-GEN-001', !empty, { gate: true, details: t.checks.queryEntered }),
+    check('DC-SQL-02', 'E-SQL-002', !unsafe, { gate: true, details: t.checks.readOnlySingle }),
     check('DC-SQL-01', 'E-SQL-001', artifacts?.executed ?? false, {
-      cap: 40, details: 'השאילתה מתפרשת ורצה',
+      cap: 40, details: t.checks.parsesAndRuns,
     }),
-    check('DC-SQL-04', 'E-SQL-004', !timedOut, { cap: 70, details: 'בתוך מגבלת הזמן' }),
+    check('DC-SQL-04', 'E-SQL-004', !timedOut, { cap: 70, details: t.checks.withinTimeout }),
     check('DC-SQL-05', 'E-SQL-005', artifacts?.columnCountMatch ?? false, {
-      details: 'מבנה התוצאה',
+      details: t.checks.resultShape,
     }),
     check('DC-SQL-06', 'E-SQL-006', artifacts?.visibleMatch ?? false, {
-      details: 'תוצאה נכונה על הנתונים הגלויים',
+      details: t.checks.correctVisible,
     }),
     check('DC-SQL-07', 'E-SQL-007', artifacts?.hiddenAllMatch ?? false, {
-      details: 'תוצאה נכונה על מקרי הבדיקה המוסתרים',
+      details: t.checks.correctHidden,
     }),
   ];
 
@@ -277,7 +285,7 @@ export async function evaluateSql(input: SqlEvaluateInput): Promise<EvaluationRe
       raw_score: 0, penalties: [], score_cap: 0,
       cap_source: failedGate?.error_code ?? 'E-GEN-001', final_score: 0,
       confidence_level: 'high',
-      confidence_reasons: unsafe ? ['שאילתה לא בטוחה נחסמה ולא הורצה'] : [],
+      confidence_reasons: unsafe ? [t.engineNotes.unsafeBlocked] : [],
       human_review_required: false, unevaluable: false,
       skills_measured: [...new Set(rubric.criteria.flatMap((c) => c.skill_ids))],
       per_skill_scores: {},

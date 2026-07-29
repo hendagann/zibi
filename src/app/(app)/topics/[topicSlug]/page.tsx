@@ -66,7 +66,7 @@ export default async function TopicPage({ params }: PageProps) {
 
       <div className={styles.meta}>
         <span>
-          {t.topic.estimatedTime}: {topic.estimatedMinutes} דק׳
+          {t.topic.estimatedTime}: {topic.estimatedMinutes} {t.common.minutesShort}
         </span>
         <span className={styles.skills}>
           {t.topic.measuredSkills}:{' '}
@@ -162,7 +162,7 @@ export default async function TopicPage({ params }: PageProps) {
                 <Link href={`${routes.practice}/${exercise.id}`} className={styles.exerciseLink}>
                   <span>{exercise.title}</span>
                   <Badge tone="neutral">
-                    {Math.round(exercise.estimatedSeconds / 60)} דק׳
+                    {Math.round(exercise.estimatedSeconds / 60)} {t.common.minutesShort}
                   </Badge>
                 </Link>
               </li>

@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import type { ContentItem } from '@/content/types';
+import { t } from '@/i18n';
 
 /**
  * Admin content editing — the write half of the authoring surface.
@@ -69,13 +70,13 @@ export interface SaveResult {
 
 /** Structural checks that must hold for any item file. */
 function validateItem(parsed: ContentItem, expectedId: string): string | null {
-  if (parsed.id !== expectedId) return 'אסור לשנות את מזהה הפריט';
-  if (!parsed.type) return 'חסר שדה type';
-  if (!parsed.title?.trim()) return 'חסרה כותרת';
+  if (parsed.id !== expectedId) return t.writer.idImmutable;
+  if (!parsed.type) return t.writer.missingType;
+  if (!parsed.title?.trim()) return t.writer.missingTitle;
   if (!Array.isArray(parsed.source) || parsed.source.length === 0)
-    return 'כל פריט חייב לציין מקור (docs/05 §6)';
-  if (!parsed.review?.status) return 'חסר סטטוס בדיקה';
-  if (typeof parsed.version !== 'number') return 'חסר מספר גרסה';
+    return t.writer.missingSource;
+  if (!parsed.review?.status) return t.writer.missingReviewStatus;
+  if (typeof parsed.version !== 'number') return t.writer.missingVersion;
   return null;
 }
 
@@ -83,20 +84,20 @@ export async function saveItemEdit(
   itemId: string,
   rawJson: string,
 ): Promise<SaveResult> {
-  if (!ID_PATTERN.test(itemId)) return { ok: false, error: 'מזהה פריט לא חוקי' };
+  if (!ID_PATTERN.test(itemId)) return { ok: false, error: t.writer.invalidId };
 
   let parsed: ContentItem;
   try {
     parsed = JSON.parse(rawJson) as ContentItem;
   } catch {
-    return { ok: false, error: 'JSON לא תקין' };
+    return { ok: false, error: t.writer.invalidJson };
   }
 
   const structural = validateItem(parsed, itemId);
   if (structural) return { ok: false, error: structural };
 
   const path = await findItemPath(itemId);
-  if (!path) return { ok: false, error: 'הפריט לא נמצא' };
+  if (!path) return { ok: false, error: t.writer.notFound };
   const existing = JSON.parse(await readFile(path, 'utf8')) as ContentItem;
 
   // CM-14: a content-affecting edit to an approved item bumps the version and
@@ -117,12 +118,12 @@ export async function approveItem(
   itemId: string,
   reviewerName: string,
 ): Promise<SaveResult> {
-  if (!ID_PATTERN.test(itemId)) return { ok: false, error: 'מזהה פריט לא חוקי' };
+  if (!ID_PATTERN.test(itemId)) return { ok: false, error: t.writer.invalidId };
   const name = reviewerName.trim();
-  if (!name) return { ok: false, error: 'אישור דורש שם בודקת (docs/05 §7)' };
+  if (!name) return { ok: false, error: t.writer.reviewerRequired };
 
   const path = await findItemPath(itemId);
-  if (!path) return { ok: false, error: 'הפריט לא נמצא' };
+  if (!path) return { ok: false, error: t.writer.notFound };
   const existing = JSON.parse(await readFile(path, 'utf8')) as ContentItem;
 
   const approved: ContentItem = {
@@ -145,18 +146,18 @@ export async function approveItem(
  * בדיקת מבנה step of the pipeline, mechanically.
  */
 export async function publishItem(itemId: string): Promise<SaveResult> {
-  if (!ID_PATTERN.test(itemId)) return { ok: false, error: 'מזהה פריט לא חוקי' };
+  if (!ID_PATTERN.test(itemId)) return { ok: false, error: t.writer.invalidId };
   const path = await findItemPath(itemId);
-  if (!path) return { ok: false, error: 'הפריט לא נמצא' };
+  if (!path) return { ok: false, error: t.writer.notFound };
   const existing = JSON.parse(await readFile(path, 'utf8')) as ContentItem;
 
   if (existing.review?.status !== 'approved') {
-    return { ok: false, error: 'פרסום דורש אישור מקצועי קודם (סטטוס approved)' };
+    return { ok: false, error: t.writer.approvalRequired };
   }
 
   const structural = await runStructuralValidation();
   if (!structural.ok) {
-    return { ok: false, error: `בדיקת המבנה נכשלה: ${structural.firstError}` };
+    return { ok: false, error: t.writer.structuralFailed(structural.firstError ?? '') };
   }
 
   const published: ContentItem = {
@@ -179,6 +180,6 @@ async function runStructuralValidation(): Promise<{ ok: boolean; firstError?: st
   } catch (error) {
     const err = error as { stderr?: string };
     const firstError = (err.stderr ?? '').split('\n').find((l) => l.trim().startsWith('CM') || l.trim().startsWith('QM') || l.trim().startsWith('SRC') || l.trim().startsWith('EX-') || l.trim().startsWith('SM'));
-    return { ok: false, firstError: firstError?.trim() ?? 'ראו פלט הוולידציה' };
+    return { ok: false, firstError: firstError?.trim() ?? t.writer.seeValidatorOutput };
   }
 }

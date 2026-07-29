@@ -51,7 +51,7 @@ export default async function PracticePage() {
                         </Badge>
                       ) : null}
                       <Badge tone="neutral">
-                        {Math.round(exercise.estimatedSeconds / 60)} דק׳
+                        {Math.round(exercise.estimatedSeconds / 60)} {t.common.minutesShort}
                       </Badge>
                     </span>
                   </Link>

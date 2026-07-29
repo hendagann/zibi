@@ -13,6 +13,13 @@
  *
  * Comments are stripped before scanning: a Hebrew example inside an
  * explanatory comment is documentation, not shipped text.
+ *
+ * Test files are skipped for the same reason. A test that proves the scoring
+ * engine detects a Hebrew answer, or that an approval is refused with a
+ * Hebrew reason, must contain Hebrew fixtures and assertions — that text is
+ * never served to a learner. Scanning them would force the suite to assert on
+ * dictionary lookups instead of on the literal strings it is pinning down,
+ * which is exactly the coupling that lets a wording change pass unnoticed.
  */
 
 import { readdir, readFile } from 'node:fs/promises';
@@ -21,6 +28,8 @@ import { join, relative } from 'node:path';
 const ROOT = process.cwd();
 const SCAN_ROOTS = ['src'];
 const ALLOWED_PREFIXES = ['src/i18n/'];
+/** Tests are not shipped text — see the header. */
+const TEST_SUFFIXES = ['.test.ts', '.test.tsx', '.test.js', '.test.jsx'];
 /** CM-20 scans data and style files too: Hebrew in a JSON or a CSS
  *  `content:` value is shipped text just as much as a JSX string. */
 const TEXT_EXTENSIONS = ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json', '.css'];
@@ -143,7 +152,10 @@ function stripComments(source) {
 }
 
 function isAllowed(relPath) {
-  return ALLOWED_PREFIXES.some((prefix) => relPath.startsWith(prefix));
+  return (
+    ALLOWED_PREFIXES.some((prefix) => relPath.startsWith(prefix)) ||
+    TEST_SUFFIXES.some((suffix) => relPath.endsWith(suffix))
+  );
 }
 
 const violations = [];

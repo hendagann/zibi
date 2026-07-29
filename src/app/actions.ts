@@ -15,6 +15,7 @@ import {
   LOCAL_USER,
 } from '@/storage/attempts';
 import { approveItem, publishItem, saveItemEdit } from '@/storage/contentWriter';
+import { t } from '@/i18n';
 
 /**
  * The client reports elapsed time since the form mounted. A learner who opens
@@ -119,11 +120,11 @@ export interface SqlRunView {
 export async function runSqlQuery(itemId: string, sql: string): Promise<SqlRunView> {
   const item = await getItem(itemId);
   if (!item || !isExercise(item) || item.questionType !== 'sql_query' || !item.sqlSpec) {
-    return { ok: false, columns: [], rows: [], truncated: false, errorHe: 'התרגיל לא נמצא' };
+    return { ok: false, columns: [], rows: [], truncated: false, errorHe: t.sqlErrors.exerciseNotFound };
   }
   const dataset = await getDataset(item.sqlSpec.datasetRef);
   if (!dataset) {
-    return { ok: false, columns: [], rows: [], truncated: false, errorHe: 'הדאטהסט לא נמצא' };
+    return { ok: false, columns: [], rows: [], truncated: false, errorHe: t.sqlErrors.datasetNotFound };
   }
   const result = await executeSql(sql, dataset);
   return {
