@@ -274,6 +274,14 @@ reachable from the rubric, and every rubric criterion to have at least one compo
 | `descriptionHe` | R | what the learner did |
 | `whyTempting` | R | why it looks correct |
 | `remediationRef` | R | the lesson or example that addresses it |
+| `anchor` | O | block id within `remediationRef`, so the link lands on the passage |
+
+**This is the scored item's field, and it is not the guided example's field of the same name.**
+A guided example carries an *illustrative* `commonMistakes` with an optional `misconceptionId`
+([05](05-content-model.md) §12); a scored item carries this one, where every field is required
+because feedback is generated from it. The distinction is stated in both documents so that an
+author reading either one knows which shape applies. Enforced by `QM-07` and `QM-16`, which run
+against scored items only.
 
 `whyTempting` is required because feedback that only names an error teaches less than feedback
 explaining why the wrong answer was attractive. This is also the field that makes distractors

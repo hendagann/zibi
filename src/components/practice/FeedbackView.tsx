@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import type { ItemCommonMistake } from '@/content/exercise';
 import type { EvaluationResult } from '@/scoring/types';
 import { routes } from '@/lib/routes';
 import { Card } from '@/components/ui/Card';
@@ -38,9 +39,20 @@ interface FeedbackViewProps {
   readonly evaluation: EvaluationResult;
   readonly previous?: EvaluationResult | undefined;
   readonly topicId: string;
+  /**
+   * The item's authored common mistakes (docs/06 §6.3). Shown only here, after
+   * an attempt exists — before submission they would hand over the answer, and
+   * during an exam no feedback is released at all (docs/10 §7).
+   */
+  readonly commonMistakes?: readonly ItemCommonMistake[] | undefined;
 }
 
-export function FeedbackView({ evaluation, previous, topicId }: FeedbackViewProps) {
+export function FeedbackView({
+  evaluation,
+  previous,
+  topicId,
+  commonMistakes,
+}: FeedbackViewProps) {
   if (evaluation.unevaluable) {
     return (
       <Card>
@@ -212,6 +224,33 @@ export function FeedbackView({ evaluation, previous, topicId }: FeedbackViewProp
                 <Link
                   className={styles.remediation}
                   href={remediationHref(topicId, w.criterion.remediation)}
+                >
+                  {t.feedback.reviseLink}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      ) : null}
+
+      {commonMistakes?.length ? (
+        <Card variant="quiet">
+          <h3>{t.feedback.commonMistakesTitle}</h3>
+          <p className={styles.capNote}>{t.feedback.commonMistakesHint}</p>
+          <ul className={styles.feedbackList}>
+            {commonMistakes.map((mistake) => (
+              <li key={mistake.misconceptionId}>
+                {mistake.descriptionHe}
+                <br />
+                <span className={styles.remediation}>
+                  {t.content.whyTemptingLabel}: {mistake.whyTempting}
+                </span>{' '}
+                <Link
+                  className={styles.remediation}
+                  href={remediationHref(topicId, {
+                    ref: mistake.remediationRef,
+                    ...(mistake.anchor ? { anchor: mistake.anchor } : {}),
+                  })}
                 >
                   {t.feedback.reviseLink}
                 </Link>

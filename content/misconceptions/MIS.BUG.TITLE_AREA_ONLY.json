@@ -1,0 +1,12 @@
+{
+  "id": "MIS.BUG.TITLE_AREA_ONLY",
+  "titleHe": "כותרת שמציינת אזור בלי התקלה",
+  "descriptionHe": "הכותרת אומרת היכן הבאג נמצא (\"בעיה בעגלת הקניות\") אך לא מה נכשל, ולכן אינה מאפשרת החלטה בלי לפתוח את הדיווח.",
+  "whyTempting": "בזמן הבדיקה ההקשר ברור לכותבת, ונדמה שהכותרת מובנת מאליה.",
+  "skillIds": [
+    "DOC.BUG"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-title",
+  "status": "active"
+}

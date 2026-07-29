@@ -7,6 +7,23 @@ export interface SqlAnswer {
   readonly sql: string;
 }
 
+/**
+ * A common mistake declared on a SCORED item — docs/06 §6.3.
+ *
+ * Deliberately a different type from the guided example's illustrative
+ * `commonMistakes` (docs/05 §12): every field is required here, because
+ * feedback is generated from it. `whyTempting` is required for the reason
+ * docs/06 gives — naming an error teaches less than explaining why the wrong
+ * answer was attractive.
+ */
+export interface ItemCommonMistake {
+  readonly misconceptionId: string;
+  readonly descriptionHe: string;
+  readonly whyTempting: string;
+  readonly remediationRef: string;
+  readonly anchor?: string;
+}
+
 /** Assessment fields an exercise or exam item adds to the envelope — docs/06 §6. */
 export interface ExerciseItem extends ContentItem {
   readonly questionType: 'author_defect_report' | 'repair_defect_report' | 'sql_query';
@@ -16,6 +33,8 @@ export interface ExerciseItem extends ContentItem {
   readonly prompt: readonly Block[];
   readonly modelAnswer: DefectReportAnswer | SqlAnswer;
   readonly revisionRefs: readonly string[];
+  /** docs/06 §6.3 — assessment metadata, validated by QM-07 and QM-16. */
+  readonly commonMistakes?: readonly ItemCommonMistake[];
   readonly diagnosisOptions?: readonly { readonly id: string; readonly label: string }[];
   /** sql_query only. */
   readonly sqlSpec?: SqlSpec;

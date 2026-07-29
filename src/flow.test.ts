@@ -162,6 +162,10 @@ describe('the vertical slice', () => {
 
     const before = await loader.getItem('DOC-defects.EX.002');
     expect(before).not.toBeNull();
+    // Relative to where the item starts, not an absolute number: what CM-14
+    // guarantees is that an edit INCREMENTS the version, and hard-coding the
+    // result couples this test to how often the content has been revised.
+    const expectedVersion = before!.version + 1;
 
     const raw = await writer.readItemRaw('DOC-defects.EX.002');
     const edited = JSON.parse(raw!) as { title: string };
@@ -175,7 +179,7 @@ describe('the vertical slice', () => {
     expect(afterEdit).toBeNull();
     const onDisk = JSON.parse((await readFile(join(contentDir!, 'exercises', 'DOC-defects.EX.002.json'), 'utf8')));
     expect(onDisk.title).toContain('נוסח מעודכן');
-    expect(onDisk.version).toBe(2);
+    expect(onDisk.version).toBe(expectedVersion);
 
     // Approval without a reviewer name is refused (docs/05 §7).
     expect((await writer.approveItem('DOC-defects.EX.002', '  ')).ok).toBe(false);
@@ -184,7 +188,7 @@ describe('the vertical slice', () => {
     expect(approve.ok).toBe(true);
     const restored = await loader.getItem('DOC-defects.EX.002');
     expect(restored?.title).toContain('נוסח מעודכן');
-    expect(restored?.version).toBe(2);
+    expect(restored?.version).toBe(expectedVersion);
   });
 
   it('the editor cannot smuggle an approved status in with an edit', async () => {

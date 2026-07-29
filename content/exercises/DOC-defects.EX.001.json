@@ -3,7 +3,12 @@
   "type": "exercise",
   "schemaVersion": 1,
   "topic": "DOC/defects",
-  "skills": { "primary": "DOC.BUG", "secondary": ["DOC.ADV"] },
+  "skills": {
+    "primary": "DOC.BUG",
+    "secondary": [
+      "DOC.ADV"
+    ]
+  },
   "cognitiveLevel": "K3",
   "difficulty": 2,
   "title": "כפתור התשלום מחייב פעמיים",
@@ -13,28 +18,78 @@
   "pool": "practice",
   "questionType": "author_defect_report",
   "requiresEvidence": true,
-  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
-  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
-  "version": 1,
+  "source": [
+    {
+      "sourceId": "SRC-ITCB-CTFL-HE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-29"
+  },
+  "version": 2,
   "status": "active",
   "rubricRef": "RUB.BUG_REPORT",
-  "revisionRefs": ["DOC-defects.SUM.001", "DOC-defects.GE.001"],
+  "revisionRefs": [
+    "DOC-defects.SUM.001",
+    "DOC-defects.GE.001"
+  ],
   "scenario": [
-    { "kind": "paragraph", "text": "אתם בודקים קופה באתר מסחר, בסביבת Staging גרסה 5.1.0, ב-Chrome 141 על Windows 11. אתם מחוברים כמשתמש רגיל ובעגלה פריט אחד ב-120 ₪. בעמוד התשלום לחצתם על \"שלם עכשיו\", הכפתור נשאר פעיל, ותוך שנייה לחצתם עליו שוב מתוך הרגל. בחשבון הבנק הבדיקתי מופיעים שני חיובים של 120 ₪, ובמערכת נוצרו שתי הזמנות זהות. במסך ההזמנות של הלקוח מופיעות שתי הזמנות." },
-    { "kind": "callout", "tone": "info", "text": "צילמתם את מסך ההזמנות הכפולות ואת שני החיובים. השתמשו בכל המידע שבתרחיש — ורק בו." }
+    {
+      "kind": "paragraph",
+      "text": "אתם בודקים קופה באתר מסחר, בסביבת Staging גרסה 5.1.0, ב-Chrome 141 על Windows 11. אתם מחוברים כמשתמש רגיל ובעגלה פריט אחד ב-120 ₪. בעמוד התשלום לחצתם על \"שלם עכשיו\", הכפתור נשאר פעיל, ותוך שנייה לחצתם עליו שוב מתוך הרגל. בחשבון הבנק הבדיקתי מופיעים שני חיובים של 120 ₪, ובמערכת נוצרו שתי הזמנות זהות. במסך ההזמנות של הלקוח מופיעות שתי הזמנות."
+    },
+    {
+      "kind": "callout",
+      "tone": "info",
+      "text": "צילמתם את מסך ההזמנות הכפולות ואת שני החיובים. השתמשו בכל המידע שבתרחיש — ורק בו."
+    }
   ],
   "prompt": [
-    { "kind": "paragraph", "text": "כתבו דוח פגם מלא על התקלה. הדוח יוערך לפי מחוון דיווח הבאג של הנושא." }
+    {
+      "kind": "paragraph",
+      "text": "כתבו דוח פגם מלא על התקלה. הדוח יוערך לפי מחוון דיווח הבאג של הנושא."
+    }
   ],
   "modelAnswer": {
     "title": "לחיצה כפולה על \"שלם עכשיו\" יוצרת שתי הזמנות ושני חיובים כאשר הכפתור נשאר פעיל",
     "environment": "Chrome 141, Windows 11, סביבת Staging, גרסה 5.1.0",
     "preconditions": "משתמש רגיל מחובר; בעגלה פריט אחד בעלות 120 ₪; אמצעי תשלום בדיקתי מוגדר",
-    "steps": ["להיכנס לעמוד התשלום עם פריט אחד בעגלה", "ללחוץ על \"שלם עכשיו\" פעם אחת", "ללחוץ שוב על הכפתור בתוך כשנייה, בעודו פעיל"],
+    "steps": [
+      "להיכנס לעמוד התשלום עם פריט אחד בעגלה",
+      "ללחוץ על \"שלם עכשיו\" פעם אחת",
+      "ללחוץ שוב על הכפתור בתוך כשנייה, בעודו פעיל"
+    ],
     "actual": "נוצרו שתי הזמנות זהות ושני חיובים של 120 ₪. הכפתור נשאר פעיל אחרי הלחיצה הראשונה, ומסך ההזמנות של הלקוח מציג שתי הזמנות.",
     "expected": "נוצרת הזמנה אחת וחיוב אחד; הכפתור ננעל מיד אחרי הלחיצה הראשונה עד לקבלת תשובה מהשרת.",
     "evidence": "צילום מסך של שתי ההזמנות הזהות במסך ההזמנות, וצילום שני החיובים של 120 ₪ בחשבון הבדיקתי",
     "severity": "critical",
     "severityJustification": "חיוב כספי כפול של לקוח — פגיעה ישירה בכסף ובאמון. לחיצה כפולה היא תנועה טבעית של משתמשים, כך שהתקלה צפויה להופיע בתדירות גבוהה בסביבת ייצור."
-  }
+  },
+  "commonMistakes": [
+    {
+      "misconceptionId": "MIS.BUG.MISSING_PRECONDITION",
+      "descriptionHe": "לא צוין שהחיוב הכפול תלוי בלחיצה שנייה אחרי שגיאת הרשת — בלי התנאי הזה הבאג לא משוחזר.",
+      "whyTempting": "הכותבת לחצה שוב באופן אינסטינקטיבי ולא ראתה בזה צעד.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-pre"
+    },
+    {
+      "misconceptionId": "MIS.BUG.CAUSE_ASSERTED",
+      "descriptionHe": "נכתב שהשרת \"מקבל את הבקשה פעמיים\" — קביעה על המימוש שהראיות בתרחיש אינן תומכות בה.",
+      "whyTempting": "זו ההשערה הסבירה ביותר, והיא נשמעת כמו עזרה למפתח.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-neutral"
+    },
+    {
+      "misconceptionId": "MIS.BUG.SEVERITY_UNJUSTIFIED",
+      "descriptionHe": "נבחרה חומרה קריטית בלי לקשור אותה לכך שמדובר בכסף אמיתי של לקוח.",
+      "whyTempting": "חיוב כפול מרגיש חמור מאליו, ולכן הנימוק נראה מיותר.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-severity"
+    }
+  ],
+  "updatedAt": "2026-07-30"
 }

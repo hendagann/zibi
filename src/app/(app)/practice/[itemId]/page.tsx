@@ -73,6 +73,7 @@ export default async function ExercisePage({ params }: PageProps) {
             evaluation={latest.evaluation}
             previous={previous?.evaluation}
             topicId={topicId}
+            commonMistakes={exercise.commonMistakes}
           />
         </Section>
       ) : null}

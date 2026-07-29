@@ -1,0 +1,12 @@
+{
+  "id": "MIS.BUG.STEPS_NOT_REPRODUCIBLE",
+  "titleHe": "צעדים שאדם אחר לא יכול לחזור עליהם",
+  "descriptionHe": "הצעדים מתומצתים לפעולה כללית אחת (\"ניסיתי לשלוח\") בלי נתונים, סדר או מצב התחלתי, ולכן הדיווח אינו ניתן לשחזור.",
+  "whyTempting": "הכותבת שחזרה את הבאג פעמים רבות וכבר יודעת את הדרך בעל פה.",
+  "skillIds": [
+    "DOC.BUG"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-steps",
+  "status": "active"
+}

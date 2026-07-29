@@ -1,0 +1,13 @@
+{
+  "id": "MIS.BUG.CAUSE_ASSERTED",
+  "titleHe": "קביעת סיבה שהראיות אינן תומכות בה",
+  "descriptionHe": "הדיווח קובע מה גרם לתקלה (\"הקאש לא מתעדכן\", \"הסשן נופל\") במקום לתאר את שנצפה, ומכוון את התיקון לכיוון שאינו מבוסס.",
+  "whyTempting": "השערה מקצועית נשמעת כמו תרומה שמזרזת את המפתח, וכשהיא נכונה היא באמת מזרזת.",
+  "skillIds": [
+    "DOC.BUG",
+    "FUND.PSY"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-neutral",
+  "status": "active"
+}

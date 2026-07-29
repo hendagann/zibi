@@ -3,7 +3,12 @@
   "type": "exercise",
   "schemaVersion": 1,
   "topic": "DOC/defects",
-  "skills": { "primary": "DOC.ADV", "secondary": ["DOC.BUG"] },
+  "skills": {
+    "primary": "DOC.ADV",
+    "secondary": [
+      "DOC.BUG"
+    ]
+  },
   "cognitiveLevel": "K4",
   "difficulty": 3,
   "title": "ייצוא דוח שנכשל בשקט",
@@ -13,27 +18,73 @@
   "pool": "practice",
   "questionType": "author_defect_report",
   "requiresEvidence": true,
-  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
-  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
-  "version": 1,
+  "source": [
+    {
+      "sourceId": "SRC-ITCB-CTFL-HE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-29"
+  },
+  "version": 2,
   "status": "active",
   "rubricRef": "RUB.BUG_REPORT",
-  "revisionRefs": ["DOC-defects.SUM.001", "DOC-defects.GE.002"],
+  "revisionRefs": [
+    "DOC-defects.SUM.001",
+    "DOC-defects.GE.002"
+  ],
   "scenario": [
-    { "kind": "paragraph", "text": "מערכת ניהול פנימית, Staging גרסה 12.3.0, Edge 130 על Windows 11, משתמש עם הרשאת מנהל חשבונות. במסך הדוחות בחרתם \"ייצוא לאקסל\" עבור דוח חיובים של 4,000 שורות. המערכת מציגה \"הייצוא הושלם בהצלחה\" והקובץ יורד — אבל הוא מכיל רק את 1,000 השורות הראשונות, בלי כל אזהרה. בדוח של 800 שורות הקובץ מלא ותקין. הצוות העסקי משתמש בקבצים האלה לדיווח רבעוני. שמרתם את שני הקבצים ואת צילומי הודעת ההצלחה." }
+    {
+      "kind": "paragraph",
+      "text": "מערכת ניהול פנימית, Staging גרסה 12.3.0, Edge 130 על Windows 11, משתמש עם הרשאת מנהל חשבונות. במסך הדוחות בחרתם \"ייצוא לאקסל\" עבור דוח חיובים של 4,000 שורות. המערכת מציגה \"הייצוא הושלם בהצלחה\" והקובץ יורד — אבל הוא מכיל רק את 1,000 השורות הראשונות, בלי כל אזהרה. בדוח של 800 שורות הקובץ מלא ותקין. הצוות העסקי משתמש בקבצים האלה לדיווח רבעוני. שמרתם את שני הקבצים ואת צילומי הודעת ההצלחה."
+    }
   ],
   "prompt": [
-    { "kind": "paragraph", "text": "כתבו דוח פגם מלא. הקדישו תשומת לב מיוחדת לנימוק החומרה — למה כישלון שקט מסוכן יותר מכישלון גלוי, ומי נפגע." }
+    {
+      "kind": "paragraph",
+      "text": "כתבו דוח פגם מלא. הקדישו תשומת לב מיוחדת לנימוק החומרה — למה כישלון שקט מסוכן יותר מכישלון גלוי, ומי נפגע."
+    }
   ],
   "modelAnswer": {
     "title": "ייצוא לאקסל חותך דוחות מעל 1,000 שורות ומציג הודעת הצלחה ללא אזהרה",
     "environment": "Edge 130, Windows 11, סביבת Staging, גרסה 12.3.0",
     "preconditions": "משתמש עם הרשאת מנהל חשבונות; דוח חיובים המכיל יותר מ-1,000 שורות",
-    "steps": ["לפתוח את מסך הדוחות ולבחור דוח חיובים של כ-4,000 שורות", "ללחוץ \"ייצוא לאקסל\" ולהמתין להודעה", "לפתוח את הקובץ שירד ולספור את השורות מול הדוח במסך"],
+    "steps": [
+      "לפתוח את מסך הדוחות ולבחור דוח חיובים של כ-4,000 שורות",
+      "ללחוץ \"ייצוא לאקסל\" ולהמתין להודעה",
+      "לפתוח את הקובץ שירד ולספור את השורות מול הדוח במסך"
+    ],
     "actual": "הקובץ מכיל 1,000 שורות בלבד מתוך 4,000, והמערכת הציגה \"הייצוא הושלם בהצלחה\" בלי אזהרת חיתוך. בדוח של 800 שורות הקובץ מלא.",
     "expected": "הקובץ מכיל את כל שורות הדוח; אם קיימת מגבלת ייצוא — מוצגת אזהרה מפורשת והייצוא לא מוצג כהצלחה מלאה.",
     "evidence": "שני קובצי הייצוא (4,000 שורות ו-800 שורות) וצילומי הודעת ההצלחה בשני המקרים",
     "severity": "high",
     "severityJustification": "הצוות העסקי מקבל נתונים חסרים בלי לדעת זאת ומבסס עליהם דיווח רבעוני — נזק להחלטות שאינו נראה באף מדד. כישלון שקט מסוכן מכישלון גלוי בדיוק כי איש לא יודע לפצות עליו."
-  }
+  },
+  "commonMistakes": [
+    {
+      "misconceptionId": "MIS.BUG.EXPECTED_RESTATES_STEP",
+      "descriptionHe": "התוצאה המצופה חוזרת על הפעולה (\"שהייצוא יסתיים\") במקום לתאר מה אמור להתקבל ואיפה.",
+      "whyTempting": "כשהייצוא נכשל בשקט, הכשל מרגיש כמו כל ההסבר הדרוש.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-expected"
+    },
+    {
+      "misconceptionId": "MIS.BUG.STEPS_NOT_REPRODUCIBLE",
+      "descriptionHe": "הצעדים אינם מציינים כמה זמן חיכתה הבודקת לפני שקבעה שהייצוא נכשל.",
+      "whyTempting": "הכשל שקט, ולכן ההמתנה לא נחשבת לצעד.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-steps"
+    },
+    {
+      "misconceptionId": "MIS.BUG.CAUSE_ASSERTED",
+      "descriptionHe": "נכתב שהשרת \"עשה timeout\" — מסקנה שלא נצפתה, אלא הוסקה מהיעדר תוצאה.",
+      "whyTempting": "זו ההשערה המקצועית המתבקשת מהיעדר הודעת שגיאה.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-neutral"
+    }
+  ],
+  "updatedAt": "2026-07-30"
 }

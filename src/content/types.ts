@@ -123,6 +123,28 @@ export interface ContentItem {
   readonly status: 'active' | 'retired';
 }
 
+/**
+ * The misconception registry — docs/05 §4, referenced by docs/06 §6.3.
+ *
+ * A misconception is a *named*, reusable wrong belief. It lives at product level
+ * rather than on an item because the same misconception recurs across topics: a
+ * report whose steps cannot be reproduced is the same error whether it appears
+ * in defect reporting or in failure investigation. Registering it once is what
+ * lets feedback name it consistently and lets `QM-07` verify that feedback can
+ * never cite a misconception that does not exist.
+ */
+export interface Misconception {
+  readonly id: string;
+  readonly titleHe: string;
+  readonly descriptionHe: string;
+  readonly whyTempting: string;
+  readonly skillIds: readonly SkillId[];
+  /** Where it is addressed; must resolve to a servable item (QM-16). */
+  readonly remediationRef: ContentItemId;
+  readonly anchor?: string;
+  readonly status: 'active' | 'retired';
+}
+
 /** A topic joined with the domain it belongs to, for map rendering. */
 export interface TopicWithDomain extends Topic {
   readonly domainRef: Domain;

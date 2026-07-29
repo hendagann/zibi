@@ -1,0 +1,12 @@
+{
+  "id": "MIS.BUG.SEVERITY_UNJUSTIFIED",
+  "titleHe": "חומרה בלי נימוק השפעה",
+  "descriptionHe": "נבחרה תווית חומרה בלי לקשור אותה להשפעה על המשתמש או על העסק, ולכן אי אפשר להגן עליה כשהיא מוטלת בספק.",
+  "whyTempting": "התווית מרגישה כמו החלק האובייקטיבי בדיווח, והנימוק כמו הסבר מיותר.",
+  "skillIds": [
+    "DOC.ADV"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-severity",
+  "status": "active"
+}

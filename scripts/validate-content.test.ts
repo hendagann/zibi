@@ -72,6 +72,109 @@ describe('content validator rules', () => {
     expect(out).toContain('CM-02');
   });
 
+  it('catches a common mistake citing an unregistered misconception (QM-07)', async () => {
+    const root = await libraryCopy();
+    await mutate(root, 'exercises/DOC-defects.EX.001.json', (data) => {
+      data.commonMistakes = [
+        {
+          misconceptionId: 'MIS.BUG.DOES_NOT_EXIST',
+          descriptionHe: 'משהו',
+          whyTempting: 'משהו',
+          remediationRef: 'DOC-defects.LE.001',
+        },
+      ];
+    });
+    const { code, out } = await check(root);
+    expect(code).not.toBe(0);
+    expect(out).toContain('QM-07');
+  });
+
+  it('accepts a common mistake that does resolve in the registry (QM-07)', async () => {
+    // The paired positive case: without it, QM-07 passing proves nothing.
+    const root = await libraryCopy();
+    await mutate(root, 'exercises/DOC-defects.EX.001.json', (data) => {
+      data.commonMistakes = [
+        {
+          misconceptionId: 'MIS.BUG.TITLE_AREA_ONLY',
+          descriptionHe: 'כותרת בלי תקלה',
+          whyTempting: 'ההקשר ברור לכותבת',
+          remediationRef: 'DOC-defects.LE.001',
+          anchor: 'sec-title',
+        },
+      ];
+    });
+    const { code } = await check(root);
+    expect(code).toBe(0);
+  });
+
+  it('catches a common mistake pointing at unapproved revision material (QM-16)', async () => {
+    const root = await libraryCopy();
+    await mutate(root, 'exercises/DOC-defects.EX.001.json', (data) => {
+      data.commonMistakes = [
+        {
+          misconceptionId: 'MIS.BUG.TITLE_AREA_ONLY',
+          descriptionHe: 'x',
+          whyTempting: 'y',
+          remediationRef: 'DOC-defects.EX.999',
+        },
+      ];
+    });
+    const { code, out } = await check(root);
+    expect(code).not.toBe(0);
+    expect(out).toContain('QM-16');
+  });
+
+  it('catches a misconception whose remediation target does not exist (QM-16)', async () => {
+    const root = await libraryCopy();
+    await mutate(root, 'misconceptions/MIS.BUG.TITLE_AREA_ONLY.json', (data) => {
+      data.remediationRef = 'DOC-defects.LE.404';
+    });
+    const { code, out } = await check(root);
+    expect(code).not.toBe(0);
+    expect(out).toContain('QM-16');
+  });
+
+  it('catches an approved blueprint that can never be assembled (EX-08)', async () => {
+    // The rule that would have caught the readiness blueprint being approved
+    // while five of its six question families had no items at all.
+    const root = await libraryCopy();
+    await mutate(root, 'exams/DOC-defects.BP.001.json', (data) => {
+      const segments = data.segments as { questionFamily: string }[];
+      segments[0]!.questionFamily = 'investigate_failure';
+    });
+    const { code, out } = await check(root);
+    expect(code).not.toBe(0);
+    expect(out).toContain('EX-08');
+  });
+
+  it('catches an approved blueprint whose segment budget no item can fit (EX-08)', async () => {
+    const root = await libraryCopy();
+    await mutate(root, 'exams/DOC-defects.BP.001.json', (data) => {
+      const segments = data.segments as { minutes: number }[];
+      // 20 minutes total is preserved so EX-03 still passes; the first segment
+      // becomes too short for any real item, which is the condition under test.
+      segments[0]!.minutes = 2;
+      segments[1]!.minutes = 18;
+    });
+    const { code, out } = await check(root);
+    expect(code).not.toBe(0);
+    expect(out).toContain('EX-08');
+  });
+
+  it('does not apply EX-08 to a draft blueprint', async () => {
+    // A draft blueprint is allowed to describe an exam the content cannot yet
+    // satisfy — that is exactly how the readiness plan is parked.
+    const root = await libraryCopy();
+    await mutate(root, 'exams/DOC-defects.BP.001.json', (data) => {
+      const segments = data.segments as { questionFamily: string }[];
+      segments[0]!.questionFamily = 'investigate_failure';
+      data.review = { status: 'draft' };
+    });
+    const { code, out } = await check(root);
+    expect(out).not.toContain('EX-08');
+    expect(code).toBe(0);
+  });
+
   it('catches an exercise without a rubric (CM-08)', async () => {
     const root = await libraryCopy();
     await mutate(root, 'exercises/DOC-defects.EX.001.json', (d) => {

@@ -3,7 +3,12 @@
   "type": "exercise",
   "schemaVersion": 1,
   "topic": "DOC/defects",
-  "skills": { "primary": "DOC.BUG", "secondary": ["DOC.ADV"] },
+  "skills": {
+    "primary": "DOC.BUG",
+    "secondary": [
+      "DOC.ADV"
+    ]
+  },
   "cognitiveLevel": "K4",
   "difficulty": 3,
   "title": "תיקון דיווח באג לקוי",
@@ -13,48 +18,119 @@
   "pool": "practice",
   "questionType": "repair_defect_report",
   "requiresEvidence": false,
-  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
-  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" },
-  "version": 1,
+  "source": [
+    {
+      "sourceId": "SRC-ITCB-CTFL-HE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-29"
+  },
+  "version": 2,
   "status": "active",
   "rubricRef": "RUB.BUG_REPAIR",
-  "revisionRefs": ["DOC-defects.SUM.001", "DOC-defects.LE.001"],
+  "revisionRefs": [
+    "DOC-defects.SUM.001",
+    "DOC-defects.LE.001"
+  ],
   "scenario": [
-    { "kind": "paragraph", "text": "עמית לצוות פתח את הדיווח הבא, והוא הוחזר מהפיתוח עם ההערה \"לא משוחזר\". קראו אותו בעיון:" },
-    { "kind": "artifactSample", "artifact": "defect_report", "value": {
-      "title": "ההתחברות שבורה שוב!!",
-      "environment": "",
-      "preconditions": "",
-      "steps": ["לנסות להתחבר כמה פעמים עד שזה נתקע"],
-      "actual": "אי אפשר להיכנס למערכת, כנראה בגלל הקאש. המפתחים שברו את זה שוב.",
-      "expected": "",
-      "evidence": "",
-      "severity": "critical",
-      "severityJustification": ""
-    } },
-    { "kind": "paragraph", "text": "מידע נוסף שידוע לכם מהשיחה עם העמית: זה קרה ב-Chrome 141 על Windows 11 בסביבת Staging גרסה 3.6.1, עם משתמש שסיסמתו נכונה. אחרי חמישה ניסיונות כניסה עם סיסמה שגויה, גם כניסה עם הסיסמה הנכונה נכשלת בלי כל הודעה על נעילת חשבון — המסך פשוט חוזר ריק. אחרי 15 דקות הכניסה מצליחה." }
+    {
+      "kind": "paragraph",
+      "text": "עמית לצוות פתח את הדיווח הבא, והוא הוחזר מהפיתוח עם ההערה \"לא משוחזר\". קראו אותו בעיון:"
+    },
+    {
+      "kind": "artifactSample",
+      "artifact": "defect_report",
+      "value": {
+        "title": "ההתחברות שבורה שוב!!",
+        "environment": "",
+        "preconditions": "",
+        "steps": [
+          "לנסות להתחבר כמה פעמים עד שזה נתקע"
+        ],
+        "actual": "אי אפשר להיכנס למערכת, כנראה בגלל הקאש. המפתחים שברו את זה שוב.",
+        "expected": "",
+        "evidence": "",
+        "severity": "critical",
+        "severityJustification": ""
+      }
+    },
+    {
+      "kind": "paragraph",
+      "text": "מידע נוסף שידוע לכם מהשיחה עם העמית: זה קרה ב-Chrome 141 על Windows 11 בסביבת Staging גרסה 3.6.1, עם משתמש שסיסמתו נכונה. אחרי חמישה ניסיונות כניסה עם סיסמה שגויה, גם כניסה עם הסיסמה הנכונה נכשלת בלי כל הודעה על נעילת חשבון — המסך פשוט חוזר ריק. אחרי 15 דקות הכניסה מצליחה."
+    }
   ],
   "prompt": [
-    { "kind": "paragraph", "text": "שלב א: סמנו אילו ליקויים קיימים בדיווח המקורי. שלב ב: כתבו את הגרסה המתוקנת המלאה, על סמך המידע מהשיחה." }
+    {
+      "kind": "paragraph",
+      "text": "שלב א: סמנו אילו ליקויים קיימים בדיווח המקורי. שלב ב: כתבו את הגרסה המתוקנת המלאה, על סמך המידע מהשיחה."
+    }
   ],
   "diagnosisOptions": [
-    { "id": "missing-expected", "label": "חסרה תוצאה מצופה" },
-    { "id": "vague-steps", "label": "צעדי השחזור מעורפלים ולא ניתנים לביצוע" },
-    { "id": "no-environment", "label": "סביבת הבדיקה חסרה" },
-    { "id": "blame-language", "label": "ניסוח מאשים וקביעת סיבה ללא ראיות" },
-    { "id": "too-many-screenshots", "label": "צורפו יותר מדי צילומי מסך" },
-    { "id": "severity-too-low", "label": "החומרה שנבחרה נמוכה מדי" }
+    {
+      "id": "missing-expected",
+      "label": "חסרה תוצאה מצופה"
+    },
+    {
+      "id": "vague-steps",
+      "label": "צעדי השחזור מעורפלים ולא ניתנים לביצוע"
+    },
+    {
+      "id": "no-environment",
+      "label": "סביבת הבדיקה חסרה"
+    },
+    {
+      "id": "blame-language",
+      "label": "ניסוח מאשים וקביעת סיבה ללא ראיות"
+    },
+    {
+      "id": "too-many-screenshots",
+      "label": "צורפו יותר מדי צילומי מסך"
+    },
+    {
+      "id": "severity-too-low",
+      "label": "החומרה שנבחרה נמוכה מדי"
+    }
   ],
   "modelAnswer": {
     "title": "כניסה עם סיסמה נכונה נכשלת בלי הודעה אחרי חמישה ניסיונות כושלים",
     "environment": "Chrome 141, Windows 11, סביבת Staging, גרסה 3.6.1",
     "preconditions": "משתמש קיים עם סיסמה ידועה; החשבון אינו נעול לפני תחילת הבדיקה",
-    "steps": ["לנסות להתחבר חמש פעמים עם סיסמה שגויה", "לנסות להתחבר עם הסיסמה הנכונה מיד אחרי הניסיון החמישי", "להמתין 15 דקות ולנסות שוב עם הסיסמה הנכונה"],
+    "steps": [
+      "לנסות להתחבר חמש פעמים עם סיסמה שגויה",
+      "לנסות להתחבר עם הסיסמה הנכונה מיד אחרי הניסיון החמישי",
+      "להמתין 15 דקות ולנסות שוב עם הסיסמה הנכונה"
+    ],
     "actual": "מיד אחרי חמשת הכישלונות, גם כניסה עם הסיסמה הנכונה נכשלת והמסך חוזר ריק, ללא הודעה על נעילת חשבון. אחרי 15 דקות הכניסה מצליחה.",
     "expected": "אם החשבון ננעל — מוצגת הודעה מפורשת על נעילה ומשך ההמתנה; משתמש אינו נשאר מול מסך ריק ללא הסבר.",
     "evidence": "צילום מסך של הכניסה הנכשלת ללא הודעה, וצילום ניסיון הכניסה המוצלח לאחר ההמתנה",
     "severity": "high",
     "severityJustification": "משתמש עם סיסמה נכונה ננעל בלי שום הסבר — נראה לו שהמערכת שבורה, והוא צפוי לפנות לתמיכה או לוותר. מנגנון הנעילה עצמו תקין; התקלה היא בהיעדר ההודעה.",
-    "diagnosis": ["missing-expected", "vague-steps", "no-environment", "blame-language"]
-  }
+    "diagnosis": [
+      "missing-expected",
+      "vague-steps",
+      "no-environment",
+      "blame-language"
+    ]
+  },
+  "commonMistakes": [
+    {
+      "misconceptionId": "MIS.BUG.STEPS_NOT_REPRODUCIBLE",
+      "descriptionHe": "הדיווח נכתב מחדש במלואו בלי לאבחן מה היה חסר בו — והמיומנות הנמדדת היא האבחון.",
+      "whyTempting": "קל יותר לכתוב דיווח טוב מאפס מלהצביע על מה שגוי בדיווח קיים.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-steps"
+    },
+    {
+      "misconceptionId": "MIS.BUG.SEVERITY_UNJUSTIFIED",
+      "descriptionHe": "החומרה עודכנה בלי להסביר מה בדיווח המקורי הצדיק שינוי.",
+      "whyTempting": "ההערכה המקורית נראית שגויה במובן מאליו, ולכן הנימוק נראה מיותר.",
+      "remediationRef": "DOC-defects.LE.001",
+      "anchor": "sec-severity"
+    }
+  ],
+  "updatedAt": "2026-07-30"
 }

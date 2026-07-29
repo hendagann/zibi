@@ -394,6 +394,9 @@ export const he = {
     confidenceLow: 'נמוכה',
     confidenceReview: 'דורש בדיקה אנושית',
     historyLabel: 'ניסיונות קודמים',
+    commonMistakesTitle: 'טעויות נפוצות בשאלה הזאת',
+    commonMistakesHint:
+      'אלה הטעויות שחוזרות בשאלה הזאת — גם אם לא עשית אותן. מוצגות לאחר ההגשה בלבד.',
   },
 
   dimensions: {

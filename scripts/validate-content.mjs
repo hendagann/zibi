@@ -33,8 +33,8 @@ async function readAll(dir) {
   }
 }
 
-const [domains, topics, skills, rubrics, sources, ...itemDirs] = await Promise.all(
-  ['domains', 'topics', 'skills', 'rubrics', 'sources',
+const [domains, topics, skills, rubrics, sources, misconceptions, ...itemDirs] = await Promise.all(
+  ['domains', 'topics', 'skills', 'rubrics', 'sources', 'misconceptions',
    'lessons', 'examples', 'exercises', 'exams'].map(readAll),
 );
 const items = itemDirs.flat();
@@ -44,6 +44,7 @@ const SERVABLE = new Set(['approved', 'published']);
 const isServable = (d) => SERVABLE.has(d?.review?.status);
 
 const itemById = new Map(items.map((i) => [i.data.id, i.data]));
+const misconceptionIds = new Set(misconceptions.map((m) => m.data.id));
 const skillIds = new Set(skills.map((s) => s.data.id));
 const sourceIds = new Set(sources.map((s) => s.data.id));
 const rubricIds = new Set(rubrics.map((r) => r.data.rubric_id));
@@ -160,6 +161,37 @@ for (const { file, data } of items.filter((i) => ['exercise', 'exam_item'].inclu
       fail('QM-12', `${file}: קישור חזרה לפריט לא מאושר: ${ref}`);
   }
   if (!data.modelAnswer) fail('QM-09', `${file}: חסרה תשובת מופת`);
+
+  /* QM-07 + QM-16 (docs/06 §6.3): טעויות נפוצות על פריט מנוקד הן מטא-דאטה
+     להערכה, ולכן כל שדה חובה — משוב נוצר מהן. זו אינה אותה שדה כמו
+     commonMistakes האילוסטרטיבי של דוגמה מודרכת (docs/05 §12). */
+  for (const mistake of data.commonMistakes ?? []) {
+    if (!mistake.misconceptionId || !misconceptionIds.has(mistake.misconceptionId))
+      fail('QM-07', `${file}: תפיסה שגויה לא רשומה במרשם: ${mistake.misconceptionId}`);
+    if (!mistake.descriptionHe?.trim()) fail('QM-07', `${file}: חסר descriptionHe בטעות נפוצה`);
+    if (!mistake.whyTempting?.trim()) fail('QM-07', `${file}: חסר whyTempting בטעות נפוצה`);
+    const target = mistake.remediationRef && itemById.get(mistake.remediationRef);
+    if (!target)
+      fail('QM-16', `${file}: יעד חזרה לא קיים: ${mistake.remediationRef}`);
+    else if (!isServable(target))
+      fail('QM-16', `${file}: יעד חזרה לא מאושר: ${mistake.remediationRef}`);
+  }
+}
+
+/* ---- misconception registry — docs/05 §4, docs/06 §6.3 ---- */
+for (const { file, data } of misconceptions) {
+  if (!/^MIS\.[A-Z0-9_.]{3,32}$/.test(data.id ?? ''))
+    fail('CM-02', `${file}: מזהה תפיסה שגויה לא תואם תבנית: ${data.id}`);
+  if (data.id !== file.split('/').pop().replace('.json', ''))
+    fail('CM-02', `${file}: שם הקובץ אינו המזהה`);
+  for (const field of ['titleHe', 'descriptionHe', 'whyTempting'])
+    if (!data[field]?.trim()) fail('QM-07', `${file}: חסר ${field}`);
+  for (const skillId of data.skillIds ?? [])
+    if (!skillIds.has(skillId)) fail('SM-03', `${file}: מיומנות לא קיימת: ${skillId}`);
+  if ((data.skillIds ?? []).length === 0) fail('QM-07', `${file}: תפיסה שגויה ללא מיומנות`);
+  const target = data.remediationRef && itemById.get(data.remediationRef);
+  if (!target) fail('QM-16', `${file}: יעד חזרה לא קיים: ${data.remediationRef}`);
+  else if (!isServable(target)) fail('QM-16', `${file}: יעד חזרה לא מאושר: ${data.remediationRef}`);
 }
 
 /* ---- EX-01..EX-07: מתווה מבחן — docs/10 §9 ---- */
@@ -203,6 +235,37 @@ for (const { file, data } of items.filter((i) => i.data.type === 'exam_blueprint
 
   if (rules.requireJudgementItem && !segments.some((seg) => seg.judgement))
     fail('EX-07', `${file}: המתווה דורש שאלת שיקול דעת אך אין מקטע judgement`);
+
+  /* ---- EX-08: מתווה מאושר חייב להיות ניתן להרכבה ----
+     מתווה approved שאינו יכול להתאסף לעולם עובר את כל בדיקות המבנה ובכל זאת
+     מבטיח ללומדת מבחן שלא יתקיים. הבדיקה כאן היא סטטית בכוונה: היא שואלת אם
+     המאגר הטרי מכיל, לכל מקטע, פריט מתאים שנכנס לתקציב הזמן. מיצוי פריטים לפי
+     היסטוריית הלומדת נשאר עניין של זמן-ריצה (docs/10 §4), וזה בסדר — כאן
+     נבדקת הבטחה על התוכן, לא על הלומדת. */
+  if (isServable(data)) {
+    const examPool = items
+      .map((i) => i.data)
+      .filter((d) => d.type === 'exam_item' && d.pool === 'exam' && isServable(d))
+      .filter((d) => !data.scopeRef || d.topic === data.scopeRef);
+    for (const seg of segments) {
+      const family = examPool.filter((d) => d.questionType === seg.questionFamily);
+      if (family.length === 0) {
+        fail(
+          'EX-08',
+          `${file}/${seg.segmentId}: מתווה מאושר ללא פריט מבחן מהסוג ${seg.questionFamily}`,
+        );
+        continue;
+      }
+      const budget = (seg.minutes ?? 0) * 60;
+      if (!family.some((d) => (d.estimatedSeconds ?? Infinity) <= budget)) {
+        const shortest = Math.min(...family.map((d) => d.estimatedSeconds ?? Infinity));
+        fail(
+          'EX-08',
+          `${file}/${seg.segmentId}: הפריט הקצר ביותר ${shortest} שנ׳ חורג מתקציב המקטע ${budget} שנ׳`,
+        );
+      }
+    }
+  }
 }
 
 /* ---- SRC-01: לכל מקור חייב להיות מצב רישיון ---- */

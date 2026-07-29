@@ -1,0 +1,12 @@
+{
+  "id": "MIS.BUG.EXPECTED_RESTATES_STEP",
+  "titleHe": "תוצאה מצופה שחוזרת על הצעד",
+  "descriptionHe": "ה\"תוצאה המצופה\" מנוסחת כ\"שזה יעבוד\" או כחזרה על הפעולה, ולא כתצפית שניתן לאמת מול דרישה.",
+  "whyTempting": "אם התוצאה בפועל שגויה, נראה מובן מאליו מה הייתה צריכה להיות — ולכן חבל לכאורה לנסח אותה במלואה.",
+  "skillIds": [
+    "DOC.BUG"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-expected",
+  "status": "active"
+}

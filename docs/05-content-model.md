@@ -447,8 +447,23 @@ A technique applied end to end, with the reasoning made visible. Owned by exactl
 | `scenario` | R | block[] | the situation, before any technique is applied |
 | `steps` | R | object[2..n] | see below |
 | `outcome` | R | block[] | the finished artifact or conclusion |
-| `commonMistakes` | O | object[] | `{ mistake, whyTempting, misconceptionId? }` |
+| `commonMistakes` | O | object[] | `{ mistake, whyTempting, misconceptionId? }` — **illustrative**, see below |
 | envelope | R | §5 | |
+
+**`commonMistakes` means two different things, and this is the field that says so.**
+A guided example's `commonMistakes` is *illustrative teaching content*: it shows the learner
+mistakes a person makes while applying the technique, and `misconceptionId` is optional because
+an example may legitimately illustrate a mistake that is not yet a registered misconception.
+
+A **scored** item's `commonMistakes` is *assessment metadata* with a different, stricter shape —
+`{ misconceptionId, descriptionHe, whyTempting, remediationRef }`, all required — and it is
+owned by [06-question-model](06-question-model.md) §6.3, per the ownership split in §1.
+
+The two are not in conflict and must not be unified. One teaches; the other drives feedback and
+must therefore resolve into the misconception registry (`QM-07`) and point at approved revision
+material (`QM-16`). Collapsing them would either force teaching content to carry remediation
+links it has no use for, or weaken the assessment field to the point where feedback could name a
+misconception that does not exist.
 
 Each entry in `steps`:
 

@@ -109,13 +109,18 @@ describe('content import', () => {
 
   it('--update bumps the version and resets the status, like an admin edit', async () => {
     const { root, bundleAt } = await setup();
+    // Read the starting version rather than assuming it: the guarantee under
+    // test is the increment, not the absolute number.
+    const beforeVersion = JSON.parse(
+      await readFile(join(root, 'exercises', 'DOC-defects.EX.001.json'), 'utf8'),
+    ).version as number;
     const bundle = await bundleAt({ items: [draftExercise('DOC-defects.EX.001', 'draft')] });
     const { code } = await importBundle(root, bundle, '--update');
     expect(code).toBe(0);
     const updated = JSON.parse(
       await readFile(join(root, 'exercises', 'DOC-defects.EX.001.json'), 'utf8'),
     );
-    expect(updated.version).toBe(2);
+    expect(updated.version).toBe(beforeVersion + 1);
     expect(updated.review.status).toBe('draft');
   });
 

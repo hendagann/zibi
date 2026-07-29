@@ -1,0 +1,12 @@
+{
+  "id": "MIS.BUG.MISSING_PRECONDITION",
+  "titleHe": "השמטת התנאי שהבאג תלוי בו",
+  "descriptionHe": "התנאי שבלעדיו הבאג אינו מופיע — משתמשת מחוברת, יותר מפריט אחד בעגלה, הרשאה מסוימת — אינו מופיע בתנאים המקדימים.",
+  "whyTempting": "המצב הזה היה נכון בסביבת הבדיקה של הכותבת, ולכן אינו נראה כתנאי אלא כמובן מאליו.",
+  "skillIds": [
+    "DOC.BUG"
+  ],
+  "remediationRef": "DOC-defects.LE.001",
+  "anchor": "sec-pre",
+  "status": "active"
+}
