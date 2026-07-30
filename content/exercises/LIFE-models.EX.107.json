@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "תפקיד הבודקת ב-Agile",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו תפקיד הבודקת בפרויקט Agile?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לחכות לסוף הספרינט ואז לבדוק ידנית"
+      },
+      {
+        "id": "b",
+        "labelHe": "להשתתף מההתחלה — בכתיבת קריטריוני קבלה, בבדיקה תוך כדי וברגרסיה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לכתוב את הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לנהל את הצוות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ב-Agile הבודקת שותפה לאורך כל האיטרציה, לא רק בסופה — כולל בהגדרת קריטריוני הקבלה.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

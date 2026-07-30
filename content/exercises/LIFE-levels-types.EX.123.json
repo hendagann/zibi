@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.123",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "title": "שינוי קטן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שונתה שורה אחת בפונקציה משותפת שמשמשת שלושה אזורים. האם נדרשת רגרסיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לא, השינוי קטן מדי"
+      },
+      {
+        "id": "b",
+        "labelHe": "כן — גודל השינוי אינו מעיד על היקף ההשפעה; כל האזורים התלויים מועמדים לרגרסיה"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אם הלקוח ביקש"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בסוף הפרויקט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פונקציה משותפת מעבירה את השינוי לכל מי שקורא לה — היקף ההשפעה, לא גודל הדיף, קובע.",
+    "skillId": "LIFE.REG",
+    "dimension": "application"
+  }
+}

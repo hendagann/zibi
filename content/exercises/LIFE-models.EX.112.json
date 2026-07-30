@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "הנימוק ל-shift-left",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו הנימוק המרכזי ל-shift-left?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זה מקצר את יום העבודה"
+      },
+      {
+        "id": "b",
+        "labelHe": "תיקון פגם שהתגלה מוקדם זול משמעותית מתיקונו אחרי שחרור"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה מבטל בדיקות מערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה מפחית תיעוד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "עלות תיקון פגם עולה ככל שהוא מתגלה מאוחר יותר; לכן כדאי להקדים את הגילוי.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

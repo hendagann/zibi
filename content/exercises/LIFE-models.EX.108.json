@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מלכודת Agile",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו קביעה על Agile שגויה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "האיטרציות קצרות"
+      },
+      {
+        "id": "b",
+        "labelHe": "יש משוב תדיר מהלקוח"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין בו תכנון בדיקות ואין מסמכים כלל"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצוות חוצה-תפקידים"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "Agile מצמצם תיעוד וממקד אותו (סיפורים, קריטריוני קבלה, DoD) — הוא אינו מבטל תכנון ותיעוד.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

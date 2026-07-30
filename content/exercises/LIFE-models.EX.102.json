@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מודל V",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין את מודל ה-V?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בו בדיקות"
+      },
+      {
+        "id": "b",
+        "labelHe": "לכל שלב פיתוח מוצמד שלב בדיקה מקביל"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבדיקות רצות לפני הפיתוח"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא זהה ל-Agile"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "במודל V כל שלב פיתוח בצד שמאל מוצמד לרמת בדיקה מקבילה בצד ימין, כך שתכנון הבדיקות מתחיל מוקדם.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

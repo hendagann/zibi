@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מהו shift-left",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו shift-left testing?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הזזת הבדיקות מוקדם יותר במחזור הפיתוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה רק בסוף"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקה משמאל לימין במסך"
+      },
+      {
+        "id": "d",
+        "labelHe": "ביטול בדיקות יחידה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "Shift-left הוא הזזת פעילות הבדיקה מוקדם ככל האפשר — סקירת דרישות, יחידה, אינטגרציה.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "שיוך פגם — קבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "המערכת עובדת בדיוק כפי שתועד, אך הלקוח אומר שביקש דוח חודשי ולא שבועי. לאיזו רמה משויך הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יחידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אינטגרציה"
+      },
+      {
+        "id": "c",
+        "labelHe": "קבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין פגם"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "אין כשל טכני; הפער בין מה שנבנה למה שנדרש עסקית מתגלה בבדיקת קבלה.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "application"
+  }
+}

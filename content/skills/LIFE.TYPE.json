@@ -1,0 +1,14 @@
+{
+  "id": "LIFE.TYPE",
+  "topic": "LIFE/levels-types",
+  "titleHe": "סוגי בדיקות",
+  "titleEn": "Test types",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Classifies a stated quality concern as functional, non-functional or change-related, and names the test type that addresses it.",
+  "prerequisites": [
+    "LIFE.LEVEL"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "DevOps",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין בדיקות בסביבת DevOps ו-CI/CD?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקות אוטומטיות רצות בכל שינוי קוד ומספקות משוב מהיר"
+      },
+      {
+        "id": "b",
+        "labelHe": "אין בדיקות"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות רק פעם בשנה"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בדיקות ידניות"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בצנרת CI/CD כל commit מפעיל בנייה והרצת בדיקות אוטומטיות, מה שמקצר מאוד את לולאת המשוב.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

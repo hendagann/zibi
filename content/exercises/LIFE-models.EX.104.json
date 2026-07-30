@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "הצמדת קוד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "במודל V, איזו רמת בדיקה מוצמדת לשלב כתיבת הקוד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקות יחידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקות קבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות מערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקות רגולציה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בדיקת יחידה בוחנת את היחידה הקטנה ביותר של הקוד, ולכן היא צמודה לשלב הכתיבה.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "LIFE.LEVEL",
+  "topic": "LIFE/levels-types",
+  "titleHe": "רמות בדיקה",
+  "titleEn": "Test levels",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Assigns a described defect to the test level that should have caught it, and justifies why an adjacent level would not.",
+  "prerequisites": [
+    "FUND.PROC"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

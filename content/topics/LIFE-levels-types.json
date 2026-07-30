@@ -1,0 +1,59 @@
+{
+  "id": "LIFE/levels-types",
+  "nameHe": "רמות וסוגי בדיקות",
+  "nameEn": "Test levels and types",
+  "domain": "LIFE",
+  "description": "ארבע רמות הבדיקה — יחידה, אינטגרציה, מערכת וקבלה — ומה כל רמה תופסת; סוגי הבדיקות (פונקציונלי, לא-פונקציונלי, קופסה שחורה/לבנה); ובדיקות שינוי: אימות תיקון מול רגרסיה. הליבה של פרק 2 ושאלת ראיון קבועה.",
+  "learningObjectives": [
+    "לשייך פגם מתואר לרמת הבדיקה שהייתה אמורה לתפוס אותו ולנמק מדוע רמה סמוכה לא",
+    "לסווג דרישת איכות כפונקציונלית, לא-פונקציונלית או קשורת-שינוי",
+    "להבחין בין בדיקת קופסה שחורה לקופסה לבנה ולציין מי מבצע כל אחת",
+    "להחליט מה דורש אימות תיקון ומה דורש רגרסיה, ולתחום את היקף הרגרסיה בנימוק"
+  ],
+  "prerequisites": [
+    "LIFE/models"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 90,
+  "measuredSkills": [
+    "LIFE.LEVEL",
+    "LIFE.TYPE",
+    "LIFE.REG"
+  ],
+  "summaryRef": "LIFE-levels-types.SUM.001",
+  "lessonRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "exerciseRefs": [
+    "LIFE-levels-types.EX.100",
+    "LIFE-levels-types.EX.101",
+    "LIFE-levels-types.EX.102",
+    "LIFE-levels-types.EX.103",
+    "LIFE-levels-types.EX.104",
+    "LIFE-levels-types.EX.105",
+    "LIFE-levels-types.EX.106",
+    "LIFE-levels-types.EX.107",
+    "LIFE-levels-types.EX.108",
+    "LIFE-levels-types.EX.109",
+    "LIFE-levels-types.EX.110",
+    "LIFE-levels-types.EX.111",
+    "LIFE-levels-types.EX.112",
+    "LIFE-levels-types.EX.113",
+    "LIFE-levels-types.EX.114",
+    "LIFE-levels-types.EX.115",
+    "LIFE-levels-types.EX.116",
+    "LIFE-levels-types.EX.117",
+    "LIFE-levels-types.EX.118",
+    "LIFE-levels-types.EX.119",
+    "LIFE-levels-types.EX.120",
+    "LIFE-levels-types.EX.121",
+    "LIFE-levels-types.EX.122",
+    "LIFE-levels-types.EX.123"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

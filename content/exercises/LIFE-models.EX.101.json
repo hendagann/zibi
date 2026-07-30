@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "החיסרון של הסדרתי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו החיסרון העיקרי של ריכוז הבדיקות בסוף במודל סדרתי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הבדיקות איטיות יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם שמקורו בדרישות מתגלה מאוחר, ותיקונו יקר בהרבה"
+      },
+      {
+        "id": "c",
+        "labelHe": "אי אפשר לתעד"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין צורך בבודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ככל שפגם מתגלה מאוחר יותר במחזור, כך תיקונו יקר יותר — זה בדיוק הנימוק לבדיקה מוקדמת.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

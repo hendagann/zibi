@@ -1,0 +1,53 @@
+{
+  "id": "LIFE/models",
+  "nameHe": "מודלי פיתוח",
+  "nameEn": "Development models",
+  "domain": "LIFE",
+  "description": "כיצד מודל הפיתוח — סדרתי, איטרטיבי, V, Agile ו-DevOps — קובע מתי מבצעים אילו בדיקות, ומה משתנה כשהמודל משתנה. פרק 2 של מבחן ההסמכה: 15% מהשאלות.",
+  "learningObjectives": [
+    "לציין, עבור מודל פיתוח נתון, אילו פעילויות בדיקה מתבצעות ומתי",
+    "להסביר מה משתנה בבדיקות כאשר המודל משתנה",
+    "לזהות את ההתאמה בין שלב פיתוח לרמת בדיקה במודל V",
+    "להסביר את היתרון הכלכלי של בדיקה מוקדמת (shift-left)"
+  ],
+  "prerequisites": [
+    "FUND/process"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 75,
+  "measuredSkills": [
+    "LIFE.MODEL"
+  ],
+  "summaryRef": "LIFE-models.SUM.001",
+  "lessonRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "exerciseRefs": [
+    "LIFE-models.EX.100",
+    "LIFE-models.EX.101",
+    "LIFE-models.EX.102",
+    "LIFE-models.EX.103",
+    "LIFE-models.EX.104",
+    "LIFE-models.EX.105",
+    "LIFE-models.EX.106",
+    "LIFE-models.EX.107",
+    "LIFE-models.EX.108",
+    "LIFE-models.EX.109",
+    "LIFE-models.EX.110",
+    "LIFE-models.EX.111",
+    "LIFE-models.EX.112",
+    "LIFE-models.EX.113",
+    "LIFE-models.EX.114",
+    "LIFE-models.EX.115",
+    "LIFE-models.EX.116",
+    "LIFE-models.EX.117",
+    "LIFE-models.EX.118",
+    "LIFE-models.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

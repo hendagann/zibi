@@ -1,0 +1,14 @@
+{
+  "id": "LIFE.REG",
+  "topic": "LIFE/levels-types",
+  "titleHe": "רגרסיה ואימות תיקון",
+  "titleEn": "Regression and confirmation testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Decides, for a described change, what needs confirmation testing versus regression testing, and scopes the regression set with a stated reason.",
+  "prerequisites": [
+    "LIFE.TYPE"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

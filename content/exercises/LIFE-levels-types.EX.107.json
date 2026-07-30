@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "מקום הגילוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פגם ברמת יחידה התגלה רק בבדיקת מערכת. כיצד לשייך אותו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לרמת המערכת, כי שם התגלה"
+      },
+      {
+        "id": "b",
+        "labelHe": "לרמת היחידה — הרמה שהייתה אמורה לתפוס אותו ראשונה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לרמת הקבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא משייכים פגמים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "משייכים לפי הרמה שהייתה אמורה לתפוס, לא לפי מקום הגילוי — כך מזהים את הנזילה ומשפרים.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "application"
+  }
+}

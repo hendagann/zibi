@@ -1,0 +1,14 @@
+{
+  "id": "LIFE.MODEL",
+  "topic": "LIFE/models",
+  "titleHe": "מודלי פיתוח",
+  "titleEn": "Development models",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "States, for a given development model, which test activities happen when, and what changes if the model changes.",
+  "prerequisites": [
+    "FUND.PROC"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

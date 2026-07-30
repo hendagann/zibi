@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "איטרטיבי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין פיתוח איטרטיבי/אינקרמנטלי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שלב אחד ארוך"
+      },
+      {
+        "id": "b",
+        "labelHe": "המוצר נבנה במחזורים חוזרים, ובכל מחזור נוספת יכולת ונבדקת"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין בדיקות רגרסיה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הבדיקות רק בסוף"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בפיתוח איטרטיבי המוצר גדל במחזורים; בכל איטרציה בודקים את החדש וגם מריצים רגרסיה על הקיים.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

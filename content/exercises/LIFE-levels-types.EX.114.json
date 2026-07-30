@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.TYPE"
+  },
+  "title": "סיווג נגישות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בדיקה שהמערכת ניתנת להפעלה מלאה במקלדת ובקורא מסך היא:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פונקציונלית"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא-פונקציונלית (נגישות)"
+      },
+      {
+        "id": "c",
+        "labelHe": "רגרסיה"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקת יחידה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "נגישות היא מאפיין איכות — בדיקה לא-פונקציונלית.",
+    "skillId": "LIFE.TYPE",
+    "dimension": "application"
+  }
+}

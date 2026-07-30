@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.120",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "title": "ההבדל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין אימות תיקון לרגרסיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "אימות בודק שהתיקון עבד (אותו תרחיש); רגרסיה בודקת שהתיקון לא שבר דבר אחר"
+      },
+      {
+        "id": "c",
+        "labelHe": "רגרסיה צרה יותר מאימות"
+      },
+      {
+        "id": "d",
+        "labelHe": "אימות מבוצע רק אוטומטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שתי שאלות שונות: אימות ממוקד בבאג שתוקן, רגרסיה מכסה את מה שעלול היה להישבר.",
+    "skillId": "LIFE.REG",
+    "dimension": "application"
+  }
+}

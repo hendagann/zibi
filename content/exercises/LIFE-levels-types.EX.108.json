@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "אינטגרציה מערכתית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה בודקת בדיקת אינטגרציה מערכתית (System Integration)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פונקציה בודדת"
+      },
+      {
+        "id": "b",
+        "labelHe": "את שילוב המערכת השלמה עם מערכות ורכיבים חיצוניים"
+      },
+      {
+        "id": "c",
+        "labelHe": "את צבעי הממשק"
+      },
+      {
+        "id": "d",
+        "labelHe": "את הקוד הפנימי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אינטגרציה מערכתית בוחנת את הממשקים מול מערכות חיצוניות — מסד נתונים, שירות תשלומים, ספק חיצוני.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "knowledge"
+  }
+}

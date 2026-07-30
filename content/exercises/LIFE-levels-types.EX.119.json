@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "title": "מהי רגרסיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי בדיקת רגרסיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הרצת סט בדיקות רחב יותר כדי לוודא שהשינוי לא שבר פונקציונליות קיימת"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקת הבאג שתוקן בלבד"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקת דרישות"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקה של קוד חדש בלבד"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "רגרסיה עונה על השאלה \"האם השינוי שבר משהו אחר?\" ולכן מכסה אזורים מעבר לתיקון עצמו.",
+    "skillId": "LIFE.REG",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "שינוי מודל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה משתנה בבדיקות כשעוברים ממודל סדרתי ל-Agile?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הבדיקות נעלמות"
+      },
+      {
+        "id": "b",
+        "labelHe": "הן מתפזרות לאורך איטרציות קצרות עם רגרסיה חוזרת, במקום להתרכז בסוף"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק המפתחים בודקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין רגרסיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המעבר מפזר את הבדיקות על פני איטרציות ומגדיל את משקל הרגרסיה והאוטומציה.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

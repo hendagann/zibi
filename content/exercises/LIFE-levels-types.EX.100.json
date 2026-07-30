@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "היחידה הקטנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נבדק בבדיקת יחידה (unit)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המערכת השלמה מקצה לקצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הרכיב הקטן ביותר שאפשר לבדוק בנפרד — פונקציה או מחלקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הממשק מול ספק חיצוני"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצורך העסקי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקת יחידה בוחנת רכיב בודד, לרוב על ידי המפתח ובגישה לקוד.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "knowledge"
+  }
+}

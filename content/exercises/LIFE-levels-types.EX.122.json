@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.122",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "title": "תיחום רגרסיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "תחת אילוץ זמן, כיצד נכון לתחום את היקף הרגרסיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להריץ את כל סט הבדיקות"
+      },
+      {
+        "id": "b",
+        "labelHe": "לפי מה שהשינוי נגע בו ומה תלוי בו, מתועדף לפי סיכון, עם הצהרה על מה שלא נבדק"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבחור אקראית"
+      },
+      {
+        "id": "d",
+        "labelHe": "לדלג על רגרסיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רגרסיה נתחמת לפי השפעת השינוי וסיכון; \"להריץ הכול\" תחת אילוץ הוא היעדר החלטה.",
+    "skillId": "LIFE.REG",
+    "dimension": "application"
+  }
+}

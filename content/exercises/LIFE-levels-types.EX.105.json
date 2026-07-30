@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "שיוך פגם — יחידה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פונקציית חישוב מחזירה תוצאה שגויה כשהסכום הוא בדיוק 100 (תנאי > במקום >=). לאיזו רמה משויך הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יחידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אינטגרציה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "קבלה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "הפגם כולו בתוך רכיב אחד וניתן לחשיפה בהרצת הפונקציה לבדה — רמת היחידה.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "application"
+  }
+}

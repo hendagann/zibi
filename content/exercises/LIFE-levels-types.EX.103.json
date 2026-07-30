@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "title": "בדיקת מערכת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין בדיקת מערכת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בוחנת את המוצר המשולב מקצה לקצה, לרוב בגישת קופסה שחורה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בוחנת פונקציה בודדת"
+      },
+      {
+        "id": "c",
+        "labelHe": "מבוצעת רק על ידי הלקוח"
+      },
+      {
+        "id": "d",
+        "labelHe": "בודקת רק ביצועים"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בדיקת מערכת בוחנת את המערכת השלמה מנקודת מבט חיצונית מול דרישות המערכת.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "knowledge"
+  }
+}

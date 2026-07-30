@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "הצמדה ב-V",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "במודל V, איזו רמת בדיקה מוצמדת לשלב הדרישות העסקיות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקות יחידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקות אינטגרציה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות קבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקות עומס"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "בדיקות הקבלה נגזרות מהדרישות העסקיות ומאמתות שהמוצר עונה על הצורך — ולכן הן המקבילה שלהן ב-V.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

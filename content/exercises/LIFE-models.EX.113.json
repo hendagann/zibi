@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מלכודת shift-left",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צוות מיישם shift-left ומבטל את בדיקות המערכת והקבלה. מה הבעיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "shift-left מקדים גילוי אך אינו מבטל את בדיקת המוצר השלם בהקשרו"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה מייקר את הפיתוח"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה מאט את הצנרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקות מוקדמות בוחנות רכיבים ודרישות; רק מערכת וקבלה בוחנות את המוצר השלם בהקשר האמיתי.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

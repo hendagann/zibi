@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מודל וזמן גילוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה עמומה (\"המערכת תשלח אישור\") לא צוינה כערוץ. באיזה מודל היא תתגלה מוקדם ביותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "סדרתי — בבדיקות המערכת בסוף"
+      },
+      {
+        "id": "b",
+        "labelHe": "V או Agile — בעת תכנון בדיקות הקבלה או כתיבת קריטריוני הקבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בכל המודלים באותו זמן"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא לא תתגלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשמנסים לנסח תוצאה צפויה מול הדרישה, העמימות צפה — וזה קורה מוקדם ב-V וב-Agile.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

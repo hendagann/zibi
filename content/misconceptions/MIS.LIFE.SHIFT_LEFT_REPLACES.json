@@ -1,0 +1,12 @@
+{
+  "id": "MIS.LIFE.SHIFT_LEFT_REPLACES",
+  "titleHe": "shift-left מבטל בדיקות מאוחרות",
+  "descriptionHe": "הנחה שהזזת בדיקות מוקדם במחזור (shift-left) מייתרת את בדיקות המערכת והקבלה, במקום להבין שהיא מקדימה את הגילוי בלבד.",
+  "whyTempting": "אם בדקנו מוקדם והכול עבר, נדמה שאין מה לבדוק בסוף. אבל בדיקות מוקדמות בוחנות רכיבים ודרישות; רק בדיקת מערכת וקבלה בוחנות את המוצר השלם בהקשר האמיתי שלו.",
+  "skillIds": [
+    "LIFE.MODEL"
+  ],
+  "remediationRef": "LIFE-models.LE.001",
+  "anchor": "sec-shift",
+  "status": "active"
+}

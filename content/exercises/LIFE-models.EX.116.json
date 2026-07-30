@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "בחירת מודל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פרויקט בטיחות-קריטי עם רגולציה נוקשה ודרישות יציבות. איזה מאפיין תהליך צפוי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תיעוד ובקרה פורמליים, עם התאמה הדוקה בין שלבי פיתוח לבדיקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "ללא תיעוד כלל"
+      },
+      {
+        "id": "c",
+        "labelHe": "ללא בדיקות קבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "ללא תכנון"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "הקשר רגולטורי וסיכון גבוה מחייבים פורמליות ועקיבות — מודל בסגנון V מתאים לכך.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "application"
+  }
+}

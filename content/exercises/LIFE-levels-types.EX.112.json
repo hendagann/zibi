@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.TYPE"
+  },
+  "title": "פונקציונלי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה בודקת בדיקה פונקציונלית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כמה מהר המערכת מגיבה"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם המערכת עושה את מה שהוגדר בדרישות"
+      },
+      {
+        "id": "c",
+        "labelHe": "כמה משתמשים היא נושאת"
+      },
+      {
+        "id": "d",
+        "labelHe": "האם היא מאובטחת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה פונקציונלית שואלת אם המערכת מבצעת את הפונקציונליות הנדרשת.",
+    "skillId": "LIFE.TYPE",
+    "dimension": "knowledge"
+  }
+}

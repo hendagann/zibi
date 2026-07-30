@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "רטרוספקטיבה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מטרת הרטרוספקטיבה בסוף איטרציה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לסקור את רשימת הבאגים בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "לדון במה עבד ומה לשפר בתהליך העבודה של הצוות"
+      },
+      {
+        "id": "c",
+        "labelHe": "לתכנן את הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לפטר עובדים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רטרוספקטיבה היא נקודת השיפור של התהליך עצמו — לא סקירת באגים.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}

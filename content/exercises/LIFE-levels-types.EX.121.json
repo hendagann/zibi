@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "title": "מה קודם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באג תוקן. מה נכון לבצע?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק רגרסיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "קודם אימות תיקון על התרחיש שנכשל, ואז רגרסיה על האזורים המושפעים"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אימות תיקון"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא לבדוק שוב"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אימות ממוקד קודם — אם התיקון לא עבד אין טעם להמשיך; אחריו רגרסיה מתועדפת.",
+    "skillId": "LIFE.REG",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.TYPE"
+  },
+  "title": "קופסה לבנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מי מבצע לרוב בדיקות קופסה לבנה ובאיזו רמה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הלקוח, ברמת הקבלה"
+      },
+      {
+        "id": "b",
+        "labelHe": "המפתח, לרוב ברמת היחידה"
+      },
+      {
+        "id": "c",
+        "labelHe": "משתמשי בטא"
+      },
+      {
+        "id": "d",
+        "labelHe": "מנהל המוצר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קופסה לבנה נשענת על ידע במבנה הקוד, ולכן מבוצעת לרוב על ידי המפתח ברמת היחידה.",
+    "skillId": "LIFE.TYPE",
+    "dimension": "knowledge"
+  }
+}

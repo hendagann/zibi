@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-levels-types.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.TYPE"
+  },
+  "title": "קופסה שחורה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין בדיקת קופסה שחורה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה לפי מבנה הקוד הפנימי"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקת ההתנהגות החיצונית מול המפרט, בלי ידע בקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקה רק של ביצועים"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקה שמבצע רק המפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קופסה שחורה בוחנת קלט/פלט מול המפרט בלי להסתמך על מבנה הקוד — רוב עבודתה של בודקת ידנית.",
+    "skillId": "LIFE.TYPE",
+    "dimension": "knowledge"
+  }
+}

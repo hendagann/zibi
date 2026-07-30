@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-models.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/models",
+  "skills": {
+    "primary": "LIFE.MODEL"
+  },
+  "title": "מודל סדרתי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "במודל פיתוח סדרתי (Waterfall), מתי מתבצעות רוב בדיקות המערכת והקבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-models.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בתחילת הפרויקט"
+      },
+      {
+        "id": "b",
+        "labelHe": "בסוף, אחרי שלב המימוש"
+      },
+      {
+        "id": "c",
+        "labelHe": "בכל יום"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא מתבצעות כלל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "במודל סדרתי השלבים רצים בזה אחר זה, ורוב הבדיקות — במיוחד מערכת וקבלה — מרוכזות בסוף.",
+    "skillId": "LIFE.MODEL",
+    "dimension": "knowledge"
+  }
+}
