@@ -72,16 +72,20 @@
   flex-direction: column;
   gap: var(--space-5);
   padding: var(--space-5) var(--space-4);
-  /* The blueberry rail (handoff §6.4). One of the few surfaces that earns a
-   * backdrop-filter, because it is large and fixed. */
+  /* The navigation rail. One of the few surfaces that earns a backdrop-filter,
+   * because it is large and fixed.
+   *
+   * Every colour below resolves through a token. An earlier version hardcoded
+   * the cream RGB values that suited the dark rail, and when the palette moved
+   * to light those literals stayed cream — cream text on a white rail is
+   * invisible, and no token change could reach it. Literal colours in a
+   * component are how a theme silently stops applying. */
   background: var(--glass-fill-sidebar);
   -webkit-backdrop-filter: blur(var(--glass-blur-sidebar));
   backdrop-filter: blur(var(--glass-blur-sidebar));
-  border-inline-end: 1px solid rgb(255 255 255 / 0.14);
-  box-shadow:
-    inset 0 0 0 1px rgb(0 0 0 / 0.1),
-    inset 3px 3px 4px 0 rgb(255 255 255 / 0.17);
-  color: var(--color-text-inverse);
+  border-inline-end: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
+  color: var(--color-text);
   overflow-y: auto;
   transform: var(--offcanvas-hidden);
   /*
@@ -120,7 +124,7 @@
 .brandName {
   font-size: var(--text-lg);
   font-weight: var(--weight-bold);
-  color: var(--color-text-inverse);
+  color: var(--color-text);
   text-decoration: none;
 }
 
@@ -130,15 +134,16 @@
   justify-content: center;
   inline-size: 2rem;
   block-size: 2rem;
-  border: 1px solid rgb(255 255 255 / 0.22);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background-color: transparent;
-  color: rgb(253 243 214 / 0.78);
+  color: var(--color-text-muted);
   cursor: pointer;
 }
 
 .closeButton:hover {
-  background-color: rgb(255 255 255 / 0.12);
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
 }
 
 .navList {
@@ -157,7 +162,7 @@
   padding-inline: var(--space-3);
   padding-block: var(--space-2);
   border-radius: var(--radius-md);
-  color: rgb(253 243 214 / 0.76);
+  color: var(--color-text-muted);
   font-size: var(--text-sm);
   font-weight: var(--weight-medium);
   text-decoration: none;
@@ -165,18 +170,18 @@
 }
 
 .navLink:hover {
-  background-color: rgb(255 255 255 / 0.12);
-  color: var(--color-text-inverse);
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
 }
 
-/* The active pill inverts the rail: a cream block with blueberry text. It is the
- * only cream fill inside the blueberry sidebar, so it reads as the one selected
- * item. State is carried three ways — fill, text colour and weight — so it never
- * depends on colour alone, and `aria-current` states it for a screen reader. */
+/* The active pill is the one tinted fill in the rail, so it reads as the single
+ * selected item. State is carried three ways — fill, text colour and weight —
+ * so it never depends on colour alone, and `aria-current` states it for a
+ * screen reader. */
 .navLinkActive,
 .navLinkActive:hover {
-  background-color: var(--color-cream);
-  color: var(--color-blueberry);
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
   font-weight: var(--weight-semibold);
 }
 
@@ -187,9 +192,9 @@
 .sidebarFooter {
   margin-block-start: auto;
   padding-block-start: var(--space-4);
-  border-block-start: 1px solid rgb(255 255 255 / 0.18);
+  border-block-start: 1px solid var(--color-border);
   font-size: var(--text-xs);
-  color: rgb(253 243 214 / 0.64);
+  color: var(--color-text-subtle);
   display: flex;
   flex-direction: column;
   gap: var(--space-1);
@@ -200,7 +205,7 @@
   position: fixed;
   inset: 0;
   z-index: var(--z-overlay);
-  background-color: rgb(20 24 31 / 0.45);
+  background-color: rgb(15 23 41 / 0.45);
   cursor: pointer;
 }
 
