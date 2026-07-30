@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "לתקן דיווח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מפתח אומר לבודקת: \"הדוח שלך לא ברור, אני לא מצליח לשחזר.\" מה השתבש וכיצד לתקן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המפתח אשם; אין מה לתקן"
+      },
+      {
+        "id": "b",
+        "labelHe": "הדוח חסר צעדי שחזור וראיות; יש להוסיף צעדים ברורים, צפוי מול מצוי וצילום/לוג"
+      },
+      {
+        "id": "c",
+        "labelHe": "יש לכתוב \"זו בעיה שלך\""
+      },
+      {
+        "id": "d",
+        "labelHe": "יש לוותר על הדיווח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשמפתח לא מצליח לשחזר, הכשל הוא בדיווח: יש להוסיף צעדים, צפוי מול מצוי, סביבה וראיות.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

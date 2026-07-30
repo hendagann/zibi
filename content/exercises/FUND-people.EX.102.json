@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "זיהוי הטיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בדיקה אוטומטית הראתה \"ירוק\", והבודקת הלחוצה סימנה \"תקין\" בלי לבחון מקרי קצה. איזו הטיה פועלת כאן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הטיית האישוש (confirmation bias)"
+      },
+      {
+        "id": "b",
+        "labelHe": "הטיית העדכניות"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין כאן הטיה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הטיית העלות השקועה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "קבלת תוצאה שמאשרת את הציפייה בלי המשך בדיקה היא הטיית אישוש קלאסית.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

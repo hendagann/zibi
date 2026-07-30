@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "בדיקה עצמית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"המחברת של הפונקציה בדקה בעצמה את הקוד שכתבה.\" מהי רמת העצמאות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עצמאות גבוהה (צד ג׳)"
+      },
+      {
+        "id": "b",
+        "labelHe": "עצמאות נמוכה (בדיקה עצמית)"
+      },
+      {
+        "id": "c",
+        "labelHe": "צוות בדיקות פנימי"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין קשר לעצמאות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשהמחבר בודק את מה שכתב, זו רמת העצמאות הנמוכה ביותר — נגועה בהטיית המחבר.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

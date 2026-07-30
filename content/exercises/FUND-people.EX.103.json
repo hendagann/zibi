@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "מהי הטיית אישוש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי הטיית האישוש (confirmation bias) בבדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "נטייה לחפש מידע שמאשר את הציפיות ולהחמיץ כשלים מפתיעים"
+      },
+      {
+        "id": "b",
+        "labelHe": "נטייה לבדוק יותר מדי"
+      },
+      {
+        "id": "c",
+        "labelHe": "העדפת בדיקות ידניות על אוטומטיות"
+      },
+      {
+        "id": "d",
+        "labelHe": "אמון יתר במפתח"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "הטיית האישוש היא הנטייה לחפש אישור למה שכבר מאמינים בו, ולכן לפספס את מה שלא ציפינו לו.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}

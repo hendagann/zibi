@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "יתרון צוות שלם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה יתרון גישת הצוות השלם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פחות בדיקות"
+      },
+      {
+        "id": "b",
+        "labelHe": "שיתוף מידע וכישורים מגוונים, ומניעת האשמות הדדיות"
+      },
+      {
+        "id": "c",
+        "labelHe": "ביטול תפקיד הבודק"
+      },
+      {
+        "id": "d",
+        "labelHe": "עבודה נפרדת של כל תחום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אחריות משותפת משפרת תקשורת ושיתוף ידע, במקום משחק ההאשמות בין בודק למפתח.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "ביקורת בונה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי \"ביקורת בונה\" בהעברת ממצאים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לתאר את התנהגות המוצר בעובדות ובראיות, לא את האדם"
+      },
+      {
+        "id": "b",
+        "labelHe": "להימנע מלדווח באגים כדי לא לפגוע"
+      },
+      {
+        "id": "c",
+        "labelHe": "לדווח רק באגים חמורים"
+      },
+      {
+        "id": "d",
+        "labelHe": "לנסח את הדוח כהאשמה אישית"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "ביקורת בונה מתמקדת בהתנהגות המערכת ובראיות, ומנוסחת כשיפור מוצע ולא כהאשמה.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}

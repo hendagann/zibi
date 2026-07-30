@@ -14,7 +14,9 @@
 | B | 7 העקרונות (נוכחות, ממצה, מוקדם, צבירה, קוטל חרקים, הקשר, אשליית היעדר) | FUND-principles.LE.001 sec-presence…sec-absence | 12 | EXHAUSTIVE, ABSENCE_FALLACY | ✓ מכוסה |
 | C | שגיאה→פגם→כשל, גורם שורש, כשל בלי פגם, false pos/neg | sec-err / sec-root / sec-nofault / sec-falsepn | 8 | FAILURE_ALWAYS_DEFECT, ERROR_DEFECT_CONFUSION | ✓ מכוסה |
 | D | תהליך הבדיקה (7 פעילויות, testware, traceability, הקשר) | FUND-process.LE.001 sec-activities…sec-context | 20 | ANALYSIS_VS_DESIGN, PROCESS_SEQUENTIAL, NO_TRACEABILITY | ✓ מכוסה |
-| E | האדם הבודק (skills, biases, תקשורת, עצמאות, whole-team) | — | 0 | — | **פער: נושא FUND/people (FUND.PSY קיים כשלד; הרצה זו, מיד אחרי D)** |
+| E | האדם הבודק (skills, biases, תקשורת, עצמאות, whole-team) | FUND-people.LE.001 sec-skills…sec-wholeteam | 20 | BUG_IS_PERSONAL, CONFIRMATION_BIAS, SELF_TEST_ENOUGH | ✓ מכוסה |
+
+**פרק 1 הושלם במלואו** (A–E). כל חמשת מקטעי המחקר מוטמעים: 5 נושאים, 96 שאלות, 11 תפיסות שגויות.
 
 
 

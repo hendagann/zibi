@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "עצמאות גבוהה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין בדיקה בעצמאות גבוהה (צד ג׳ חיצוני)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המחבר בודק את עצמו"
+      },
+      {
+        "id": "b",
+        "labelHe": "ארגון חיצוני, נפרד מצוות הפיתוח, מבצע את הבדיקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "עמית באותו צוות בודק"
+      },
+      {
+        "id": "d",
+        "labelHe": "המנהל בודק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "צד ג׳ חיצוני מנותק מצוות הפיתוח — רמת העצמאות הגבוהה ביותר.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "מפתח מתגונן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מפתח מתקשה לקבל שבקוד שלו יש פגם. כיצד עדיף לבודקת לגשת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לכתוב בדוח \"שברת את המערכת\""
+      },
+      {
+        "id": "b",
+        "labelHe": "להציג עובדות וראיות על התנהגות המוצר, בניסוח ניטרלי וממוקד-מערכת"
+      },
+      {
+        "id": "c",
+        "labelHe": "לדווח למנהל במקום למפתח"
+      },
+      {
+        "id": "d",
+        "labelHe": "לוותר על הדיווח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ביקורת בונה מדברת על התנהגות המוצר בעובדות ובראיות, לא על האדם — כך הממצא מטופל בלי התגוננות.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

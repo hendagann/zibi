@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "בדיקת הצפוי בלבד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בודקת נוטה לבדוק רק את המסלול שהיא מצפה שיעבוד. איזו טעות זו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הטיית אישוש — התמקדות בציפיות והחמצת מצבי קצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "עצמאות גבוהה"
+      },
+      {
+        "id": "c",
+        "labelHe": "ביקורת בונה"
+      },
+      {
+        "id": "d",
+        "labelHe": "גישת צוות שלם"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בדיקה של המסלול הצפוי בלבד היא ביטוי של הטיית אישוש — מפספסים את מה שלא צופים.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

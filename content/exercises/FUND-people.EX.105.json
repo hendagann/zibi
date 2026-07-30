@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "ניסוח דוח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה ניסוח דוח פגם עדיף?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"המפתחים שוב פספסו את הדרישות\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"בלחיצה על 'שמור' בשלב 3 המסך קורס; מצורף צילום ולוג\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"המסך בעייתי\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"משהו לא עובד, תבדקו\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ניסוח עובדתי, ממוקד-מוצר, עם צעדי שחזור וראיות — ניתן לשחזור ולא מאשים.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "האשמות הדדיות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"הבודק אשם שהמוצר לא עובד; המפתח אשם שהבודק לא תפס.\" מה הבעיה בגישה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה, כך צריך"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא מנוגדת לגישת הצוות השלם, שבה האחריות לאיכות משותפת"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבודק תמיד אשם"
+      },
+      {
+        "id": "d",
+        "labelHe": "המפתח תמיד אשם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "משחק האשמות מנוגד לגישת הצוות השלם — האיכות היא אחריות משותפת, לא תורנות אשמה.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

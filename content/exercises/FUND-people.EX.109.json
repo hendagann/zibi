@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "זיהוי רמה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"בדיקה בוצעה על ידי צוות בדיקות ייעודי בארגון, שאינו חלק מצוות הפיתוח.\" רמת העצמאות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה עצמית"
+      },
+      {
+        "id": "b",
+        "labelHe": "עמיתים באותו צוות פיתוח"
+      },
+      {
+        "id": "c",
+        "labelHe": "צוות בדיקות פנימי עצמאי בארגון"
+      },
+      {
+        "id": "d",
+        "labelHe": "צד ג׳ חיצוני"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "בודקים ייעודיים בארגון, מחוץ לצוות הפיתוח, הם רמת עצמאות בינונית–גבוהה — צוות בדיקות פנימי.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

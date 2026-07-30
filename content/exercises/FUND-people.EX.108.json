@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "השפעת עצמאות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נכון לגבי רמות עצמאות הבדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ככל שהבודק רחוק יותר מכתיבת הקוד, כך גדל הסיכוי לחשוף פגמים שהטיית המחבר מסתירה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה עצמית חושפת הכי הרבה פגמים"
+      },
+      {
+        "id": "c",
+        "labelHe": "עצמאות אינה משפיעה על מציאת פגמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק צד ג׳ חיצוני מורשה לבדוק"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "מרחק מכתיבת הקוד מפחית את הטיית המחבר ומגדיל את הסיכוי לחשוף פגמים שהמחבר לא ראה.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}

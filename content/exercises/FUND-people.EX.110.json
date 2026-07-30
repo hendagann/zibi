@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "למה לא רק המפתח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע לא מספיק שמפתחים יבדקו רק את הקוד של עצמם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כי הם עסוקים מדי"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי הטיית המחבר גורמת להם לפספס פגמים שבדיקה עצמאית הייתה חושפת"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי אסור למפתחים לבדוק כלל"
+      },
+      {
+        "id": "d",
+        "labelHe": "כי בדיקה עצמית אורכת יותר זמן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המחבר רואה את מה שהתכוון לכתוב; בדיקה עצמאית חושפת בדיוק את הפגמים שההטיה הסתירה ממנו.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "כישורי בודק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו תכונה חיונית לבודק טוב, מעבר לידע הטכני?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יכולת לכתוב קוד מהר בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "יסודיות, סקרנות, חשיבה ביקורתית ותקשורת טובה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הימנעות מתקשורת עם המפתחים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אמון מלא בכל תוצאה אוטומטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מעבר לידע הטכני, בודק נשען על יסודיות, סקרנות, חשיבה ביקורתית ותקשורת — הבודק הוא מבשר החדשות הרעות.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}

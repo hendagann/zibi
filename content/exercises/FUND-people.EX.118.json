@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "מלכודת מוחלט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו קביעה על עצמאות הבדיקה נכונה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עצמאות גבוהה תמיד עדיפה בכל היבט וללא חיסרון"
+      },
+      {
+        "id": "b",
+        "labelHe": "עצמאות גבוהה חושפת פגמים שהמחבר מפספס, אך דורשת תקשורת טובה כדי לא להתנתק מהפיתוח"
+      },
+      {
+        "id": "c",
+        "labelHe": "עצמאות נמוכה עדיפה תמיד"
+      },
+      {
+        "id": "d",
+        "labelHe": "עצמאות אינה רלוונטית ב-Agile"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "עצמאות גבוהה מפחיתה הטיית מחבר אך עולה בהקשר ובקרבה — היא כלי שדורש תקשורת, לא פתרון מוחלט.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

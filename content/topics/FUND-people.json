@@ -1,0 +1,53 @@
+{
+  "id": "FUND/people",
+  "nameHe": "האדם הבודק",
+  "nameEn": "The people of testing",
+  "domain": "FUND",
+  "description": "הכישורים, ההטיות והתקשורת של הבודק: פסיכולוגיה של הבדיקה, ביקורת בונה, תקשורת בודק–מפתח, רמות עצמאות הבדיקה וגישת הצוות השלם. חלק מפרק 1 של מבחן ההסמכה.",
+  "learningObjectives": [
+    "לזהות מה גרם לקרע בתקשורת בין בודק למפתח ולנסח בחירת תקשורת שמשמרת גם את הממצא וגם את היחסים",
+    "לזהות הטיה קוגניטיבית (כמו הטיית האישוש) בתרחיש בדיקה נתון",
+    "לקבוע את רמת עצמאות הבדיקה בתרחיש נתון ולהסביר את השפעתה על מציאת פגמים",
+    "להסביר את יתרונות גישת הצוות השלם (whole-team) לאיכות המוצר"
+  ],
+  "prerequisites": [
+    "FUND/purpose"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 65,
+  "measuredSkills": [
+    "FUND.PSY"
+  ],
+  "summaryRef": "FUND-people.SUM.001",
+  "lessonRefs": [
+    "FUND-people.LE.001"
+  ],
+  "exerciseRefs": [
+    "FUND-people.EX.100",
+    "FUND-people.EX.101",
+    "FUND-people.EX.102",
+    "FUND-people.EX.103",
+    "FUND-people.EX.104",
+    "FUND-people.EX.105",
+    "FUND-people.EX.106",
+    "FUND-people.EX.107",
+    "FUND-people.EX.108",
+    "FUND-people.EX.109",
+    "FUND-people.EX.110",
+    "FUND-people.EX.111",
+    "FUND-people.EX.112",
+    "FUND-people.EX.113",
+    "FUND-people.EX.114",
+    "FUND-people.EX.115",
+    "FUND-people.EX.116",
+    "FUND-people.EX.117",
+    "FUND-people.EX.118",
+    "FUND-people.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

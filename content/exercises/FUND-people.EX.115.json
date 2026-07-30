@@ -1,0 +1,67 @@
+{
+  "id": "FUND-people.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/people",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "תקשורת לקויה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה ניסוח מדגים תקשורת בודק–מפתח לקויה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-people.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"בשלב 3, קלט תקין, המסך לא הגיב; מצורף לוג\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"יש בעיה כללית, משהו לא בסדר\""
+      },
+      {
+        "id": "c",
+        "labelHe": "תיאור מדויק של הפער בין צפוי למצוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "צירוף ראיות לשחזור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ניסוח עמום בלי צעדים, צפוי/מצוי או ראיות מכריח את המפתח לנחש ושוחק אמון.",
+    "skillId": "FUND.PSY",
+    "dimension": "knowledge"
+  }
+}
