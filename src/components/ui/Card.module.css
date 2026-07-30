@@ -1,12 +1,15 @@
-/* The glass panel — the product's primary surface.
+/* The glass panel — the product's primary surface (handoff §6.4).
  *
- * `backdrop-filter` is progressive: where it is unsupported the card falls back
- * to a flat translucent fill over the dark ground, which still separates it from
- * the background. The fill is therefore never fully transparent. */
+ * The white inner bevel is what makes a translucent surface read as glass;
+ * without it the panel is just a semi-transparent background.
+ *
+ * Regular cards deliberately carry NO backdrop-filter. Every filtered element
+ * becomes its own compositing layer, and the handoff records a prototype that
+ * stalled on load at 120+ blur layers. At card size the gradient and bevel look
+ * identical without that cost, so blur is reserved for the few large surfaces
+ * (sidebar, header, hero). */
 .card {
-  background-color: var(--glass-surface);
-  -webkit-backdrop-filter: blur(var(--glass-blur));
-  backdrop-filter: blur(var(--glass-blur));
+  background: var(--glass-fill);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
@@ -20,23 +23,27 @@
 
 .quiet {
   box-shadow: none;
-  background-color: transparent;
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  background: transparent;
+  border-color: transparent;
 }
 
-/* For cards carrying long Hebrew prose: denser fill, stronger blur, so the
- * gradient behind them cannot reduce the contrast of body text. */
+/* Long Hebrew study prose: the denser fill, so the glow behind it cannot pull
+ * body-text contrast down. Blur is warranted here because these are large. */
 .dense {
-  background-color: var(--glass-surface-dense);
-  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
-  backdrop-filter: blur(var(--glass-blur-strong));
+  background: var(--glass-fill-dense);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
 }
 
-/* For code, editors and result tables: opaque. Glass behind a monospace grid
- * hurts legibility and the brief forbids it. */
+/* Paper: the opaque light surface, for tables and forms. */
 .solid {
-  background-color: var(--color-surface);
-  -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+  background: var(--color-surface);
+}
+
+/* Code, SQL, logs and result grids — always the dark opaque surface, whatever
+ * the rest of the palette does. Never glass behind a monospace grid. */
+.code {
+  background: var(--color-code-surface);
+  color: var(--color-code-text);
+  border-color: transparent;
 }

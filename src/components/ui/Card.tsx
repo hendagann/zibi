@@ -1,7 +1,7 @@
 import type { HTMLAttributes, ReactNode } from 'react';
 import styles from './Card.module.css';
 
-type Variant = 'default' | 'flush' | 'quiet' | 'dense' | 'solid';
+type Variant = 'default' | 'flush' | 'quiet' | 'dense' | 'solid' | 'code';
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
   readonly children: ReactNode;
@@ -14,6 +14,7 @@ const variantClass: Record<Variant, string | undefined> = {
   quiet: styles.quiet,
   dense: styles.dense,
   solid: styles.solid,
+  code: styles.code,
 };
 
 export function Card({

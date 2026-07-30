@@ -113,95 +113,128 @@
 }
 
 /* ============================================================================
- * Glass dark theme — the single default.
+ * Cream & Blueberry glass — the approved design system.
  *
- * Derived as a design LANGUAGE from design-reference/ (see docs/design-system.md):
- * a near-black charcoal ground with a warm olive glow, translucent panels with
- * hairline light borders, generous radii, and one lime accent that leads the
- * eye. None of the reference's content, copy, subject matter or data structure
- * is reproduced — only the visual grammar.
+ * Source: design-reference/handoff (README §6). The glass recipe is derived from
+ * the Figma glassmorphism file but adapted to a LIGHT palette, which is the
+ * decision this file implements. It replaces the earlier dark interpretation.
  *
- * This overrides the light wireframe palette above rather than replacing it in
- * place, so the origin of every earlier value stays readable in one file. The
- * product is dark by design (not by preference), so this is NOT inside a
- * prefers-color-scheme query: a learner who prefers light must still get an
- * interface whose contrast was actually verified, and only one of the two is.
+ * Two colours in a 70/30 ratio: cream is ~70% of every screen, blueberry is the
+ * ONLY action colour. If everything is blue, nothing is emphasised.
+ *
+ * The white inner bevel is what turns a translucent surface into glass —
+ * without it the panel is just a semi-transparent background.
  * ==========================================================================*/
 :root {
-  /* ---- ground ---- */
-  --color-surface-sunken: #0a0b0c; /* app background, behind the glow */
-  --color-surface: #121315; /* opaque panels: code, editors, tables */
-  --color-surface-raised: #17181b;
-  --color-surface-hover: #1f2124;
+  /* ---- the two base colours ---- */
+  --color-cream: #fff0c9; /* app ground, ~70% of the screen */
+  --color-blueberry: #243b8f; /* action, navigation, progress, scores, ~30% */
+  --color-blueberry-dark: #1c2f75; /* primary-button hover */
 
-  /* ---- glass ----
-   * Two tiers on purpose. Text-heavy cards use the denser tier so long Hebrew
-   * prose keeps its contrast; short metric cards may be lighter. Transparency
-   * never wins over readability. */
-  --glass-surface: rgb(255 255 255 / 0.045);
-  --glass-surface-dense: rgb(255 255 255 / 0.07);
-  --glass-surface-hover: rgb(255 255 255 / 0.09);
-  --glass-border: rgb(255 255 255 / 0.1);
-  --glass-border-strong: rgb(255 255 255 / 0.18);
-  --glass-blur: 18px;
-  --glass-blur-strong: 28px;
+  /* ---- surfaces ---- */
+  --color-surface-sunken: #fff0c9; /* ground */
+  --color-surface: #fffdf4; /* paper: tables, forms, opaque light surfaces */
+  --color-surface-raised: #fff7de; /* a card inside a card */
+  --color-surface-hover: rgb(36 59 143 / 0.06);
+  /* Code is ALWAYS dark, whatever the rest of the palette does. */
+  --color-code-surface: #182452;
+  --color-code-text: #efe9d8;
 
-  --color-border: rgb(255 255 255 / 0.1);
-  --color-border-strong: rgb(255 255 255 / 0.2);
+  /* ---- glass, two tiers ----
+   * Regular: data, metric and list cards. Dense: long study prose, header,
+   * sidebar. `backdrop-filter` is applied only to LARGE surfaces (see the
+   * performance note in §6.4) — small cards get the same look from the gradient
+   * and bevel alone, without a compositing layer each. */
+  --glass-fill: radial-gradient(
+    140% 150% at 50.22% 50.31%,
+    rgb(255 255 255 / 0.26) 0%,
+    rgb(255 255 255 / 0.66) 100%
+  );
+  --glass-fill-dense: radial-gradient(
+    150% 160% at 50.22% 50.31%,
+    rgb(255 255 255 / 0.56) 0%,
+    rgb(255 255 255 / 0.88) 100%
+  );
+  --glass-fill-sidebar: radial-gradient(
+    140% 150% at 50.22% 50.31%,
+    rgb(46 74 172 / 0.94) 0%,
+    rgb(26 44 108 / 0.96) 100%
+  );
+  --glass-border: rgb(36 59 143 / 0.12);
+  --glass-border-hover: rgb(36 59 143 / 0.22);
+  --glass-bevel: inset 2px 2px 4px 0 rgb(255 255 255 / 0.6);
+  --glass-blur: 14px;
+  --glass-blur-sidebar: 8.8px;
 
-  /* ---- text (contrast checked against #0a0b0c and the glass tiers) ---- */
-  --color-text: #f2f3f2; /* ~17:1 */
-  --color-text-muted: #b6bab6; /* ~9:1 */
-  --color-text-subtle: #8b908c; /* ~5.4:1 — AA for body, not for 12px */
-  --color-text-inverse: #0e0f10;
+  --color-border: rgb(36 59 143 / 0.12);
+  --color-border-strong: rgb(36 59 143 / 0.22);
 
-  /* ---- accent: lime. Leads the eye; never a default surface colour. ---- */
-  --color-accent: #cdf24c;
-  --color-accent-hover: #d8f96a;
-  --color-accent-soft: rgb(205 242 76 / 0.14);
-  --color-accent-contrast: #14180a; /* on-accent text, ~14:1 */
+  /* ---- text ---- */
+  --color-text: #1b2450; /* ~12:1 on cream */
+  --color-text-muted: #55608f; /* ~5.6:1 */
+  --color-text-subtle: #8089ae; /* 14px and up only */
+  --color-text-inverse: #fff6dc; /* on blueberry */
 
-  /* Actions map onto the accent so every existing button inherits it. */
-  --color-primary: #cdf24c;
-  --color-primary-hover: #d8f96a;
-  --color-primary-soft: rgb(205 242 76 / 0.14);
-  --color-primary-contrast: #14180a;
+  /* ---- action: blueberry is the only one ---- */
+  --color-primary: #243b8f;
+  --color-primary-hover: #1c2f75;
+  --color-primary-soft: rgb(36 59 143 / 0.12);
+  --color-primary-contrast: #fff6dc;
+  --color-accent: #243b8f;
+  --color-accent-hover: #1c2f75;
+  --color-accent-soft: rgb(36 59 143 / 0.12);
+  --color-accent-contrast: #fff6dc;
 
-  /* ---- functional. Each is legible on the dark ground AND carries a
-   * non-colour cue in the components, per the accessibility rule. ---- */
-  --color-success: #7fd99a;
-  --color-success-soft: rgb(127 217 154 / 0.14);
-  --color-warning: #f0c26a;
-  --color-warning-soft: rgb(240 194 106 / 0.14);
-  --color-danger: #f58b80;
-  --color-danger-soft: rgb(245 139 128 / 0.14);
-  --color-info: #7fc4f0;
-  --color-info-soft: rgb(127 196 240 / 0.14);
+  /* ---- functional. Each pairs with an icon in the components, so state is
+   * never carried by colour alone. ---- */
+  --color-success: #237a4b;
+  --color-success-soft: rgb(35 122 75 / 0.12);
+  --color-warning: #a16a0b;
+  --color-warning-soft: rgb(161 106 11 / 0.12);
+  --color-danger: #be4438;
+  --color-danger-soft: rgb(190 68 56 / 0.12);
+  --color-info: #12808e;
+  --color-info-soft: rgb(18 128 142 / 0.12);
 
-  --color-focus: #cdf24c;
-  --color-skeleton: rgb(255 255 255 / 0.06);
-  --color-skeleton-sheen: rgb(255 255 255 / 0.12);
+  /* ---- the six topic statuses (§6.7) ---- */
+  --status-not-started: #7c86ac;
+  --status-started: #12808e;
+  --status-needs-review: #a16a0b;
+  --status-partial: #55608f;
+  --status-mastered: #237a4b;
+  --status-exam-ready: #243b8f;
 
-  /* ---- radii: one step up from the wireframe kit, per the reference ---- */
+  --color-focus: #243b8f;
+  --color-focus-on-dark: #fff0c9;
+  --color-skeleton: rgb(36 59 143 / 0.08);
+  --color-skeleton-sheen: rgb(255 255 255 / 0.7);
+
+  /* ---- radii: tags/fields, buttons, cards, modals. No others. ---- */
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  /* ---- elevation: soft and wide on dark, plus a glass inner highlight ---- */
-  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
-  --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
-  --shadow-lg: 0 16px 48px rgb(0 0 0 / 0.55);
-  --shadow-glass: 0 16px 48px rgb(0 0 0 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.07);
+  /* ---- elevation ---- */
+  --shadow-sm: 0 2px 8px rgb(36 59 143 / 0.08);
+  --shadow-md: 0 8px 24px rgb(36 59 143 / 0.10);
+  --shadow-lg: 0 16px 48px rgb(36 59 143 / 0.12);
+  --shadow-glass: var(--glass-bevel), 0 16px 48px rgb(36 59 143 / 0.12);
 
-  /* ---- type: Heebo leads for Hebrew, Poppins for Latin/numerals/display ----
-   * The variables are injected by next/font in the root layout; the literal
-   * names remain as a fallback so the stack still resolves if the font module
-   * ever fails to load. */
-  --font-sans: var(--font-heebo), Heebo, var(--font-poppins), Poppins, system-ui,
-    -apple-system, 'Segoe UI', 'Noto Sans Hebrew', Arial, sans-serif;
+  /* ---- type ---- */
+  --font-sans: var(--font-heebo), Heebo, system-ui, -apple-system, 'Segoe UI',
+    'Noto Sans Hebrew', Arial, sans-serif;
   --font-display: var(--font-poppins), Poppins, var(--font-heebo), Heebo,
     system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), 'JetBrains Mono', ui-monospace,
+    SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* ---- motion (§6.11) ---- */
+  --transition-fast: 120ms ease-out;
+  --transition-base: 150ms ease-out;
+  --transition-slow: 200ms ease-out;
+  --transition-base-duration: 150ms;
+  --transition-base-easing: ease-out;
 }
 
 /* ---- reset ---- */
@@ -223,14 +256,14 @@ html {
 body {
   min-height: 100dvh;
   background-color: var(--color-surface-sunken);
-  /* The reference's ambient glow, rebuilt as gradients rather than shipping its
-   * licensed raster: a warm olive bloom low on the inline-start side and a cool
-   * green one opposite. `fixed` keeps the ground still while content scrolls, so
-   * the background reads as one surface across every route. Both are far below
-   * the contrast floor of any text that sits on them. */
+  /* The ambient glow (handoff §6.3) — CSS, never a raster. This is what gives
+   * the glass something to refract; on a flat fill the panels read as plain
+   * translucency. `fixed` keeps it still while content scrolls, so the ground is
+   * one continuous surface across every route. */
   background-image:
-    radial-gradient(60rem 40rem at 8% 92%, rgb(150 140 60 / 0.16), transparent 70%),
-    radial-gradient(52rem 36rem at 96% 8%, rgb(120 200 130 / 0.1), transparent 70%);
+    radial-gradient(760px 560px at 6% 94%, rgb(36 59 143 / 0.2), transparent 62%),
+    radial-gradient(680px 520px at 98% 4%, rgb(224 170 62 / 0.34), transparent 58%),
+    radial-gradient(440px 400px at 74% 44%, rgb(36 59 143 / 0.09), transparent 62%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--color-text);
