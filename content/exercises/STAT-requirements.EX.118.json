@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "מסגור משותף",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד נכון לפתוח העלאת ממצאים מול מנהל מוצר רגיש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"יש בעיות במסמך\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"כדי שאוכל לכתוב תוצאה צפויה מדויקת, אשמח לחדד שלוש נקודות\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הדרישות לא טובות\""
+      },
+      {
+        "id": "d",
+        "labelHe": "לשלוח רשימה בלי הקדמה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מסגור ככלי עבודה משותף מייצר שיתוף פעולה במקום התגוננות.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

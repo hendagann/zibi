@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "מתי לסקור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מתי הכי משתלם לסקור דרישות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אחרי השחרור"
+      },
+      {
+        "id": "b",
+        "labelHe": "בשלב כתיבתן, לפני שנכתב קוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "בזמן בדיקות המערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "בקבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ככל שמוקדם יותר, תיקון הפגם זול יותר.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

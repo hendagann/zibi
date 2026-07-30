@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.BASIC"
+  },
+  "title": "משלימים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה היחס בין סטטי לדינמי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "סטטי מייתר דינמי"
+      },
+      {
+        "id": "b",
+        "labelHe": "הם משלימים — כל אחד מוצא פגמים שהשני לא"
+      },
+      {
+        "id": "c",
+        "labelHe": "דינמי מייתר סטטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "הם זהים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אף אחד מהם אינו מחליף את השני.",
+    "skillId": "STAT.BASIC",
+    "dimension": "knowledge"
+  }
+}

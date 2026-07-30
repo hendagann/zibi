@@ -1,0 +1,54 @@
+{
+  "id": "STAT/fundamentals",
+  "nameHe": "יסודות וסקירות",
+  "nameEn": "Static testing fundamentals and reviews",
+  "domain": "STAT",
+  "description": "בדיקה בלי להריץ את התוכנה: מה סקירה סטטית מוצאת שבדיקה דינמית לא, למה מוקדם זול יותר, וארבעת סוגי הסקירות ותפקידיהן — מסקירה לא-פורמלית ועד Inspection.",
+  "learningObjectives": [
+    "לציין מה טכניקה סטטית יכולה למצוא בתוצר נתון שבדיקה דינמית לא הייתה מוצאת",
+    "להסביר מדוע פגם שנמצא בסקירת דרישות זול לתיקון מפגם שנמצא בייצור",
+    "לבחור סוג סקירה מתאים לתוצר ולשלב הפרויקט",
+    "לציין את התפקידים שסקירה פורמלית דורשת ומה כל אחד עושה"
+  ],
+  "prerequisites": [
+    "FUND/process"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "STAT.BASIC",
+    "STAT.REV"
+  ],
+  "summaryRef": "STAT-fundamentals.SUM.001",
+  "lessonRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "exerciseRefs": [
+    "STAT-fundamentals.EX.100",
+    "STAT-fundamentals.EX.101",
+    "STAT-fundamentals.EX.102",
+    "STAT-fundamentals.EX.103",
+    "STAT-fundamentals.EX.104",
+    "STAT-fundamentals.EX.105",
+    "STAT-fundamentals.EX.106",
+    "STAT-fundamentals.EX.107",
+    "STAT-fundamentals.EX.108",
+    "STAT-fundamentals.EX.109",
+    "STAT-fundamentals.EX.110",
+    "STAT-fundamentals.EX.111",
+    "STAT-fundamentals.EX.112",
+    "STAT-fundamentals.EX.113",
+    "STAT-fundamentals.EX.114",
+    "STAT-fundamentals.EX.115",
+    "STAT-fundamentals.EX.116",
+    "STAT-fundamentals.EX.117",
+    "STAT-fundamentals.EX.118",
+    "STAT-fundamentals.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

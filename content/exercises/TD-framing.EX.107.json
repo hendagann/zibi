@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "ענף לא נבחן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ענף שלילי של תנאי מעולם לא הורץ. מה מודד זאת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כיסוי דרישות"
+      },
+      {
+        "id": "b",
+        "labelHe": "כיסוי החלטות (מבוססות מבנה)"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר באגים"
+      },
+      {
+        "id": "d",
+        "labelHe": "זמן בדיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כיסוי החלטות מודד בדיוק אם כל ענף נבחן.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

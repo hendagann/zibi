@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "חוסר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"שדה הגיל מוגבל ל-120\". מה חסר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "מה קורה בערך 121 — נדחה, נחתך, או הודעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "סוג השדה"
+      },
+      {
+        "id": "d",
+        "labelHe": "צבע השדה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעדר התנהגות בגבול הוא מחלקת פגמים שמגיעה מאוחר לייצור.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

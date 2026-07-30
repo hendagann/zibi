@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "שאלה פתוחה מדי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה החיסרון בשאלה \"מה בדיוק התכוונת?\""
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא לא מנומסת"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא מטילה את כל העבודה על הצד השני במקום להציע כיוון"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא ארוכה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין חיסרון"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שאלה עם הצעה קונקרטית יעילה יותר.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

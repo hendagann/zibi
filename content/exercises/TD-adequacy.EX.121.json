@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COMBO"
+  },
+  "title": "חפיפה קלאסית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "היכן נוצרת חפיפה בין מחלקות שקילות לערכי גבול?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין חפיפה"
+      },
+      {
+        "id": "b",
+        "labelHe": "נציג המחלקה התקינה כבר נבדק כחלק מבדיקות הגבול"
+      },
+      {
+        "id": "c",
+        "labelHe": "בערכים שליליים"
+      },
+      {
+        "id": "d",
+        "labelHe": "בקלט טקסט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו החפיפה השכיחה ביותר בשילוב השתיים.",
+    "skillId": "TD.COMBO",
+    "dimension": "application"
+  }
+}

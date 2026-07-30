@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "קוד עודף",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בקוד יש פונקציה שאינה באף דרישה. מי יגלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות מפרט"
+      },
+      {
+        "id": "b",
+        "labelHe": "מבוססות מבנה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות קבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק טכניקה שמתחילה מהקוד תפגוש קוד שאינו ברשימת הדרישות.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

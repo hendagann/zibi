@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "חוסר בהתראה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"התראות יישלחו למשתמשים הרלוונטיים\". מה חסר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "מי נחשב רלוונטי, באיזה ערוץ, ומה קורה כשאין נמען"
+      },
+      {
+        "id": "c",
+        "labelHe": "צבע ההתראה"
+      },
+      {
+        "id": "d",
+        "labelHe": "שם המפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הגדרת נמען, ערוץ ומקרה קצה חסרים כולם.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

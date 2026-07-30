@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.SEL"
+  },
+  "title": "טווח יחיד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כלל: סכום מותר 100–5000. איזו טכניקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "טבלת החלטה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מחלקות שקילות + ערכי גבול"
+      },
+      {
+        "id": "c",
+        "labelHe": "מעברי מצבים"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקות עומס"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "טווח יחיד ללא צירוף תנאים — זו בדיוק הטכניקה המתאימה.",
+    "skillId": "TD.SEL",
+    "dimension": "application"
+  }
+}

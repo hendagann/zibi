@@ -1,0 +1,67 @@
+{
+  "id": "TD-experience-based.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/experience-based",
+  "skills": {
+    "primary": "TD.EXP"
+  },
+  "title": "דפוסי כשל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו דפוסי כשל כדאי להחזיק ברשימה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-experience-based.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק ערכי קצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "ערכי קצה וריק, כפילויות, קלט מיוחד, הרשאות, מצב מערכת ורצף חריג"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק הרשאות"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק עומס"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רשימת דפוסים היא הבסיס לתקיפות פגם.",
+    "skillId": "TD.EXP",
+    "dimension": "knowledge"
+  }
+}

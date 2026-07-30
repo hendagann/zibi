@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "טענת כיסוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו התוצר של טענת כיסוי מקצועית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מספר אחוזים"
+      },
+      {
+        "id": "b",
+        "labelHe": "שתי רשימות — מה מכוסה ומה אינו מכוסה"
+      },
+      {
+        "id": "c",
+        "labelHe": "רשימת באגים"
+      },
+      {
+        "id": "d",
+        "labelHe": "דוח זמן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק הרשימה השנייה מאפשרת החלטה מושכלת.",
+    "skillId": "TD.COV",
+    "dimension": "application"
+  }
+}

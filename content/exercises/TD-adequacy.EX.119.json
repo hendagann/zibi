@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COMBO"
+  },
+  "title": "שילוב חוזר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין שילוב גרוע?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא זול"
+      },
+      {
+        "id": "b",
+        "labelHe": "שתי טכניקות מייצרות בפועל את אותן בדיקות בשמות שונים"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא מהיר"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מכסה יותר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חפיפה מנפחת את הסט בלי להוסיף כיסוי.",
+    "skillId": "TD.COMBO",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "דרישה לא מומשה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "המפרט דורש מייל אישור ואין מימוש. מי יגלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות מבנה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מבוססות מפרט"
+      },
+      {
+        "id": "c",
+        "labelHe": "מבוססות ניסיון בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק טכניקה שמתחילה מהדרישה תחפש את קיומה במוצר.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

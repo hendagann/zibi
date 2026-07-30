@@ -1,0 +1,15 @@
+{
+  "id": "STAT.CRIT",
+  "topic": "STAT/requirements",
+  "titleHe": "איתור אי־בהירות",
+  "titleEn": "Finding ambiguity",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Marks the ambiguous, untestable and contradictory statements in a requirements excerpt, and rewrites each into a testable form.",
+  "prerequisites": [
+    "STAT.REV",
+    "DOC.REQ"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

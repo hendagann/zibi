@@ -1,0 +1,15 @@
+{
+  "id": "TD.EXPL",
+  "topic": "TD/experience-based",
+  "titleHe": "בדיקות חוקרות",
+  "titleEn": "Exploratory testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Runs a time-boxed exploratory session against a charter and reports coverage achieved, findings, and what was deliberately left unexplored.",
+  "prerequisites": [
+    "TD.EXP",
+    "DOC.CHART"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

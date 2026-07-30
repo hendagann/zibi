@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.120",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COMBO"
+  },
+  "title": "להסיר מיותר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה עושים אחרי שילוב טכניקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מוסיפים עוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "מזהים ומסירים בדיקות שהשילוב הפך למיותרות"
+      },
+      {
+        "id": "c",
+        "labelHe": "מריצים הכול"
+      },
+      {
+        "id": "d",
+        "labelHe": "כותבים דוח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סט שמתנפח בכל טכניקה בסוף לא ירוץ במלואו.",
+    "skillId": "TD.COMBO",
+    "dimension": "application"
+  }
+}

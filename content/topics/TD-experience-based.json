@@ -1,0 +1,57 @@
+{
+  "id": "TD/experience-based",
+  "nameHe": "טכניקות מבוססות ניסיון",
+  "nameEn": "Experience-based techniques",
+  "domain": "TD",
+  "description": "ניחוש שגיאות מבוסס דפוסים, בדיקה מבוססת רשימות, ובדיקות חוקרות מנוהלות — עם charter, קיצוב זמן ודיווח כיסוי. הטכניקות שתופסות מה שאף מסמך לא כתב.",
+  "learningObjectives": [
+    "לנסח השערות כשל לפיצ׳ר ולציין על איזה ניסיון או היסטוריה כל אחת נשענת",
+    "ליישם רשימת בדיקה ולזהות גם ערכים שאינם רלוונטיים וגם סיכונים שהרשימה מפספסת",
+    "לנהל סשן בדיקות חוקרות מול charter בזמן קצוב",
+    "לדווח כיסוי, ממצאים ומה נותר במכוון לא נחקר"
+  ],
+  "prerequisites": [
+    "TD/framing"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 90,
+  "measuredSkills": [
+    "TD.EXP",
+    "TD.CHK",
+    "TD.EXPL"
+  ],
+  "summaryRef": "TD-experience-based.SUM.001",
+  "lessonRefs": [
+    "TD-experience-based.LE.001"
+  ],
+  "exerciseRefs": [
+    "TD-experience-based.EX.100",
+    "TD-experience-based.EX.101",
+    "TD-experience-based.EX.102",
+    "TD-experience-based.EX.103",
+    "TD-experience-based.EX.104",
+    "TD-experience-based.EX.105",
+    "TD-experience-based.EX.106",
+    "TD-experience-based.EX.107",
+    "TD-experience-based.EX.108",
+    "TD-experience-based.EX.109",
+    "TD-experience-based.EX.110",
+    "TD-experience-based.EX.111",
+    "TD-experience-based.EX.112",
+    "TD-experience-based.EX.113",
+    "TD-experience-based.EX.114",
+    "TD-experience-based.EX.115",
+    "TD-experience-based.EX.116",
+    "TD-experience-based.EX.117",
+    "TD-experience-based.EX.118",
+    "TD-experience-based.EX.119",
+    "TD-experience-based.EX.120",
+    "TD-experience-based.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

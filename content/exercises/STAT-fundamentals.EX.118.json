@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "שלב מרכזי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באיזה שלב נמצאים רוב הפגמים בסקירה פורמלית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בפגישת הסקירה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בסקירה העצמאית שכל אחד מבצע לבד"
+      },
+      {
+        "id": "c",
+        "labelHe": "בתכנון"
+      },
+      {
+        "id": "d",
+        "labelHe": "במעקב"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הפגישה מדווחת את מה שנמצא בהכנה; בלי הכנה היא מרוקנת.",
+    "skillId": "STAT.REV",
+    "dimension": "application"
+  }
+}

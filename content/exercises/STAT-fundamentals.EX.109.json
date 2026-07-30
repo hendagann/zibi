@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "לא-פורמלית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין סקירה לא-פורמלית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תפקידים מוגדרים ומדדים"
+      },
+      {
+        "id": "b",
+        "labelHe": "עמית מסתכל בלי תהליך מוגדר ובלי תיעוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "המחבר מציג שלב-שלב"
+      },
+      {
+        "id": "d",
+        "labelHe": "קריטריוני כניסה ויציאה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זולה ומהירה, ואיכותה תלויה באדם.",
+    "skillId": "STAT.REV",
+    "dimension": "knowledge"
+  }
+}

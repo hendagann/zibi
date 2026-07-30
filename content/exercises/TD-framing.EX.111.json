@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "מפרט מפורט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "יש מפרט מפורט וברור. מה הבסיס הטבעי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות ניסיון"
+      },
+      {
+        "id": "b",
+        "labelHe": "מבוססות מפרט"
+      },
+      {
+        "id": "c",
+        "labelHe": "מבוססות מבנה בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בסיס"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשיש ממה לגזור, מבוססות מפרט הן הבסיס.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

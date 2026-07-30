@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "תפקיד המתעד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה תפקיד המתעד (scribe)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להחליט על חומרה"
+      },
+      {
+        "id": "b",
+        "labelHe": "לרשום כל פגם שעולה בפגישה"
+      },
+      {
+        "id": "c",
+        "labelHe": "להציג את המסמך"
+      },
+      {
+        "id": "d",
+        "labelHe": "לתקן את המסמך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תיעוד מסודר הוא מה שמאפשר מעקב אחרי התיקונים.",
+    "skillId": "STAT.REV",
+    "dimension": "knowledge"
+  }
+}

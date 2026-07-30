@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.SEL"
+  },
+  "title": "למה לא טבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע טבלת החלטה אינה מתאימה לטווח יחיד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא מורכבת"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא תייצר טבלה בת שורה אחת ולא תוסיף כיסוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא אסורה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא איטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "טבלת החלטה מצדיקה את עצמה כשיש צירוף תנאים.",
+    "skillId": "TD.SEL",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "בלי תיעוד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מערכת שהתקבלה בירושה בלי תיעוד. במה מתחילים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בכתיבת מקרי בדיקה שיטתיים"
+      },
+      {
+        "id": "b",
+        "labelHe": "בבדיקות חוקרות כדי ללמוד את המערכת, ותיעוד תוך כדי"
+      },
+      {
+        "id": "c",
+        "labelHe": "בכיסוי קוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "בבדיקות קבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בלי מסמך אין ממה לגזור; לומדים תחילה ואז בונים בסיס.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

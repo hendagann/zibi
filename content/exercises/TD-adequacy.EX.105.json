@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "מהו אורקל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו אורקל בבדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלי אוטומציה"
+      },
+      {
+        "id": "b",
+        "labelHe": "המקור שקובע אם התוצאה נכונה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מסד נתונים"
+      },
+      {
+        "id": "d",
+        "labelHe": "סוג באג"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "לכל בדיקה יש אורקל, גם אם לא נאמר במפורש.",
+    "skillId": "TD.COV",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "מבוססות מפרט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה נגזרות טכניקות מבוססות מפרט?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מהקוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "מהדרישות והמפרט, בלי ידע במבנה הקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "מהיסטוריית פגמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "מהאינטואיציה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מחלקות שקילות, ערכי גבול וטבלאות החלטה נגזרות מהמפרט.",
+    "skillId": "TD.CAT",
+    "dimension": "knowledge"
+  }
+}

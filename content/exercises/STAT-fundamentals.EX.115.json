@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "תפקיד המנחה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה תפקיד המנחה (moderator)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לכתוב את המסמך"
+      },
+      {
+        "id": "b",
+        "labelHe": "לתכנן, לנהל את הפגישה ולבדוק שקריטריוני הכניסה והיציאה מתקיימים"
+      },
+      {
+        "id": "c",
+        "labelHe": "לתעד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לתקן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המנחה מנהל את התהליך, לא את התוכן.",
+    "skillId": "STAT.REV",
+    "dimension": "knowledge"
+  }
+}

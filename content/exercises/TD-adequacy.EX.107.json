@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "אורקל גרסה קודמת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה המגבלה בהשוואה לגרסה קודמת כאורקל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא איטית"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא משמרת גם באגים ישנים כ\"נכונים\""
+      },
+      {
+        "id": "c",
+        "labelHe": "היא יקרה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין מגבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אם הגרסה הקודמת שגתה, ההשוואה תאשר את השגיאה.",
+    "skillId": "TD.COV",
+    "dimension": "application"
+  }
+}

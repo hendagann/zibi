@@ -1,0 +1,67 @@
+{
+  "id": "TD-experience-based.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/experience-based",
+  "skills": {
+    "primary": "TD.EXP"
+  },
+  "title": "כפילות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו בדיקה נגזרת מדפוס \"כפילויות\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-experience-based.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שדה ריק"
+      },
+      {
+        "id": "b",
+        "labelHe": "שליחת אותו טופס פעמיים ברצף מהיר"
+      },
+      {
+        "id": "c",
+        "labelHe": "טקסט ארוך"
+      },
+      {
+        "id": "d",
+        "labelHe": "ניתוק רשת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "לחיצה כפולה היא המופע השכיח של דפוס הכפילויות.",
+    "skillId": "TD.EXP",
+    "dimension": "application"
+  }
+}

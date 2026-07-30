@@ -1,0 +1,14 @@
+{
+  "id": "TD.CHK",
+  "topic": "TD/experience-based",
+  "titleHe": "בדיקה מבוססת רשימות",
+  "titleEn": "Checklist-based testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Applies a checklist to a feature, identifying both the entries that do not apply and the risks the checklist misses.",
+  "prerequisites": [
+    "TD.EXP"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

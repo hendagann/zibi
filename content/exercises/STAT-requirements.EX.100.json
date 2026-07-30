@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "חמישה פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם סוגי פגמי הדרישות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עמימות, חוסר, סתירה, אי-מדידות, פתרון בדרישה"
+      },
+      {
+        "id": "b",
+        "labelHe": "תחביר, כתיב, פיסוק"
+      },
+      {
+        "id": "c",
+        "labelHe": "חומרה, עדיפות, סטטוס"
+      },
+      {
+        "id": "d",
+        "labelHe": "יחידה, אינטגרציה, מערכת"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "אלה חמש המחלקות שסקירת דרישות מחפשת.",
+    "skillId": "STAT.CRIT",
+    "dimension": "knowledge"
+  }
+}

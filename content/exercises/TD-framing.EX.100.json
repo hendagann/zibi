@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "שלוש קטגוריות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהן שלוש קטגוריות טכניקות הבדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות מפרט, מבוססות מבנה, מבוססות ניסיון"
+      },
+      {
+        "id": "b",
+        "labelHe": "יחידה, אינטגרציה, מערכת"
+      },
+      {
+        "id": "c",
+        "labelHe": "ידני, אוטומטי, חצי-אוטומטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "פונקציונלי, ביצועים, אבטחה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "זו החלוקה הקנונית של טכניקות התכנון.",
+    "skillId": "TD.CAT",
+    "dimension": "knowledge"
+  }
+}

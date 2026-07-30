@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.SEL"
+  },
+  "title": "נימוק K4",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הופך בחירת טכניקה לתשובה ברמת K4?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שם הטכניקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "נימוק מול חלופה שנדחתה, וציון התנאי שהיה משנה את הבחירה"
+      },
+      {
+        "id": "c",
+        "labelHe": "אורך התשובה"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר הבדיקות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו ההבחנה בין העדפה לשיקול דעת.",
+    "skillId": "TD.SEL",
+    "dimension": "application"
+  }
+}

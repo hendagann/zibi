@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "עודפות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שלוש בדיקות באותה מחלקת שקילות. מה זה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כיסוי טוב"
+      },
+      {
+        "id": "b",
+        "labelHe": "עודפות — שתיים מהן אינן מוסיפות כיסוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "חובה"
+      },
+      {
+        "id": "d",
+        "labelHe": "טעות במפרט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "נציג אחד למחלקה מספיק; היתר מנפחות את הסט.",
+    "skillId": "TD.COV",
+    "dimension": "application"
+  }
+}

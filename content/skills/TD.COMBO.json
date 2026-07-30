@@ -1,0 +1,14 @@
+{
+  "id": "TD.COMBO",
+  "topic": "TD/adequacy",
+  "titleHe": "שילוב טכניקות",
+  "titleEn": "Combining techniques",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Combines techniques so their coverage complements rather than repeats, and identifies which tests the combination makes redundant.",
+  "prerequisites": [
+    "TD.SEL"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

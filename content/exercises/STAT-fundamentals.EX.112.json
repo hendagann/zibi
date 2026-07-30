@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "Inspection",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין Inspection?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הסוג הפורמלי ביותר — תפקידים מוגדרים, קריטריוני כניסה/יציאה ומדדים"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסוג הזול ביותר"
+      },
+      {
+        "id": "c",
+        "labelHe": "בלי הכנה"
+      },
+      {
+        "id": "d",
+        "labelHe": "בלי תיעוד"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "Inspection הוא התהליך המובנה והקפדני ביותר.",
+    "skillId": "STAT.REV",
+    "dimension": "knowledge"
+  }
+}

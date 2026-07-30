@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.BASIC"
+  },
+  "title": "תוצרים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו תוצרים ניתן לסקור סטטית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק קוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "דרישות, סיפורי משתמש, עיצוב, קוד, מקרי בדיקה ותוכנית בדיקות"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק דרישות"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק ממשק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל תוצר עבודה כתוב ניתן לסקירה סטטית.",
+    "skillId": "STAT.BASIC",
+    "dimension": "knowledge"
+  }
+}

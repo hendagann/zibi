@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "ניסוח נכון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה ניסוח עדיף מול \"המערכת תהיה יציבה\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"'יציבה' זו לא דרישה\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"מה נחשב יציבות מספקת — למשל זמן פעילות 99.5% בחודש?\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"תגדירו מחדש\""
+      },
+      {
+        "id": "d",
+        "labelHe": "להתעלם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שאלה שמציעה כיוון קונקרטי מקבלת תשובה מהר יותר.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

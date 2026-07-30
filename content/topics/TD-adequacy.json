@@ -1,0 +1,59 @@
+{
+  "id": "TD/adequacy",
+  "nameHe": "כיסוי ובחירת טכניקה",
+  "nameEn": "Coverage and technique selection",
+  "domain": "TD",
+  "description": "מה סט בדיקות מכסה ומה לא, מהו האורקל שקובע כל תוצאה, בחירת טכניקה מנומקת מול חלופה שנדחתה, ושילוב טכניקות שמשלימות זו את זו במקום לחזור. הרמה שמבדילה בודקת בכירה — K4.",
+  "learningObjectives": [
+    "לטעון מה סט בדיקות נתון מכסה ומה אינו מכסה",
+    "לנקוב באורקל שקובע כל תוצאה ולזהות מתי אין אורקל",
+    "לבחור טכניקה למצב מתואר ולנמק מול חלופה אחת שנדחתה",
+    "לציין את התנאים שבהם הבחירה הייתה משתנה",
+    "לשלב טכניקות כך שהכיסוי משלים ולא חוזר, ולזהות אילו בדיקות השילוב הופך למיותרות"
+  ],
+  "prerequisites": [
+    "TD/black-box",
+    "TD/experience-based"
+  ],
+  "difficulty": 5,
+  "estimatedMinutes": 100,
+  "measuredSkills": [
+    "TD.COV",
+    "TD.SEL",
+    "TD.COMBO"
+  ],
+  "summaryRef": "TD-adequacy.SUM.001",
+  "lessonRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "exerciseRefs": [
+    "TD-adequacy.EX.100",
+    "TD-adequacy.EX.101",
+    "TD-adequacy.EX.102",
+    "TD-adequacy.EX.103",
+    "TD-adequacy.EX.104",
+    "TD-adequacy.EX.105",
+    "TD-adequacy.EX.106",
+    "TD-adequacy.EX.107",
+    "TD-adequacy.EX.108",
+    "TD-adequacy.EX.109",
+    "TD-adequacy.EX.110",
+    "TD-adequacy.EX.111",
+    "TD-adequacy.EX.112",
+    "TD-adequacy.EX.113",
+    "TD-adequacy.EX.114",
+    "TD-adequacy.EX.115",
+    "TD-adequacy.EX.116",
+    "TD-adequacy.EX.117",
+    "TD-adequacy.EX.118",
+    "TD-adequacy.EX.119",
+    "TD-adequacy.EX.120",
+    "TD-adequacy.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

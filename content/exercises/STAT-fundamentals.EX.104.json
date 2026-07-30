@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.BASIC"
+  },
+  "title": "קוד בלתי נגיש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע בדיקה דינמית אינה מגלה קוד בלתי נגיש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא מוסתר"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא לעולם אינו רץ, ולכן אינו יכול להיכשל"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא תקין"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא כן מגלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קוד שלא מבוצע אינו מייצר תוצאה שאפשר להשוות.",
+    "skillId": "STAT.BASIC",
+    "dimension": "application"
+  }
+}

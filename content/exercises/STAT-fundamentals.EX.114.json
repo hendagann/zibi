@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "בחירה להבנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ארכיטקט רוצה שהצוות יבין מסמך עיצוב חדש. איזו סקירה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "Inspection"
+      },
+      {
+        "id": "b",
+        "labelHe": "Walkthrough"
+      },
+      {
+        "id": "c",
+        "labelHe": "לא-פורמלית"
+      },
+      {
+        "id": "d",
+        "labelHe": "סקירה טכנית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "העברת ידע והבנה משותפת הן בדיוק מטרת ה-Walkthrough.",
+    "skillId": "STAT.REV",
+    "dimension": "application"
+  }
+}

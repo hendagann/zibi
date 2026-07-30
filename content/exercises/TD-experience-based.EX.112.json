@@ -1,0 +1,67 @@
+{
+  "id": "TD-experience-based.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/experience-based",
+  "skills": {
+    "primary": "TD.CHK"
+  },
+  "title": "תחזוקת רשימה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה מוזנת רשימת בדיקה חיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-experience-based.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מהמפרט בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "מפגמים שנמצאו בשטח והרשימה לא תפסה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מהתקציב"
+      },
+      {
+        "id": "d",
+        "labelHe": "מהמנהל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל פגם משמעותי שהרשימה פספסה הוא מועמד לשורה חדשה.",
+    "skillId": "TD.CHK",
+    "dimension": "application"
+  }
+}

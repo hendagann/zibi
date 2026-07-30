@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "סיווג",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"התהליך יהיה פשוט ואינטואיטיבי\". איזה סוג פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "סתירה"
+      },
+      {
+        "id": "b",
+        "labelHe": "עמימות ואי-מדידות"
+      },
+      {
+        "id": "c",
+        "labelHe": "פתרון בדרישה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין פגם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שני תארים בלי קריטריון מדיד.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

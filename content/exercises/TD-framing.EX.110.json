@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "משמעות 100%",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה אומר כיסוי 100%?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שאין באגים"
+      },
+      {
+        "id": "b",
+        "labelHe": "שכל הפריטים מהסוג שנמדד נגעו בהם — לא שנבדק הכול"
+      },
+      {
+        "id": "c",
+        "labelHe": "שהמערכת מושלמת"
+      },
+      {
+        "id": "d",
+        "labelHe": "שאפשר לשחרר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פגמים מסוגים אחרים נשארים מחוץ למדידה.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

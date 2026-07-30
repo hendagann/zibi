@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.BASIC"
+  },
+  "title": "עלות תיקון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קורה לעלות תיקון פגם ככל שהוא מתגלה מאוחר יותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יורדת"
+      },
+      {
+        "id": "b",
+        "labelHe": "עולה — משינוי משפט במסמך ועד שינוי קוד, בדיקות, רגרסיה ולקוחות שנפגעו"
+      },
+      {
+        "id": "c",
+        "labelHe": "נשארת זהה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין קשר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זה הנימוק הכלכלי המרכזי לסקירה מוקדמת.",
+    "skillId": "STAT.BASIC",
+    "dimension": "knowledge"
+  }
+}

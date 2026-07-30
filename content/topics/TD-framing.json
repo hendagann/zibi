@@ -1,0 +1,51 @@
+{
+  "id": "TD/framing",
+  "nameHe": "בחירת גישה",
+  "nameEn": "Choosing an approach",
+  "domain": "TD",
+  "description": "שלוש קטגוריות טכניקות הבדיקה — מבוססות מפרט, מבוססות מבנה ומבוססות ניסיון — מה כל אחת יכולה לחשוף ומה לא, וכיצד המידע הזמין והסיכון קובעים במה משתמשים.",
+  "learningObjectives": [
+    "לסווג טכניקה כמבוססת מפרט, מבנה או ניסיון",
+    "לציין מה כל קטגוריה יכולה לחשוף ומה לא",
+    "לבחור קטגוריה לפי המידע הזמין ורמת הסיכון",
+    "להסביר מדוע קטגוריה אחת לבדה משאירה פגמים שלא ייתפסו"
+  ],
+  "prerequisites": [
+    "FUND/process"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 70,
+  "measuredSkills": [
+    "TD.CAT"
+  ],
+  "summaryRef": "TD-framing.SUM.001",
+  "lessonRefs": [
+    "TD-framing.LE.001"
+  ],
+  "exerciseRefs": [
+    "TD-framing.EX.100",
+    "TD-framing.EX.101",
+    "TD-framing.EX.102",
+    "TD-framing.EX.103",
+    "TD-framing.EX.104",
+    "TD-framing.EX.105",
+    "TD-framing.EX.106",
+    "TD-framing.EX.107",
+    "TD-framing.EX.108",
+    "TD-framing.EX.109",
+    "TD-framing.EX.110",
+    "TD-framing.EX.111",
+    "TD-framing.EX.112",
+    "TD-framing.EX.113",
+    "TD-framing.EX.114",
+    "TD-framing.EX.115",
+    "TD-framing.EX.116",
+    "TD-framing.EX.117"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

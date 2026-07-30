@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "קלט לא צפוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אמוג׳י בשדה שם מקריס את המסך; אין דרישה בנושא. מי יגלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות מפרט"
+      },
+      {
+        "id": "b",
+        "labelHe": "מבוססות מבנה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מבוססות ניסיון"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "קלט שלא נכתב באף מסמך נתפס בידע ובניחוש שגיאות.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

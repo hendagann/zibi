@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.BASIC"
+  },
+  "title": "מה סטטי מוצא",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה פגם סקירה סטטית תופסת ובדיקה דינמית לא?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "נזילת זיכרון"
+      },
+      {
+        "id": "b",
+        "labelHe": "סתירה בין שתי דרישות"
+      },
+      {
+        "id": "c",
+        "labelHe": "זמן תגובה איטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "קריסה תחת עומס"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "לסתירה בין דרישות אין ביטוי בריצה — הקוד מימש אחת מהן.",
+    "skillId": "STAT.BASIC",
+    "dimension": "application"
+  }
+}

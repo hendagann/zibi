@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "למה לא אחת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע קטגוריה אחת אינה מספיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא איטית"
+      },
+      {
+        "id": "b",
+        "labelHe": "כל קטגוריה עיוורת לסוג פגמים שהאחרות תופסות"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא יקרה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא מספיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מפרט לא רואה קוד עודף; מבנה מאשר מימוש של דרישה שגויה.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

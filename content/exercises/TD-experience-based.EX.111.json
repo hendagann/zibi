@@ -1,0 +1,67 @@
+{
+  "id": "TD-experience-based.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/experience-based",
+  "skills": {
+    "primary": "TD.CHK"
+  },
+  "title": "התיישנות רשימה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע רשימת בדיקה מוצאת פחות פגמים עם הזמן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-experience-based.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המוצר משתפר"
+      },
+      {
+        "id": "b",
+        "labelHe": "פרדוקס קוטל החרקים — אותן בדיקות מפסיקות למצוא חדשים"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבודקים מתעייפים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין סיבה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו העיקרון במופע יומיומי; הפתרון הוא עדכון הרשימה.",
+    "skillId": "TD.CHK",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "פריט כיסוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו פריט כיסוי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "באג"
+      },
+      {
+        "id": "b",
+        "labelHe": "יחידת המדידה — משפט קוד, החלטה או מחלקת שקילות"
+      },
+      {
+        "id": "c",
+        "labelHe": "מקרה בדיקה"
+      },
+      {
+        "id": "d",
+        "labelHe": "דרישה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הכיסוי מחושב כיחס בין הפריטים שנבדקו לסך הפריטים.",
+    "skillId": "TD.CAT",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "STAT/requirements",
+  "nameHe": "סקירת דרישות",
+  "nameEn": "Requirements review",
+  "domain": "STAT",
+  "description": "איתור פגמי דרישות וכתיבתם מחדש בצורה בדיקה: עמימות, חוסר, סתירה, אי-מדידות ופתרון שהוכנס לדרישה — וניסוח שאלת הבהרה שמקדמת במקום להאשים.",
+  "learningObjectives": [
+    "לסמן במקטע דרישות את המשפטים העמומים, הבלתי-מדידים והסותרים",
+    "לשכתב כל אחד לצורה שניתן לבדוק",
+    "לזהות דרישה שמכתיבה פתרון במקום לתאר צורך",
+    "לנסח שאלת הבהרה בונה שמקדמת את הדרישה"
+  ],
+  "prerequisites": [
+    "STAT/fundamentals"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 85,
+  "measuredSkills": [
+    "STAT.CRIT"
+  ],
+  "summaryRef": "STAT-requirements.SUM.001",
+  "lessonRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "exerciseRefs": [
+    "STAT-requirements.EX.100",
+    "STAT-requirements.EX.101",
+    "STAT-requirements.EX.102",
+    "STAT-requirements.EX.103",
+    "STAT-requirements.EX.104",
+    "STAT-requirements.EX.105",
+    "STAT-requirements.EX.106",
+    "STAT-requirements.EX.107",
+    "STAT-requirements.EX.108",
+    "STAT-requirements.EX.109",
+    "STAT-requirements.EX.110",
+    "STAT-requirements.EX.111",
+    "STAT-requirements.EX.112",
+    "STAT-requirements.EX.113",
+    "STAT-requirements.EX.114",
+    "STAT-requirements.EX.115",
+    "STAT-requirements.EX.116",
+    "STAT-requirements.EX.117",
+    "STAT-requirements.EX.118",
+    "STAT-requirements.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

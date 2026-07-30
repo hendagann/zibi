@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "פתרון להיעדר אורקל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה עושים כשאין אורקל לתוצאה בודדת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מוותרים על הבדיקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מגדירים תכונות שהתוצאה חייבת לקיים, ומעלים את היעדר האורקל כבעיה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מסמנים עבר"
+      },
+      {
+        "id": "d",
+        "labelHe": "מבקשים מהמפתח להחליט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מחליפים שאלה — מ\"האם זה הערך הנכון\" ל\"האם התכונות מתקיימות\".",
+    "skillId": "TD.COV",
+    "dimension": "application"
+  }
+}

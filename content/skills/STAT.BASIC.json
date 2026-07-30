@@ -1,0 +1,14 @@
+{
+  "id": "STAT.BASIC",
+  "topic": "STAT/fundamentals",
+  "titleHe": "ערך הבדיקה הסטטית",
+  "titleEn": "Value of static testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Names what a static technique could find in a given work product that dynamic testing could not, and at what cost.",
+  "prerequisites": [
+    "FUND.PROC"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

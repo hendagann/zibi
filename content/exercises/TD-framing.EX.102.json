@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "מבוססות מבנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה נגזרות טכניקות מבוססות מבנה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מהדרישות"
+      },
+      {
+        "id": "b",
+        "labelHe": "ממבנה הקוד וזרימת השליטה, ומודדות כיסוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "מניסיון"
+      },
+      {
+        "id": "d",
+        "labelHe": "מדוחות פגמים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כיסוי משפטים וכיסוי החלטות הן דוגמאות מרכזיות.",
+    "skillId": "TD.CAT",
+    "dimension": "knowledge"
+  }
+}

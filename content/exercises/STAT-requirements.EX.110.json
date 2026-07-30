@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "לתקן בראש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע אסור \"לתקן בראש\" דרישה עמומה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זה איטי"
+      },
+      {
+        "id": "b",
+        "labelHe": "מאותו רגע נבדקת הנחת הבודקת ולא כוונת הלקוח, והפער יתגלה בקבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה לא מקצועי להתייעץ"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בעיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו הטעות המסוכנת ביותר בסקירת דרישות.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

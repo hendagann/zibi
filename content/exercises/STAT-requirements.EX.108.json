@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "שכתוב צורך",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד לשכתב \"הדוח יוצג בגרף עוגה\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"בגרף עמודות\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"הדוח יציג את התפלגות המכירות לפי קטגוריה\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הדוח יהיה יפה\""
+      },
+      {
+        "id": "d",
+        "labelHe": "להשאיר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הניסוח מתאר את התוצאה הרצויה ומשאיר את הבחירה לעיצוב.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

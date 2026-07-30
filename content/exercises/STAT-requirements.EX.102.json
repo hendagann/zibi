@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "תואר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"המערכת תהיה ידידותית למשתמש\". איזה פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "סתירה"
+      },
+      {
+        "id": "b",
+        "labelHe": "עמימות/אי-מדידות — תואר ולא קריטריון"
+      },
+      {
+        "id": "c",
+        "labelHe": "חוסר"
+      },
+      {
+        "id": "d",
+        "labelHe": "פתרון בדרישה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תארים דורשים החלפה בערך מדיד.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.COV"
+  },
+  "title": "סט צר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שדה 18–120 נבדק ב-25, 50, 99 ו-10. מה חסר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "ערכי הגבול 17/18/120/121 והמחלקה מעל הטווח"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק 50"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק תיעוד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שלוש בדיקות באותה מחלקה, ואף גבול לא נבדק.",
+    "skillId": "TD.COV",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "STAT-requirements.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "title": "איך מוצאים סתירה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד מתגלות סתירות בין דרישות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בקריאה לינארית של כל דרישה בנפרד"
+      },
+      {
+        "id": "b",
+        "labelHe": "בקריאה צולבת — העמדת דרישות רחוקות זו מול זו"
+      },
+      {
+        "id": "c",
+        "labelHe": "בהרצת המערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "בבדיקת יחידה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל דרישה בנפרד נראית סבירה; ההתנגשות בין שתיים היא מה שנחשף.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

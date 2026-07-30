@@ -1,0 +1,14 @@
+{
+  "id": "STAT.REV",
+  "topic": "STAT/fundamentals",
+  "titleHe": "סוגי סקירות",
+  "titleEn": "Review types",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Selects an appropriate review type for a given work product and project stage, and states the roles the review requires.",
+  "prerequisites": [
+    "STAT.BASIC"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

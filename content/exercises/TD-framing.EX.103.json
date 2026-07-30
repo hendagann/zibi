@@ -1,0 +1,67 @@
+{
+  "id": "TD-framing.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "title": "מבוססות ניסיון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה נגזרות טכניקות מבוססות ניסיון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-framing.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מהמפרט"
+      },
+      {
+        "id": "b",
+        "labelHe": "מידע הבודקת, היסטוריית פגמים ודפוסי שגיאה מוכרים"
+      },
+      {
+        "id": "c",
+        "labelHe": "מהקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "מהתקציב"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ניחוש שגיאות, רשימות בדיקה ובדיקות חוקרות שייכות לכאן.",
+    "skillId": "TD.CAT",
+    "dimension": "knowledge"
+  }
+}

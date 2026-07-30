@@ -1,0 +1,67 @@
+{
+  "id": "STAT-fundamentals.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "title": "Walkthrough",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מי מציג ב-Walkthrough?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המנחה"
+      },
+      {
+        "id": "b",
+        "labelHe": "המחבר של המסמך, שלב-שלב"
+      },
+      {
+        "id": "c",
+        "labelHe": "מנהל הפרויקט"
+      },
+      {
+        "id": "d",
+        "labelHe": "הלקוח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ב-Walkthrough המחבר מוביל ומסביר, והמשתתפים שואלים.",
+    "skillId": "STAT.REV",
+    "dimension": "knowledge"
+  }
+}

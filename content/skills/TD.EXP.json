@@ -1,0 +1,14 @@
+{
+  "id": "TD.EXP",
+  "topic": "TD/experience-based",
+  "titleHe": "ניחוש שגיאות",
+  "titleEn": "Error guessing",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Generates plausible failure hypotheses for a feature and states the experience or defect history each is grounded in.",
+  "prerequisites": [
+    "TD.CAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

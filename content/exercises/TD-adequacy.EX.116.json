@@ -1,0 +1,67 @@
+{
+  "id": "TD-adequacy.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/adequacy",
+  "skills": {
+    "primary": "TD.SEL"
+  },
+  "title": "מה היה משנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הכלל תלוי בטווח יחיד. מה היה מצדיק מעבר לטבלת החלטה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-adequacy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "טווח רחב יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוספת תנאי — למשל מגבלה שונה ללקוח פרימיום"
+      },
+      {
+        "id": "c",
+        "labelHe": "יותר זמן"
+      },
+      {
+        "id": "d",
+        "labelHe": "כלי אחר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "צירוף תנאים הוא הטריגר למעבר.",
+    "skillId": "TD.SEL",
+    "dimension": "application"
+  }
+}

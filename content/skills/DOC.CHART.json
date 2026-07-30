@@ -1,0 +1,14 @@
+{
+  "id": "DOC.CHART",
+  "topic": "DOC/exploration",
+  "titleHe": "כתיבת charter",
+  "titleEn": "Charter authoring",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Writes an exploratory charter that scopes a session - target, resources, information sought - narrowly enough to be actionable.",
+  "prerequisites": [
+    "DOC.REQ"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}
