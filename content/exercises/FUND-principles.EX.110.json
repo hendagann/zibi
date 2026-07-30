@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "מהו פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"פגם\" (defect / bug) הוא:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הטעות של המפתחת"
+      },
+      {
+        "id": "b",
+        "labelHe": "הליקוי בקוד או בתוצר שבגללו המערכת לא עומדת בדרישה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הקריסה שהמשתמש רואה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הדוח שהבודקת כותבת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פגם הוא הליקוי הקונקרטי בתוצר. הוא נובע משגיאה אנושית, והפעלתו בריצה מייצרת כשל.",
+    "skillId": "FUND.ERR",
+    "dimension": "knowledge"
+  }
+}

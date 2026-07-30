@@ -1,0 +1,14 @@
+{
+  "id": "FUND.QA",
+  "topic": "FUND/purpose",
+  "titleHe": "QA מול QC מול בדיקות",
+  "titleEn": "QA vs QC vs testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Classifies a described activity as quality assurance, quality control or testing, and states the practical consequence of confusing them.",
+  "prerequisites": [
+    "FUND.WHAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

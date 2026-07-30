@@ -1,0 +1,54 @@
+{
+  "id": "FUND/principles",
+  "nameHe": "עקרונות ותורת הפגם",
+  "nameEn": "Principles and defect theory",
+  "domain": "FUND",
+  "description": "שבעת עקרונות הבדיקה ושרשרת שגיאה–פגם–כשל: תורת היסוד שכל שאר המקצוע נשען עליה. חוזר במבחן ובראיונות עבודה כאחד.",
+  "learningObjectives": [
+    "לזהות איזה משבעת העקרונות מופר בתרחיש פרויקט נתון ולנבא את התוצאה",
+    "לשרשר כשל שדווח חזרה אל הפגם ואל השגיאה האנושית שיצרה אותו",
+    "להבחין בין כשל שמקורו פגם בקוד לכשל שמקורו סביבתי",
+    "להסביר את ההבדל בין חיובי שגוי לשלילי שגוי ואת הסיכון בכל אחד"
+  ],
+  "prerequisites": [
+    "FUND/purpose"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 75,
+  "measuredSkills": [
+    "FUND.PRIN",
+    "FUND.ERR"
+  ],
+  "summaryRef": "FUND-principles.SUM.001",
+  "lessonRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "exerciseRefs": [
+    "FUND-principles.EX.100",
+    "FUND-principles.EX.101",
+    "FUND-principles.EX.102",
+    "FUND-principles.EX.103",
+    "FUND-principles.EX.104",
+    "FUND-principles.EX.105",
+    "FUND-principles.EX.106",
+    "FUND-principles.EX.107",
+    "FUND-principles.EX.108",
+    "FUND-principles.EX.109",
+    "FUND-principles.EX.110",
+    "FUND-principles.EX.111",
+    "FUND-principles.EX.112",
+    "FUND-principles.EX.113",
+    "FUND-principles.EX.114",
+    "FUND-principles.EX.115",
+    "FUND-principles.EX.116",
+    "FUND-principles.EX.117",
+    "FUND-principles.EX.118",
+    "FUND-principles.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

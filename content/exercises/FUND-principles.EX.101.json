@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "אין בדיקה ממצה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע לא בודקים את כל צירופי הקלט האפשריים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כי זה משעמם"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי במוצר לא-טריוויאלי מספר הצירופים עצום ובלתי אפשרי לכסות; בוחרים מדגם לפי סיכון"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי הכלים לא תומכים"
+      },
+      {
+        "id": "d",
+        "labelHe": "כי זה אסור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה ממצה בלתי אפשרית מעשית. לכן קיימות טכניקות בחירה ובדיקות מבוססות-סיכון — כדי לכסות את החשוב, לא את הכול.",
+    "skillId": "FUND.PRIN",
+    "dimension": "knowledge"
+  }
+}

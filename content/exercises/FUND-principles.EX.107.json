@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "הפרת בדיקה מוקדמת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה התוצאה של הפרת עקרון הבדיקה המוקדמת — כלומר בדיקה רק בסוף הפיתוח?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חיסכון בזמן"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגמים מצטברים ומתגלים מאוחר, כשהתיקון נרחב ויקר בהרבה"
+      },
+      {
+        "id": "c",
+        "labelHe": "איכות טובה יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין תוצאה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ככל שפגם מתגלה מאוחר יותר, כך התיקון יקר ומורכב יותר — לכן דחיית הבדיקה לסוף היא הפרה שמייקרת את הפרויקט.",
+    "skillId": "FUND.PRIN",
+    "dimension": "knowledge"
+  }
+}

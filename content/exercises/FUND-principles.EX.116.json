@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "חיובי שגוי מול שלילי שגוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו תוצאת בדיקה מסוכנת יותר, ולמה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חיובי שגוי — כי הוא מרגיז"
+      },
+      {
+        "id": "b",
+        "labelHe": "שלילי שגוי (false negative) — הבדיקה עברה אך פספסה באג אמיתי, ומשדרת ביטחון כוזב"
+      },
+      {
+        "id": "c",
+        "labelHe": "שתיהן זהות בסיכון"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת לא מסוכנת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חיובי שגוי מבזבז זמן (חקירת \"באג\" שאינו קיים), אבל שלילי שגוי משאיר פגם אמיתי במערכת ומשדר \"הכול תקין\" — סכנה גדולה יותר.",
+    "skillId": "FUND.ERR",
+    "dimension": "reasoning"
+  }
+}

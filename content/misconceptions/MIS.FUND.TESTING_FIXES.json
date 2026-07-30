@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.TESTING_FIXES",
+  "titleHe": "בדיקה מתקנת את הבאג",
+  "descriptionHe": "ציפייה שהבודקת תתקן את הפגם, מתוך בלבול בין בדיקה (מציאה ודיווח) לניפוי (debugging — איתור ותיקון בידי המפתח).",
+  "whyTempting": "שתי הפעולות עוסקות באותו באג, אז נדמה שהן אותו תפקיד. אבל בדיקה מוצאת ומדווחת; ניפוי מתקן, והוא עבודת פיתוח.",
+  "skillIds": [
+    "FUND.WHAT"
+  ],
+  "remediationRef": "FUND-purpose.LE.001",
+  "anchor": "sec-debug",
+  "status": "active"
+}

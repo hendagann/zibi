@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "גורם שורש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו \"גורם שורש\" (root cause)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הכשל שהמשתמש דיווח"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסיבה המוקדמת ביותר בשרשרת — לרוב שגיאה בדרישות, עיצוב או קידוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "שם הבאג במערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "הבודקת שמצאה את הבאג"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "גורם השורש הוא ההתחלה של השרשרת. תיקון רק של הכשל המיידי בלי לטפל בשורש מוביל לאותו סוג באג במקום אחר.",
+    "skillId": "FUND.ERR",
+    "dimension": "knowledge"
+  }
+}

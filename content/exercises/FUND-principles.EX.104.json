@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "זיהוי צבירת פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ניתוח מגלה שרוב הקריסות בשלושה חודשים אחרונים מגיעות ממודול התשלומים. איזה עיקרון מנחה את המשך העבודה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פרדוקס קוטל החרקים"
+      },
+      {
+        "id": "b",
+        "labelHe": "צבירת פגמים — להקצות יותר בדיקות למודול שכבר הפגין תקלות"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין בדיקה ממצה"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקות תלויות הקשר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "עקרון 80/20: פגמים מתרכזים במיעוט רכיבים. מודול שכבר \"צבר\" תקלות סביר שיש בו עוד, ולכן מגדילים בו את המאמץ.",
+    "skillId": "FUND.PRIN",
+    "dimension": "application"
+  }
+}

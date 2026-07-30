@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "זיהוי החוליה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אנליסטית הגדירה דרישה שגויה, שבעקבותיה נכתב קוד \"נכון\" לדרישה השגויה, ובריצה המערכת עשתה דבר לא-רצוי. מהי החוליה הראשונה בשרשרת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הכשל בריצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "השגיאה האנושית — הגדרת הדרישה השגויה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "המשתמש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "השרשרת מתחילה בשגיאה אנושית, וכאן היא בשלב הדרישות — לא הקידוד. זה ממחיש שגורם השורש יכול לשבת הרבה לפני הקוד.",
+    "skillId": "FUND.ERR",
+    "dimension": "application"
+  }
+}

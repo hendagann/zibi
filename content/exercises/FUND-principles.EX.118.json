@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "תיקון לפרדוקס קוטל החרקים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הפתרון לפרדוקס קוטל החרקים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להריץ את אותן בדיקות יותר פעמים"
+      },
+      {
+        "id": "b",
+        "labelHe": "לעדכן ולגוון מקרי בדיקה, להוסיף תרחישים חדשים"
+      },
+      {
+        "id": "c",
+        "labelHe": "להפסיק לבדוק"
+      },
+      {
+        "id": "d",
+        "labelHe": "להגדיל את צוות הבדיקות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סט קבוע מאבד יעילות עם הזמן. רענון וגיוון — תרחישים חדשים, נתונים חדשים, טכניקות חדשות — הוא מה שמחזיר לבדיקות את כוח הגילוי.",
+    "skillId": "FUND.PRIN",
+    "dimension": "knowledge"
+  }
+}

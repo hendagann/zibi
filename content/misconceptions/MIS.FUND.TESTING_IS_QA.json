@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.TESTING_IS_QA",
+  "titleHe": "בדיקות זה QA",
+  "descriptionHe": "שימוש ב\"QA\" כשם נרדף ל\"בדיקות\", וערבוב בין שיפור תהליך (QA) לבדיקת תוצר (QC/בדיקות).",
+  "whyTempting": "בארץ קוראים לתפקיד \"QA Engineer\", אז נדמה שכל מה שבודקת עושה הוא QA. בפועל העבודה היא QC ובדיקות.",
+  "skillIds": [
+    "FUND.QA"
+  ],
+  "remediationRef": "FUND-purpose.LE.001",
+  "anchor": "sec-qa",
+  "status": "active"
+}

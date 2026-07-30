@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.ABSENCE_FALLACY",
+  "titleHe": "מוצר בלי באגים הוא מוצר טוב",
+  "descriptionHe": "מדידת הצלחה רק לפי היעדר פגמים, בלי לבדוק אם המוצר עונה על הצורך העסקי והמשתמשי.",
+  "whyTempting": "אפס באגים נשמע כמו הצלחה מוחלטת. אבל מוצר תקין-טכנית שעונה על דרישות שגויות — נכשל בשוק. זו אשליית היעדר השגיאות.",
+  "skillIds": [
+    "FUND.PRIN"
+  ],
+  "remediationRef": "FUND-principles.LE.001",
+  "anchor": "sec-absence",
+  "status": "active"
+}

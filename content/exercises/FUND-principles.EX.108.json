@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "ניגוד בין עקרונות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 5,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מנהל אומר: \"יש לנו כיסוי 100%, אז אנחנו מכוסים לגמרי\". אילו שני עקרונות הוא מפר בבת אחת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה מוקדמת ובדיקות תלויות הקשר"
+      },
+      {
+        "id": "b",
+        "labelHe": "נוכחות פגמים (כיסוי גבוה אינו הוכחת היעדר) ופרדוקס קוטל החרקים (הכיסוי אולי של סט מיושן)"
+      },
+      {
+        "id": "c",
+        "labelHe": "צבירת פגמים ובדיקה ממצה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף עיקרון"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "\"כיסוי 100% = מכוסים\" מניח שהיעדר-ממצא מוכיח תקינות (נגד עקרון נוכחות הפגמים), ומתעלם מכך שכיסוי גבוה על סט קבוע מפסיק למצוא באגים (פרדוקס קוטל החרקים).",
+    "skillId": "FUND.PRIN",
+    "dimension": "reasoning"
+  }
+}

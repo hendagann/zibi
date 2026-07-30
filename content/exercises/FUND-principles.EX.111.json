@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "מהו כשל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"כשל\" (failure) הוא:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ליקוי בקוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "התנהגות שגויה של התוכנה בזמן ריצה, כתוצאה מהפעלת פגם"
+      },
+      {
+        "id": "c",
+        "labelHe": "טעות של אדם"
+      },
+      {
+        "id": "d",
+        "labelHe": "מסמך דרישות שגוי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשל הוא מה שקורה בריצה כשפגם מופעל: המערכת מתנהגת אחרת מהצפוי. הוא החוליה השלישית בשרשרת.",
+    "skillId": "FUND.ERR",
+    "dimension": "knowledge"
+  }
+}

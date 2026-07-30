@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "מהי שגיאה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "לפי המינוח, \"שגיאה\" (error / mistake) היא:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "התנהגות שגויה של התוכנה בריצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "טעות אנושית — מחשבה או פעולה שגויה של אדם שיוצרת פגם"
+      },
+      {
+        "id": "c",
+        "labelHe": "ליקוי בקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "תקלת חומרה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שגיאה היא החוליה האנושית: אדם טועה. הליקוי בקוד שנוצר מהטעות הוא הפגם, וההתנהגות השגויה בריצה היא הכשל.",
+    "skillId": "FUND.ERR",
+    "dimension": "knowledge"
+  }
+}

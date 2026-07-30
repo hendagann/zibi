@@ -1,0 +1,13 @@
+{
+  "id": "MIS.FUND.NO_BUGS_MEANS_CLEAN",
+  "titleHe": "אם לא נמצאו באגים — המוצר נקי",
+  "descriptionHe": "הסקת מסקנה ש\"הבדיקות עברו\" פירושה \"אין פגמים\", במקום \"לא מצאנו פגם במה שבדקנו\".",
+  "whyTempting": "תוצאה ירוקה מרגישה כמו אישור. אבל בדיקה מגלה נוכחות פגמים, לא היעדרם — אזורים שלא נבדקו יכולים להכיל באגים.",
+  "skillIds": [
+    "FUND.WHAT",
+    "FUND.PRIN"
+  ],
+  "remediationRef": "FUND-purpose.LE.001",
+  "anchor": "sec-prove",
+  "status": "active"
+}

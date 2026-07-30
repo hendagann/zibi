@@ -1,0 +1,14 @@
+{
+  "id": "FUND.PRIN",
+  "topic": "FUND/principles",
+  "titleHe": "עקרונות הבדיקה",
+  "titleEn": "Testing principles",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Identifies which testing principle a described project decision violates, and predicts the consequence of continuing.",
+  "prerequisites": [
+    "FUND.WHAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

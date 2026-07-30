@@ -1,0 +1,67 @@
+{
+  "id": "FUND-purpose.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/purpose",
+  "skills": {
+    "primary": "FUND.WHAT"
+  },
+  "title": "האם בודק טוב מוצא הכי הרבה באגים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שאלת ראיון: \"האם בודק טוב הוא מי שמצא הכי הרבה באגים?\""
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן, זה המדד היחיד"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא בהכרח — כמות באגים תלויה גם באיכות הקוד ובאזור שנבדק; בודק טוב מודד בסיכון, בכיסוי ובאיכות המידע"
+      },
+      {
+        "id": "c",
+        "labelHe": "כן, תמיד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא, בודק טוב לא מוצא באגים בכלל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מספר הבאגים אינו מדד טהור לאיכות הבודקת — הוא מושפע מאיכות הקוד ומהאזור. בודקת טובה מכוונת לסיכון ולמידע שימושי, לא לספירה.",
+    "skillId": "FUND.WHAT",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.EXHAUSTIVE",
+  "titleHe": "אפשר וכדאי לבדוק הכול",
+  "descriptionHe": "ניסיון לכסות את כל צירופי הקלט והמצבים, במקום לבחור מדגם לפי סיכון.",
+  "whyTempting": "בדיקת הכול מרגישה יסודית ובטוחה. אבל היא בלתי אפשרית במוצר לא-טריוויאלי, ובפועל שורפת זמן ומאלצת לדלג על אזורים חשובים.",
+  "skillIds": [
+    "FUND.PRIN"
+  ],
+  "remediationRef": "FUND-principles.LE.001",
+  "anchor": "sec-exhaustive",
+  "status": "active"
+}

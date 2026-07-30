@@ -1,0 +1,67 @@
+{
+  "id": "FUND-purpose.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/purpose",
+  "skills": {
+    "primary": "FUND.WHAT"
+  },
+  "title": "הפחתת סיכון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כשאומרים שבדיקה \"מפחיתה סיכון\", הכוונה היא ש:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הבדיקה מבטלת כל סיכון"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבדיקה מקטינה את הסיכוי ואת ההשפעה של איכות ירודה שתגיע למשתמש, אך אינה מאפסת אותם"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבדיקה מבטיחה שחרור בזמן"
+      },
+      {
+        "id": "d",
+        "labelHe": "הבדיקה מוזילה את הפיתוח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה מקטינה סיכון — לא מבטלת. סיכון שיורי תמיד נשאר, ותפקיד הבדיקה לצמצם אותו ולתאר אותו, לא להעמיד פנים שאין.",
+    "skillId": "FUND.WHAT",
+    "dimension": "knowledge"
+  }
+}

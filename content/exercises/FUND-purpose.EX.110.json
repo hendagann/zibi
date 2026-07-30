@@ -1,0 +1,67 @@
+{
+  "id": "FUND-purpose.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/purpose",
+  "skills": {
+    "primary": "FUND.QA"
+  },
+  "title": "ההשלכה של הבלבול",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההשלכה המעשית של בלבול בין QA ל-QC בארגון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין השלכה, אלה מילים נרדפות"
+      },
+      {
+        "id": "b",
+        "labelHe": "ערבוב תחומי אחריות — ציפייה שבודקת גם תשפר תהליכים, גם תכתוב תקנים וגם תריץ את כל הבדיקות ידנית"
+      },
+      {
+        "id": "c",
+        "labelHe": "הקוד יהיה איטי יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "המשתמשים יתבלבלו"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הבלבול מטשטש מי אחראי למה. אם \"QA\" מצופה לעשות הכול — תהליך, תקנים וביצוע בדיקות — מעמיסים שני תחומים שונים על תפקיד אחד.",
+    "skillId": "FUND.QA",
+    "dimension": "reasoning"
+  }
+}

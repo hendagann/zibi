@@ -1,0 +1,48 @@
+{
+  "id": "FUND/purpose",
+  "nameHe": "למה בודקים",
+  "nameEn": "Why we test",
+  "domain": "FUND",
+  "description": "מטרות הבדיקה, מה בדיקה יכולה ומה לא, וההבחנה בין בדיקות, בקרת איכות (QC) והבטחת איכות (QA). פרק 1 של מבחן ההסמכה — כ-20% מהשאלות.",
+  "learningObjectives": [
+    "לזהות מטרות טיפוסיות של בדיקה במצב פרויקט נתון",
+    "להסביר מדוע בדיקה מגלה נוכחות פגמים אך לא מוכיחה את היעדרם",
+    "להבחין בין בדיקה לניפוי שגיאות (debugging)",
+    "לסווג פעילות כ-QA, QC או בדיקות ולציין את ההשלכה של בלבול ביניהן"
+  ],
+  "prerequisites": [],
+  "difficulty": 1,
+  "estimatedMinutes": 60,
+  "measuredSkills": [
+    "FUND.WHAT",
+    "FUND.QA"
+  ],
+  "summaryRef": "FUND-purpose.SUM.001",
+  "lessonRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "exerciseRefs": [
+    "FUND-purpose.EX.100",
+    "FUND-purpose.EX.101",
+    "FUND-purpose.EX.102",
+    "FUND-purpose.EX.103",
+    "FUND-purpose.EX.104",
+    "FUND-purpose.EX.105",
+    "FUND-purpose.EX.106",
+    "FUND-purpose.EX.107",
+    "FUND-purpose.EX.108",
+    "FUND-purpose.EX.109",
+    "FUND-purpose.EX.110",
+    "FUND-purpose.EX.111",
+    "FUND-purpose.EX.112",
+    "FUND-purpose.EX.113",
+    "FUND-purpose.EX.114",
+    "FUND-purpose.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

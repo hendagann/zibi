@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "אשליית היעדר השגיאות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מוצר עבר את כל הבדיקות הפונקציונליות ללא באג, אך המשתמשים נטשו אותו. מה קרה, ואיזה עיקרון מסביר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הבדיקות היו רעות"
+      },
+      {
+        "id": "b",
+        "labelHe": "אשליית היעדר השגיאות: מוצר תקין-טכנית עדיין נכשל אם אינו עונה על הצורך — ייתכן שהדרישות עצמן היו שגויות"
+      },
+      {
+        "id": "c",
+        "labelHe": "פרדוקס קוטל החרקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בדיקה ממצה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אפס באגים אינו מבטיח מוצר טוב. אם הדרישות שגויות, המוצר יעבור בדיקות ועדיין לא יענה על הצורך. זו אשליית היעדר השגיאות.",
+    "skillId": "FUND.PRIN",
+    "dimension": "reasoning"
+  }
+}

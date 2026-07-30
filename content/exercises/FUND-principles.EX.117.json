@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "חיובי שגוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בדיקה אוטומטית סימנה \"באג\" מכיוון שסביבת הבדיקה הייתה למטה, אך בקוד אין שום פגם. זה:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שלילי שגוי"
+      },
+      {
+        "id": "b",
+        "labelHe": "חיובי שגוי (false positive) — דיווח על באג שאינו קיים"
+      },
+      {
+        "id": "c",
+        "labelHe": "כשל אמיתי"
+      },
+      {
+        "id": "d",
+        "labelHe": "פגם בקוד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חיובי שגוי: הבדיקה \"צעקה באג\" בלי שיש באג. כאן הסיבה סביבתית. סכנתו — שחיקת אמון ובזבוז זמן על חקירות שווא.",
+    "skillId": "FUND.ERR",
+    "dimension": "knowledge"
+  }
+}

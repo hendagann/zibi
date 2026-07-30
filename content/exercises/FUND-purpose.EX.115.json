@@ -1,0 +1,67 @@
+{
+  "id": "FUND-purpose.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/purpose",
+  "skills": {
+    "primary": "FUND.QA"
+  },
+  "title": "התפקיד בארץ",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע חשוב לדעת שתפקיד \"QA Engineer\" בישראל עוסק בפועל בעיקר ב-QC ובבדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זה לא חשוב, זה רק שם"
+      },
+      {
+        "id": "b",
+        "labelHe": "כדי לא לבלבל בין ציפיות: העבודה היא בחינת תוצר וכתיבת בדיקות, לא בהכרח שיפור תהליכים ברמת הארגון"
+      },
+      {
+        "id": "c",
+        "labelHe": "כדי לדרוש שכר גבוה יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "כדי להימנע מכתיבת דוחות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "השם \"QA\" עלול ליצור ציפייה לעבודת תהליך שאינה בליבת התפקיד. הבנת ההבחנה עוזרת למקד את הציפיות ואת ההגדרה של מה נמדד.",
+    "skillId": "FUND.QA",
+    "dimension": "reasoning"
+  }
+}

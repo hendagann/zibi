@@ -1,0 +1,14 @@
+{
+  "id": "FUND.ERR",
+  "topic": "FUND/principles",
+  "titleHe": "טעות, פגם, כשל",
+  "titleEn": "Error, defect and failure",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Traces a reported failure back to the defect and the human error that produced it, using the correct term for each link.",
+  "prerequisites": [
+    "FUND.WHAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

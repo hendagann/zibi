@@ -1,7 +1,22 @@
 # פנקס כיסוי תוכן — מצב מול תוצרי המחקר
 
 מתעדכן בכל הרצת הטמעה. שורת פער = עבודה שנותרה; אסור למחוק שורה בלי לכסות אותה.
-עודכן: 2026-07-30 (הרצה 1).
+עודכן: 2026-07-30 (הרצה 2 — יסודות הבדיקות, פרק A–C).
+
+## יסודות הבדיקות — פרק 1 (מחקר: research/יסודות הבדיקות (CTFL פרק 1).pdf)
+
+| פרק מחקר | מושג | שיעור + עוגן | שאלות | תפיסות שגויות | פער? |
+| --- | --- | --- | --- | --- | --- |
+| A | מטרות הבדיקה | FUND-purpose.LE.001 sec-obj | 6 | — | ✓ מכוסה |
+| A | בדיקה לא מוכיחה היעדר פגמים | sec-prove | (משולב) | NO_BUGS_MEANS_CLEAN | ✓ |
+| A | בדיקה מול ניפוי (debugging) | sec-debug | (משולב) | TESTING_FIXES | ✓ |
+| A | QA מול QC מול בדיקות | sec-qa / sec-qa-consequence | 8 | TESTING_IS_QA | ✓ מכוסה |
+| B | 7 העקרונות (נוכחות, ממצה, מוקדם, צבירה, קוטל חרקים, הקשר, אשליית היעדר) | FUND-principles.LE.001 sec-presence…sec-absence | 12 | EXHAUSTIVE, ABSENCE_FALLACY | ✓ מכוסה |
+| C | שגיאה→פגם→כשל, גורם שורש, כשל בלי פגם, false pos/neg | sec-err / sec-root / sec-nofault / sec-falsepn | 8 | FAILURE_ALWAYS_DEFECT, ERROR_DEFECT_CONFUSION | ✓ מכוסה |
+| D | תהליך הבדיקה (7 פעילויות, traceability, השפעת הקשר) | — | 0 | — | **פער: נושא FUND/process (FUND.PROC קיים כשלד)** |
+| E | האדם הבודק (skills, biases, תקשורת, עצמאות, whole-team) | — | 0 | — | **פער: נושא FUND/people (FUND.PSY קיים כשלד)** |
+
+
 
 ## נתוני המבחן הרשמי (מתוך research/סיכום מנהלים.pdf)
 

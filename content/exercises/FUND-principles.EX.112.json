@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "סיווג בשרשרת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מפתחת כתבה \"> 18\" במקום \">= 18\". משתמש בן 18 נדחה. מה הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ההחלטה השגויה של המפתחת"
+      },
+      {
+        "id": "b",
+        "labelHe": "האופרטור > במקום >= בקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "דחיית המשתמש בן 18"
+      },
+      {
+        "id": "d",
+        "labelHe": "מסך ההרשמה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הפגם הוא הליקוי בקוד — האופרטור השגוי. ההחלטה השגויה היא השגיאה (החוליה האנושית), ודחיית המשתמש בריצה היא הכשל.",
+    "skillId": "FUND.ERR",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "פגם בלי כשל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פגם יושב בקוד אך אף בדיקה לא גילתה אותו כי הנתיב שמכיל אותו לא הורץ. איך זה ייתכן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זה בלתי אפשרי"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם קיים בקוד בין אם הורץ ובין אם לא; בלי הרצת הנתיב אין כשל נצפה — למשל קוד מת"
+      },
+      {
+        "id": "c",
+        "labelHe": "הפגם נעלם"
+      },
+      {
+        "id": "d",
+        "labelHe": "הבדיקה תמיד מוצאת כל פגם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פגם הוא תכונה של הקוד; כשל מתרחש רק בהרצה. אם הנתיב לא מורץ, הפגם קיים אך שקט. לכן כיסוי חלקי משאיר פגמים בלתי-מתגלים.",
+    "skillId": "FUND.ERR",
+    "dimension": "reasoning"
+  }
+}

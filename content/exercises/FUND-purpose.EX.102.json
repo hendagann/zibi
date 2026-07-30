@@ -1,0 +1,67 @@
+{
+  "id": "FUND-purpose.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/purpose",
+  "skills": {
+    "primary": "FUND.WHAT"
+  },
+  "title": "בדיקה מול ניפוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו ההבדל בין בדיקה (testing) לניפוי שגיאות (debugging)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-purpose.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הם שם נרדף"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה מוצאת ומדווחת כשל; ניפוי מאתר ומתקן את הפגם שגרם לו"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקה מתקנת באגים; ניפוי מוצא אותם"
+      },
+      {
+        "id": "d",
+        "labelHe": "ניפוי נעשה רק באוטומציה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה מגלה ומדווחת על כשל; ניפוי — עבודת פיתוח — מאתר את הפגם בקוד ומתקן אותו. הבודקת לא מתקנת קוד.",
+    "skillId": "FUND.WHAT",
+    "dimension": "knowledge"
+  }
+}

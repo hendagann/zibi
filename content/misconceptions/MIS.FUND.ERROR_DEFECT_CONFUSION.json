@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.ERROR_DEFECT_CONFUSION",
+  "titleHe": "בלבול בין שגיאה, פגם וכשל",
+  "descriptionHe": "שימוש לא-מדויק במונחים: קריאה לפגם בקוד \"כשל\", או לכשל בריצה \"באג\", בלי להבחין בין החוליות.",
+  "whyTempting": "שלושתם מתארים \"משהו שהשתבש\", אז הם מתערבבים. אבל כל מונח מציין חוליה אחרת בשרשרת, וזה בדיוק מה שהמבחן בודק.",
+  "skillIds": [
+    "FUND.ERR"
+  ],
+  "remediationRef": "FUND-principles.LE.001",
+  "anchor": "sec-err",
+  "status": "active"
+}

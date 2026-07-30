@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "זיהוי פרדוקס קוטל החרקים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צוות מריץ שנה את אותם 400 מקרי בדיקה. הכיסוי 100% אך לא נמצאו באגים חדשים בעוד שבפרודקשן צצות תקלות. איזה עיקרון מופר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה ממצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "פרדוקס קוטל החרקים — סט קבוע מפסיק למצוא פגמים חדשים"
+      },
+      {
+        "id": "c",
+        "labelHe": "צבירת פגמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקה מוקדמת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סט בדיקות קפוא מול מערכת מתפתחת מפסיק למצוא באגים — בדיוק פרדוקס קוטל החרקים. הכיסוי הגבוה מטעה כי הוא של תרחישים ישנים.",
+    "skillId": "FUND.PRIN",
+    "dimension": "application"
+  }
+}

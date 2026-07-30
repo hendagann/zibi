@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "title": "העיקרון על נוכחות פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "העיקרון \"בדיקה מגלה נוכחות פגמים\" אומר ש:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה מוכיחה שאין פגמים"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה יכולה להראות שקיים פגם, אך לא שאין פגמים"
+      },
+      {
+        "id": "c",
+        "labelHe": "תמיד יש בדיוק פגם אחד"
+      },
+      {
+        "id": "d",
+        "labelHe": "פגמים מופיעים רק בייצור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "העיקרון הראשון: גילוי מוכיח קיום, אי-גילוי אינו מוכיח היעדר. זה הבסיס לכל שאר תורת הבדיקה.",
+    "skillId": "FUND.PRIN",
+    "dimension": "knowledge"
+  }
+}

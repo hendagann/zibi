@@ -1,0 +1,67 @@
+{
+  "id": "FUND-principles.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "title": "כשל בלי פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "התוכנה קרסה כי שרת מסד הנתונים נפל עקב הפסקת חשמל. הקוד תקין. מה זה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "FUND-principles.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פגם בקוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "כשל שמקורו סביבתי — יש כשל אך אין פגם בקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "שגיאה אנושית של המפתחת"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא קרה כלום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו כשל (התנהגות שגויה בריצה) שנגרם מסיבה חיצונית — אין פה פגם בקוד לתקן. לא כל כשל הוא קוד שגוי.",
+    "skillId": "FUND.ERR",
+    "dimension": "application"
+  }
+}
