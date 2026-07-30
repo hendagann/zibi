@@ -1,6 +1,6 @@
 import { appendFile, mkdir, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import type { DefectReportAnswer } from '@/content/blocks';
+import type { DefectReportAnswer, StructuredAnswer } from '@/content/blocks';
 import type { McqAnswer, SqlAnswer } from '@/content/exercise';
 import type { EvaluationResult } from '@/scoring/types';
 
@@ -40,7 +40,7 @@ export interface AttemptRecord {
   /** Set for `exam` attempts: the sitting this answer belongs to (docs/10 §7.1). */
   readonly session_id?: string;
   /** Raw as submitted, never normalised — re-scoring needs the original. */
-  readonly answer: DefectReportAnswer | SqlAnswer | McqAnswer;
+  readonly answer: DefectReportAnswer | SqlAnswer | McqAnswer | StructuredAnswer;
   readonly evaluation: EvaluationResult;
 }
 

@@ -10,7 +10,15 @@ import { FeedbackView } from '@/components/practice/FeedbackView';
 import { SchemaView } from '@/components/practice/SchemaView';
 import { McqExerciseForm } from '@/components/practice/McqExerciseForm';
 import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
-import { isExercise, isMcqAnswer, isSqlAnswer, type ExerciseItem } from '@/content/exercise';
+import { StructuredAnswerForm } from '@/components/practice/StructuredAnswerForm';
+import {
+  isExercise,
+  isMcqAnswer,
+  isSqlAnswer,
+  isStructuredFamily,
+  type ExerciseItem,
+} from '@/content/exercise';
+import type { DefectReportAnswer } from '@/content/blocks';
 import { getDataset, getItem } from '@/content/loader';
 import { attemptsForItem, LOCAL_USER } from '@/storage/attempts';
 import { t } from '@/i18n';
@@ -41,6 +49,9 @@ export default async function ExercisePage({ params }: PageProps) {
 
   const isSql = exercise.questionType === 'sql_query';
   const isMcq = exercise.questionType === 'mcq_single';
+  // The open families render one shared multi-field form, driven by the
+  // item's own essaySpec — see StructuredAnswerForm.
+  const isStructured = isStructuredFamily(exercise.questionType) && !!exercise.essaySpec;
   const dataset =
     isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
 
@@ -108,6 +119,16 @@ export default async function ExercisePage({ params }: PageProps) {
                 latest && isMcqAnswer(latest.answer) ? latest.answer.selectedOptionId : undefined
               }
             />
+          ) : isStructured && exercise.essaySpec ? (
+            <StructuredAnswerForm
+              itemId={exercise.id}
+              spec={exercise.essaySpec}
+              initialAnswer={
+                latest && !isSqlAnswer(latest.answer) && !isMcqAnswer(latest.answer)
+                  ? (latest.answer as Readonly<Record<string, string>>)
+                  : undefined
+              }
+            />
           ) : isSql ? (
             <SqlExerciseForm
               itemId={exercise.id}
@@ -120,7 +141,7 @@ export default async function ExercisePage({ params }: PageProps) {
               itemId={exercise.id}
               initialAnswer={
                 latest && !isSqlAnswer(latest.answer) && !isMcqAnswer(latest.answer)
-                  ? latest.answer
+                  ? (latest.answer as DefectReportAnswer)
                   : undefined
               }
               diagnosisOptions={exercise.diagnosisOptions}

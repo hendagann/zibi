@@ -1,0 +1,59 @@
+{
+  "id": "EXAM-readiness.XM.003",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "SQL — לקוחות ללא הזמנות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.SQL",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מסד הנתונים shop מכיל את הטבלאות customers ו-orders. יש לאתר לקוחות שמעולם לא ביצעו הזמנה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם הלקוח (name) לכל לקוח שאין לו אף הזמנה. במבחן לא יוצג משוב עד לסיום."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "shop",
+    "referenceSql": "SELECT c.name FROM customers c LEFT JOIN orders o ON o.customer_id = c.id WHERE o.id IS NULL",
+    "requiredColumns": [
+      "name"
+    ],
+    "orderMatters": false
+  },
+  "modelAnswer": {
+    "sql": "SELECT c.name FROM customers c LEFT JOIN orders o ON o.customer_id = c.id WHERE o.id IS NULL",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-data.SUM.001"
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "rubric_id": "RUB.PRIORITISATION",
+  "version": "1.0.0",
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": [
+    "prioritise_defects"
+  ],
+  "maxScore": 100,
+  "created_at": "2026-07-30",
+  "approved_at": "2026-07-30",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-30",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "זיהוי הסיכון",
+      "description": "מה עלול לקרות בכל פגם",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את זיהוי הסיכון",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לזיהוי הסיכון",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.k1",
+          "label": "זיהוי הסיכון",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "risk",
+            "n": 30
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c2",
+      "name": "חומרת ההשפעה",
+      "description": "עד כמה הנזק חמור",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את חומרת ההשפעה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לחומרת ההשפעה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c2.k1",
+          "label": "הערכת השפעה",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "impact",
+            "n": 30
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c3",
+      "name": "הסתברות",
+      "description": "מה הסיכוי שיקרה בפועל",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את הסתברות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית להסתברות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "הערכת הסתברות",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "likelihood",
+            "n": 20
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c4",
+      "name": "היקף המשתמשים המושפעים",
+      "description": "כמה משתמשים ואילו",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את היקף המשתמשים המושפעים",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית להיקף המשתמשים המושפעים",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c4.k1",
+          "label": "היקף מושפעים",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "users",
+            "n": 20
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c5",
+      "name": "השפעה עסקית",
+      "description": "המשמעות לעסק ולא רק למערכת",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "LIFE.UAT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את השפעה עסקית",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית להשפעה עסקית",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c5.k1",
+          "label": "השפעה עסקית",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "business",
+            "n": 20
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c6",
+      "name": "פתרון עוקף",
+      "description": "האם קיים מעקף והאם הוא סביר",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את פתרון עוקף",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לפתרון עוקף",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c6.k1",
+          "label": "בחינת מעקף",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "workaround",
+            "n": 20
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c7",
+      "name": "תלויות וזמן שנותר",
+      "description": "אילוצי המציאות",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את תלויות וזמן שנותר",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לתלויות וזמן שנותר",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c7.k1",
+          "label": "התייחסות לאילוצים",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "constraints",
+            "n": 20
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c8",
+      "name": "איכות ההנמקה",
+      "description": "האם ההחלטה מנומקת ולא שרירותית",
+      "weight": 12,
+      "max_points": 12,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את איכות ההנמקה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לאיכות ההנמקה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c8.k1",
+          "label": "הנמקת ההחלטה",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "decision",
+            "n": 40
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c9",
+      "name": "עקביות עם נתוני התרחיש",
+      "description": "ההחלטה אינה סותרת עובדה שנמסרה",
+      "weight": 8,
+      "max_points": 8,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את עקביות עם נתוני התרחיש",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לעקביות עם נתוני התרחיש",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c9.k1",
+          "label": "עקביות עם הנתונים",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "decision",
+            "n": 25
+          }
+        }
+      ],
+      "remediation": null
+    }
+  ]
+}

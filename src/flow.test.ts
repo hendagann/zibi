@@ -41,7 +41,7 @@ afterEach(async () => {
 async function submit(
   mods: Awaited<ReturnType<typeof slice>>,
   itemId: string,
-  answer: DefectReportAnswer,
+  answer: DefectReportAnswer | Readonly<Record<string, string>>,
 ) {
   const { loader, storage, engine } = mods;
   const item = (await loader.getItem(itemId)) as import('@/content/exercise').ExerciseItem;
@@ -102,6 +102,60 @@ describe('the vertical slice', () => {
     expect(exercises.filter((e) => e.topic === 'TECH/data').length).toBeGreaterThanOrEqual(5);
     const summary = await loader.getItem('DOC-defects.SUM.001');
     expect(summary?.type).toBe('summary');
+  });
+
+  // The open families (requirement analysis, investigation, prioritisation,
+  // professional decision) go through the SAME engine, storage and rubric path
+  // as the defect report — they only differ in which fields they declare. This
+  // pins that: a structured answer scores, persists and re-reads intact, and a
+  // blank one is stopped by the universal gate rather than by a DC-BUG check
+  // that would be meaningless for these artifacts.
+  it('structured-answer families score, persist and gate like any other item', async () => {
+    const mods = await slice();
+    const { loader, storage } = mods;
+
+    const items: readonly string[] = [
+      'DOC-requirements.EX.200',
+      'TECH-web.EX.200',
+      'MGMT-risk.EX.200',
+      'DOC-reporting.EX.200',
+    ];
+
+    for (const id of items) {
+      const item = (await loader.getItem(id)) as import('@/content/exercise').ExerciseItem;
+      expect(item, id).not.toBeNull();
+      expect(item.essaySpec?.fields.length, id).toBeGreaterThan(0);
+
+      // The model answer is the reference full-marks answer (QM-09).
+      const model = item.modelAnswer as Readonly<Record<string, string>>;
+      const result = await submit(mods, id, model);
+      expect(result.final_score, id).toBe(100);
+      expect(result.criterion_results.length, id).toBeGreaterThan(0);
+
+      // Every declared field is answered by the model answer, so the form and
+      // the reference answer cannot drift apart unnoticed.
+      for (const field of item.essaySpec!.fields) {
+        expect(model[field.id], `${id}.${field.id}`).toBeTruthy();
+      }
+
+      const stored = await storage.attemptsForItem(storage.LOCAL_USER, id);
+      expect(stored, id).toHaveLength(1);
+      expect(stored[0]?.evaluation.final_score, id).toBe(100);
+    }
+  });
+
+  it('an empty structured answer fails the universal gate at zero', async () => {
+    const mods = await slice();
+    const { loader } = mods;
+    const item = (await loader.getItem('MGMT-risk.EX.200')) as import('@/content/exercise').ExerciseItem;
+    const blank = Object.fromEntries(item.essaySpec!.fields.map((f) => [f.id, '']));
+
+    const result = await submit(mods, 'MGMT-risk.EX.200', blank);
+
+    expect(result.final_score).toBe(0);
+    expect(result.deterministic_checks.some((c) => c.check_id === 'DC-GEN-01' && c.status === 'fail')).toBe(true);
+    // No defect-report check may run against an artifact that has no steps.
+    expect(result.deterministic_checks.some((c) => c.check_id.startsWith('DC-BUG'))).toBe(false);
   });
 
   it('weak answer → capped score; revision → higher score; both stored; progress sees both', async () => {

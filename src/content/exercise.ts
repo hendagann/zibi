@@ -1,6 +1,6 @@
 import type { McqAnswer, McqItemSpec } from '@/scoring/mcqEngine';
 import type { SqlSpec } from '@/scoring/sqlEngine';
-import type { Block, DefectReportAnswer } from './blocks';
+import type { Block, DefectReportAnswer, EssaySpec, StructuredAnswer } from './blocks';
 import type { ContentItem } from './types';
 
 /** The answer shape for sql_query exercises. */
@@ -33,12 +33,25 @@ export interface ExerciseItem extends ContentItem {
     | 'author_defect_report'
     | 'repair_defect_report'
     | 'sql_query'
-    | 'mcq_single';
+    | 'mcq_single'
+    /**
+     * The open families beyond the defect report. Each is its own question
+     * type rather than one generic type with a sub-field, because a blueprint
+     * segment matches `questionFamily` against `questionType` as data
+     * (docs/10 §2.1) — the exam generator must never learn what a family
+     * means. All four produce a structured artifact whose fields the item
+     * declares in `essaySpec`, and all four are scored by the same rubric
+     * engine, so adding them costs no branch in the scoring path.
+     */
+    | 'analyse_requirement'
+    | 'investigate_failure'
+    | 'prioritise_defects'
+    | 'professional_decision';
   readonly requiresEvidence: boolean;
   readonly rubricRef: string;
   readonly scenario: readonly Block[];
   readonly prompt: readonly Block[];
-  readonly modelAnswer: DefectReportAnswer | SqlAnswer | McqAnswer;
+  readonly modelAnswer: DefectReportAnswer | SqlAnswer | McqAnswer | StructuredAnswer;
   readonly revisionRefs: readonly string[];
   /** docs/06 §6.3 — assessment metadata, validated by QM-07 and QM-16. */
   readonly commonMistakes?: readonly ItemCommonMistake[];
@@ -47,6 +60,8 @@ export interface ExerciseItem extends ContentItem {
   readonly sqlSpec?: SqlSpec;
   /** mcq_single only. */
   readonly mcqSpec?: McqItemSpec;
+  /** The open families only: the fields the learner fills. */
+  readonly essaySpec?: EssaySpec;
 }
 
 export interface SummaryItem extends ContentItem {
@@ -68,18 +83,30 @@ export interface GuidedExampleItem extends ContentItem {
   readonly commonMistakes?: readonly { readonly mistake: string; readonly whyTempting: string }[];
 }
 
+/** The open families that render as a structured multi-field artifact. */
+export const STRUCTURED_FAMILIES = [
+  'analyse_requirement',
+  'investigate_failure',
+  'prioritise_defects',
+  'professional_decision',
+] as const;
+
+export function isStructuredFamily(questionType: string): boolean {
+  return (STRUCTURED_FAMILIES as readonly string[]).includes(questionType);
+}
+
 export function isExercise(item: ContentItem): item is ExerciseItem {
   return item.type === 'exercise' || item.type === 'exam_item';
 }
 
 export function isSqlAnswer(
-  answer: DefectReportAnswer | SqlAnswer | McqAnswer,
+  answer: DefectReportAnswer | SqlAnswer | McqAnswer | StructuredAnswer,
 ): answer is SqlAnswer {
   return typeof (answer as SqlAnswer).sql === 'string';
 }
 
 export function isMcqAnswer(
-  answer: DefectReportAnswer | SqlAnswer | McqAnswer,
+  answer: DefectReportAnswer | SqlAnswer | McqAnswer | StructuredAnswer,
 ): answer is McqAnswer {
   return typeof (answer as McqAnswer).selectedOptionId === 'string';
 }

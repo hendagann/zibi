@@ -2,7 +2,7 @@
 
 import { randomUUID } from 'node:crypto';
 import { revalidatePath } from 'next/cache';
-import type { DefectReportAnswer } from '@/content/blocks';
+import type { DefectReportAnswer, StructuredAnswer } from '@/content/blocks';
 import { isExercise } from '@/content/exercise';
 import type { ExerciseItem } from '@/content/exercise';
 import {
@@ -57,7 +57,7 @@ export interface SubmitResult {
  */
 export async function submitAnswer(
   itemId: string,
-  answer: DefectReportAnswer,
+  answer: DefectReportAnswer | StructuredAnswer,
   timeSpentSeconds?: number,
 ): Promise<SubmitResult> {
   const item = await getItem(itemId);
@@ -341,7 +341,7 @@ export async function startExam(blueprintId: string): Promise<StartExamResult> {
 export async function submitExamAnswer(
   sessionId: string,
   itemId: string,
-  answer: DefectReportAnswer | { readonly sql: string },
+  answer: DefectReportAnswer | StructuredAnswer | { readonly sql: string },
   timeSpentSeconds?: number,
 ): Promise<{ ok: boolean; error?: string }> {
   const session = await getSession(LOCAL_USER, sessionId);
@@ -392,7 +392,7 @@ export async function submitExamAnswer(
     });
   } else {
     evaluation = evaluate({
-      answer: answer as DefectReportAnswer,
+      answer: answer as DefectReportAnswer | StructuredAnswer,
       rubric: rubric ?? inactiveRubric,
       questionId: exercise.id,
       itemVersion: exercise.version,
@@ -415,7 +415,7 @@ export async function submitExamAnswer(
     submitted_at: submittedAt,
     context: 'exam',
     session_id: sessionId,
-    answer: answer as DefectReportAnswer,
+    answer: answer as DefectReportAnswer | StructuredAnswer,
     evaluation,
   });
 

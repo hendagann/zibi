@@ -76,7 +76,8 @@
     "experienceBand": null
   },
   "review": {
-    "status": "draft",
-    "reviewNote": "מתווה מוכנות מלא לפי המפרט. נשאר draft עד שקיימים פריטי מבחן לכל שש המשפחות בתקציבי הזמן של המקטעים — EX-08 אוסר מתווה מאושר שאינו ניתן להרכבה, כי מתווה מאושר מבטיח ללומדת מבחן שיתקיים. חסרים: analyse_requirement, sql_query, investigate_failure, prioritise_defects, professional_decision, ופריט defect_report בן 3 דקות."
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
   }
 }

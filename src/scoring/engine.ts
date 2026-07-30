@@ -11,7 +11,7 @@
  */
 
 import { createHash } from 'node:crypto';
-import type { DefectReportAnswer } from '@/content/blocks';
+import type { DefectReportAnswer, StructuredAnswer } from '@/content/blocks';
 import { t } from '@/i18n';
 import type {
   CriterionResult,
@@ -26,18 +26,35 @@ import { EVALUATION_VERSION } from './types';
 
 /* ---------------- field access ---------------- */
 
-function fieldText(answer: DefectReportAnswer, field: string): string {
-  if (field === 'steps') return answer.steps.filter((s) => s.trim()).join('\n');
+function fieldText(answer: ScorableAnswer, field: string): string {
   const value = (answer as unknown as Record<string, unknown>)[field];
+  // `steps` is the one array-valued field, and only on a defect report. The
+  // Array check rather than a name check is what lets a structured_answer item
+  // legitimately declare a field called `steps` holding plain text.
+  if (Array.isArray(value)) return value.filter((s) => String(s).trim()).join('\n');
   return typeof value === 'string' ? value : '';
 }
 
-function trimmed(answer: DefectReportAnswer, field: string): string {
+function trimmed(answer: ScorableAnswer, field: string): string {
   return fieldText(answer, field).trim();
 }
 
-function realSteps(answer: DefectReportAnswer): string[] {
-  return answer.steps.map((s) => s.trim()).filter(Boolean);
+function realSteps(answer: ScorableAnswer): string[] {
+  const steps = (answer as Partial<DefectReportAnswer>).steps;
+  return Array.isArray(steps) ? steps.map((s) => s.trim()).filter(Boolean) : [];
+}
+
+/** Every answer the rubric engine can score — docs/06 §3 rubric types. */
+export type ScorableAnswer = DefectReportAnswer | StructuredAnswer;
+
+/** Read defect-report-only fields off any scorable answer; absent on a structured one. */
+function asReport(answer: ScorableAnswer): Partial<DefectReportAnswer> {
+  return answer as Partial<DefectReportAnswer>;
+}
+
+/** A defect report carries the ordered steps array; a structured answer does not. */
+function isDefectReport(answer: ScorableAnswer): answer is DefectReportAnswer {
+  return Array.isArray((answer as Partial<DefectReportAnswer>).steps);
 }
 
 /* ---------------- layer 1: deterministic checks ---------------- */
@@ -60,9 +77,19 @@ function check(
 }
 
 export function runDeterministicChecks(
-  answer: DefectReportAnswer,
+  answer: ScorableAnswer,
   requiresEvidence: boolean,
 ): DeterministicCheckResult[] {
+  // The DC-BUG-* family asks defect-report questions ("are there reproduction
+  // steps?"), which are meaningless for a requirement analysis or a
+  // prioritisation. A structured answer therefore runs the universal gate
+  // only, and everything else about its quality is decided by its rubric's
+  // criteria — exactly the layer-1/layer-2 split of docs/07 §2.
+  if (!isDefectReport(answer)) {
+    const anything = Object.values(answer).some((v) => String(v).trim().length > 0);
+    return [check('DC-GEN-01', 'E-GEN-001', anything, { gate: true, details: t.checks.notEmpty })];
+  }
+
   const steps = realSteps(answer);
   const anything =
     [answer.title, answer.environment, answer.preconditions, answer.actual, answer.expected, answer.evidence, answer.severityJustification]
@@ -102,7 +129,7 @@ function excerpt(text: string, max = 90): string {
   return t.length <= max ? t : `${t.slice(0, max)}…`;
 }
 
-export function detect(rule: DetectionRule, answer: DefectReportAnswer): Detection {
+export function detect(rule: DetectionRule, answer: ScorableAnswer): Detection {
   switch (rule.kind) {
     case 'non_empty': {
       const t = trimmed(answer, rule.field);
@@ -138,20 +165,20 @@ export function detect(rule: DetectionRule, answer: DefectReportAnswer): Detecti
       return { detected: !hit, evidence: hit ? t.detect.found(hit) : t.detect.clean };
     }
     case 'severity_selected':
-      return { detected: answer.severity !== '', evidence: answer.severity || '—' };
+      return { detected: asReport(answer).severity !== undefined && asReport(answer).severity !== '', evidence: asReport(answer).severity || '—' };
     case 'selected_option':
       return {
-        detected: (answer.diagnosis ?? []).includes(rule.optionId),
+        detected: (asReport(answer).diagnosis ?? []).includes(rule.optionId),
         evidence: rule.optionId,
       };
   }
 }
 
-function criticalTriggered(rule: CriticalRule, answer: DefectReportAnswer): { hit: boolean; label: string } {
+function criticalTriggered(rule: CriticalRule, answer: ScorableAnswer): { hit: boolean; label: string } {
   switch (rule.kind) {
     case 'expected_equals_actual': {
-      const a = answer.actual.trim();
-      const e = answer.expected.trim();
+      const a = trimmed(answer, 'actual');
+      const e = trimmed(answer, 'expected');
       return { hit: a.length > 0 && a === e, label: t.detect.expectedEqualsActual };
     }
     case 'contains_phrases': {
@@ -160,7 +187,7 @@ function criticalTriggered(rule: CriticalRule, answer: DefectReportAnswer): { hi
       return { hit, label: rule.labelHe };
     }
     case 'wrong_options_selected': {
-      const selected = answer.diagnosis ?? [];
+      const selected = asReport(answer).diagnosis ?? [];
       const wrong = selected.filter((s) => !rule.validOptionIds.includes(s));
       return { hit: wrong.length > rule.maxWrong, label: rule.labelHe };
     }
@@ -185,7 +212,7 @@ export function deriveLevel(coverage: number, criticalHit: boolean, missingMust:
 
 export function evaluateCriterion(
   criterion: RubricCriterion,
-  answer: DefectReportAnswer,
+  answer: ScorableAnswer,
 ): CriterionResult {
   const detections = criterion.expected_components.map((c) => ({
     component: c,
@@ -247,7 +274,7 @@ export function roundHalfUp(n: number): number {
 }
 
 export interface EvaluateInput {
-  readonly answer: DefectReportAnswer;
+  readonly answer: ScorableAnswer;
   readonly rubric: RubricDoc;
   readonly questionId: string;
   readonly itemVersion: number;

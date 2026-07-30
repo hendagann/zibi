@@ -1,0 +1,228 @@
+{
+  "rubric_id": "RUB.SCENARIO",
+  "version": "1.0.0",
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": [
+    "professional_decision"
+  ],
+  "maxScore": 100,
+  "created_at": "2026-07-30",
+  "approved_at": "2026-07-30",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-30",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "קריאה נכונה של המצב",
+      "description": "הבנת מה באמת קורה בתרחיש",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את קריאה נכונה של המצב",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לקריאה נכונה של המצב",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.k1",
+          "label": "תיאור המצב",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "situation",
+            "n": 40
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c2",
+      "name": "פעולה מקצועית מתאימה",
+      "description": "מה עושים בפועל",
+      "weight": 25,
+      "max_points": 25,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את פעולה מקצועית מתאימה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לפעולה מקצועית מתאימה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c2.k1",
+          "label": "פעולה מוצעת",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "action",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c2.k2",
+          "label": "פירוט צעדים",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "action",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c3",
+      "name": "הנמקה",
+      "description": "למה זו הפעולה הנכונה",
+      "weight": 25,
+      "max_points": 25,
+      "skill_ids": [
+        "MGMT.RBT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את הנמקה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית להנמקה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "נימוק ההחלטה",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "reasoning",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c3.k2",
+          "label": "התייחסות לחלופה שנדחתה",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "reasoning",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c4",
+      "name": "מודעות לסיכון",
+      "description": "מה הסיכון שנותר ומה מתקבל",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "MGMT.RISK"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את מודעות לסיכון",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית למודעות לסיכון",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c4.k1",
+          "label": "סיכון שיורי",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "risk",
+            "n": 30
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c5",
+      "name": "תקשורת ושיתוף",
+      "description": "למי מדווחים ואיך",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "FUND.PSY"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את תקשורת ושיתוף",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לתקשורת ושיתוף",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c5.k1",
+          "label": "תקשורת לבעלי עניין",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "communication",
+            "n": 30
+          }
+        }
+      ],
+      "remediation": null
+    }
+  ]
+}

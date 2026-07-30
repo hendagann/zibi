@@ -1,0 +1,288 @@
+{
+  "rubric_id": "RUB.REQ_ANALYSIS",
+  "version": "1.0.0",
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": [
+    "analyse_requirement"
+  ],
+  "maxScore": 100,
+  "created_at": "2026-07-30",
+  "approved_at": "2026-07-30",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-30",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "זיהוי מה ניתן לבדיקה",
+      "description": "מה בדרישה ניתן לאימות כפי שנוסח",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "DOC.REQ"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את זיהוי מה ניתן לבדיקה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לזיהוי מה ניתן לבדיקה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.k1",
+          "label": "פירוט מה ניתן לאמת",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "testable",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c1.k2",
+          "label": "פירוט מלא ומדויק",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "testable",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c2",
+      "name": "איתור אי־בהירות",
+      "description": "זיהוי ניסוחים עמומים או בלתי מדידים",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "STAT.CRIT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את איתור אי־בהירות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לאיתור אי־בהירות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c2.k1",
+          "label": "זיהוי ניסוח עמום",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "ambiguities",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c2.k2",
+          "label": "הסבר מדוע הוא עמום",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "ambiguities",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c3",
+      "name": "זיהוי חוסרים",
+      "description": "מה הדרישה אינה אומרת ונדרש כדי לבדוק",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "STAT.CRIT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את זיהוי חוסרים",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לזיהוי חוסרים",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "זיהוי פרט חסר",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "gaps",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c3.k2",
+          "label": "כיסוי מקרי קצה ושגיאה",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "gaps",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c4",
+      "name": "זיהוי סתירות",
+      "description": "סתירה בין דרישות או מול הנחות",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "STAT.CRIT"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את זיהוי סתירות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לזיהוי סתירות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c4.k1",
+          "label": "התייחסות לסתירות",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "contradictions",
+            "n": 25
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c5",
+      "name": "ניסוח קריטריוני קבלה",
+      "description": "המרת הדרישה לתנאים מדידים",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "LIFE.AGILE"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את ניסוח קריטריוני קבלה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לניסוח קריטריוני קבלה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c5.k1",
+          "label": "קריטריון מדיד",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "criteria",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c5.k2",
+          "label": "כיסוי מסלול שלילי",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "criteria",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c6",
+      "name": "בהירות",
+      "description": "ניסוח מסודר וניתן לפעולה",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "DOC.REQ"
+      ],
+      "dimension": "knowledge",
+      "full_examples": [
+        "תשובה שמכסה במלואו את בהירות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לבהירות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c6.k1",
+          "label": "ניסוח ברור",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "questions",
+            "n": 30
+          }
+        }
+      ],
+      "remediation": null
+    }
+  ]
+}

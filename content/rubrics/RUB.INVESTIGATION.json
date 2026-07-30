@@ -1,0 +1,319 @@
+{
+  "rubric_id": "RUB.INVESTIGATION",
+  "version": "1.0.0",
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": [
+    "investigate_failure"
+  ],
+  "maxScore": 100,
+  "created_at": "2026-07-30",
+  "approved_at": "2026-07-30",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-30",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "שאלות הבהרה",
+      "description": "מה עוד צריך לדעת לפני מסקנה",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "DOC.REQ"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את שאלות הבהרה",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לשאלות הבהרה",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.k1",
+          "label": "שאלות הבהרה",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "questions",
+            "n": 25
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c2",
+      "name": "ניסיון שחזור",
+      "description": "כיצד מנסים לשחזר את התקלה",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "DOC.BUG"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את ניסיון שחזור",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לניסיון שחזור",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c2.k1",
+          "label": "תיאור שחזור",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "reproduce",
+            "n": 40
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c3",
+      "name": "בידוד וזיהוי שלב הכשל",
+      "description": "היכן בשרשרת נשבר",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "TECH.DEV"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את בידוד וזיהוי שלב הכשל",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לבידוד וזיהוי שלב הכשל",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "זיהוי שלב הכשל",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "isolate",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c3.k2",
+          "label": "נימוק הבידוד",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "isolate",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c4",
+      "name": "כיסוי שכבות",
+      "description": "בדיקת השכבות הרלוונטיות — ממשק, רשת, שרת, נתונים, לוגים",
+      "weight": 20,
+      "max_points": 20,
+      "skill_ids": [
+        "TECH.DEV",
+        "TECH.LOG"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את כיסוי שכבות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לכיסוי שכבות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c4.k1",
+          "label": "בדיקת שכבות רלוונטיות",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "layers",
+            "n": 40
+          }
+        },
+        {
+          "component_id": "c4.k2",
+          "label": "נימוק אילו שכבות אינן רלוונטיות",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "layers",
+            "n": 120
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c5",
+      "name": "השוואה למצב תקין",
+      "description": "זיהוי מה שונה מהמצב שעובד",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "TECH.DEV"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את השוואה למצב תקין",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית להשוואה למצב תקין",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c5.k1",
+          "label": "השוואה למצב תקין",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "compare",
+            "n": 25
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c6",
+      "name": "איסוף ראיות",
+      "description": "אילו ראיות נאספות לדוח",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "DOC.BUG"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "תשובה שמכסה במלואו את איסוף ראיות",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לאיסוף ראיות",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c6.k1",
+          "label": "רשימת ראיות",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "evidence",
+            "n": 25
+          }
+        }
+      ],
+      "remediation": null
+    },
+    {
+      "criterion_id": "c7",
+      "name": "סדר פעולות והימנעות ממסקנה מוקדמת",
+      "description": "שחזור לפני השערה; אין קביעת סיבה בלי ראיה",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "FUND.ERR"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "תשובה שמכסה במלואו את סדר פעולות והימנעות ממסקנה מוקדמת",
+        "תשובה מפורטת ומנומקת בסעיף זה"
+      ],
+      "partial_examples": [
+        "התייחסות חלקית לסדר פעולות והימנעות ממסקנה מוקדמת",
+        "אמירה כללית בלי פירוט"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "טקסט שאינו נוגע לסעיף"
+      ],
+      "critical_errors": [
+        {
+          "kind": "contains_phrases",
+          "fields": [
+            "isolate",
+            "order"
+          ],
+          "phrases": [
+            "בטוח שזה",
+            "ברור שהמסד",
+            "אין ספק ש"
+          ],
+          "labelHe": "קביעת סיבת שורש בלי ראיה תומכת"
+        }
+      ],
+      "expected_components": [
+        {
+          "component_id": "c7.k1",
+          "label": "סדר פעולות מנומק",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "order",
+            "n": 40
+          }
+        }
+      ],
+      "remediation": null
+    }
+  ]
+}

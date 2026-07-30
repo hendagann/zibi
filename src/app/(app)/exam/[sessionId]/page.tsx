@@ -9,7 +9,8 @@ import { BlockRenderer } from '@/components/content/BlockRenderer';
 import { ExerciseForm } from '@/components/practice/ExerciseForm';
 import { SchemaView } from '@/components/practice/SchemaView';
 import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
-import { isExercise, type ExerciseItem } from '@/content/exercise';
+import { StructuredAnswerForm } from '@/components/practice/StructuredAnswerForm';
+import { isExercise, isStructuredFamily, type ExerciseItem } from '@/content/exercise';
 import { getDataset, getItem } from '@/content/loader';
 import { answeredCount, computeExamResult, currentSegment } from '@/exam/session';
 import { attemptsForSession, LOCAL_USER } from '@/storage/attempts';
@@ -114,6 +115,7 @@ export default async function ExamSittingPage({ params }: PageProps) {
   const exercise = item as ExerciseItem;
 
   const isSql = exercise.questionType === 'sql_query';
+  const isStructured = isStructuredFamily(exercise.questionType) && !!exercise.essaySpec;
   const dataset =
     isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
 
@@ -158,6 +160,12 @@ export default async function ExamSittingPage({ params }: PageProps) {
         <Card>
           {isSql ? (
             <SqlExerciseForm itemId={exercise.id} examSessionId={sessionId} />
+          ) : isStructured && exercise.essaySpec ? (
+            <StructuredAnswerForm
+              itemId={exercise.id}
+              spec={exercise.essaySpec}
+              examSessionId={sessionId}
+            />
           ) : (
             <ExerciseForm
               itemId={exercise.id}

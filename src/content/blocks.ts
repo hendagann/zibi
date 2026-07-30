@@ -94,6 +94,35 @@ export interface DefectReportAnswer {
   readonly diagnosis?: readonly string[];
 }
 
+/**
+ * The answer to a `structured_answer` item — the open families beyond the
+ * defect report (requirement analysis, investigation, prioritisation,
+ * professional decision).
+ *
+ * A flat map of field id → text, whose fields the item declares in `essaySpec`.
+ * Flat rather than nested so the scoring engine's field access (docs/07 §4.2
+ * detection rules) reads it exactly as it reads a defect report — the two
+ * families share one detection layer and one level-derivation function, which
+ * is what keeps a new family a content change rather than an engine change.
+ */
+export type StructuredAnswer = Readonly<Record<string, string>>;
+
+/** A field of a `structured_answer` item, declared on the item. */
+export interface EssayField {
+  readonly id: string;
+  readonly labelHe: string;
+  readonly hintHe?: string;
+  readonly rows?: number;
+}
+
+export interface EssaySpec {
+  readonly fields: readonly EssayField[];
+}
+
+export function emptyStructuredAnswer(spec: EssaySpec): StructuredAnswer {
+  return Object.fromEntries(spec.fields.map((f) => [f.id, '']));
+}
+
 export function emptyDefectReport(): DefectReportAnswer {
   return {
     title: '',

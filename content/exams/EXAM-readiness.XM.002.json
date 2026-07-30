@@ -1,0 +1,63 @@
+{
+  "id": "EXAM-readiness.XM.002",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "דיווח פגם — הנחה שמוחלת פעמיים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 180,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "author_defect_report",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.BUG_REPORT",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "חנות מקוונת, סביבת Staging, גרסה 3.1.0, דפדפן Chrome. בעגלת קניות עם קופון הנחה של 10%, לחיצה חוזרת על \"החל קופון\" מחילה את ההנחה שוב — הסכום יורד ב-20%. חוזר בכל ניסיון."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי דוח פגם מלא. במבחן לא יוצג משוב עד לסיום."
+    }
+  ],
+  "modelAnswer": {
+    "title": "לחיצה חוזרת על \"החל קופון\" מחילה את ההנחה פעמיים ומקטינה את הסכום ב-20%",
+    "environment": "Chrome, סביבת Staging, גרסה 3.1.0",
+    "preconditions": "משתמשת מחוברת; בעגלה פריט אחד; קיים קופון תקף של 10%",
+    "steps": [
+      "להוסיף פריט לעגלה",
+      "להזין קופון 10% וללחוץ \"החל קופון\"",
+      "ללחוץ שוב על \"החל קופון\" עם אותו קופון"
+    ],
+    "actual": "ההנחה מוחלת פעם נוספת והסכום לתשלום יורד ב-20% במקום ב-10%. חוזר בכל ניסיון.",
+    "expected": "קופון שכבר הוחל אינו מוחל שוב; מוצגת הודעה שהקופון כבר בשימוש, והסכום נותר עם 10% הנחה.",
+    "evidence": "צילום מסך של הסכום לפני ואחרי הלחיצה השנייה",
+    "severity": "high",
+    "severityJustification": "הפגם גורם לגביית חסר בכל הזמנה שבה הלקוח לוחץ פעמיים — הפסד כספי ישיר, וניתן לניצול מכוון על ידי כל לקוח.",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "DOC-defects.SUM.001"
+  ]
+}

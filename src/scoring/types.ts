@@ -13,6 +13,16 @@ import type { DefectReportAnswer } from '@/content/blocks';
 
 /* ---------- detection rules (declared in rubric JSON, executed by code) ---------- */
 
+/**
+ * A field a detection rule may read.
+ *
+ * The nine named fields are the defect-report shape. The open string arm
+ * carries the field ids of a `structured_answer` item, which declares its own
+ * fields in `essaySpec` (docs/06 §3 rubric types: the artifact differs per
+ * family, the scoring mechanism does not). Detection reads a named field off
+ * the answer object either way, so one detection layer serves both — adding a
+ * family is a content change, not an engine change.
+ */
 export type AnswerField =
   | 'title'
   | 'environment'
@@ -22,7 +32,8 @@ export type AnswerField =
   | 'expected'
   | 'evidence'
   | 'severity'
-  | 'severityJustification';
+  | 'severityJustification'
+  | (string & {});
 
 export type DetectionRule =
   | { readonly kind: 'non_empty'; readonly field: AnswerField }

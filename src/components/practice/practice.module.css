@@ -195,3 +195,12 @@
   font-size: var(--text-sm);
   color: var(--color-text-muted);
 }
+
+/* Field guidance for the open families: what this field is asking for.
+   Muted and small so it guides without competing with the label. */
+.hint {
+  margin-block-end: var(--space-2);
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+}
