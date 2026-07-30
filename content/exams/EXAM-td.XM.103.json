@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-td.XM.103",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "ערכי גבול",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "טווח מותר 18–120. אילו ערכים בודקים בגבול העליון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TD-black-box.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "120 בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "119, 120, 121"
+      },
+      {
+        "id": "c",
+        "labelHe": "100 ו-150"
+      },
+      {
+        "id": "d",
+        "labelHe": "0 ו-121"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקת גבול כוללת את הגבול ואת הערכים משני צדדיו.",
+    "skillId": "TD.BVA",
+    "dimension": "application"
+  }
+}

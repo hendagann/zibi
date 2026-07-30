@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-tech.XM.108",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.SEC"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "הרשאות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הכפתור מוסתר מהמשתמש. האם ההרשאה נאכפת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא בהכרח — יש לשלוח את הקריאה ישירות ולבדוק אם השרת חוסם"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק במובייל"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק ב-API"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הסתרה חזותית אינה בקרת גישה.",
+    "skillId": "TECH.SEC",
+    "dimension": "application"
+  }
+}

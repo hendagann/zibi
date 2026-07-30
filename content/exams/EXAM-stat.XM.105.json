@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-stat.XM.105",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "STAT/requirements",
+  "skills": {
+    "primary": "STAT.CRIT"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "פתרון בדרישה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"המערכת תציג את הנתונים בגרף עוגה\". איזה פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "STAT-requirements.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עמימות"
+      },
+      {
+        "id": "b",
+        "labelHe": "חוסר"
+      },
+      {
+        "id": "c",
+        "labelHe": "פתרון בדרישה — מוכתב \"איך\" במקום \"מה\""
+      },
+      {
+        "id": "d",
+        "labelHe": "סתירה"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "הדרישה נועלת מימוש ומסתירה את הצורך האמיתי.",
+    "skillId": "STAT.CRIT",
+    "dimension": "application"
+  }
+}

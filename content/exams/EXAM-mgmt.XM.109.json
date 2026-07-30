@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.109",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "מחזור חיי פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מי מעביר פגם לסטטוס \"נסגר\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המפתח מיד לאחר התיקון"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבודקת, לאחר שאימתה את התיקון בתרחיש המקורי"
+      },
+      {
+        "id": "c",
+        "labelHe": "מנהל הפרויקט"
+      },
+      {
+        "id": "d",
+        "labelHe": "הלקוח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סגירה בלי אימות היא הסיבה השכיחה לחזרת התקלה מהלקוח.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "application"
+  }
+}

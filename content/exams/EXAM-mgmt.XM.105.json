@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.105",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "קריאת נתונים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דוח: 90% מהמקרים הורצו. מה השאלה הראשונה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-control.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מי הריץ"
+      },
+      {
+        "id": "b",
+        "labelHe": "אילו 10% לא הורצו והאם הם באזור סיכון גבוה"
+      },
+      {
+        "id": "c",
+        "labelHe": "כמה זמן"
+      },
+      {
+        "id": "d",
+        "labelHe": "איזו גרסה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אחוז ביצוע חסר משמעות בלי לדעת מה נשאר מחוצה לו.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

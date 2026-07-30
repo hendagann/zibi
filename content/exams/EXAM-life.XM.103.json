@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-life.XM.103",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.REG"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "אימות מול רגרסיה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באג תוקן. איזו פעולה מריצה בדיוק את התרחיש שנכשל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רגרסיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אימות תיקון"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקת עומס"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקת קבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אימות תיקון מריץ את התרחיש והנתונים המקוריים כדי לוודא שהבאג נפתר.",
+    "skillId": "LIFE.REG",
+    "dimension": "application"
+  }
+}

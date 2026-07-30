@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-td.XM.101",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TD/framing",
+  "skills": {
+    "primary": "TD.CAT"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "קוד עודף",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בקוד יש פונקציה שאינה מופיעה באף דרישה. מי יגלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TD-framing.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מבוססות מפרט"
+      },
+      {
+        "id": "b",
+        "labelHe": "מבוססות מבנה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות קבלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק טכניקה שמתחילה מהקוד תפגוש קוד שאינו ברשימת הדרישות.",
+    "skillId": "TD.CAT",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-life.XM.102",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "LIFE/levels-types",
+  "skills": {
+    "primary": "LIFE.LEVEL"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "שיוך פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שני שירותים תקינים בנפרד, אך אחד שולח תאריך בפורמט שהשני אינו מבין. לאיזו רמה משויך הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "LIFE-levels-types.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יחידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אינטגרציה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מערכת"
+      },
+      {
+        "id": "d",
+        "labelHe": "קבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הפגם קיים רק בממשק בין הרכיבים — רמת האינטגרציה.",
+    "skillId": "LIFE.LEVEL",
+    "dimension": "application"
+  }
+}

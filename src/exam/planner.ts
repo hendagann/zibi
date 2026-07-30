@@ -146,6 +146,27 @@ function compareKeys(a: readonly number[], b: readonly number[]): number {
   return 0;
 }
 
+/**
+ * Is an item's topic inside the blueprint's scope?
+ *
+ * `scopeRef` carries a topic ID for `scope: 'topic'` and a DOMAIN ID for
+ * `scope: 'domain'` (docs/05 §13). An earlier version compared it to
+ * `item.topic` in both cases, which silently matched nothing for a
+ * domain-scoped blueprint — every segment then reported `no_item_for_family`
+ * even with a full pool, so a chapter exam could never assemble. Topic IDs are
+ * `<DOMAIN>/<slug>` (docs/03 §3), so domain membership is the prefix test.
+ */
+export function inBlueprintScope(
+  topic: string | undefined,
+  blueprint: Pick<ExamBlueprint, 'scope' | 'scopeRef'>,
+): boolean {
+  if (!blueprint.scopeRef) return true;
+  if (!topic) return false;
+  return blueprint.scope === 'domain'
+    ? topic.startsWith(`${blueprint.scopeRef}/`)
+    : topic === blueprint.scopeRef;
+}
+
 export function planExam(
   blueprint: ExamBlueprint,
   pool: readonly ExerciseItem[],
@@ -167,7 +188,7 @@ export function planExam(
 
   const inScope = pool
     .filter((item) => item.type === 'exam_item' && item.pool === rules.poolRef)
-    .filter((item) => !blueprint.scopeRef || item.topic === blueprint.scopeRef)
+    .filter((item) => inBlueprintScope(item.topic, blueprint))
     .map<Candidate>((item) => {
       const skillId = item.skills?.primary ?? '';
       return { item, skillId, skill: skillById.get(skillId) };

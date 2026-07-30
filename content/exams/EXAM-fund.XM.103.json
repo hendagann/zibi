@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-fund.XM.103",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.ERR"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "שרשרת הפגם",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אנליסטית הבינה דרישה לא נכון וכתבה מפרט שגוי; המפתח מימש לפיו; המשתמש קיבל תוצאה שגויה. מהו הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "FUND-principles.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אי-ההבנה של האנליסטית"
+      },
+      {
+        "id": "b",
+        "labelHe": "המפרט השגוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "התוצאה השגויה שהמשתמש ראה"
+      },
+      {
+        "id": "d",
+        "labelHe": "המשתמש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אי-ההבנה היא השגיאה; המפרט השגוי הוא הפגם; התוצאה בריצה היא הכשל.",
+    "skillId": "FUND.ERR",
+    "dimension": "application"
+  }
+}

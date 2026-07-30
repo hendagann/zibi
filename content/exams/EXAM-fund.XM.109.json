@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-fund.XM.109",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "אשליית היעדר שגיאות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מוצר נטול באגים אך אינו עונה על צורכי הלקוח. איזה עיקרון זה ממחיש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "FUND-principles.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "צבירת פגמים"
+      },
+      {
+        "id": "b",
+        "labelHe": "אשליית היעדר שגיאות"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקה מוקדמת"
+      },
+      {
+        "id": "d",
+        "labelHe": "תלות הקשר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מוצר תקין טכנית שאינו פותר את הצורך הוא בדיוק אשליית היעדר השגיאות.",
+    "skillId": "FUND.PRIN",
+    "dimension": "application"
+  }
+}

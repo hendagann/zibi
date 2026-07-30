@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-fund.XM.102",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "FUND/principles",
+  "skills": {
+    "primary": "FUND.PRIN"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "הפרת עיקרון",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צוות מריץ שנה שלמה את אותו סט בדיקות בלי לעדכן, ומוצא פחות ופחות פגמים. איזה עיקרון פועל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "FUND-principles.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בדיקה ממצה"
+      },
+      {
+        "id": "b",
+        "labelHe": "פרדוקס קוטל החרקים"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקה מוקדמת"
+      },
+      {
+        "id": "d",
+        "labelHe": "צבירת פגמים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סט קבוע מפסיק למצוא פגמים חדשים — זהו פרדוקס קוטל החרקים.",
+    "skillId": "FUND.PRIN",
+    "dimension": "application"
+  }
+}

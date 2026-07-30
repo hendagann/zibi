@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-doc.XM.101",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "הנחה שקטה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הסיכון בהחלטה עצמאית על פרט שהדרישה שותקת עליו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "DOC-requirements.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין סיכון"
+      },
+      {
+        "id": "b",
+        "labelHe": "נבדקת ההנחה של הבודקת ולא כוונת הלקוח, והפער מתגלה בקבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבדיקות איטיות"
+      },
+      {
+        "id": "d",
+        "labelHe": "הדוח ארוך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו הדרך שבה מוצר עובר הכול ונכשל אצל הלקוח.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-stat.XM.109",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "מטרת הפגישה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מטרת פגישת הסקירה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לתקן כל פגם שעולה"
+      },
+      {
+        "id": "b",
+        "labelHe": "לדווח ולתעד פגמים; התיקון נעשה אחר כך"
+      },
+      {
+        "id": "c",
+        "labelHe": "להחליט על שחרור"
+      },
+      {
+        "id": "d",
+        "labelHe": "לכתוב מקרי בדיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דיון על תיקונים בפגישה בולע את הזמן ומשאיר את רוב המסמך בלי סקירה.",
+    "skillId": "STAT.REV",
+    "dimension": "application"
+  }
+}

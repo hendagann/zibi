@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-tech.XM.100",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "קודי סטטוס",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין 401 ל-403?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-web.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "401 = לא מאומת; 403 = מאומת אך אינו רשאי"
+      },
+      {
+        "id": "c",
+        "labelHe": "401 = שרת; 403 = לקוח"
+      },
+      {
+        "id": "d",
+        "labelHe": "401 = הצליח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שני באגים שונים לחלוטין מאחורי אותו סימפטום.",
+    "skillId": "TECH.WEB",
+    "dimension": "application"
+  }
+}

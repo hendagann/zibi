@@ -1,0 +1,123 @@
+{
+  "id": "EXAM-td.BP.001",
+  "type": "exam_blueprint",
+  "schemaVersion": 1,
+  "examType": "topic",
+  "title": "מבחן פרק 4 — טכניקות תכנון בדיקות",
+  "lang": "he",
+  "dir": "rtl",
+  "scope": "domain",
+  "scopeRef": "TD",
+  "skillWeights": {
+    "TD.CAT": 30,
+    "TD.EP": 10,
+    "TD.BVA": 10,
+    "TD.EXP": 10,
+    "TD.EXPL": 20,
+    "TD.COV": 10,
+    "TD.SEL": 10
+  },
+  "itemCount": 10,
+  "durationMinutes": 10,
+  "passMark": 70,
+  "segments": [
+    {
+      "segmentId": "q1",
+      "titleHe": "שאלה 1",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q2",
+      "titleHe": "שאלה 2",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q3",
+      "titleHe": "שאלה 3",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q4",
+      "titleHe": "שאלה 4",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q5",
+      "titleHe": "שאלה 5",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q6",
+      "titleHe": "שאלה 6",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q7",
+      "titleHe": "שאלה 7",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q8",
+      "titleHe": "שאלה 8",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q9",
+      "titleHe": "שאלה 9",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    },
+    {
+      "segmentId": "q10",
+      "titleHe": "שאלה 10",
+      "minutes": 1,
+      "questionFamily": "mcq_single",
+      "open": false,
+      "judgement": false
+    }
+  ],
+  "selectionRules": {
+    "poolRef": "exam",
+    "noRepeatWithinDays": 90,
+    "excludeAttempted": true,
+    "minOpenQuestions": 0,
+    "requireJudgementItem": false,
+    "maxItemsPerSkill": 3,
+    "difficultyBand": [
+      1,
+      5
+    ],
+    "experienceBand": null
+  },
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

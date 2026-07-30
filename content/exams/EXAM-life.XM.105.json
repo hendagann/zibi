@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-life.XM.105",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "קריטריון קבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה קריטריון קבלה ניתן לאימות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "LIFE-agile.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הממשק יהיה נוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "הקישור פג אחרי 60 דקות ומציג הודעת פקיעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "המערכת תהיה מהירה"
+      },
+      {
+        "id": "d",
+        "labelHe": "התהליך יהיה פשוט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק ניסוח מדיד מאפשר לקבוע חד-משמעית אם הקריטריון התקיים.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

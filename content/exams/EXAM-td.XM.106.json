@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-td.XM.106",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TD/experience-based",
+  "skills": {
+    "primary": "TD.EXPL"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "charter",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה ב-charter \"לחקור את המערכת\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TD-experience-based.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא צר מדי"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא רחב מדי — מגע שטחי בלי מסקנה על אף אזור"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא ארוך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעדר מיקוד מפזר את הזמן ומונע מסקנה.",
+    "skillId": "TD.EXPL",
+    "dimension": "application"
+  }
+}

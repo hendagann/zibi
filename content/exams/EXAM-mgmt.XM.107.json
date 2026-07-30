@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.107",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "אסטרטגיה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נכון לגבי אסטרטגיית בדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יש אחת נכונה לכל ארגון"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא נגזרת מסיכון, רגולציה, בשלות ומשאבים"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא תמיד אוטומציה"
+      },
+      {
+        "id": "d",
+        "labelHe": "המפתחים קובעים אותה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אסטרטגיה נכונה בהקשר אחד נכשלת באחר.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "application"
+  }
+}

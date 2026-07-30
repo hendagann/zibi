@@ -194,6 +194,15 @@ for (const { file, data } of misconceptions) {
   else if (!isServable(target)) fail('QM-16', `${file}: יעד חזרה לא מאושר: ${data.remediationRef}`);
 }
 
+/** Blueprint scope membership — mirrors inBlueprintScope() in src/exam/planner.ts. */
+function inScope(topic, blueprint) {
+  if (!blueprint.scopeRef) return true;
+  if (!topic) return false;
+  return blueprint.scope === 'domain'
+    ? topic.startsWith(`${blueprint.scopeRef}/`)
+    : topic === blueprint.scopeRef;
+}
+
 /* ---- EX-01..EX-07: מתווה מבחן — docs/10 §9 ---- */
 for (const { file, data } of items.filter((i) => i.data.type === 'exam_blueprint')) {
   if (typeof data.durationMinutes !== 'number' || data.durationMinutes > 20)
@@ -246,7 +255,11 @@ for (const { file, data } of items.filter((i) => i.data.type === 'exam_blueprint
     const examPool = items
       .map((i) => i.data)
       .filter((d) => d.type === 'exam_item' && d.pool === 'exam' && isServable(d))
-      .filter((d) => !data.scopeRef || d.topic === data.scopeRef);
+      // scopeRef is a topic ID for scope:'topic' and a DOMAIN id for
+      // scope:'domain' (docs/05 §13). Topic IDs are `<DOMAIN>/<slug>`, so
+      // domain membership is a prefix test — comparing it to `topic` directly
+      // matched nothing and failed every domain-scoped blueprint.
+      .filter((d) => inScope(d.topic, data));
     for (const seg of segments) {
       const family = examPool.filter((d) => d.questionType === seg.questionFamily);
       if (family.length === 0) {

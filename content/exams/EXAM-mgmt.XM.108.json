@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.108",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.ENV"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "אצלי זה עובד",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הצעד הראשון מול \"אצלי זה עובד\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להתעקש שזה באג"
+      },
+      {
+        "id": "b",
+        "labelHe": "לוודא שמדובר באותה גרסת build בדיוק"
+      },
+      {
+        "id": "c",
+        "labelHe": "לסגור את הדיווח"
+      },
+      {
+        "id": "d",
+        "labelHe": "לפנות למנהל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הבדל גרסה הוא ההסבר השכיח ביותר לפער בין סביבות.",
+    "skillId": "MGMT.ENV",
+    "dimension": "application"
+  }
+}

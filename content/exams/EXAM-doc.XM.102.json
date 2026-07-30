@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-doc.XM.102",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "תוצאה צפויה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"ללחוץ שמור\" ⇐ \"הכפתור נלחץ\". מה הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין פגם"
+      },
+      {
+        "id": "b",
+        "labelHe": "התוצאה חוזרת על הצעד ואינה מתארת תוצאה נצפית"
+      },
+      {
+        "id": "c",
+        "labelHe": "הצעד שגוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "חסר תאריך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אין למה להשוות — כל התנהגות תתאים לניסוח.",
+    "skillId": "DOC.TC",
+    "dimension": "application"
+  }
+}

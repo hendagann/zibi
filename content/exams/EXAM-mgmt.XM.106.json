@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.106",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "שחיקת מדד",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "יעד \"20 באגים בחודש\". כיצד מספקים אותו בלי לשפר איכות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-control.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אי אפשר"
+      },
+      {
+        "id": "b",
+        "labelHe": "לפצל פגם אחד לחמישה ולדווח על קוסמטיקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לעבוד מהר יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "להוסיף בודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מדד שמודד פעילות ניתן לניפוח בלי לגעת באיכות.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

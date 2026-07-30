@@ -306,6 +306,38 @@ describe('pool isolation and exclusions', () => {
     expect(result.segments[0]?.itemId).toBe('TECH.XM.001');
   });
 
+  // A domain-scoped blueprint carries a DOMAIN id in scopeRef, not a topic id
+  // (docs/05 §13). Comparing it to item.topic matched nothing, so a chapter
+  // exam refused to assemble against a pool that fully satisfied it.
+  it('honours the domain scope of a domain exam', () => {
+    const bp = blueprint([segment('report', 3, 'author_defect_report')], {
+      examType: 'topic',
+      scope: 'domain',
+      scopeRef: 'TECH',
+    });
+    const result = plan(bp, [
+      item('DOC.XM.001', { topic: 'DOC/defects' }),
+      item('TECH.XM.001', { topic: 'TECH/data', skillId: 'TECH.SQL' }),
+    ]);
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.segments[0]?.itemId).toBe('TECH.XM.001');
+  });
+
+  // The prefix test must not admit a topic that merely starts with the same
+  // letters — `TECH` must never match a hypothetical `TECHNIQUE/...` domain.
+  it('does not treat a same-prefix topic as in-domain', () => {
+    const bp = blueprint([segment('report', 3, 'author_defect_report')], {
+      examType: 'topic',
+      scope: 'domain',
+      scopeRef: 'TE',
+    });
+    const result = plan(bp, [item('TECH.XM.001', { topic: 'TECH/data', skillId: 'TECH.SQL' })]);
+
+    expect(result.ok).toBe(false);
+  });
+
   it('respects the difficulty band', () => {
     const bp = blueprint([segment('report', 3, 'author_defect_report')], {
       selectionRules: { ...RULES, difficultyBand: [4, 5] },

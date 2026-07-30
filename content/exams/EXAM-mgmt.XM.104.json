@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-mgmt.XM.104",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "אומדן",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אופטימי 4, סביר 6, פסימי 14. מהו אומדן שלוש הנקודות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "MGMT-planning.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "6"
+      },
+      {
+        "id": "b",
+        "labelHe": "7"
+      },
+      {
+        "id": "c",
+        "labelHe": "8"
+      },
+      {
+        "id": "d",
+        "labelHe": "9"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "E=(4+4×6+14)/6 = 42/6 = 7.",
+    "skillId": "MGMT.EST",
+    "dimension": "application"
+  }
+}

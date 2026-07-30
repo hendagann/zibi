@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-stat.XM.102",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "STAT/fundamentals",
+  "skills": {
+    "primary": "STAT.REV"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 2,
+  "title": "תפקיד",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מי בודק שקריטריוני הכניסה והיציאה לסקירה מתקיימים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "STAT-fundamentals.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המחבר"
+      },
+      {
+        "id": "b",
+        "labelHe": "המנחה (moderator)"
+      },
+      {
+        "id": "c",
+        "labelHe": "המתעד"
+      },
+      {
+        "id": "d",
+        "labelHe": "מנהל הפרויקט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המנחה מנהל את התהליך ובודק את הקריטריונים.",
+    "skillId": "STAT.REV",
+    "dimension": "application"
+  }
+}

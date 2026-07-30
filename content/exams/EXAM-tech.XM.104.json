@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-tech.XM.104",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "אימות מול מה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מול מה מאמתים תגובת API?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-api.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מול הסכימה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מול הדרישה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מול הגרסה הקודמת"
+      },
+      {
+        "id": "d",
+        "labelHe": "מול הממשק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סכימה בודקת מבנה; הדרישה קובעת נכונות.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

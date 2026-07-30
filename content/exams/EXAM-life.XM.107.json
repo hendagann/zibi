@@ -1,0 +1,70 @@
+{
+  "id": "EXAM-life.XM.107",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 3,
+  "title": "סוג קבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 60,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה: \"גיבוי לילי רץ וניתן לשחזר ממנו\". איזה סוג קבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.SUM.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "UAT"
+      },
+      {
+        "id": "b",
+        "labelHe": "קבלה תפעולית (OAT)"
+      },
+      {
+        "id": "c",
+        "labelHe": "קבלה חוזית"
+      },
+      {
+        "id": "d",
+        "labelHe": "קבלה רגולטורית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מוכנות לתפעול — גיבוי, שחזור, ניטור — היא OAT.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}
