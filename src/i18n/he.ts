@@ -13,7 +13,10 @@
 
 export const he = {
   app: {
-    name: 'זיבי',
+    /* A Latin brand name inside an RTL interface. It is rendered inside
+     * `dir="ltr"` isolation wherever it sits next to Hebrew, so the bidi
+     * algorithm cannot reorder it against neighbouring punctuation. */
+    name: 'TestReady',
     description: 'פלטפורמת למידה להכנה למבחני QA ידני',
     locale: 'he-IL',
     dir: 'rtl',

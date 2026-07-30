@@ -109,7 +109,9 @@ export function AppNav() {
         >
           <MenuIcon />
         </button>
-        <span className={styles.topbarBrand}>{t.app.name}</span>
+        <span className={styles.topbarBrand} dir="ltr">
+          {t.app.name}
+        </span>
       </header>
 
       {isOpen && isMobile ? (
@@ -134,7 +136,7 @@ export function AppNav() {
         {...drawerProps}
       >
         <div className={styles.brand}>
-          <Link href={routes.dashboard} className={styles.brandName}>
+          <Link href={routes.dashboard} className={styles.brandName} dir="ltr">
             {t.app.name}
           </Link>
           <button
