@@ -38,6 +38,13 @@ export const he = {
     breadcrumbLabel: 'מיקום נוכחי',
   },
 
+  theme: {
+    dark: 'מצב כהה',
+    light: 'מצב בהיר',
+    switchToDark: 'מעבר למצב כהה',
+    switchToLight: 'מעבר למצב בהיר',
+  },
+
   account: {
     label: 'חשבון',
     signedOut: 'לא מחוברת',
@@ -129,6 +136,7 @@ export const he = {
     answeredLabel: 'נענו',
     lastScoreLabel: 'ציון אחרון',
     notAnsweredYet: 'טרם נענה',
+    doneLabel: 'בוצע',
     navLabel: 'ניווט בין תרגילים',
   },
 

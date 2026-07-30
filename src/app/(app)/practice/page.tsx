@@ -10,6 +10,17 @@ import { routes } from '@/lib/routes';
 import { t } from '@/i18n';
 import styles from './practice-list.module.css';
 
+/** The tick beside a completed exercise — see `.doneMark`. */
+function CheckIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor"
+      strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
+      focusable="false">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+  );
+}
+
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = { title: t.practice.title };
@@ -37,18 +48,27 @@ export default async function PracticePage() {
           <ul className={styles.list} role="list">
             {exercises.map((exercise) => {
               const score = latestByItem.get(exercise.id);
+              const done = score !== undefined;
               return (
                 <li key={exercise.id}>
                   <Link
                     href={`${routes.practice}/${exercise.id}`}
-                    className={styles.link}
+                    className={done ? `${styles.link} ${styles.linkDone}` : styles.link}
                   >
-                    <span className={styles.title}>{exercise.title}</span>
+                    <span className={done ? `${styles.title} ${styles.titleDone}` : styles.title}>
+                      {exercise.title}
+                    </span>
                     <span className={styles.meta}>
-                      {score !== undefined ? (
-                        <Badge tone={score >= 70 ? 'success' : 'warning'}>
-                          {t.feedback.scoreLabel}: {score}
-                        </Badge>
+                      {done ? (
+                        <>
+                          <span className={styles.doneMark}>
+                            <CheckIcon />
+                            {t.practice.doneLabel}
+                          </span>
+                          <Badge tone={score >= 70 ? 'success' : 'warning'}>
+                            {t.feedback.scoreLabel}: {score}
+                          </Badge>
+                        </>
                       ) : null}
                       <Badge tone="neutral">
                         {Math.round(exercise.estimatedSeconds / 60)} {t.common.minutesShort}

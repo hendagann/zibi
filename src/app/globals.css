@@ -248,6 +248,120 @@
   --transition-base-easing: ease-out;
 }
 
+/* ==========================================================================
+ * DARK — "Cobalt at night"
+ *
+ * A complete re-pointing of the colour tokens, not a filter and not a partial
+ * override: every colour token the light palette defines is redefined here, so
+ * no component can inherit a light value and end up with white-on-white. The
+ * token NAMES are unchanged, which is why no component file needed editing —
+ * that indirection is exactly what the palette layer is for.
+ *
+ * Two things are deliberately re-derived rather than inverted. The glass recipe
+ * flips from a white fill with a white bevel to a light-tinted fill with a
+ * faint top bevel, because "glass" on a dark ground is a lift, not a wash. And
+ * the functional hues (success/warning/danger/info) are lightened rather than
+ * reused: #1b7f4b reads at ~2.4:1 on a dark ground and would fail exactly where
+ * a status colour matters most.
+ *
+ * Applied by [data-theme="dark"] on <html>. The attribute is always set
+ * explicitly — by the learner's stored choice, or on a first visit from the
+ * OS preference — which is why no prefers-color-scheme duplicate of this block
+ * exists. One source of truth for which theme is active, not two that can
+ * disagree.
+ * ==========================================================================*/
+:root[data-theme='dark'] {
+  --color-cream: #1a2438;
+  --color-midnight: #e8eefb;
+  --color-midnight-raised: #cbd6ea;
+  --color-midnight-hover: #aebdd8;
+  --color-blueberry: #6ea0ff;
+  --color-blueberry-dark: #8fb7ff;
+
+  --color-surface-sunken: #0d1117;
+  --color-surface: #161b24;
+  --color-surface-raised: #1c222d;
+  --color-surface-hover: #232a37;
+
+  --color-code-surface: #0a0e14;
+  --color-code-text: #dbe4f5;
+
+  --glass-fill: radial-gradient(
+    150% 160% at 50.22% 50.31%,
+    rgb(255 255 255 / 0.06) 0%,
+    rgb(255 255 255 / 0.02) 100%
+  );
+  --glass-fill-dense: radial-gradient(
+    150% 160% at 50.22% 50.31%,
+    rgb(255 255 255 / 0.08) 0%,
+    rgb(255 255 255 / 0.03) 100%
+  );
+  --glass-fill-sidebar: radial-gradient(
+    140% 150% at 50.22% 50.31%,
+    rgb(255 255 255 / 0.07) 0%,
+    rgb(255 255 255 / 0.02) 100%
+  );
+  --glass-border: rgb(255 255 255 / 0.10);
+  --glass-border-hover: rgb(110 160 255 / 0.45);
+  --glass-bevel: inset 1px 1px 0 0 rgb(255 255 255 / 0.07),
+    inset 0 -1px 0 0 rgb(0 0 0 / 0.30);
+
+  --color-border: #262d3a;
+  --color-border-strong: #39424f;
+
+  --color-text: #e6ebf4; /* ~13:1 on #0d1117 */
+  --color-text-muted: #a8b3c5; /* ~7:1 */
+  --color-text-subtle: #7d8798; /* ~4.6:1 — 14px+ only, as in light */
+  --color-text-inverse: #0d1117; /* on the light cobalt action colour */
+
+  --color-primary: #6ea0ff;
+  --color-primary-hover: #8fb7ff;
+  --color-primary-soft: rgb(110 160 255 / 0.16);
+  --color-primary-contrast: #0d1117;
+  --color-accent: #6ea0ff;
+  --color-accent-hover: #8fb7ff;
+  --color-accent-soft: rgb(110 160 255 / 0.16);
+  --color-accent-contrast: #0d1117;
+
+  --color-success: #4ade80;
+  --color-success-soft: rgb(74 222 128 / 0.16);
+  --color-warning: #fbbf24;
+  --color-warning-soft: rgb(251 191 36 / 0.16);
+  --color-danger: #f87171;
+  --color-danger-soft: rgb(248 113 113 / 0.16);
+  --color-info: #60b5f5;
+  --color-info-soft: rgb(96 181 245 / 0.16);
+
+  --status-not-started: #8891a3;
+  --status-started: #60b5f5;
+  --status-needs-review: #fbbf24;
+  --status-partial: #97a1b5;
+  --status-mastered: #4ade80;
+  --status-exam-ready: #6ea0ff;
+
+  --color-focus: #8fb7ff;
+  --color-focus-on-dark: #8fb7ff;
+
+  --color-skeleton: #1e2530;
+  --color-skeleton-sheen: #2a3240;
+
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.45);
+  --shadow-md: 0 4px 16px rgb(0 0 0 / 0.50);
+  --shadow-lg: 0 12px 40px rgb(0 0 0 / 0.60);
+  --shadow-glass: var(--glass-bevel), 0 8px 28px rgb(0 0 0 / 0.45);
+
+  color-scheme: dark;
+}
+
+/* The ambient glow has to be re-derived too: the light version's near-white
+ * blooms would sit as grey haze on a dark ground. */
+:root[data-theme='dark'] body {
+  background-image:
+    radial-gradient(820px 600px at 8% 0%, rgb(110 160 255 / 0.10), transparent 60%),
+    radial-gradient(720px 560px at 100% 6%, rgb(88 122 255 / 0.10), transparent 58%),
+    radial-gradient(520px 460px at 50% 100%, rgb(110 160 255 / 0.06), transparent 62%);
+}
+
 /* ---- reset ---- */
 *,
 *::before,

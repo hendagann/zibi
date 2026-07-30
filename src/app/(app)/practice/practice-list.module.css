@@ -23,8 +23,37 @@
   border-color: var(--color-primary);
 }
 
+/*
+ * A done exercise is recognisable before it is read: a green rail down the
+ * inline-start edge and a quieter surface. The point is to let the eye skip
+ * it while scanning a long queue, so the signal has to survive peripheral
+ * vision — a badge alone does not, since you have to read it to use it.
+ *
+ * `inline-start` rather than `left`: this file is RTL and the rail belongs on
+ * the side the row begins on.
+ */
+.linkDone {
+  border-inline-start: 4px solid var(--color-success);
+  background-color: var(--color-surface-sunken);
+}
+
 .title {
   font-weight: var(--weight-medium);
+}
+
+/* Colour is not the only carrier — a tick glyph and a text label sit beside
+ * it, which is what makes the state readable to a colour-blind learner. */
+.doneMark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-success);
+  font-size: var(--text-xs);
+  font-weight: var(--weight-semibold);
+}
+
+.titleDone {
+  color: var(--color-text-muted);
 }
 
 .meta {

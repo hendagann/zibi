@@ -9,6 +9,7 @@ import { primaryNav } from '@/lib/navigation';
 import { isActiveRoute, routes } from '@/lib/routes';
 import { t } from '@/i18n';
 import { CloseIcon, MenuIcon, navIcons } from './NavIcons';
+import { ThemeToggle } from './ThemeToggle';
 import styles from './AppShell.module.css';
 
 /**
@@ -184,6 +185,7 @@ export function AppNav() {
         </ul>
 
         <div className={styles.sidebarFooter}>
+          <ThemeToggle />
           <span>{t.account.label}</span>
           <span>{t.account.signedOut}</span>
         </div>

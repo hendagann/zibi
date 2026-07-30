@@ -135,11 +135,28 @@ describe('AppNav on a narrow screen', () => {
     render(<AppNav />);
     await userEvent.click(screen.getByRole('button', { name: t.nav.menu }));
 
-    await waitFor(() => {
-      // Exactly two controls: the toggle and the drawer's close button. A
-      // focusable backdrop would be a third, and it was how Tab escaped.
-      expect(screen.getAllByRole('button')).toHaveLength(2);
-    });
+    await waitFor(() => expect(screen.getByRole('dialog')).toBeInTheDocument());
+
+    // The invariant is that nothing hidden from assistive technology is
+    // reachable by Tab — the backdrop is rendered aria-hidden, and making it a
+    // <button> was exactly how Tab escaped the drawer.
+    //
+    // This replaces a count of "exactly two buttons", which asserted the same
+    // thing only by accident: it broke the moment a legitimate third control
+    // was added to the sidebar, and counting would have tempted the next
+    // person to bump the number rather than check what the extra button was.
+    for (const element of document.querySelectorAll('[aria-hidden="true"]')) {
+      expect(element.tagName).not.toBe('BUTTON');
+      expect(element.hasAttribute('tabindex')).toBe(false);
+    }
+
+    // Every control that IS focusable carries an accessible name, so none of
+    // them is an unlabelled scrim.
+    for (const button of screen.getAllByRole('button')) {
+      expect(
+        button.getAttribute('aria-label') ?? button.textContent ?? '',
+      ).not.toBe('');
+    }
   });
 
   it('reflects the open state on the toggle', async () => {
