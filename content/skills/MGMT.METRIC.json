@@ -1,0 +1,14 @@
+{
+  "id": "MGMT.METRIC",
+  "topic": "MGMT/control",
+  "titleHe": "מדדים",
+  "titleEn": "Metrics",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Identifies how a proposed metric can be satisfied without improving quality, and proposes a metric less easy to game.",
+  "prerequisites": [
+    "MGMT.MON"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

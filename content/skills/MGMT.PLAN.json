@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.PLAN",
+  "topic": "MGMT/planning",
+  "titleHe": "תכנון וקריטריונים",
+  "titleEn": "Test planning and criteria",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Writes entry and exit criteria that can be objectively evaluated, and identifies criteria that cannot be met as written.",
+  "prerequisites": [
+    "FUND.PROC",
+    "MGMT.RISK"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

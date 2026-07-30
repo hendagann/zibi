@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.PLAN"
+  },
+  "title": "אין באגים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע \"אין באגים\" הוא קריטריון יציאה בעייתי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא ארוך מדי"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא בלתי בר-השגה ונוגד את העיקרון שבדיקה אינה מוכיחה היעדר פגמים"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא מדיד מדי"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מתאים רק ל-Agile"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תנאי בלתי אפשרי או שיתעלמו ממנו או שישתק כל שחרור.",
+    "skillId": "MGMT.PLAN",
+    "dimension": "application"
+  }
+}

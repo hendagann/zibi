@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "מחזור חיים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו הרצף הטיפוסי במחזור חיי פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חדש → נסגר"
+      },
+      {
+        "id": "b",
+        "labelHe": "חדש → שויך → בטיפול → תוקן → נבדק שוב → אומת → נסגר"
+      },
+      {
+        "id": "c",
+        "labelHe": "תוקן → חדש → נסגר"
+      },
+      {
+        "id": "d",
+        "labelHe": "נסגר → נבדק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הרצף כולל אימות לפני סגירה, ונתיב פתיחה מחדש בכישלון.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "knowledge"
+  }
+}

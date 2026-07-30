@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "אקסטרפולציה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי אקסטרפולציה באומדן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ניחוש"
+      },
+      {
+        "id": "b",
+        "labelHe": "המשך קו מתוך מדידות של איטרציות שכבר הסתיימו"
+      },
+      {
+        "id": "c",
+        "labelHe": "הערכת מומחים"
+      },
+      {
+        "id": "d",
+        "labelHe": "נוסחה משוקללת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אקסטרפולציה נשענת על מדידות בפועל מאיטרציות קודמות — שימושית ב-Agile.",
+    "skillId": "MGMT.EST",
+    "dimension": "knowledge"
+  }
+}

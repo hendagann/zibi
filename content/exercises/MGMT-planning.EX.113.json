@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "דלפי מורחב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין דלפי מורחב (Wideband Delphi)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מומחים מעריכים עצמאית, משווים ודנים בפערים בסבבים עד התכנסות"
+      },
+      {
+        "id": "b",
+        "labelHe": "המנהל קובע"
+      },
+      {
+        "id": "c",
+        "labelHe": "נוסחה מתמטית"
+      },
+      {
+        "id": "d",
+        "labelHe": "נתון היסטורי"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "הערכה עצמאית ואז דיון על הפערים — Planning Poker הוא וריאנט מוכר.",
+    "skillId": "MGMT.EST",
+    "dimension": "knowledge"
+  }
+}

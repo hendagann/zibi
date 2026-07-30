@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.AUTO"
+  },
+  "title": "השאלה הרביעית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו שלוש שאלות שואלים על מועמדת לאוטומציה — ומה הרביעית שמדלגים עליה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תדירות, יציבות, ערך רגרסיה — והרביעית: מי מתחזק וכמה זמן"
+      },
+      {
+        "id": "b",
+        "labelHe": "עלות, זמן, כלי — והרביעית: מי כותב"
+      },
+      {
+        "id": "c",
+        "labelHe": "שפה, מסגרת, שרת — והרביעית: מתי"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין שאלות"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בעלות על התחזוקה היא השאלה שמדלגים עליה ומשלמים עליה אחר כך.",
+    "skillId": "MGMT.AUTO",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "MGMT/strategy",
+  "nameHe": "אסטרטגיה ומניעת פגמים",
+  "nameEn": "Strategy and defect prevention",
+  "domain": "MGMT",
+  "description": "בחירת אסטרטגיית בדיקות שמתאימה להקשר ולבשלות הארגון, וניתוח קבוצת פגמים לגורם משותף כדי למנוע את המחלקה כולה במקום את המקרה הבודד.",
+  "learningObjectives": [
+    "להציע אסטרטגיית בדיקות להקשר מתואר ולנמק אותה מול אילוצי הארגון ובשלותו",
+    "לזהות מדוע אסטרטגיה שמתאימה לארגון אחד נכשלת באחר",
+    "לנתח קבוצת פגמים ולזהות גורם משותף",
+    "להציע שינוי תהליך שמונע את מחלקת הפגמים ולא רק את המופע הבודד"
+  ],
+  "prerequisites": [
+    "MGMT/control"
+  ],
+  "difficulty": 5,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "MGMT.STRAT",
+    "MGMT.DEFPREV"
+  ],
+  "summaryRef": "MGMT-strategy.SUM.001",
+  "lessonRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-strategy.EX.100",
+    "MGMT-strategy.EX.101",
+    "MGMT-strategy.EX.102",
+    "MGMT-strategy.EX.103",
+    "MGMT-strategy.EX.104",
+    "MGMT-strategy.EX.105",
+    "MGMT-strategy.EX.106",
+    "MGMT-strategy.EX.107",
+    "MGMT-strategy.EX.108",
+    "MGMT-strategy.EX.109",
+    "MGMT-strategy.EX.110",
+    "MGMT-strategy.EX.111",
+    "MGMT-strategy.EX.112",
+    "MGMT-strategy.EX.113",
+    "MGMT-strategy.EX.114",
+    "MGMT-strategy.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

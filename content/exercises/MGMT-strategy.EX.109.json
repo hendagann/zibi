@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "תשובת ראיון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "נשאלת \"איזו אסטרטגיה היית מציעה לנו?\". מה פותח תשובה חזקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אוטומציה מלאה וכיסוי 80%"
+      },
+      {
+        "id": "b",
+        "labelHe": "שאלות: מה הסיכון, מה קיים היום, כמה אנשים"
+      },
+      {
+        "id": "c",
+        "labelHe": "העתקת פתרון מוכר"
+      },
+      {
+        "id": "d",
+        "labelHe": "דחיית השאלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תשובה שמתחילה מפתרון לפני הקשר היא תשובה של מי שמעתיק.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "application"
+  }
+}

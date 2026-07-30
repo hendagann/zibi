@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "מה לכתוב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "סוכם בשיחה לדחות פגם כי יש פתרון עוקף. מה נכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להסתמך על הזיכרון"
+      },
+      {
+        "id": "b",
+        "labelHe": "לכתוב את ההחלטה ונימוקה בפגם עצמו"
+      },
+      {
+        "id": "c",
+        "labelHe": "לסגור בלי הערה"
+      },
+      {
+        "id": "d",
+        "labelHe": "למחוק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בעוד שלושה חודשים איש לא יזכור למה הפגם נדחה.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "application"
+  }
+}

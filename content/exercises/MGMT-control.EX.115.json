@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "מדד עמיד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה מדד עמיד יותר לשחיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מספר באגים שנמצאו"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגמים שדלפו לייצור באזורי סיכון גבוה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר שעות עבודה"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר מקרי בדיקה שנכתבו"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מדד שקושר תוצאה לערך קשה יותר לסיפוק בלי שיפור אמיתי.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

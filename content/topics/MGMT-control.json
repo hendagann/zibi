@@ -1,0 +1,54 @@
+{
+  "id": "MGMT/control",
+  "nameHe": "ניטור ומדידה",
+  "nameEn": "Monitoring and metrics",
+  "domain": "MGMT",
+  "description": "מדדי בדיקה ומה הם לא אומרים, דוח התקדמות מול דוח סיכום, וזיהוי מדד שאפשר לספק בלי לשפר איכות. המיומנות שמונעת ניהול לפי מספר יחיד מטעה.",
+  "learningObjectives": [
+    "לפרש מערכת נתוני התקדמות ולציין גם מה היא מראה וגם מה היא אינה מראה",
+    "להבחין בין דוח התקדמות לדוח סיכום",
+    "לזהות כיצד ניתן לספק מדד מוצע בלי לשפר איכות",
+    "להציע מדד שקשה יותר לשחק בו"
+  ],
+  "prerequisites": [
+    "MGMT/planning"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "MGMT.MON",
+    "MGMT.METRIC"
+  ],
+  "summaryRef": "MGMT-control.SUM.001",
+  "lessonRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-control.EX.100",
+    "MGMT-control.EX.101",
+    "MGMT-control.EX.102",
+    "MGMT-control.EX.103",
+    "MGMT-control.EX.104",
+    "MGMT-control.EX.105",
+    "MGMT-control.EX.106",
+    "MGMT-control.EX.107",
+    "MGMT-control.EX.108",
+    "MGMT-control.EX.109",
+    "MGMT-control.EX.110",
+    "MGMT-control.EX.111",
+    "MGMT-control.EX.112",
+    "MGMT-control.EX.113",
+    "MGMT-control.EX.114",
+    "MGMT-control.EX.115",
+    "MGMT-control.EX.116",
+    "MGMT-control.EX.117",
+    "MGMT-control.EX.118",
+    "MGMT-control.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "דיווח מקצועי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין דיווח התקדמות מקצועי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מספרים בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "ציון גם מה הנתונים מראים וגם מה הם אינם מראים"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק חדשות טובות"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק אחוזים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דיווח שאינו מסייג הופך ממוצע למסקנה שגויה.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

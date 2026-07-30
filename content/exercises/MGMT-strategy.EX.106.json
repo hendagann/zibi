@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "תיעוד מינימלי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע \"תיעוד מינימלי\" נכשל בארגון מפוקח?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא לא נכשל"
+      },
+      {
+        "id": "b",
+        "labelHe": "בלי עקיבות ותיעוד אין ראיה שדרישה רגולטורית נבדקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא יקר"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא איטי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מבקר חיצוני דורש ראיה; בדיקה בלי תיעוד אינה נחשבת שבוצעה.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "application"
+  }
+}

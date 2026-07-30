@@ -1,0 +1,12 @@
+{
+  "id": "TECH.WEB",
+  "topic": "TECH/web",
+  "titleHe": "מודל בקשה־תגובה",
+  "titleEn": "Request-response model",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Traces what happens between a user action and a rendered result, and states where a described symptom could originate.",
+  "prerequisites": [],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

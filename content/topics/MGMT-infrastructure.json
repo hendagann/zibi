@@ -1,0 +1,53 @@
+{
+  "id": "MGMT/infrastructure",
+  "nameHe": "סביבות, תצורה ונתונים",
+  "nameEn": "Environments, configuration and data",
+  "domain": "MGMT",
+  "description": "ניהול תצורה של תוצרי הבדיקה, אבחון הבדלי סביבות כשפגם משתחזר במקום אחד ולא באחר, וניהול נתוני בדיקה — יצירה, בידוד, איפוס והגנה על מידע אישי.",
+  "learningObjectives": [
+    "לציין מה חייב להירשם כדי שפגם יהיה ניתן לשחזור",
+    "לזהות אילו הבדלים בין שתי סביבות עשויים להסביר פגם שמשתחזר באחת ולא בשנייה, וכיצד לאמת כל אחד",
+    "לפרט את נתוני הבדיקה שתרחיש דורש — יצירה, בידוד ואיפוס",
+    "לזהות נתונים אישיים שדורשים הגנה בסביבת בדיקה"
+  ],
+  "prerequisites": [
+    "MGMT/planning"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "MGMT.CONF",
+    "MGMT.ENV",
+    "MGMT.DATA"
+  ],
+  "summaryRef": "MGMT-infrastructure.SUM.001",
+  "lessonRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-infrastructure.EX.100",
+    "MGMT-infrastructure.EX.101",
+    "MGMT-infrastructure.EX.102",
+    "MGMT-infrastructure.EX.103",
+    "MGMT-infrastructure.EX.104",
+    "MGMT-infrastructure.EX.105",
+    "MGMT-infrastructure.EX.106",
+    "MGMT-infrastructure.EX.107",
+    "MGMT-infrastructure.EX.108",
+    "MGMT-infrastructure.EX.109",
+    "MGMT-infrastructure.EX.110",
+    "MGMT-infrastructure.EX.111",
+    "MGMT-infrastructure.EX.112",
+    "MGMT-infrastructure.EX.113",
+    "MGMT-infrastructure.EX.114",
+    "MGMT-infrastructure.EX.115",
+    "MGMT-infrastructure.EX.116",
+    "MGMT-infrastructure.EX.117"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "MGMT.EST",
+  "topic": "MGMT/planning",
+  "titleHe": "אומדן מאמץ",
+  "titleEn": "Effort estimation",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Produces a test effort estimate with its assumptions stated, and identifies which assumption most affects the result.",
+  "prerequisites": [
+    "MGMT.PLAN"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

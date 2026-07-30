@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "סטארטאפ",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "סטארטאפ בן 8 אנשים משחרר יומית. מה מתאים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תיעוד פורמלי מלא ועקיבות מלאה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקות חקרניות ממוקדות סיכון ואוטומציה דקה על הזרימות הכספיות"
+      },
+      {
+        "id": "c",
+        "labelHe": "קבלה רגולטורית"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקות ידניות בלבד ללא אוטומציה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שחרור יומי מחייב רגרסיה מהירה, וצוות קטן אינו יכול לשאת תיעוד כבד.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "application"
+  }
+}

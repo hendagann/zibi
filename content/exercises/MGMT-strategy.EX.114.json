@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.DEFPREV"
+  },
+  "title": "מדד הצלחה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד מודדים שמניעת הפגמים עבדה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חמישה באגים נסגרו"
+      },
+      {
+        "id": "b",
+        "labelHe": "כמה פגמים חדשים מאותה מחלקה הופיעו ברבעונים הבאים"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר הבדיקות עלה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצוות מרוצה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעלמות המחלקה היא ההוכחה; סגירת המופעים אינה מוכיחה דבר.",
+    "skillId": "MGMT.DEFPREV",
+    "dimension": "application"
+  }
+}

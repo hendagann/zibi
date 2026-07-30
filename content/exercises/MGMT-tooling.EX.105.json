@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "שיעור פתיחה מחדש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "על מה מצביע שיעור פתיחה מחדש גבוה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בדיקה קפדנית מדי"
+      },
+      {
+        "id": "b",
+        "labelHe": "תיקונים שטחיים שאינם פותרים את הפגם"
+      },
+      {
+        "id": "c",
+        "labelHe": "מוצר איכותי"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין משמעות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו מדד שימושי לאיכות התיקונים.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "application"
+  }
+}

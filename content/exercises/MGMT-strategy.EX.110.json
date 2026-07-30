@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.DEFPREV"
+  },
+  "title": "מניעת פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי מניעת פגמים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תיקון כל באג מהר"
+      },
+      {
+        "id": "b",
+        "labelHe": "ניתוח קבוצת פגמים לגורם משותף ושינוי תהליך שמונע את המחלקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "סגירת באגים ישנים"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוספת בודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מניעה פועלת על המחלקה, לא על המופע.",
+    "skillId": "MGMT.DEFPREV",
+    "dimension": "knowledge"
+  }
+}

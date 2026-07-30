@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "סגירת פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"35 מתוך 40 פגמים נסגרו\". מה חסר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שמות המפתחים"
+      },
+      {
+        "id": "b",
+        "labelHe": "כיצד נסגרו — תוקן ואומת, לא ניתן לשחזור, או נדחה"
+      },
+      {
+        "id": "c",
+        "labelHe": "תאריכים"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר השורות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סגירה מנהלית משפרת את המדד בלי לשפר את המוצר.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.AUTO"
+  },
+  "title": "הרבה ערכים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "חישוב מע\"מ ל-40 צירופים — להאטמת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן — כלל יציב, הרבה ערכים, ובדיקה ידנית מייגעת ומועדת לטעות"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק 5 צירופים"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק ידנית"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "זהו המקרה הקלאסי שבו אוטומציה מדויקת מאדם.",
+    "skillId": "MGMT.AUTO",
+    "dimension": "application"
+  }
+}

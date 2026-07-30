@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "בלבול דוחות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קורה כשדוח סיכום מלא בפרטים תפעוליים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא מדויק יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא אינו משרת אף החלטה — מקבל ההחלטה אינו יכול לפעול לפיו"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא קצר יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין הבדל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דוח סיכום נועד להחלטה, לא לתיעוד פעילות.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "DOC.REQ",
+  "topic": "DOC/requirements",
+  "titleHe": "ניתוח דרישה לבדיקה",
+  "titleEn": "Requirement analysis",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Extracts from a requirement what can be verified, and lists the questions that must be answered before it can be tested at all.",
+  "prerequisites": [
+    "FUND.PROC"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

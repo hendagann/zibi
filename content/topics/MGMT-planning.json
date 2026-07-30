@@ -1,0 +1,56 @@
+{
+  "id": "MGMT/planning",
+  "nameHe": "תכנון ואומדן",
+  "nameEn": "Test planning and estimation",
+  "domain": "MGMT",
+  "description": "תוכנית הבדיקות, קריטריוני כניסה ויציאה שניתן להעריך אובייקטיבית, פירמידת הבדיקות, וטכניקות אומדן מאמץ: יחסים, אקסטרפולציה, דלפי מורחב ואומדן שלוש נקודות.",
+  "learningObjectives": [
+    "לכתוב קריטריוני כניסה ויציאה שניתן להעריך אובייקטיבית",
+    "לזהות קריטריון שאינו ניתן לעמידה או להערכה כפי שנוסח",
+    "לבחור טכניקת אומדן מתאימה ולחשב אומדן לפי הנתונים",
+    "לציין את ההנחות שביסוד האומדן ולזהות איזו מהן משפיעה עליו יותר מכול"
+  ],
+  "prerequisites": [
+    "MGMT/risk"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 90,
+  "measuredSkills": [
+    "MGMT.PLAN",
+    "MGMT.EST"
+  ],
+  "summaryRef": "MGMT-planning.SUM.001",
+  "lessonRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-planning.EX.100",
+    "MGMT-planning.EX.101",
+    "MGMT-planning.EX.102",
+    "MGMT-planning.EX.103",
+    "MGMT-planning.EX.104",
+    "MGMT-planning.EX.105",
+    "MGMT-planning.EX.106",
+    "MGMT-planning.EX.107",
+    "MGMT-planning.EX.108",
+    "MGMT-planning.EX.109",
+    "MGMT-planning.EX.110",
+    "MGMT-planning.EX.111",
+    "MGMT-planning.EX.112",
+    "MGMT-planning.EX.113",
+    "MGMT-planning.EX.114",
+    "MGMT-planning.EX.115",
+    "MGMT-planning.EX.116",
+    "MGMT-planning.EX.117",
+    "MGMT-planning.EX.118",
+    "MGMT-planning.EX.119",
+    "MGMT-planning.EX.120",
+    "MGMT-planning.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.DEFPREV"
+  },
+  "title": "תיקון על המחלקה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו תיקון שפועל על מחלקת פגמי הגבול?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לתקן את חמשת הבאגים"
+      },
+      {
+        "id": "b",
+        "labelHe": "שדה חובה \"התנהגות בערכי גבול\" בתבנית הקריטריונים ושאלה בצ׳קליסט הסקירה"
+      },
+      {
+        "id": "c",
+        "labelHe": "להוסיף בודקת"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבקש להשתדל יותר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שינוי תבנית ותהליך חוסם את המחלקה בשלב הדרישה.",
+    "skillId": "MGMT.DEFPREV",
+    "dimension": "application"
+  }
+}

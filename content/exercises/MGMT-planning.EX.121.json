@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "בחירת טכניקה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "יש נתונים ממדידה של שלוש איטרציות קודמות. איזו טכניקה מתאימה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אקסטרפולציה"
+      },
+      {
+        "id": "b",
+        "labelHe": "דלפי מורחב"
+      },
+      {
+        "id": "c",
+        "labelHe": "ניחוש"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין טכניקה מתאימה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "כשיש מדידות בפועל מאיטרציות שהסתיימו, המשך הקו הוא הבסיס הטוב ביותר.",
+    "skillId": "MGMT.EST",
+    "dimension": "application"
+  }
+}

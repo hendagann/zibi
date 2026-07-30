@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "תמריץ הפוך",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הנזק ביעד \"20 באגים בחודש\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין נזק"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא מתמרץ נגד חקירה עמוקה של אזור סיכון שתניב אולי פגם קריטי יחיד"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא יקר"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא איטי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המדד מייצר תמריץ הפוך למטרה שלשמה נקבע.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

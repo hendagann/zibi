@@ -1,0 +1,12 @@
+{
+  "id": "MIS.MGMT.ESTIMATE_NO_ASSUMPTIONS",
+  "titleHe": "אומדן הוא מספר",
+  "descriptionHe": "מסירת אומדן מאמץ כמספר בודד בלי ההנחות שביסודו, ובלי לציין איזו הנחה משפיעה עליו יותר מכול.",
+  "whyTempting": "מספר בודד נשמע החלטי ובטוח. אבל כשהנחה נשברת — והיא תישבר — אין על מה להישען כדי לעדכן, והחריגה נראית כמו כישלון של הבודקת במקום כשינוי בתנאים.",
+  "skillIds": [
+    "MGMT.EST"
+  ],
+  "remediationRef": "MGMT-planning.LE.001",
+  "anchor": "sec-assume",
+  "status": "active"
+}

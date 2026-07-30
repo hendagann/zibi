@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "השאלה המקדימה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה לשאול לפני אימוץ מדד חדש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כמה הוא עולה"
+      },
+      {
+        "id": "b",
+        "labelHe": "כיצד אפשר לספק אותו בלי שהמוצר ישתפר"
+      },
+      {
+        "id": "c",
+        "labelHe": "מי המציא אותו"
+      },
+      {
+        "id": "d",
+        "labelHe": "באיזה כלי מודדים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו השאלה שחושפת מראש את נקודת השחיקה.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

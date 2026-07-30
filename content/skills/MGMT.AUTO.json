@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.AUTO",
+  "topic": "MGMT/tooling",
+  "titleHe": "אוריינות אוטומציה",
+  "titleEn": "Automation literacy",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Decides which tests in a given set justify automation, and states the maintenance cost accepted for each.",
+  "prerequisites": [
+    "TD.SEL",
+    "MGMT.EST"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

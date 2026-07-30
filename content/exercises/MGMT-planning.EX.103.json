@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.PLAN"
+  },
+  "title": "דוגמת כניסה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו דוגמה היא קריטריון כניסה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כיסוי דרישות 100%"
+      },
+      {
+        "id": "b",
+        "labelHe": "סביבת הבדיקה זמינה ובדיקת עשן עברה"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין פגמים קריטיים פתוחים"
+      },
+      {
+        "id": "d",
+        "labelHe": "דוח הסיכום נכתב"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זמינות סביבה ובדיקת עשן הן תנאים להתחלה, לא לסיום.",
+    "skillId": "MGMT.PLAN",
+    "dimension": "application"
+  }
+}

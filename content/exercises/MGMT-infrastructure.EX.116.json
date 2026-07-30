@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.CONF"
+  },
+  "title": "מה נסגר בטעות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דוח פגם ללא גרסה, סביבה ונתונים. מה צפוי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יטופל מהר"
+      },
+      {
+        "id": "b",
+        "labelHe": "ייסגר כ\"לא ניתן לשחזור\" גם אם הפגם אמיתי"
+      },
+      {
+        "id": "c",
+        "labelHe": "יקבל עדיפות גבוהה"
+      },
+      {
+        "id": "d",
+        "labelHe": "יועבר ללקוח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעדר פרטי תצורה הוא הסיבה השכיחה לסגירת פגמים אמיתיים.",
+    "skillId": "MGMT.CONF",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "סגירה מהירה כיעד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "יעד \"לסגור פגמים מהר\". כיצד משחקים בו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לתקן מהר יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "לסגור פגמים כ\"לא ניתן לשחזור\" בלי חקירה"
+      },
+      {
+        "id": "c",
+        "labelHe": "להוסיף בודקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אי אפשר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סטטוס סגירה הוא נקודת השחיקה של מדד מהירות הסגירה.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "מהי אסטרטגיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי אסטרטגיית בדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רשימת מקרי הבדיקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הגישה שקובעת איך בודקים בארגון — מה ידני מול אוטומטי, היכן העומק, איזו פורמליות"
+      },
+      {
+        "id": "c",
+        "labelHe": "דוח סיכום"
+      },
+      {
+        "id": "d",
+        "labelHe": "כלי בדיקות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "האסטרטגיה היא הגישה; התוכניות הפרטניות נגזרות ממנה.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "knowledge"
+  }
+}

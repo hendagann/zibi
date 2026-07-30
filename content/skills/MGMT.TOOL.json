@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.TOOL",
+  "topic": "MGMT/tooling",
+  "titleHe": "כלי ניהול בדיקות ופגמים",
+  "titleEn": "Test and defect management tools",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Moves a defect through a tool's workflow with correct state, fields and traceability links, and identifies what information the workflow loses.",
+  "prerequisites": [
+    "DOC.BUG",
+    "DOC.RTM"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

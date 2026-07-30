@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.PLAN"
+  },
+  "title": "תיקון ניסוח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד נכון לתקן את \"כל הבדיקות הושלמו\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להשאיר"
+      },
+      {
+        "id": "b",
+        "labelHe": "\"95% ממקרי הבדיקה המתוכננים הורצו וכל כושל נותח\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"רוב הבדיקות רצו\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"הבדיקות נגמרו בזמן\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הניסוח המקורי מתקיים גם אם עשרות בדיקות נכשלו; התיקון קובע כמות וטיפול בכשלים.",
+    "skillId": "MGMT.PLAN",
+    "dimension": "application"
+  }
+}

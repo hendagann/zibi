@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "קטגוריות כלים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו קטגוריה מתאימה לכלי ניהול פגמים כמו Jira?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ניהול בדיקות ופגמים"
+      },
+      {
+        "id": "b",
+        "labelHe": "ניתוח קוד סטטי"
+      },
+      {
+        "id": "c",
+        "labelHe": "כלי ביצועים"
+      },
+      {
+        "id": "d",
+        "labelHe": "אוטומציית ממשק"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "Jira ודומיו מנהלים מקרים, פגמים, עקיבות ודוחות.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "knowledge"
+  }
+}

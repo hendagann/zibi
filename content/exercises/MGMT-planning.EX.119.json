@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "הנחות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה חייב ללוות כל אומדן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אישור המנהל"
+      },
+      {
+        "id": "b",
+        "labelHe": "ההנחות שביסודו והצבעה על ההנחה המשפיעה ביותר"
+      },
+      {
+        "id": "c",
+        "labelHe": "שם הבודקת"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר הבאגים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אומדן בלי הנחות אינו ניתן להגנה ואינו ניתן לעדכון כשהתנאים משתנים.",
+    "skillId": "MGMT.EST",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "התנגדות בונה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מנהל מציע מדד פגום. מה נכון לעשות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להתנגד בלי הצעה"
+      },
+      {
+        "id": "b",
+        "labelHe": "להסביר את נקודת השחיקה ולהציע חלופה עמידה יותר"
+      },
+      {
+        "id": "c",
+        "labelHe": "לאמץ בשקט"
+      },
+      {
+        "id": "d",
+        "labelHe": "לפנות מעל ראשו"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בהיעדר חלופה, מנהל שצריך לנהל יאמץ את המדד הפגום.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

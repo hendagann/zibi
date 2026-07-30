@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.PLAN"
+  },
+  "title": "תוכנית בדיקות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה כוללת תוכנית בדיקות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק רשימת באגים"
+      },
+      {
+        "id": "b",
+        "labelHe": "גישה, היקף, סיכונים, משאבים, לוחות זמנים וקריטריוני כניסה/יציאה"
+      },
+      {
+        "id": "c",
+        "labelHe": "קוד המוצר"
+      },
+      {
+        "id": "d",
+        "labelHe": "שמות המפתחים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תוכנית הבדיקות מתארת כיצד ניגשים לבדיקה — כולל היקף, סיכונים, משאבים וקריטריונים.",
+    "skillId": "MGMT.PLAN",
+    "dimension": "knowledge"
+  }
+}

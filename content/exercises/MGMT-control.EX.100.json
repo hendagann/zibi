@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "ניטור מול בקרה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין ניטור לבקרה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "ניטור אוסף ומשווה לתוכנית; בקרה היא הפעולה המתקנת בעקבות פער"
+      },
+      {
+        "id": "c",
+        "labelHe": "בקרה קודמת לניטור"
+      },
+      {
+        "id": "d",
+        "labelHe": "ניטור מבוצע רק בסוף"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ניטור בלי בקרה הוא דיווח; בקרה בלי ניטור היא ניחוש.",
+    "skillId": "MGMT.MON",
+    "dimension": "knowledge"
+  }
+}

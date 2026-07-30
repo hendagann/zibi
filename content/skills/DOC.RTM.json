@@ -1,0 +1,15 @@
+{
+  "id": "DOC.RTM",
+  "topic": "DOC/design-artifacts",
+  "titleHe": "מטריצת עקיבות",
+  "titleEn": "Traceability matrix",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Builds traceability between requirements and tests, and identifies both requirements with no coverage and tests with no requirement.",
+  "prerequisites": [
+    "DOC.TC",
+    "DOC.REQ"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

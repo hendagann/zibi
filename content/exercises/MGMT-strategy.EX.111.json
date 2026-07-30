@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.DEFPREV"
+  },
+  "title": "גורם משותף",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "חמישה פגמים: 0 בגיל, 0 בהעברה, 31/12 מעוברת, אורך מקסימלי, הנחה 100%. מה המשותף?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כולם בממשק"
+      },
+      {
+        "id": "b",
+        "labelHe": "כולם בערכי גבול — התנהגות לא מוגדרת בקצה"
+      },
+      {
+        "id": "c",
+        "labelHe": "כולם באותו מודול"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין קשר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חמישה מופעים של מחלקה אחת: ערכי גבול.",
+    "skillId": "MGMT.DEFPREV",
+    "dimension": "application"
+  }
+}

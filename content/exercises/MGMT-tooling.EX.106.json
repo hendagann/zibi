@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "שדות חובה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו שדות הם חובה בדוח פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק כותרת"
+      },
+      {
+        "id": "b",
+        "labelHe": "מזהה, כותרת, גרסה, סביבה, צעדי שחזור, צפוי מול מצוי, חומרה, עדיפות וסטטוס"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק חומרה"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק צעדים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שדה חסר הוא בדרך כלל מה שגורם לסגירה כ\"לא ניתן לשחזור\".",
+    "skillId": "MGMT.TOOL",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "שלושת האילוצים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו אילוצים קובעים אסטרטגיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "סיכון ורגולציה, בשלות הארגון, ומשאבים"
+      },
+      {
+        "id": "b",
+        "labelHe": "תקציב בלבד"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר הבודקים בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "סוג הקוד"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "שלושת אלה יחד קובעים מה בכלל אפשר לבצע.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "knowledge"
+  }
+}

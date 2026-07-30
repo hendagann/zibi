@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.DATA"
+  },
+  "title": "חלופה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי החלופה לנתוני ייצור?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לוותר על בדיקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "נתונים מסונתזים או מוסווים ששומרים על מבנה ריאלי ומכסים את מקרי הקצה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק בייצור"
+      },
+      {
+        "id": "d",
+        "labelHe": "להשתמש בנתון אחד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הסוואה או סינתזה שומרות על ערך הבדיקה בלי החשיפה.",
+    "skillId": "MGMT.DATA",
+    "dimension": "application"
+  }
+}

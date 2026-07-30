@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.ENV"
+  },
+  "title": "הרשאות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד הרשאות יכולות להסביר פער בין סביבות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הן לא"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה כמשתמשת רגילה מול מפתח כמנהל עלולה לחשוף שגיאת הרשאה"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק בייצור"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק במובייל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תפקיד המשתמש הוא חשוד מרכזי בפערי שחזור.",
+    "skillId": "MGMT.ENV",
+    "dimension": "application"
+  }
+}

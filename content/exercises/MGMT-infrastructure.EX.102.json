@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.CONF"
+  },
+  "title": "שחזור פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה חייב להירשם כדי שפגם יהיה ניתן לשחזור?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק תיאור התקלה"
+      },
+      {
+        "id": "b",
+        "labelHe": "גרסת מוצר מדויקת, סביבה, תצורה, נתונים ומצב התחלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "שם המדווח"
+      },
+      {
+        "id": "d",
+        "labelHe": "שעת הדיווח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בלי הפרטים האלה פגם אמיתי נסגר כ\"לא ניתן לשחזור\".",
+    "skillId": "MGMT.CONF",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.STRAT",
+  "topic": "MGMT/strategy",
+  "titleHe": "אסטרטגיית בדיקות",
+  "titleEn": "Test strategy",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Proposes a test strategy for a described context and justifies it against that organisation's constraints and maturity.",
+  "prerequisites": [
+    "MGMT.PLAN",
+    "MGMT.RBT"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.METRIC"
+  },
+  "title": "כנות לגבי מגבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "האם נכון להציג את המדד החלופי כחסין לשחיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא — כל מדד ניתן לשחיקה; אמירה כנה על המגבלה אמינה יותר"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק למנהלים"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בדוח סיכום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הכרה במגבלה מחזקת את הטיעון במקום להחלישו.",
+    "skillId": "MGMT.METRIC",
+    "dimension": "application"
+  }
+}

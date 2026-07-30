@@ -1,0 +1,52 @@
+{
+  "id": "MGMT/tooling",
+  "nameHe": "כלים ואוטומציה",
+  "nameEn": "Tools and automation",
+  "domain": "MGMT",
+  "description": "קטגוריות כלי בדיקה, מחזור חיי פגם בכלי ניהול, ושיקול הדעת שקובע אילו בדיקות מצדיקות אוטומציה — כולל עלות התחזוקה שמתקבלת עם כל אחת. פרק 6 של המבחן (5%) והמיומנות היומיומית מול Jira.",
+  "learningObjectives": [
+    "להעביר פגם במחזור החיים בכלי עם סטטוס, שדות וקישורי עקיבות נכונים",
+    "לזהות איזה מידע מחזור העבודה בכלי מאבד",
+    "להחליט אילו בדיקות מתוך סט נתון מצדיקות אוטומציה",
+    "לציין את עלות התחזוקה שמתקבלת עם כל בדיקה שמואטמת"
+  ],
+  "prerequisites": [
+    "MGMT/infrastructure"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 75,
+  "measuredSkills": [
+    "MGMT.TOOL",
+    "MGMT.AUTO"
+  ],
+  "summaryRef": "MGMT-tooling.SUM.001",
+  "lessonRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-tooling.EX.100",
+    "MGMT-tooling.EX.101",
+    "MGMT-tooling.EX.102",
+    "MGMT-tooling.EX.103",
+    "MGMT-tooling.EX.104",
+    "MGMT-tooling.EX.105",
+    "MGMT-tooling.EX.106",
+    "MGMT-tooling.EX.107",
+    "MGMT-tooling.EX.108",
+    "MGMT-tooling.EX.109",
+    "MGMT-tooling.EX.110",
+    "MGMT-tooling.EX.111",
+    "MGMT-tooling.EX.112",
+    "MGMT-tooling.EX.113",
+    "MGMT-tooling.EX.114",
+    "MGMT-tooling.EX.115",
+    "MGMT-tooling.EX.116",
+    "MGMT-tooling.EX.117"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

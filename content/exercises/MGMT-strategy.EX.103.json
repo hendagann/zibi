@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-strategy.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/strategy",
+  "skills": {
+    "primary": "MGMT.STRAT"
+  },
+  "title": "בשלות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע בשלות הארגון היא אילוץ מרכזי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-strategy.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא לא"
+      },
+      {
+        "id": "b",
+        "labelHe": "אסטרטגיה שדורשת מיומנות ותשתית שאינן קיימות נבנית חצי ונזנחת"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא קובעת את התקציב"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא נוגעת רק למפתחים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תוכנית נכונה תיאורטית נכשלת אם הארגון אינו מסוגל לבצעה.",
+    "skillId": "MGMT.STRAT",
+    "dimension": "application"
+  }
+}

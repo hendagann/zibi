@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "חישוב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אופטימי 4, סביר 6, פסימי 14. מהו האומדן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "6 ימים"
+      },
+      {
+        "id": "b",
+        "labelHe": "7 ימים"
+      },
+      {
+        "id": "c",
+        "labelHe": "8 ימים"
+      },
+      {
+        "id": "d",
+        "labelHe": "9 ימים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "E=(4+4×6+14)/6 = 42/6 = 7 ימים.",
+    "skillId": "MGMT.EST",
+    "dimension": "application"
+  }
+}

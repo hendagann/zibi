@@ -1,0 +1,15 @@
+{
+  "id": "DOC.TC",
+  "topic": "DOC/design-artifacts",
+  "titleHe": "כתיבת מקרה בדיקה",
+  "titleEn": "Test case authoring",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Writes a test case another tester can execute identically without asking a question - preconditions, data, steps, expected result.",
+  "prerequisites": [
+    "DOC.REQ",
+    "TD.EP"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

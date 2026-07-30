@@ -1,0 +1,17 @@
+{
+  "id": "TD.SEL",
+  "topic": "TD/adequacy",
+  "titleHe": "בחירת טכניקה",
+  "titleEn": "Technique selection",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Chooses a technique for a described situation, justifies it against at least one rejected alternative, and states the conditions under which the choice would change.",
+  "prerequisites": [
+    "TD.COV",
+    "TD.DT",
+    "TD.ST",
+    "MGMT.RISK"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

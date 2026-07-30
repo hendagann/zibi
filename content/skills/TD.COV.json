@@ -1,0 +1,15 @@
+{
+  "id": "TD.COV",
+  "topic": "TD/adequacy",
+  "titleHe": "כיסוי ואורקלים",
+  "titleEn": "Coverage and oracles",
+  "tier": "applied",
+  "cognitiveLevel": "K4",
+  "behaviour": "Argues what a given test set does and does not cover, and names the oracle used to decide each result.",
+  "prerequisites": [
+    "TD.EP",
+    "TD.BVA"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

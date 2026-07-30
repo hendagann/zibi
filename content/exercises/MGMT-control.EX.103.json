@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "מספר פגמים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה אפשר להסיק ממספר פגמים גבוה שנמצא?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המוצר גרוע בוודאות"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבדיקה טובה בוודאות"
+      },
+      {
+        "id": "c",
+        "labelHe": "לא ניתן להכריע בלי הקשר — ייתכן מוצר גרוע וייתכן בדיקה טובה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין משמעות"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "המדד דו-משמעי מטבעו; רק הקשר מבחין בין השניים.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

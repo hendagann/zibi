@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.CONF"
+  },
+  "title": "ניהול תצורה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נכלל בניהול תצורה של תוצרי בדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק הקוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "תוכנית, מקרים, סקריפטים, נתונים, הגדרות סביבה ותוצאות"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק דוחות פגמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק סביבת הבדיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל ה-testware נכנס לבקרת גרסאות כדי לאפשר שחזור ועקביות.",
+    "skillId": "MGMT.CONF",
+    "dimension": "knowledge"
+  }
+}

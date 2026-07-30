@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-control.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/control",
+  "skills": {
+    "primary": "MGMT.MON"
+  },
+  "title": "מדד תפוקה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מודד אחוז מקרי הבדיקה שהורצו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-control.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "איכות המוצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "תפוקה מול תוכנית — לא אם המקרים שהורצו הם החשובים"
+      },
+      {
+        "id": "c",
+        "labelHe": "כיסוי דרישות"
+      },
+      {
+        "id": "d",
+        "labelHe": "חומרת פגמים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אפשר להריץ מאות מקרים שוליים ולדלג על עשרה קריטיים ועדיין להציג אחוז גבוה.",
+    "skillId": "MGMT.MON",
+    "dimension": "application"
+  }
+}

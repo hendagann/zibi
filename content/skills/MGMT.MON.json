@@ -1,0 +1,14 @@
+{
+  "id": "MGMT.MON",
+  "topic": "MGMT/control",
+  "titleHe": "ניטור ובקרה",
+  "titleEn": "Monitoring and control",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Interprets a set of test progress data, stating both what it shows about progress and what it does not.",
+  "prerequisites": [
+    "MGMT.PLAN"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

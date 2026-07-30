@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-tooling.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/tooling",
+  "skills": {
+    "primary": "MGMT.TOOL"
+  },
+  "title": "עקיבות בכלי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפשרים קישורי עקיבות בכלי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-tooling.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לקצר את הדוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "לענות על \"אילו דרישות יש להן פגמים פתוחים\""
+      },
+      {
+        "id": "c",
+        "labelHe": "להאיץ תיקונים"
+      },
+      {
+        "id": "d",
+        "labelHe": "למחוק פגמים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "עקיבות מקשרת פגם לדרישה ולמקרה בדיקה.",
+    "skillId": "MGMT.TOOL",
+    "dimension": "application"
+  }
+}

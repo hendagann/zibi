@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.DEFPREV",
+  "topic": "MGMT/strategy",
+  "titleHe": "מניעת פגמים",
+  "titleEn": "Defect prevention",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Analyses a set of defects for a common cause and proposes a process change that prevents the class, not the instance.",
+  "prerequisites": [
+    "MGMT.METRIC",
+    "DOC.BUG"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

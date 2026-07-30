@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.EST"
+  },
+  "title": "דומיננטיות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע בדלפי ההערכה הראשונה נעשית עצמאית ובלי לחשוף מספרים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כדי לחסוך זמן"
+      },
+      {
+        "id": "b",
+        "labelHe": "כדי שמומחה דומיננטי לא ימשוך את כולם למספר שלו"
+      },
+      {
+        "id": "c",
+        "labelHe": "כדי לשמור על סוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה לא נדרש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חשיפת מספר ראשון גורמת להתכנסות אליו; הפער בין הערכות הוא המידע היקר בדיון.",
+    "skillId": "MGMT.EST",
+    "dimension": "application"
+  }
+}

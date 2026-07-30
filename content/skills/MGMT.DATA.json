@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.DATA",
+  "topic": "MGMT/infrastructure",
+  "titleHe": "ניהול נתוני בדיקה",
+  "titleEn": "Test data management",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Specifies the test data a scenario requires - creation, isolation and reset - and identifies personal data requiring protection.",
+  "prerequisites": [
+    "DOC.REQ",
+    "TECH.SQL"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

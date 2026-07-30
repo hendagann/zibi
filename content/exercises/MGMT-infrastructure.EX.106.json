@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-infrastructure.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/infrastructure",
+  "skills": {
+    "primary": "MGMT.ENV"
+  },
+  "title": "אימות תצורה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד מאמתים השערה על הבדל בתצורה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-infrastructure.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שואלים את המפתח"
+      },
+      {
+        "id": "b",
+        "labelHe": "משווים את משתני הסביבה שדה מול שדה בין הסביבות"
+      },
+      {
+        "id": "c",
+        "labelHe": "מריצים שוב"
+      },
+      {
+        "id": "d",
+        "labelHe": "מחכים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל השערה מלווה בדרך אימות, אחרת זו החלפת ניחושים.",
+    "skillId": "MGMT.ENV",
+    "dimension": "application"
+  }
+}

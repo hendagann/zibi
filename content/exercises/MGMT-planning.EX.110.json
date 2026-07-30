@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-planning.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/planning",
+  "skills": {
+    "primary": "MGMT.PLAN"
+  },
+  "title": "פירמידה הפוכה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה ב-Ice Cream Cone (הרבה בדיקות ממשק, מעט יחידה)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-planning.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "יקר לתחזוקה, איטי ושברירי — וכשל אינו מצביע היכן הבעיה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא מהיר מדי"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא דורש פחות בודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקות ממשק רבות נשברות מכל שינוי עיצוב ואינן מאתרות את מקור התקלה.",
+    "skillId": "MGMT.PLAN",
+    "dimension": "application"
+  }
+}
