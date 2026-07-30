@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "ירוק אינו ערובה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע צנרת ירוקה אינה מבטיחה מוצר איכותי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כי הבדיקות איטיות"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי היא מאשרת רק שהבדיקות שנכתבו עברו — אזור בלי בדיקות יישאר ירוק גם כשהוא שבור"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי היא רצה בלילה"
+      },
+      {
+        "id": "d",
+        "labelHe": "כי היא לא כוללת בדיקות יחידה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כיסוי הבדיקות הוא גבול הידיעה של הצנרת; היעדר בדיקה אינו היעדר פגם.",
+    "skillId": "LIFE.CICD",
+    "dimension": "application"
+  }
+}

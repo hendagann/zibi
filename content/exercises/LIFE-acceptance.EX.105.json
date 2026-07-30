@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "קבלה תפעולית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה בוחנת קבלה תפעולית (OAT)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "צבעי הממשק"
+      },
+      {
+        "id": "b",
+        "labelHe": "מוכנות לתפעול — גיבוי ושחזור, ניטור, תזמון משימות, שדרוג"
+      },
+      {
+        "id": "c",
+        "labelHe": "את הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "את שביעות רצון המשתמש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "OAT שואלת אם המערכת ניתנת להפעלה ביום-יום, לא אם היא נעימה לשימוש.",
+    "skillId": "LIFE.UAT",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "ערך ATDD",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו הערך העיקרי של ATDD?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא מייתר בדיקות"
+      },
+      {
+        "id": "b",
+        "labelHe": "השיחה המשותפת חושפת אי-בהירות בדרישה כשעוד זול לתקן"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא מאיץ את הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מחליף את מנהל המוצר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הערך הוא תקשורתי: ניסוח תוצאה צפויה מראש חושף פערי הבנה מוקדם.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "UAT כחזרה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צוות מריץ ב-UAT בדיוק את אותם מקרי בדיקת מערכת. מה הבעיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "כך מוותרים על היכולת היחידה לגלות שהמפרט עצמו היה שגוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה לוקח יותר זמן"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה דורש יותר בודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אם UAT חוזרת על המפרט, היא לא בודקת את הצורך — ומאבדת את כל ערכה.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

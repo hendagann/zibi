@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.WHOLE"
+  },
+  "title": "מלכודת Agile",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו קביעה על תפקיד הבודקת ב-Agile שגויה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא משתתפת בתכנון"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא מנסחת קריטריוני קבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא מתחילה לבדוק רק אחרי שכל הפיתוח הסתיים"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא מריצה רגרסיה לקראת סוף האיטרציה"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "בדיקה מתחילה מוקדם ורצה במקביל לפיתוח; המתנה לסיום הפיתוח היא בדיוק מה שהגישה מונעת.",
+    "skillId": "LIFE.WHOLE",
+    "dimension": "application"
+  }
+}

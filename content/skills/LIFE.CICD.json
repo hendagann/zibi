@@ -1,0 +1,15 @@
+{
+  "id": "LIFE.CICD",
+  "topic": "LIFE/delivery",
+  "titleHe": "אוריינות CI/CD",
+  "titleEn": "CI/CD literacy",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Determines, from a failed pipeline result, whether the failure indicates a product defect, a test defect or an environment problem.",
+  "prerequisites": [
+    "LIFE.MODEL",
+    "LIFE.REG"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

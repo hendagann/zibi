@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "DoR מול DoD",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין DoR ל-DoD?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "DoR שומר על הכניסה לספרינט; DoD שומר על סימון הסיפור כגמור"
+      },
+      {
+        "id": "c",
+        "labelHe": "DoD נכתב על ידי הלקוח בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "DoR חל רק על באגים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שני שערים שונים: אחד מונע כניסה של סיפור לא בשל, השני מונע \"בוצע\" על עבודה שלא נבדקה.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

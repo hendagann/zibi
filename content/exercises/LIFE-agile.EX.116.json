@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.WHOLE"
+  },
+  "title": "מתי מתחילה הבדיקה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מתי נכון שהבודקת תתחיל לעבוד באיטרציה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ביום האחרון"
+      },
+      {
+        "id": "b",
+        "labelHe": "מהתכנון — חידוד סיפורים, ניסוח קריטריונים ובדיקה תוך כדי"
+      },
+      {
+        "id": "c",
+        "labelHe": "אחרי השחרור"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק כשיש באג"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הבודקת שותפה לכל האיטרציה; דחיסת הבדיקה לסוף מבטיחה שפגמים יתגלו כשאין זמן לתקן.",
+    "skillId": "LIFE.WHOLE",
+    "dimension": "application"
+  }
+}

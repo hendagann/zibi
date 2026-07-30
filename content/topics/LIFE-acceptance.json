@@ -1,0 +1,49 @@
+{
+  "id": "LIFE/acceptance",
+  "nameHe": "קבלה וחשיבה עסקית",
+  "nameEn": "Acceptance and business thinking",
+  "domain": "LIFE",
+  "description": "בדיקות קבלה כשאלה עסקית ולא טכנית: גזירת בדיקות מהמטרה העסקית, והבחנה בין UAT, קבלה תפעולית (OAT), קבלה חוזית ורגולטורית, ובין אלפא לבטא.",
+  "learningObjectives": [
+    "לגזור בדיקות קבלה מתוך מטרה עסקית מוצהרת ולא מתוך המימוש",
+    "להבחין בין UAT, קבלה תפעולית וקבלה חוזית/רגולטורית",
+    "להבחין בין בדיקות אלפא לבטא ולציין מי מבצע כל אחת",
+    "להסביר מדוע מוצר שעובר את כל בדיקות המערכת עדיין עלול להיכשל בקבלה"
+  ],
+  "prerequisites": [
+    "LIFE/levels-types"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 70,
+  "measuredSkills": [
+    "LIFE.UAT"
+  ],
+  "summaryRef": "LIFE-acceptance.SUM.001",
+  "lessonRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "exerciseRefs": [
+    "LIFE-acceptance.EX.100",
+    "LIFE-acceptance.EX.101",
+    "LIFE-acceptance.EX.102",
+    "LIFE-acceptance.EX.103",
+    "LIFE-acceptance.EX.104",
+    "LIFE-acceptance.EX.105",
+    "LIFE-acceptance.EX.106",
+    "LIFE-acceptance.EX.107",
+    "LIFE-acceptance.EX.108",
+    "LIFE-acceptance.EX.109",
+    "LIFE-acceptance.EX.110",
+    "LIFE-acceptance.EX.111",
+    "LIFE-acceptance.EX.112",
+    "LIFE-acceptance.EX.113",
+    "LIFE-acceptance.EX.114",
+    "LIFE-acceptance.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

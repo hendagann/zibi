@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "הגדרת מוכן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קובעת הגדרת מוכן (DoR)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מתי הסיפור גמור"
+      },
+      {
+        "id": "b",
+        "labelHe": "מתי סיפור בשל מספיק כדי להיכנס לספרינט"
+      },
+      {
+        "id": "c",
+        "labelHe": "מתי משחררים גרסה"
+      },
+      {
+        "id": "d",
+        "labelHe": "מתי סוגרים באג"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "DoR היא שער הכניסה: הסיפור מובן, מוערך, יש לו קריטריוני קבלה ותלויות ידועות.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "ערך לבודקת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הערך העיקרי של צנרת CI/CD לבודקת ידנית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא מחליפה אותה"
+      },
+      {
+        "id": "b",
+        "labelHe": "רגרסיה אוטומטית מהירה ומשוב תוך דקות"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא כותבת מקרי בדיקה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא מתקנת באגים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הצנרת מספקת רשת ביטחון של רגרסיה מהירה, ומפנה את הבודקת לחקירה ולשיקול דעת.",
+    "skillId": "LIFE.CICD",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "דיווח נכון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הוכרע שמדובר בתקלת סביבה. למי מדווחים ואיך?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פותחים באג מוצר על המפתח"
+      },
+      {
+        "id": "b",
+        "labelHe": "מדווחים לגורם התשתית, עם הראיות: הודעת השגיאה, היקף הכשל ותוכן הקומיט"
+      },
+      {
+        "id": "c",
+        "labelHe": "מתעלמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "מוחקים את הסדרה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הדיווח מופנה לפי הקטגוריה שהוכרעה, ותמיד נשען על הראיות שאספת.",
+    "skillId": "LIFE.CICD",
+    "dimension": "application"
+  }
+}

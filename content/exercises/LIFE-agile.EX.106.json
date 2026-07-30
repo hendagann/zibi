@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "תיקון ניסוח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד נכון לתקן את הקריטריון \"המערכת תגיב מהר\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להשאיר כמו שהוא"
+      },
+      {
+        "id": "b",
+        "labelHe": "\"זמן תגובה מתחת ל-2 שניות ב-95% מהבקשות\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"המערכת תגיב מהר מאוד\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"הביצועים יהיו טובים\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "החלפת תואר בערך מדיד הופכת כוונה לתנאי שניתן לאמת.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

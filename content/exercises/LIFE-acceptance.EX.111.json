@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "בטא",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מייחד בדיקות בטא?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הן אוטומטיות"
+      },
+      {
+        "id": "b",
+        "labelHe": "משתמשים אמיתיים מריצים את המוצר בסביבתם שלהם"
+      },
+      {
+        "id": "c",
+        "labelHe": "הן מבוצעות על ידי המפתחים"
+      },
+      {
+        "id": "d",
+        "labelHe": "הן מחליפות בדיקות מערכת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בטא נותנת גיוון של מכשירים, רשתות והרגלי שימוש שאי אפשר לשחזר במעבדה.",
+    "skillId": "LIFE.UAT",
+    "dimension": "knowledge"
+  }
+}

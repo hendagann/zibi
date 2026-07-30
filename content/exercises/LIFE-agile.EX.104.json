@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "מבחן האימות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו המבחן שקובע אם קריטריון קבלה תקין?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "האם הוא קצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם שני אנשים יסכימו חד-משמעית אם הוא התקיים"
+      },
+      {
+        "id": "c",
+        "labelHe": "האם מנהל המוצר אישר"
+      },
+      {
+        "id": "d",
+        "labelHe": "האם הוא כתוב באנגלית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קריטריון שאי אפשר לקבוע לגביו כן/לא חד-משמעי אינו בדיק, ויוביל לוויכוח בסוף הספרינט.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

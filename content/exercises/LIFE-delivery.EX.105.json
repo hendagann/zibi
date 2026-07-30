@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "כשל לסירוגין",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בדיקה נכשלת בכל הרצה שנייה בלי שהשתנה קוד. מה הסביר ביותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פגם מוצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקה שברירית (למשל תלות בתזמון)"
+      },
+      {
+        "id": "c",
+        "labelHe": "תקלת רגולציה"
+      },
+      {
+        "id": "d",
+        "labelHe": "דרישה חסרה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אי-דטרמיניזם בלי שינוי קוד מצביע כמעט תמיד על שבריריות בבדיקה או בסביבה.",
+    "skillId": "LIFE.CICD",
+    "dimension": "application"
+  }
+}

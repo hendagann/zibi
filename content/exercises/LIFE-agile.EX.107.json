@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "Given-When-Then",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מתאר פורמט Given-When-Then?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מצב התחלה, פעולה ותוצאה צפויה"
+      },
+      {
+        "id": "b",
+        "labelHe": "דרישה, עיצוב וקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "חומרה, עדיפות וסטטוס"
+      },
+      {
+        "id": "d",
+        "labelHe": "תכנון, ביצוע וסיכום"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "בהינתן (מצב), כאשר (פעולה), אז (תוצאה צפויה) — כמעט מקרה בדיקה מוכן.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}

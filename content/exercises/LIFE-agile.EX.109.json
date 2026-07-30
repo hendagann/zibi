@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "מסלול שלילי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "סיפור איפוס סיסמה קיבל קריטריונים רק למסלול התקין. מה חסר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "מסלולים שליליים ומקרי גבול: מייל לא רשום, קישור שפג, קישור שנוצל"
+      },
+      {
+        "id": "c",
+        "labelHe": "אומדן"
+      },
+      {
+        "id": "d",
+        "labelHe": "שם המפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המסלול התקין הוא רק חלק; פקיעה, שימוש חוזר וקלט לא מוכר הם המקומות שנשברים בפועל.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

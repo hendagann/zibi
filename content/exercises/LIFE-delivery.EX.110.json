@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "מלכודת דיווח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הנזק בפתיחת באג מוצר על כל ריצה אדומה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין נזק"
+      },
+      {
+        "id": "b",
+        "labelHe": "דיווחים שמתבררים כתקלות סביבה שוחקים את אמון המפתחים בבדיקות"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה מאט את הצנרת"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה מוחק בדיקות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אמון נשחק מהר; אחרי כמה דיווחי שווא, גם באג אמיתי לא יזכה ליחס.",
+    "skillId": "LIFE.CICD",
+    "dimension": "application"
+  }
+}

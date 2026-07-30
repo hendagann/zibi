@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "מי מבצע UAT",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מי מבצע בדרך כלל בדיקות קבלת משתמש (UAT)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "צוות הפיתוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "משתמשי הקצה או נציגי הלקוח"
+      },
+      {
+        "id": "c",
+        "labelHe": "מנהל הפרויקט בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "מערכת אוטומטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "UAT מבוצעת על ידי מי שישתמש במערכת בפועל, לא על ידי מי שבנה אותה.",
+    "skillId": "LIFE.UAT",
+    "dimension": "knowledge"
+  }
+}

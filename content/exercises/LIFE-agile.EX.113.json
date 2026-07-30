@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "בלי DoD",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קורה בצוות שלא הגדיר DoD?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הצוות מהיר יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "\"בוצע\" הופך לפרשנות אישית, ומצטבר חוב של משימות שנראות סגורות ופתוחות בפועל"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין השפעה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הבדיקות מיותרות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בלי הגדרה משותפת, כל אחד מסמן \"בוצע\" לפי קריטריון אחר — וזה מקור לבאגים שמחליקים.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.RISK",
+  "topic": "MGMT/risk",
+  "titleHe": "ניתוח סיכונים",
+  "titleEn": "Risk analysis",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Rates a product risk on likelihood and impact with stated reasoning, and distinguishes product risk from project risk.",
+  "prerequisites": [
+    "FUND.PROC",
+    "LIFE.TYPE"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

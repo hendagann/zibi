@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "סיווג גיבוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה: \"גיבוי לילי רץ וניתן לשחזר ממנו\". איזה סוג קבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "UAT"
+      },
+      {
+        "id": "b",
+        "labelHe": "קבלה תפעולית (OAT)"
+      },
+      {
+        "id": "c",
+        "labelHe": "קבלה חוזית"
+      },
+      {
+        "id": "d",
+        "labelHe": "קבלה רגולטורית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אין כאן משתמש קצה — זו מוכנות תפעולית, כלומר OAT.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

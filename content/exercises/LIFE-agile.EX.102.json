@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "סיפור אינו מפרט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נכון לגבי סיפור משתמש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא מפרט טכני מלא"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא קצר בכוונה ונועד לפתוח שיחה; הפרטים מתועדים בקריטריוני הקבלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא נכתב על ידי הבודקת בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מחליף בדיקות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הסיפור פותח שיחה; הפירוט — ערכי גבול, שגיאות, הודעות — חי בקריטריוני הקבלה.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}

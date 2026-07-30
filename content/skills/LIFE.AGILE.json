@@ -1,0 +1,15 @@
+{
+  "id": "LIFE.AGILE",
+  "topic": "LIFE/agile",
+  "titleHe": "סיפורי משתמש וקריטריוני קבלה",
+  "titleEn": "User stories and acceptance criteria",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Converts a user story into testable acceptance criteria, and identifies criteria that cannot be verified as written.",
+  "prerequisites": [
+    "LIFE.MODEL",
+    "LIFE.LEVEL"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "אלפא",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "היכן מתבצעות בדיקות אלפא?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אצל משתמשים אמיתיים בשטח"
+      },
+      {
+        "id": "b",
+        "labelHe": "בתוך הארגון, לפני חשיפה חיצונית"
+      },
+      {
+        "id": "c",
+        "labelHe": "בסביבת ייצור בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "אצל הרגולטור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אלפא היא בדיקה פנימית בארגון על גרסה קרובה לייצור, לפני חשיפה חיצונית.",
+    "skillId": "LIFE.UAT",
+    "dimension": "knowledge"
+  }
+}

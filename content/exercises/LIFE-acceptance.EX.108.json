@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "קבלה רגולטורית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה: \"עמידה בתקנות הגנת הפרטיות ובתקן נגישות\". איזה סוג קבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "UAT"
+      },
+      {
+        "id": "b",
+        "labelHe": "OAT"
+      },
+      {
+        "id": "c",
+        "labelHe": "קבלה רגולטורית"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקת יחידה"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "חוק ותקן הם המדד — זו קבלה רגולטורית, גם אם המשתמשים מרוצים.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

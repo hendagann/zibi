@@ -1,0 +1,14 @@
+{
+  "id": "LIFE.WHOLE",
+  "topic": "LIFE/agile",
+  "titleHe": "גישת whole-team",
+  "titleEn": "Whole-team approach",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Describes what the tester contributes at each point of an iteration, and identifies work that should not fall to the tester alone.",
+  "prerequisites": [
+    "LIFE.AGILE"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

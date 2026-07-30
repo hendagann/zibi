@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "הגדרת בוצע",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קובעת הגדרת בוצע (DoD)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מתי סיפור נכנס לספרינט"
+      },
+      {
+        "id": "b",
+        "labelHe": "מתי סיפור באמת גמור — נסקר, נבדק, פגמים קריטיים נסגרו, תיעוד עודכן"
+      },
+      {
+        "id": "c",
+        "labelHe": "מתי כותבים קוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "מתי מתכננים ספרינט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "DoD היא שער היציאה, וההגנה מפני \"בוצע\" שמשמעותו רק \"הקוד נכתב\".",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}

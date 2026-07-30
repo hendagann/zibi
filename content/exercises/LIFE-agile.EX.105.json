@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "קריטריון פסול",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה קריטריון קבלה אינו ניתן לאימות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הקישור פג אחרי 60 דקות ומציג הודעת פקיעה"
+      },
+      {
+        "id": "b",
+        "labelHe": "המערכת תעבוד היטב ותהיה מאובטחת"
+      },
+      {
+        "id": "c",
+        "labelHe": "בהזנת מייל לא רשום מוצגת הודעה \"כתובת לא מוכרת\""
+      },
+      {
+        "id": "d",
+        "labelHe": "תגובה תוך פחות מ-2 שניות ב-95% מהבקשות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "\"היטב\" ו\"מאובטחת\" אינם מדידים — אי אפשר לקבוע חד-משמעית אם התקיימו.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "application"
+  }
+}

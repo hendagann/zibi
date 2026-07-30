@@ -1,0 +1,15 @@
+{
+  "id": "LIFE.UAT",
+  "topic": "LIFE/acceptance",
+  "titleHe": "בדיקות קבלה",
+  "titleEn": "Acceptance testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Derives acceptance tests from a stated business goal rather than from the implementation, and distinguishes alpha, beta and formal acceptance.",
+  "prerequisites": [
+    "LIFE.LEVEL",
+    "MGMT.RISK"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

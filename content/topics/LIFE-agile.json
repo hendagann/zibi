@@ -1,0 +1,57 @@
+{
+  "id": "LIFE/agile",
+  "nameHe": "בדיקות ב-Agile",
+  "nameEn": "Testing in Agile",
+  "domain": "LIFE",
+  "description": "סיפורי משתמש וקריטריוני קבלה מדידים, הגדרת מוכן והגדרת בוצע, ATDD ותפקיד הבודקת לאורך האיטרציה. הנושא שממנו נגזרות שאלות הראיון הנפוצות ביותר על עבודה בצוות Agile.",
+  "learningObjectives": [
+    "להמיר סיפור משתמש לקריטריוני קבלה שניתן לאמת",
+    "לזהות קריטריון קבלה שאינו ניתן לאימות כפי שנוסח ולתקן אותו",
+    "להסביר את ההבדל בין הגדרת מוכן (DoR) להגדרת בוצע (DoD)",
+    "לתאר מה הבודקת תורמת בכל שלב של האיטרציה ומה אינו צריך ליפול עליה לבדה"
+  ],
+  "prerequisites": [
+    "LIFE/models",
+    "LIFE/levels-types"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 85,
+  "measuredSkills": [
+    "LIFE.AGILE",
+    "LIFE.WHOLE"
+  ],
+  "summaryRef": "LIFE-agile.SUM.001",
+  "lessonRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "exerciseRefs": [
+    "LIFE-agile.EX.100",
+    "LIFE-agile.EX.101",
+    "LIFE-agile.EX.102",
+    "LIFE-agile.EX.103",
+    "LIFE-agile.EX.104",
+    "LIFE-agile.EX.105",
+    "LIFE-agile.EX.106",
+    "LIFE-agile.EX.107",
+    "LIFE-agile.EX.108",
+    "LIFE-agile.EX.109",
+    "LIFE-agile.EX.110",
+    "LIFE-agile.EX.111",
+    "LIFE-agile.EX.112",
+    "LIFE-agile.EX.113",
+    "LIFE-agile.EX.114",
+    "LIFE-agile.EX.115",
+    "LIFE-agile.EX.116",
+    "LIFE-agile.EX.117",
+    "LIFE-agile.EX.118",
+    "LIFE-agile.EX.119",
+    "LIFE-agile.EX.120",
+    "LIFE-agile.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

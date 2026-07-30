@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "שלוש קטגוריות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ריצה אדומה יכולה להעיד על שלוש אפשרויות. מהן?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פגם מוצר, פגם בבדיקה, תקלת סביבה"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם מוצר בלבד"
+      },
+      {
+        "id": "c",
+        "labelHe": "באג, שיפור, בקשה"
+      },
+      {
+        "id": "d",
+        "labelHe": "נמוך, בינוני, גבוה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "כשל בצנרת אינו מסקנה אלא שאלה: מוצר, בדיקה או סביבה.",
+    "skillId": "LIFE.CICD",
+    "dimension": "knowledge"
+  }
+}

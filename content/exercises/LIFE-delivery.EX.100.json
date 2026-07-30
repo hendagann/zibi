@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "מה קורה בצנרת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מתרחש בצנרת CI/CD בכל שינוי קוד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לא קורה דבר עד סוף הספרינט"
+      },
+      {
+        "id": "b",
+        "labelHe": "המוצר נבנה, מורצות בדיקות אוטומטיות, ואם עברו — נפרס לסביבה"
+      },
+      {
+        "id": "c",
+        "labelHe": "נכתב מסמך דרישות"
+      },
+      {
+        "id": "d",
+        "labelHe": "מתקיימת פגישת צוות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הצנרת בונה, מריצה בדיקות ופורסת — לולאת משוב של דקות במקום ימים.",
+    "skillId": "LIFE.CICD",
+    "dimension": "knowledge"
+  }
+}

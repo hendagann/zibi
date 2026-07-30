@@ -1,0 +1,12 @@
+{
+  "id": "MIS.LIFE.GREEN_MEANS_QUALITY",
+  "titleHe": "צנרת ירוקה = מוצר איכותי",
+  "descriptionHe": "הסקה שאם כל הבדיקות בצנרת עברו, המוצר תקין ואפשר לשחרר בלי בדיקה חקרנית ושיקול דעת.",
+  "whyTempting": "ירוק מלא נראה כמו אישור גורף. אבל הצנרת מאשרת רק שהבדיקות שנכתבו עברו — אזור שאין לו בדיקות יישאר ירוק גם כשהוא שבור לחלוטין.",
+  "skillIds": [
+    "LIFE.CICD"
+  ],
+  "remediationRef": "LIFE-delivery.LE.001",
+  "anchor": "sec-green",
+  "status": "active"
+}

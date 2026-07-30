@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "משוב מבטא",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פגם מהותי עלה במשוב מבטא. כיצד להתייחס?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זו רק דעה, אפשר להתעלם"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם מהותי מבטא מחייב טיפול לפני שחרור רשמי"
+      },
+      {
+        "id": "c",
+        "labelHe": "לדחות לגרסה הבאה תמיד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לסגור את תוכנית הבטא"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בטא אינה סקר דעות: היא חושפת כשלים אמיתיים בתנאים אמיתיים.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "תרחישים מכשילים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בבדיקת קבלה למטרת \"קיצור זמן טיפול\", מה חשוב לכלול מעבר לתרחיש הנפוץ?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק את התרחיש הפשוט"
+      },
+      {
+        "id": "b",
+        "labelHe": "פניות מורכבות, העברה בין מחלקות ונציג חדש"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקות יחידה"
+      },
+      {
+        "id": "d",
+        "labelHe": "סקירת קוד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "התרחישים המורכבים הם שמושכים את הממוצע האמיתי בייצור; בלעדיהם המדידה מטעה.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

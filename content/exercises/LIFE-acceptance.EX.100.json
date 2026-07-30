@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "שאלת הקבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "על איזו שאלה עונה בדיקת קבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "האם הקוד נקי"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם המוצר פותר את הבעיה העסקית שבגללה נבנה"
+      },
+      {
+        "id": "c",
+        "labelHe": "האם הפונקציה מחזירה ערך"
+      },
+      {
+        "id": "d",
+        "labelHe": "האם יש בדיקות יחידה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קבלה היא השאלה העסקית — לא רק אם המוצר עובד לפי המפרט, אלא אם הוא עונה על הצורך.",
+    "skillId": "LIFE.UAT",
+    "dimension": "knowledge"
+  }
+}

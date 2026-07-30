@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.WHOLE"
+  },
+  "title": "תרומה ברטרוספקטיבה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבודקת מביאה לרטרוספקטיבה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רשימת באגים בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "נתונים על מה דלף, למה, ומה כדאי לשנות בתהליך"
+      },
+      {
+        "id": "c",
+        "labelHe": "אומדן לספרינט הבא"
+      },
+      {
+        "id": "d",
+        "labelHe": "קוד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הרטרו עוסקת בתהליך; תרומת הבודקת היא ניתוח נזילות ולקחים, לא רשימת פגמים.",
+    "skillId": "LIFE.WHOLE",
+    "dimension": "application"
+  }
+}

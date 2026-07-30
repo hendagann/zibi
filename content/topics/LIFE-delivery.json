@@ -1,0 +1,50 @@
+{
+  "id": "LIFE/delivery",
+  "nameHe": "צנרת אספקה",
+  "nameEn": "Delivery pipeline",
+  "domain": "LIFE",
+  "description": "קריאת תוצאות של צנרת CI/CD: מה קורה בכל commit, ואיך מכריעים אם ריצה אדומה מעידה על פגם במוצר, פגם בבדיקה או תקלת סביבה. מיומנות יומיומית בכל צוות מודרני.",
+  "learningObjectives": [
+    "לתאר מה מתרחש בצנרת CI/CD בכל שינוי קוד",
+    "להכריע, מתוך ריצה כושלת, אם מדובר בפגם מוצר, פגם בבדיקה או תקלת סביבה",
+    "לנמק את ההכרעה בראיות מתוך הריצה ולא בניחוש",
+    "להסביר מדוע ריצה ירוקה אינה ערובה לאיכות"
+  ],
+  "prerequisites": [
+    "LIFE/models",
+    "LIFE/levels-types"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 65,
+  "measuredSkills": [
+    "LIFE.CICD"
+  ],
+  "summaryRef": "LIFE-delivery.SUM.001",
+  "lessonRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "exerciseRefs": [
+    "LIFE-delivery.EX.100",
+    "LIFE-delivery.EX.101",
+    "LIFE-delivery.EX.102",
+    "LIFE-delivery.EX.103",
+    "LIFE-delivery.EX.104",
+    "LIFE-delivery.EX.105",
+    "LIFE-delivery.EX.106",
+    "LIFE-delivery.EX.107",
+    "LIFE-delivery.EX.108",
+    "LIFE-delivery.EX.109",
+    "LIFE-delivery.EX.110",
+    "LIFE-delivery.EX.111",
+    "LIFE-delivery.EX.112",
+    "LIFE-delivery.EX.113",
+    "LIFE-delivery.EX.114",
+    "LIFE-delivery.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

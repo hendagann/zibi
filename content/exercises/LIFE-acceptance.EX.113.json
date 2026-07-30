@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "מערכת מול קבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מוצר עבר את כל בדיקות המערכת אך הלקוח אומר שהוא לא עוזר לו. מה קרה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הבדיקות היו שגויות"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבדיקות אימתו את המפרט, אך המפרט עצמו לא ענה על הצורך"
+      },
+      {
+        "id": "c",
+        "labelHe": "הקוד לא קומפל"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא בוצעו בדיקות יחידה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקות מערכת מאמתות מול המפרט; פער בין המפרט לצורך מתגלה רק בקבלה.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-acceptance.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/acceptance",
+  "skills": {
+    "primary": "LIFE.UAT"
+  },
+  "title": "בדיקה שנגזרה מהמימוש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "המטרה: לקצר זמן טיפול ל-5 דקות. איזו בדיקת קבלה שגויה בגישתה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-acceptance.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מדידת זמן טיפול מקצה לקצה ב-10 פניות"
+      },
+      {
+        "id": "b",
+        "labelHe": "לוודא שכפתור \"פתרון מהיר\" מופיע ולוחץ"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקת פנייה מורכבת שאינה מתאימה לפתרון מהיר"
+      },
+      {
+        "id": "d",
+        "labelHe": "מדידת זמן אצל נציג חדש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אישור שהכפתור קיים נגזר מהמימוש ואינו יכול לומר דבר על זמן הטיפול בפועל.",
+    "skillId": "LIFE.UAT",
+    "dimension": "application"
+  }
+}

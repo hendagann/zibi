@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-delivery.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/delivery",
+  "skills": {
+    "primary": "LIFE.CICD"
+  },
+  "title": "בדיקה מיושנת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "המוצר שונה בכוונה, והבדיקה מצפה להתנהגות הישנה. מה זה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-delivery.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פגם מוצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם בבדיקה — היא לא עודכנה אחרי שינוי מכוון"
+      },
+      {
+        "id": "c",
+        "labelHe": "תקלת סביבה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין כשל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כשההתנהגות החדשה היא הנכונה, הבדיקה היא שצריכה להתעדכן.",
+    "skillId": "LIFE.CICD",
+    "dimension": "application"
+  }
+}

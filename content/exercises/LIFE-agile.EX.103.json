@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "מהם קריטריוני קבלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם קריטריוני קבלה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רשימת באגים"
+      },
+      {
+        "id": "b",
+        "labelHe": "התנאים המדידים שקובעים מתי הסיפור נחשב בוצע"
+      },
+      {
+        "id": "c",
+        "labelHe": "אומדן שעות"
+      },
+      {
+        "id": "d",
+        "labelHe": "תיאור הארכיטקטורה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קריטריוני קבלה הם תנאים מדידים וניתנים לאימות, והבסיס הישיר למקרי הבדיקה.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}

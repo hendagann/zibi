@@ -1,0 +1,67 @@
+{
+  "id": "LIFE-agile.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "LIFE/agile",
+  "skills": {
+    "primary": "LIFE.AGILE"
+  },
+  "title": "ATDD",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו ATDD?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "LIFE-agile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלי אוטומציה"
+      },
+      {
+        "id": "b",
+        "labelHe": "גישה שבה הלקוח, המפתח והבודקת מנסחים יחד מבחני קבלה לפני כתיבת הקוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "סוג בדיקת עומס"
+      },
+      {
+        "id": "d",
+        "labelHe": "שיטת אומדן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ב-ATDD מבחני הקבלה נכתבים לפני הקוד, בשיתוף שלושת התפקידים.",
+    "skillId": "LIFE.AGILE",
+    "dimension": "knowledge"
+  }
+}
