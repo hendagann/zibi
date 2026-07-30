@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.RTM"
+  },
+  "title": "בדיקה יתומה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מקרה בדיקה שאינו קשור לאף דרישה. מה עושים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מוחקים"
+      },
+      {
+        "id": "b",
+        "labelHe": "בודקים אם הוא מכסה התנהגות אמיתית שלא תועדה, ואז מתעדים את הדרישה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מתעלמים"
+      },
+      {
+        "id": "d",
+        "labelHe": "מעבירים למפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "החוסר הוא לרוב בתיעוד, לא בבדיקה.",
+    "skillId": "DOC.RTM",
+    "dimension": "application"
+  }
+}

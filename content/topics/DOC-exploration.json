@@ -1,0 +1,49 @@
+{
+  "id": "DOC/exploration",
+  "nameHe": "תיעוד חקירה",
+  "nameEn": "Documenting exploration",
+  "domain": "DOC",
+  "description": "כתיבת charter שממקד סשן חקירה: מה נחקר, באילו משאבים ואיזה מידע מחפשים — צר מספיק כדי להיות בר-ביצוע, רחב מספיק כדי לגלות את הבלתי צפוי.",
+  "learningObjectives": [
+    "לכתוב charter שממקד סשן חקירה למטרה ברת-ביצוע",
+    "לזהות charter רחב מדי או צר מדי ולתקן",
+    "לציין את המשאבים ואת סוג המידע שהסשן מחפש",
+    "לגזור סדרת charters מאזור סיכון נתון"
+  ],
+  "prerequisites": [
+    "TD/experience-based"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 60,
+  "measuredSkills": [
+    "DOC.CHART"
+  ],
+  "summaryRef": "DOC-exploration.SUM.001",
+  "lessonRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "exerciseRefs": [
+    "DOC-exploration.EX.100",
+    "DOC-exploration.EX.101",
+    "DOC-exploration.EX.102",
+    "DOC-exploration.EX.103",
+    "DOC-exploration.EX.104",
+    "DOC-exploration.EX.105",
+    "DOC-exploration.EX.106",
+    "DOC-exploration.EX.107",
+    "DOC-exploration.EX.108",
+    "DOC-exploration.EX.109",
+    "DOC-exploration.EX.110",
+    "DOC-exploration.EX.111",
+    "DOC-exploration.EX.112",
+    "DOC-exploration.EX.113",
+    "DOC-exploration.EX.114",
+    "DOC-exploration.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

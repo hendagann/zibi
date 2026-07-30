@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "title": "ארבעה מרכיבים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם מרכיבי מקרה הבדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תנאים מקדימים, נתונים, צעדים, תוצאה צפויה"
+      },
+      {
+        "id": "b",
+        "labelHe": "כותרת, חומרה, עדיפות, סטטוס"
+      },
+      {
+        "id": "c",
+        "labelHe": "קלט, קוד, פלט"
+      },
+      {
+        "id": "d",
+        "labelHe": "מי, מתי, איפה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "אלה ארבעת המרכיבים ההכרחיים.",
+    "skillId": "DOC.TC",
+    "dimension": "knowledge"
+  }
+}

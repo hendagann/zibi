@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.I18N"
+  },
+  "title": "התארכות טקסט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע תרגום עלול לשבור פריסה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא לא"
+      },
+      {
+        "id": "b",
+        "labelHe": "טקסט מתורגם ארוך יותר מהמקור ושובר פריסה שנבנתה לאנגלית קצרה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הגופן שונה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצבע משתנה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תוויות וכפתורים הם המקום השכיח.",
+    "skillId": "TECH.I18N",
+    "dimension": "application"
+  }
+}

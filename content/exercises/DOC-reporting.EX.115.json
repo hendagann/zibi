@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.STAKE"
+  },
+  "title": "תיגר — התחפרות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה בתגובה \"אני מתנגדת\" בלי חלופות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הדיון הופך לעימות על מי מחליט במקום על הסיכון"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא קצרה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא לא מקצועית מספיק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "עמדה בלי חלופות ממקמת את הבודקת כחוסמת.",
+    "skillId": "DOC.STAKE",
+    "dimension": "application"
+  }
+}

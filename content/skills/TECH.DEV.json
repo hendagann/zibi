@@ -1,0 +1,14 @@
+{
+  "id": "TECH.DEV",
+  "topic": "TECH/web",
+  "titleHe": "כלי מפתחים בדפדפן",
+  "titleEn": "Browser developer tools",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Uses browser developer tools to capture the evidence that distinguishes a client-side cause from a server-side one.",
+  "prerequisites": [
+    "TECH.WEB"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

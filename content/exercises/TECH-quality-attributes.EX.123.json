@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.123",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "מיקוד נראה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע חשוב שהמיקוד יהיה נראה לעין?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לעיצוב"
+      },
+      {
+        "id": "b",
+        "labelHe": "בלעדיו משתמש מקלדת אינו יודע היכן הוא נמצא במסך"
+      },
+      {
+        "id": "c",
+        "labelHe": "למהירות"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין חשיבות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מיקוד בלתי נראה הופך ניווט מקלדת לבלתי אפשרי.",
+    "skillId": "TECH.A11Y",
+    "dimension": "application"
+  }
+}

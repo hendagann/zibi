@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "Content-Type",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מציינת הכותרת Content-Type?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "את גודל הגוף"
+      },
+      {
+        "id": "b",
+        "labelHe": "את פורמט גוף הבקשה או התגובה"
+      },
+      {
+        "id": "c",
+        "labelHe": "את המשתמש"
+      },
+      {
+        "id": "d",
+        "labelHe": "את הגרסה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "למשל application/json.",
+    "skillId": "TECH.API",
+    "dimension": "knowledge"
+  }
+}

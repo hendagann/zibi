@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "Authorization",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נושאת הכותרת Authorization?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "את שם המשתמש בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "את הטוקן שמאמת את הבקשה"
+      },
+      {
+        "id": "c",
+        "labelHe": "את הסטטוס"
+      },
+      {
+        "id": "d",
+        "labelHe": "את הפורמט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעדרה מוביל ל-401.",
+    "skillId": "TECH.API",
+    "dimension": "knowledge"
+  }
+}

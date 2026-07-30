@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "שלושה מרכיבים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו שלושה דברים מחלצים מכל דרישה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מה נבדק, באילו תנאים, ומה התוצאה הצפויה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מי כתב, מתי, ולמה"
+      },
+      {
+        "id": "c",
+        "labelHe": "חומרה, עדיפות, סטטוס"
+      },
+      {
+        "id": "d",
+        "labelHe": "קלט, קוד, פלט"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "אלה שלושת המרכיבים שהופכים דרישה למקרה בדיקה.",
+    "skillId": "DOC.REQ",
+    "dimension": "knowledge"
+  }
+}

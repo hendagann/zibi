@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MATRIX"
+  },
+  "title": "תעדוף נפח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "נתוני שימוש: אנדרואיד 14 — 38%, 13 — 27%. יש 3 מכשירים. מה נכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לפזר על גרסאות שוליות"
+      },
+      {
+        "id": "b",
+        "labelHe": "להקצות שניים לגרסאות שמכסות 65% מהמשתמשים, ורצוי בגדלי מסך שונים"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק רק iOS"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבחור אקראית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כיסוי הנפח הגדול קודם, ובמקביל ממד נוסף.",
+    "skillId": "TECH.MATRIX",
+    "dimension": "application"
+  }
+}

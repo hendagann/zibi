@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "דיווח ממצאים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד לנסח דיווח על אימות API?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"ה-API לא תקין\""
+      },
+      {
+        "id": "b",
+        "labelHe": "לפי שלושת הממדים — מה תקין ומה סוטה בערכים, במבנה ובסטטוס"
+      },
+      {
+        "id": "c",
+        "labelHe": "\"JSON שגוי\""
+      },
+      {
+        "id": "d",
+        "labelHe": "להעתיק את התגובה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הפירוט מכוון את המפתח לשכבה הנכונה.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

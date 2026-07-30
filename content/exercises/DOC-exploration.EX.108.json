@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "נגזר מסיכון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה נכון לגזור charter?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ממה שמעניין לחקור"
+      },
+      {
+        "id": "b",
+        "labelHe": "מהיכן כשל יעלה ביוקר — סיכון"
+      },
+      {
+        "id": "c",
+        "labelHe": "מסדר המסכים"
+      },
+      {
+        "id": "d",
+        "labelHe": "מהעדפת המפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אזור שנגע בו שינוי או בעל היסטוריית פגמים מקבל עדיפות.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

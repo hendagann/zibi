@@ -1,0 +1,14 @@
+{
+  "id": "TECH.API",
+  "topic": "TECH/api",
+  "titleHe": "יסודות API",
+  "titleEn": "API fundamentals",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Interprets a request and response, stating what the method, status code, headers and authentication indicate about the outcome.",
+  "prerequisites": [
+    "TECH.WEB"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

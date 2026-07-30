@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "השרשרת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מתרחש בין לחיצה לתוצאה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק רינדור"
+      },
+      {
+        "id": "b",
+        "labelHe": "טיפול באירוע ⇐ בקשת HTTP ⇐ עיבוד בשרת ⇐ מסד/שירות ⇐ תגובה ⇐ רינדור"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק קריאה למסד"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק JavaScript"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "לכל חוליה בשרשרת סוג תקלה משלה.",
+    "skillId": "TECH.WEB",
+    "dimension": "knowledge"
+  }
+}

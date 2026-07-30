@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "400",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מציין קוד 400?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שגיאת שרת"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבקשה שגויה — הקלט שנשלח אינו תקין"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין הרשאה"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא נמצא"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "4xx מצביע על בעיה בבקשה עצמה.",
+    "skillId": "TECH.WEB",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "קלט קיצוני",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו קלטים קיצוניים בודקים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק ריק"
+      },
+      {
+        "id": "b",
+        "labelHe": "ריק, ארוך מאוד, שפה לא נתמכת, וקלט שכולו אמוג׳י"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק ארוך"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין צורך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בכל אחד נדרשת התנהגות מוגדרת ולא קריסה.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

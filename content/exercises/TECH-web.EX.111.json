@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.DEV"
+  },
+  "title": "200 ומסך ריק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "חזר 200 עם הנתונים הנכונים והמסך ריק. היכן הבעיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בשרת"
+      },
+      {
+        "id": "b",
+        "labelHe": "ברינדור בצד הלקוח — כמעט תמיד שגיאת JavaScript"
+      },
+      {
+        "id": "c",
+        "labelHe": "במסד"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בעיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הבאג חי אחרי קבלת התגובה.",
+    "skillId": "TECH.DEV",
+    "dimension": "application"
+  }
+}

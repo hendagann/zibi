@@ -1,0 +1,15 @@
+{
+  "id": "TECH.PERF",
+  "topic": "TECH/quality-attributes",
+  "titleHe": "פרשנות תוצאות ביצועים",
+  "titleEn": "Interpreting performance results",
+  "tier": "advanced",
+  "cognitiveLevel": "K3",
+  "behaviour": "Interprets a performance result against a stated expectation and identifies the user-facing risk it indicates.",
+  "prerequisites": [
+    "TECH.WEB",
+    "MGMT.RISK"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "DOC/reporting",
+  "nameHe": "דיווח לבעלי עניין",
+  "nameEn": "Stakeholder reporting",
+  "domain": "DOC",
+  "description": "כתיבת דוח סיכום שתומך בהחלטת שחרור, ניסוח סיכון שיורי במונחים שמי שאינו בודק יכול לפעול לפיהם, והצגת מצב איכות שעומדת בפני תיגר בלי להגזים בוודאות. הרמה שבה בודקת הופכת ליועצת.",
+  "learningObjectives": [
+    "לכתוב דוח סיכום שתומך בהחלטת שחרור",
+    "לנסח סיכון שיורי במונחים שמי שאינו בודק יכול לפעול לפיהם",
+    "להציג מצב איכות לקהל לא-טכני ולהמליץ בלי להגזים בוודאות",
+    "לעמוד בתיגר על ההמלצה בלי לוותר עליה ובלי להתחפר"
+  ],
+  "prerequisites": [
+    "MGMT/control"
+  ],
+  "difficulty": 5,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "DOC.SUM",
+    "DOC.STAKE"
+  ],
+  "summaryRef": "DOC-reporting.SUM.001",
+  "lessonRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "exerciseRefs": [
+    "DOC-reporting.EX.100",
+    "DOC-reporting.EX.101",
+    "DOC-reporting.EX.102",
+    "DOC-reporting.EX.103",
+    "DOC-reporting.EX.104",
+    "DOC-reporting.EX.105",
+    "DOC-reporting.EX.106",
+    "DOC-reporting.EX.107",
+    "DOC-reporting.EX.108",
+    "DOC-reporting.EX.109",
+    "DOC-reporting.EX.110",
+    "DOC-reporting.EX.111",
+    "DOC-reporting.EX.112",
+    "DOC-reporting.EX.113",
+    "DOC-reporting.EX.114",
+    "DOC-reporting.EX.115",
+    "DOC-reporting.EX.116",
+    "DOC-reporting.EX.117"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

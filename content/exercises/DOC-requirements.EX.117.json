@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "בהירות מול בדיקתיות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "האם דרישה קריאה היא בהכרח בדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא — בהירות נמדדת ביכולת לגזור תוצאה צפויה, לא בקריאוּת"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק בעברית"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק אם קצרה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ניסוח קולח יוצר תחושת בהירות מטעה.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

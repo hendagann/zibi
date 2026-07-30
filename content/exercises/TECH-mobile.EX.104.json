@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "קישוריות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו שלושה תרחישי רשת בודקים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק אין רשת"
+      },
+      {
+        "id": "b",
+        "labelHe": "אין רשת, רשת איטית מאוד, ומעבר Wi-Fi↔סלולר באמצע פעולה"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק Wi-Fi"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק סלולר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המעבר באמצע פעולה הוא השובר הנפוץ.",
+    "skillId": "TECH.MOB",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.RTM"
+  },
+  "title": "פער כיסוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה R4 (נעילה אחרי 3 כישלונות) ללא מקרי בדיקה. מה המשמעות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא לא חשובה"
+      },
+      {
+        "id": "b",
+        "labelHe": "בקרת אבטחה עלולה להשתחרר בלי שנבדקה כלל"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא כוסתה במקום אחר"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין משמעות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פער כיסוי בבקרת אבטחה הוא ממצא בעדיפות גבוהה.",
+    "skillId": "DOC.RTM",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "DOC/design-artifacts",
+  "nameHe": "תוצרי תכנון",
+  "nameEn": "Test design artifacts",
+  "domain": "DOC",
+  "description": "כתיבת מקרה בדיקה שבודקת אחרת יכולה לבצע בלי לשאול שאלה, שרשור מקרים לתרחיש עם מצב משותף מכוון, ובניית מטריצת עקיבות שחושפת דרישות בלי כיסוי ובדיקות בלי דרישה.",
+  "learningObjectives": [
+    "לכתוב מקרה בדיקה עם תנאים מקדימים, נתונים, צעדים ותוצאה צפויה",
+    "לזהות מקרה בדיקה שאי אפשר לבצע בלי לשאול שאלה",
+    "לשרשר מקרים לתרחיש שסדרו ומצבו המשותף מכוונים",
+    "לבנות עקיבות ולזהות דרישות ללא כיסוי ובדיקות ללא דרישה"
+  ],
+  "prerequisites": [
+    "DOC/requirements"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 95,
+  "measuredSkills": [
+    "DOC.TC",
+    "DOC.TS",
+    "DOC.RTM"
+  ],
+  "summaryRef": "DOC-design-artifacts.SUM.001",
+  "lessonRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "exerciseRefs": [
+    "DOC-design-artifacts.EX.100",
+    "DOC-design-artifacts.EX.101",
+    "DOC-design-artifacts.EX.102",
+    "DOC-design-artifacts.EX.103",
+    "DOC-design-artifacts.EX.104",
+    "DOC-design-artifacts.EX.105",
+    "DOC-design-artifacts.EX.106",
+    "DOC-design-artifacts.EX.107",
+    "DOC-design-artifacts.EX.108",
+    "DOC-design-artifacts.EX.109",
+    "DOC-design-artifacts.EX.110",
+    "DOC-design-artifacts.EX.111",
+    "DOC-design-artifacts.EX.112",
+    "DOC-design-artifacts.EX.113",
+    "DOC-design-artifacts.EX.114",
+    "DOC-design-artifacts.EX.115",
+    "DOC-design-artifacts.EX.116",
+    "DOC-design-artifacts.EX.117",
+    "DOC-design-artifacts.EX.118",
+    "DOC-design-artifacts.EX.119",
+    "DOC-design-artifacts.EX.120",
+    "DOC-design-artifacts.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

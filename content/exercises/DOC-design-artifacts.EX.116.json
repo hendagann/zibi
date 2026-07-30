@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.RTM"
+  },
+  "title": "תעדוף פערים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד נכון לדווח על שני פערי כיסוי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כרשימה שטוחה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מתועדפים לפי סיכון — בקרת אבטחה לפני איפוס סיסמה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לפי סדר אלפביתי"
+      },
+      {
+        "id": "d",
+        "labelHe": "לפי מספר הדרישה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תעדוף הוא חלק מהממצא, לא תוספת.",
+    "skillId": "DOC.RTM",
+    "dimension": "application"
+  }
+}

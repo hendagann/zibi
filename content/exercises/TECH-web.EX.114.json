@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.DEV"
+  },
+  "title": "ראיות לדוח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו ראיות לצרף לדוח על 500?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "צילום מסך בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "הנתיב, ה-payload, קוד הסטטוס, וחותמת זמן או מזהה בקשה"
+      },
+      {
+        "id": "c",
+        "labelHe": "שם הדפדפן בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "גרסת המערכת בלבד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מזהה הבקשה הוא מה שמאפשר למפתח למצוא את הרשומה בלוג.",
+    "skillId": "TECH.DEV",
+    "dimension": "application"
+  }
+}

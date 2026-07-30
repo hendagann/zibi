@@ -1,0 +1,51 @@
+{
+  "id": "DOC/requirements",
+  "nameHe": "עבודה מול דרישות",
+  "nameEn": "Working from requirements",
+  "domain": "DOC",
+  "description": "חילוץ מה שניתן לאמת מתוך דרישה, וניסוח השאלות שחייבות מענה לפני שאפשר לבדוק אותה בכלל. השלב שקובע אם הבדיקה תמדוד את הדבר הנכון.",
+  "learningObjectives": [
+    "לחלץ מדרישה את מה שניתן לאמת",
+    "לרשום את השאלות שחייבות מענה לפני שניתן לבדוק",
+    "להבחין בין מה שהדרישה אומרת למה שהיא מניחה",
+    "לזהות דרישה שנראית ברורה אך אינה ניתנת לגזירת תוצאה צפויה"
+  ],
+  "prerequisites": [
+    "STAT/requirements"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 75,
+  "measuredSkills": [
+    "DOC.REQ"
+  ],
+  "summaryRef": "DOC-requirements.SUM.001",
+  "lessonRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "exerciseRefs": [
+    "DOC-requirements.EX.100",
+    "DOC-requirements.EX.101",
+    "DOC-requirements.EX.102",
+    "DOC-requirements.EX.103",
+    "DOC-requirements.EX.104",
+    "DOC-requirements.EX.105",
+    "DOC-requirements.EX.106",
+    "DOC-requirements.EX.107",
+    "DOC-requirements.EX.108",
+    "DOC-requirements.EX.109",
+    "DOC-requirements.EX.110",
+    "DOC-requirements.EX.111",
+    "DOC-requirements.EX.112",
+    "DOC-requirements.EX.113",
+    "DOC-requirements.EX.114",
+    "DOC-requirements.EX.115",
+    "DOC-requirements.EX.116",
+    "DOC-requirements.EX.117"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

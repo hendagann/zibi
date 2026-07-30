@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.LOG"
+  },
+  "title": "הקשר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע לקרוא את השורות שלפני השגיאה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להארכה"
+      },
+      {
+        "id": "b",
+        "labelHe": "השגיאה לרוב תוצאה ולא סיבה; ההקשר מראה היכן בזרימה זה נשבר"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין צורך"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק אם אין מזהה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ההקשר מאתר את השלב, לא רק את הסימפטום.",
+    "skillId": "TECH.LOG",
+    "dimension": "application"
+  }
+}

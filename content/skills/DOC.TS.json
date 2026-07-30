@@ -1,0 +1,14 @@
+{
+  "id": "DOC.TS",
+  "topic": "DOC/design-artifacts",
+  "titleHe": "תרחישי בדיקה",
+  "titleEn": "Test scenarios",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Sequences test cases into a scenario whose order and shared state are deliberate, and states the dependencies between them.",
+  "prerequisites": [
+    "DOC.TC"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

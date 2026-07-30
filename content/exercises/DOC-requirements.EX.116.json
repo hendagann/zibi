@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "מתי לעצור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מתי נכון לעצור ולשאול במקום לכתוב מקרי בדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אף פעם"
+      },
+      {
+        "id": "b",
+        "labelHe": "ברגע שלא מצליחים לנסח תוצאה צפויה חד-משמעית"
+      },
+      {
+        "id": "c",
+        "labelHe": "אחרי כתיבת כל המקרים"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק אם המנהל מבקש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הכישלון בניסוח התוצאה הוא הסימן.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

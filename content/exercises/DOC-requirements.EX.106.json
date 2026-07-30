@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "הודעה חושפת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע חשוב לשאול איזו הודעה מוצגת בנעילה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עניין של עיצוב"
+      },
+      {
+        "id": "b",
+        "labelHe": "הודעה שונה מהודעת סיסמה שגויה חושפת שהמשתמש קיים — סוגיית אבטחה"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין חשיבות"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בגלל תרגום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פרט ניסוח קטן נושא משמעות אבטחתית.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

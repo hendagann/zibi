@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "פגמים פתוחים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד לדווח על פגמים שנותרו פתוחים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "במספר בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "במונחי מה המשתמש יחווה ומה הצפי המעשי"
+      },
+      {
+        "id": "c",
+        "labelHe": "לפי מזהה בכלי"
+      },
+      {
+        "id": "d",
+        "labelHe": "לא לדווח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המשמעות למשתמש היא מה שמאפשר להחליט.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

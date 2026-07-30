@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "מלכודת מיקוד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי מלכודת מיקוד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כפתור נסתר"
+      },
+      {
+        "id": "b",
+        "labelHe": "רכיב שנכנסים אליו ואי אפשר לצאת ממנו במקלדת"
+      },
+      {
+        "id": "c",
+        "labelHe": "מיקוד לא נראה"
+      },
+      {
+        "id": "d",
+        "labelHe": "סדר שגוי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חלון קופץ שאינו נסגר ב-Esc הוא דוגמה קלאסית.",
+    "skillId": "TECH.A11Y",
+    "dimension": "knowledge"
+  }
+}

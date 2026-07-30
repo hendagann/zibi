@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.I18N"
+  },
+  "title": "דוגמת שבירה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"שגיאה 404 בשרת\" מוצג כ-\"404 שגיאה בשרת\". מה הסיבה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תרגום שגוי"
+      },
+      {
+        "id": "b",
+        "labelHe": "היעדר בידוד כיווני למספר בתוך טקסט עברי"
+      },
+      {
+        "id": "c",
+        "labelHe": "גופן שגוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "באג בשרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו כשל bidi קלאסי.",
+    "skillId": "TECH.I18N",
+    "dimension": "application"
+  }
+}

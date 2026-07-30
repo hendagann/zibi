@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOBUX"
+  },
+  "title": "תנאי שדרוג",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו תנאים בודקים בשדרוג?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק שהאפליקציה נפתחת"
+      },
+      {
+        "id": "b",
+        "labelHe": "שהנתונים, ההגדרות והחיבור נשמרו, ושמיגרציה עברה"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק גרסה"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק גודל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המבחן הוא שרידות הנתונים.",
+    "skillId": "TECH.MOBUX",
+    "dimension": "application"
+  }
+}

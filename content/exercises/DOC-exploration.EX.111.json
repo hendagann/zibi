@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "charter טוב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה charter מנוסח היטב?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לחקור את האתר"
+      },
+      {
+        "id": "b",
+        "labelHe": "\"לחקור רישום עם סוגי משתמש שונים וקלט חריג, כדי לאתר בעיות הרשאה ואימות\""
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק את כפתור ההרשמה"
+      },
+      {
+        "id": "d",
+        "labelHe": "למצוא באגים ברישום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שלושת המרכיבים נוכחים והוא בר-ביצוע ב-90 דקות.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "המבחן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו המבחן המעשי לדרישה מוכנה לבדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אורכה"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם אפשר לגזור ממנה תוצאה צפויה חד-משמעית"
+      },
+      {
+        "id": "c",
+        "labelHe": "מי כתב אותה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אם היא מאושרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אם שתי בודקות ייגזרו תוצאות שונות — הדרישה טרם מוכנה.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "TECH.APIV",
+  "topic": "TECH/api",
+  "titleHe": "אימות תגובת API",
+  "titleEn": "API response validation",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Validates an API response against a stated requirement, identifying discrepancies in values, structure and status.",
+  "prerequisites": [
+    "TECH.API",
+    "DOC.REQ"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

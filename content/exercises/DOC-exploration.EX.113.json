@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "משאבים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נכלל ב\"משאבים\" ב-charter?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תקציב"
+      },
+      {
+        "id": "b",
+        "labelHe": "איזה משתמש והרשאות, אילו נתונים, איזו סביבה וכלים"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר הבודקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "זמן בלבד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המשאבים קובעים מה בכלל אפשר לחקור בסשן.",
+    "skillId": "DOC.CHART",
+    "dimension": "knowledge"
+  }
+}

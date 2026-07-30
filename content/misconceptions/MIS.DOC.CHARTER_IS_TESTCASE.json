@@ -1,0 +1,12 @@
+{
+  "id": "MIS.DOC.CHARTER_IS_TESTCASE",
+  "titleHe": "charter הוא מקרה בדיקה",
+  "descriptionHe": "ניסוח charter כפעולה בודדת (\"לבדוק שכפתור השליחה עובד\") במקום כמשימת חקירה עם אזור וסוג מידע מבוקש.",
+  "whyTempting": "ניסוח ממוקד וקונקרטי נראה כמו charter טוב יותר. אבל כשהמשימה מצטמצמת לצעד יחיד היא מבטלת את מה שהחקירה נועדה לתת — למצוא את מה שאיש לא חשב לכתוב כמקרה בדיקה.",
+  "skillIds": [
+    "DOC.CHART"
+  ],
+  "remediationRef": "DOC-exploration.LE.001",
+  "anchor": "sec-parts",
+  "status": "active"
+}

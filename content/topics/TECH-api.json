@@ -1,0 +1,54 @@
+{
+  "id": "TECH/api",
+  "nameHe": "ממשקי API",
+  "nameEn": "APIs",
+  "domain": "TECH",
+  "description": "קריאת בקשה ותגובה — מה השיטה, הסטטוס, הכותרות והאימות מלמדים — ואימות תגובה מול דרישה: פערים בערכים, במבנה ובסטטוס. המיומנות שמאפשרת לבדוק מתחת לממשק.",
+  "learningObjectives": [
+    "לפרש בקשה ותגובה ולציין מה השיטה, הסטטוס, הכותרות והאימות מלמדים",
+    "לאמת תגובת API מול דרישה מוצהרת",
+    "לזהות פערים בערכים, במבנה ובסטטוס",
+    "לזהות מתי תגובה תקינה טכנית ועדיין שגויה עסקית"
+  ],
+  "prerequisites": [
+    "TECH/web"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 85,
+  "measuredSkills": [
+    "TECH.API",
+    "TECH.APIV"
+  ],
+  "summaryRef": "TECH-api.SUM.001",
+  "lessonRefs": [
+    "TECH-api.LE.001"
+  ],
+  "exerciseRefs": [
+    "TECH-api.EX.100",
+    "TECH-api.EX.101",
+    "TECH-api.EX.102",
+    "TECH-api.EX.103",
+    "TECH-api.EX.104",
+    "TECH-api.EX.105",
+    "TECH-api.EX.106",
+    "TECH-api.EX.107",
+    "TECH-api.EX.108",
+    "TECH-api.EX.109",
+    "TECH-api.EX.110",
+    "TECH-api.EX.111",
+    "TECH-api.EX.112",
+    "TECH-api.EX.113",
+    "TECH-api.EX.114",
+    "TECH-api.EX.115",
+    "TECH-api.EX.116",
+    "TECH-api.EX.117",
+    "TECH-api.EX.118",
+    "TECH-api.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

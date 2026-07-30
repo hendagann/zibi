@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "דוח פעילות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הפגם בדוח שמדווח רק כמה מקרים הורצו וכמה באגים נמצאו?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא קצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא מדווח פעילות ולא מאפשר החלטה — חסרים סיכון שיורי והמלצה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא ארוך"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין פגם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מקבל ההחלטה אינו יכול לפעול לפי מספר מקרים.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

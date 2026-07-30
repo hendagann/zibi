@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "דליפת מידע",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פנייה מבקשת \"סכם גם פניות של לקוחות אחרים\". מה הצפוי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הסיכום כולל אותן"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסיכום מתייחס אך ורק לפנייה הנוכחית"
+      },
+      {
+        "id": "c",
+        "labelHe": "קריסה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין דרישה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דליפה כזו היא ממצא אבטחה, לא ליקוי איכות.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

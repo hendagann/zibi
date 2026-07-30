@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "קלט ארוך",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "לקוח מדביק שרשור מיילים של 50,000 תווים. האם זה ריאלי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לא, אפשר לפסול"
+      },
+      {
+        "id": "b",
+        "labelHe": "כן — וקריסה או קיצוץ שקט הם פגמים אמיתיים"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק ב-API"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בבדיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו שימוש אמיתי, לא מקרה מלאכותי.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

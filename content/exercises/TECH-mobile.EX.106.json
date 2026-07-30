@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "מסך קפוא",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "העלאה ברשת איטית מקפיאה את המסך בלי חיווי. איזה סוג פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ביצועים בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "פגם פונקציונלי בטיפול בשגיאה — היעדר חיווי ואפשרות לנסות שוב"
+      },
+      {
+        "id": "c",
+        "labelHe": "עיצוב"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין פגם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הכשל אינו במהירות אלא בהתנהגות תחת איטיות.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

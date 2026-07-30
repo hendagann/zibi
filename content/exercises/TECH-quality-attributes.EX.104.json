@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "תווית שדה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה קורה כששדה קלט אינו מקושר לתווית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "קורא המסך מכריז \"עריכת טקסט\" בלבד ואינו מציין מה להזין"
+      },
+      {
+        "id": "c",
+        "labelHe": "השדה לא עובד"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצבע משתנה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו ממצא נגישות קלאסי שקל לצטט.",
+    "skillId": "TECH.A11Y",
+    "dimension": "application"
+  }
+}

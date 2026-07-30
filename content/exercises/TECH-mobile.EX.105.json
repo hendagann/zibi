@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "מעבר רשת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע מעבר Wi-Fi↔סלולר שובר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הרשת איטית"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבקשה יצאה ברשת אחת והתשובה אמורה לחזור לאחרת"
+      },
+      {
+        "id": "c",
+        "labelHe": "הסוללה נגמרת"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה לא שובר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו מצב מובייל טהור שלא קיים בדסקטופ.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

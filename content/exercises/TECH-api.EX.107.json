@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "404 מול 200 ריק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "GET למשאב שאינו קיים החזיר 200 עם גוף ריק. מה הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין פגם"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסטטוס הנכון 404; 200 ריק מאלץ כל צרכן לפרסר את הגוף ומסתיר את המצב מניטור"
+      },
+      {
+        "id": "c",
+        "labelHe": "היה צריך 500"
+      },
+      {
+        "id": "d",
+        "labelHe": "היה צריך 403"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "קוד הסטטוס אמור לשאת את המידע.",
+    "skillId": "TECH.API",
+    "dimension": "application"
+  }
+}

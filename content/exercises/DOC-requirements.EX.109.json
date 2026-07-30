@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "רשימת שאלות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מעמדה של רשימת שאלות על דרישה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עדות שהבודקת לא הבינה"
+      },
+      {
+        "id": "b",
+        "labelHe": "תוצר מקצועי שהופך עמימות סמויה לרשימת החלטות"
+      },
+      {
+        "id": "c",
+        "labelHe": "עיכוב מיותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "תחליף לבדיקה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הרשימה היא ניתוח, לא בלבול.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

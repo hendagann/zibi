@@ -1,0 +1,15 @@
+{
+  "id": "TECH.A11Y",
+  "topic": "TECH/quality-attributes",
+  "titleHe": "בדיקות נגישות",
+  "titleEn": "Accessibility testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Evaluates an interface against stated accessibility criteria using keyboard and screen reader, and reports each failure with the criterion cited.",
+  "prerequisites": [
+    "DOC.REQ",
+    "TECH.WEB"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

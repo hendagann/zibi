@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.STAKE"
+  },
+  "title": "ידוע מול הערכה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע להפריד ידוע מהערכה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לצורך אורך הדוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי אם ההערכה תתברר כלא מדויקת, גם החלק המבוסס ייתפס כמוגזם"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה לא נדרש"
+      },
+      {
+        "id": "d",
+        "labelHe": "כדי להישמע זהיר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ההפרדה מגנה על אמינות הממצא המדוד.",
+    "skillId": "DOC.STAKE",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "תאריך",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "תגובה מחזירה \"12/07/2026\" והדרישה מחייבת ISO. מה הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין פגם"
+      },
+      {
+        "id": "b",
+        "labelHe": "פורמט שאינו ISO וגם דו-משמעי — 12 ביולי או 7 בדצמבר"
+      },
+      {
+        "id": "c",
+        "labelHe": "התאריך שגוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "חסר אזור זמן בלבד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "פורמט לא תקני מייצר עמימות אצל הצרכן.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

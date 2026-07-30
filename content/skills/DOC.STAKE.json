@@ -1,0 +1,15 @@
+{
+  "id": "DOC.STAKE",
+  "topic": "DOC/reporting",
+  "titleHe": "תקשורת מול בעלי עניין",
+  "titleEn": "Stakeholder communication",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Presents quality status to a non-testing audience and states a recommendation that survives challenge without overstating certainty.",
+  "prerequisites": [
+    "DOC.SUM",
+    "MGMT.METRIC"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

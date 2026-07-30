@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "נגמר מהר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אחרי 20 דקות נגמר מה לעשות. מה זה מלמד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המערכת תקינה"
+      },
+      {
+        "id": "b",
+        "labelHe": "ה-charter צר מדי"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבודקת מהירה"
+      },
+      {
+        "id": "d",
+        "labelHe": "יש לסיים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סשן שמתרוקן מוקדם מעיד על מיקוד יתר.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

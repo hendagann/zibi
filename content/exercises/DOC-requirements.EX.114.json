@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "כישלון באמצע",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה לשאול על כישלון בפעולה ארוכה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "מה קורה כשהפעולה נכשלת באמצע — האם נשמר חלקית, האם יש הודעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מה הצבע"
+      },
+      {
+        "id": "d",
+        "labelHe": "מי המפתח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "התנהגות בכישלון היא שתיקה שכיחה ומסוכנת.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

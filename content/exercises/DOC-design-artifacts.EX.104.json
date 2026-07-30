@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "title": "מבחן התוצאה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה כלל מזהה תוצאה צפויה שאינה תוצאה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אם היא ארוכה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אם אפשר לכתוב אותה בלי לדעת מה המערכת עושה"
+      },
+      {
+        "id": "c",
+        "labelHe": "אם היא באנגלית"
+      },
+      {
+        "id": "d",
+        "labelHe": "אם יש בה מספרים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תוצאה שאינה תלויה בהתנהגות המערכת אינה תוצאה.",
+    "skillId": "DOC.TC",
+    "dimension": "application"
+  }
+}

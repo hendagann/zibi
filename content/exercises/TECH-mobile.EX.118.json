@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MATRIX"
+  },
+  "title": "סימולטור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אין מכשיר iOS פיזי. מה אפשרי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לדווח שנבדק"
+      },
+      {
+        "id": "b",
+        "labelHe": "בדיקת שפיות בסימולטור, ובמקביל החרגה מוצהרת שלא נבדק על מכשיר פיזי"
+      },
+      {
+        "id": "c",
+        "labelHe": "להתעלם"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבטל תמיכה ב-iOS"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סימולטור מצמצם סיכון אך אינו מחליף מכשיר, וזה נאמר במפורש.",
+    "skillId": "TECH.MATRIX",
+    "dimension": "application"
+  }
+}

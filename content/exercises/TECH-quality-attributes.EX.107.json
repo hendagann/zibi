@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "שם כפתור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע \"לחץ כאן\" הוא שם כפתור בעייתי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא קצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא אינו מובן מחוץ להקשר — קורא מסך מקריא רשימת כפתורים"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא באנגלית"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בעיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שם כפתור חייב לתאר את הפעולה בעצמו.",
+    "skillId": "TECH.A11Y",
+    "dimension": "application"
+  }
+}

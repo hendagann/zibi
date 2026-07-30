@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "מה API חושף",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע בדיקת API אינה כפילות של בדיקת המסך?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא מהירה יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא חושפת פגמים שהממשק מתקן או מסתיר, ושישברו צרכנים אחרים"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא זולה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא אוטומטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הממשק הוא צרכן אחד מני רבים.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

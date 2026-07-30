@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "מחזור חיים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה בודקים במעבר לרקע וחזרה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "צריכת סוללה בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם המשתמש חוזר למקום שבו היה עם הנתונים שהזין"
+      },
+      {
+        "id": "c",
+        "labelHe": "עוצמת מסך"
+      },
+      {
+        "id": "d",
+        "labelHe": "כלום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שחזור מצב הוא הבדיקה המרכזית.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

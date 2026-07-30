@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.STAKE"
+  },
+  "title": "היעדר ממצאים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד לנסח \"לא נמצאו תקלות\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"המערכת תקינה\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"לא נמצאו תקלות בזרימות שנבדקו; אזורים X ו-Y לא נבדקו כלל\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הכול עבר\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"אין באגים\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בלי ציון מה לא נבדק, שקט מתפרש כתקינות.",
+    "skillId": "DOC.STAKE",
+    "dimension": "application"
+  }
+}

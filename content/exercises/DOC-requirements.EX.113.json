@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "דוח ריק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"לייצא דוח\" — מה לשאול על מקרה הקצה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כלום"
+      },
+      {
+        "id": "b",
+        "labelHe": "מה קורה בדוח ריק — קובץ ריק, כותרות בלבד, או הודעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מי לחץ"
+      },
+      {
+        "id": "d",
+        "labelHe": "באיזה דפדפן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המקרה הריק הוא מקרה קצה קלאסי שדרישות שוכחות.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

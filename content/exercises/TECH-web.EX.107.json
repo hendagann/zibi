@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.DEV"
+  },
+  "title": "Network",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מראה לשונית Network?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שגיאות JavaScript"
+      },
+      {
+        "id": "b",
+        "labelHe": "אילו בקשות נשלחו, מה נשלח, מה חזר, באיזה סטטוס וכמה זמן"
+      },
+      {
+        "id": "c",
+        "labelHe": "קוד המקור"
+      },
+      {
+        "id": "d",
+        "labelHe": "מסד הנתונים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו הראיה שמפרידה צד לקוח מצד שרת.",
+    "skillId": "TECH.DEV",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "הממשק מתקן",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הממשק מציג את התאריך נכון למרות שה-API מחזיר פורמט שגוי. האם זה פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לא"
+      },
+      {
+        "id": "b",
+        "labelHe": "כן — צרכן אחר של אותו API יקבל ערך שגוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אם הלקוח מתלונן"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק במובייל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הממשק מסתיר את הפגם; שכבת ה-API היא המקום לחשוף אותו.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "שיחה נכנסת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה בודקים כשמתקבלת שיחה באמצע פעולה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "איכות השיחה"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם המצב נשמר והפעולה לא נכפלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "עוצמת הרמקול"
+      },
+      {
+        "id": "d",
+        "labelHe": "כלום"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אובדן טופס וחיוב כפול הם הכשלים הטיפוסיים.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

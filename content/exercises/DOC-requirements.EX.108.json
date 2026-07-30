@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "שאלה פתוחה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה החיסרון ב\"מה בדיוק אתם רוצים?\""
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא לא מנומסת"
+      },
+      {
+        "id": "b",
+        "labelHe": "היא מטילה את כל עבודת החשיבה על הצד השני ותחזור בתשובה כללית"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא ארוכה"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין חיסרון"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שאלה בלי הצעת כיוון אינה מקדמת.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "אזור גדול",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אזור התשלומים גדול מדי ל-charter אחד. מה עושים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "דוחסים לסשן ארוך"
+      },
+      {
+        "id": "b",
+        "labelHe": "מפרקים לסדרת charters — אמצעי תשלום, כישלון חיוב, החזרים, מצבי גבול"
+      },
+      {
+        "id": "c",
+        "labelHe": "מוותרים"
+      },
+      {
+        "id": "d",
+        "labelHe": "בודקים ידנית בלבד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סדרה שומרת על מדידת כיסוי אמיתית.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

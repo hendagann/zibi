@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TS"
+  },
+  "title": "מהו תרחיש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו תרחיש בדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מקרה בדיקה יחיד"
+      },
+      {
+        "id": "b",
+        "labelHe": "שרשור מקרים שסדרם והמצב המשותף ביניהם מכוונים"
+      },
+      {
+        "id": "c",
+        "labelHe": "דוח פגם"
+      },
+      {
+        "id": "d",
+        "labelHe": "דרישה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "התרחיש בודק זרימה עסקית שלמה ומצב מצטבר.",
+    "skillId": "DOC.TS",
+    "dimension": "knowledge"
+  }
+}

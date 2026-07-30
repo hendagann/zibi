@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.LOG"
+  },
+  "title": "טענה לא מבוססת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה ב\"נראה שהמסד נפל\" כשאין בלוג רשומה על המסד?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הצגת השערה כעובדה שולחת את המפתח לבדוק רכיב תקין ושוחקת אמון"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה ארוך"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה טכני מדי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "טענה בלי ראיה פוגעת גם בממצאים המבוססים.",
+    "skillId": "TECH.LOG",
+    "dimension": "application"
+  }
+}

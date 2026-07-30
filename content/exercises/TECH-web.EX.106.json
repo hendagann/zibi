@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "502/503",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מרמז 502 או 503?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "קלט שגוי"
+      },
+      {
+        "id": "b",
+        "labelHe": "שירות לא זמין — תלות חיצונית או עומס"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין הרשאה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצליח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אלה מצביעים על זמינות ולא על לוגיקה.",
+    "skillId": "TECH.WEB",
+    "dimension": "knowledge"
+  }
+}

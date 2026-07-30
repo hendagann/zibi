@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "title": "תוצאה טובה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי תוצאה צפויה טובה ל\"ללחוץ שמור\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הכפתור נלחץ"
+      },
+      {
+        "id": "b",
+        "labelHe": "מוצגת הודעת \"נשמר בהצלחה\" והרשומה מופיעה ברשימה"
+      },
+      {
+        "id": "c",
+        "labelHe": "השמירה עובדת"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין שגיאה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תוצאה נצפית וקונקרטית שאפשר להשוות אליה.",
+    "skillId": "DOC.TC",
+    "dimension": "application"
+  }
+}

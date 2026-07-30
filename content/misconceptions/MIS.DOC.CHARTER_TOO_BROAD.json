@@ -1,0 +1,12 @@
+{
+  "id": "MIS.DOC.CHARTER_TOO_BROAD",
+  "titleHe": "charter רחב הוא charter גמיש",
+  "descriptionHe": "ניסוח משימת חקירה רחבה כמו \"לחקור את המערכת\", מתוך מחשבה שמיקוד יגביל את היכולת לגלות את הבלתי צפוי.",
+  "whyTempting": "החופש נשמע כמו עצם היתרון של בדיקות חוקרות. אבל בלי מיקוד הסשן נוגע שטחית בעשרה מקומות ולא מגיע למסקנה על אף אחד — ואי אפשר לדווח על כיסוי שהושג.",
+  "skillIds": [
+    "DOC.CHART"
+  ],
+  "remediationRef": "DOC-exploration.LE.001",
+  "anchor": "sec-test",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "השורה שמדלגים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה מרכיב מדלגים עליו לרוב ומדוע הוא חשוב?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "המשאבים"
+      },
+      {
+        "id": "b",
+        "labelHe": "סוג המידע המבוקש — הוא קובע מה ייחשב ממצא"
+      },
+      {
+        "id": "c",
+        "labelHe": "האזור"
+      },
+      {
+        "id": "d",
+        "labelHe": "הזמן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חיפוש בעיות הרשאה שונה מחיפוש בעיות קלט.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

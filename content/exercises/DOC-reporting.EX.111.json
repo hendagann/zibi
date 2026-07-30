@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.STAKE"
+  },
+  "title": "הגזמה בוודאות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה באמירה \"המערכת תקינה\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא ארוכה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אי אפשר לגבות אותה, ואם תתגלה תקלה היא תשחק את האמון בכל דיווח עתידי"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא צנועה מדי"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין בעיה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה אינה מוכיחה היעדר פגמים.",
+    "skillId": "DOC.STAKE",
+    "dimension": "application"
+  }
+}

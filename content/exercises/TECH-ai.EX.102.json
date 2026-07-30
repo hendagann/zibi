@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "תכונות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו תכונות אפשר לבדוק בפלט מחולל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק אורך"
+      },
+      {
+        "id": "b",
+        "labelHe": "פורמט ומבנה, טווח, עקביות, אי-הכללה, רלוונטיות והתנהגות בכישלון"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק דיוק"
+      },
+      {
+        "id": "d",
+        "labelHe": "אף אחת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל אחת מהן נבדקת דטרמיניסטית.",
+    "skillId": "TECH.AI",
+    "dimension": "knowledge"
+  }
+}

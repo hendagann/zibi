@@ -1,0 +1,12 @@
+{
+  "id": "MIS.DOC.MIX_KNOWN_ESTIMATE",
+  "titleHe": "ערבוב ידוע והערכה",
+  "descriptionHe": "הצגת הערכה — כמו תדירות צפויה בייצור — באותה נשימה עם ממצא מדוד, בלי להבחין ביניהם.",
+  "whyTempting": "ההערכה מחזקת את הטיעון ברגע שבו צריך לשכנע. אבל אם היא תתברר כלא מדויקת, גם החלק המבוסס של הדיווח ייתפס כמוגזם — ההפרדה היא מה שמגן על אמינות הממצא.",
+  "skillIds": [
+    "DOC.STAKE"
+  ],
+  "remediationRef": "DOC-reporting.LE.001",
+  "anchor": "sec-separate",
+  "status": "active"
+}

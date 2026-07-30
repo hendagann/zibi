@@ -1,0 +1,15 @@
+{
+  "id": "TECH.I18N",
+  "topic": "TECH/quality-attributes",
+  "titleHe": "בדיקות לוקליזציה ו־RTL",
+  "titleEn": "Localisation and RTL testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Identifies where a bilingual Hebrew/English interface breaks - direction, alignment, mixed-direction strings, dates, numbers, currency - and reports the rendering fault precisely.",
+  "prerequisites": [
+    "TECH.WEB",
+    "DOC.REQ"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

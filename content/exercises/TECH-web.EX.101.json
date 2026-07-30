@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "401",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מציין קוד 401?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הרשאה"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא מאומת — אין טוקן או שפג תוקפו"
+      },
+      {
+        "id": "c",
+        "labelHe": "לא נמצא"
+      },
+      {
+        "id": "d",
+        "labelHe": "שגיאת שרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "401 = \"לא יודעים מי אתה\".",
+    "skillId": "TECH.WEB",
+    "dimension": "knowledge"
+  }
+}

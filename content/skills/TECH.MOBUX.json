@@ -1,0 +1,14 @@
+{
+  "id": "TECH.MOBUX",
+  "topic": "TECH/mobile",
+  "titleHe": "התקנה, שדרוג והבדלי מכשירים",
+  "titleEn": "Install, upgrade and device differences",
+  "tier": "applied",
+  "cognitiveLevel": "K2",
+  "behaviour": "Identifies which install, upgrade and device-difference conditions affect a described feature.",
+  "prerequisites": [
+    "TECH.MOB"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

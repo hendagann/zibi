@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.I18N"
+  },
+  "title": "בדיקה באנגלית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "האם מספיק לבדוק ממשק דו-לשוני באנגלית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן, הלוגיקה זהה"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא — מחרוזות מעורבות, סמלים כיווניים ופורמטים קיימים רק בעברית"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אם אין תרגום"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק במובייל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הפגמים נובעים מכיוון ומפורמט, לא מלוגיקה.",
+    "skillId": "TECH.I18N",
+    "dimension": "application"
+  }
+}

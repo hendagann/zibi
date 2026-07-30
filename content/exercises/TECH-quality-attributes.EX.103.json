@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "טקסט חלופי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה נדרש מטקסט חלופי לתמונה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שם הקובץ"
+      },
+      {
+        "id": "b",
+        "labelHe": "תיאור התוכן המשמעותי של התמונה"
+      },
+      {
+        "id": "c",
+        "labelHe": "גודל התמונה"
+      },
+      {
+        "id": "d",
+        "labelHe": "פורמט"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "\"תמונה1.jpg\" אינו טקסט חלופי.",
+    "skillId": "TECH.A11Y",
+    "dimension": "application"
+  }
+}

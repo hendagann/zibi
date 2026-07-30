@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MATRIX"
+  },
+  "title": "החרגה מוצהרת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד נכון להחריג פלטפורמה שלא נבדקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לא להזכיר"
+      },
+      {
+        "id": "b",
+        "labelHe": "להצהיר: מה לא נבדק, איזה אחוז משתמשים, ומה הסיכון המתקבל"
+      },
+      {
+        "id": "c",
+        "labelHe": "לדווח שנבדק"
+      },
+      {
+        "id": "d",
+        "labelHe": "לדחות את השחרור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סיכון מוצהר הוא סיכון מנוהל.",
+    "skillId": "TECH.MATRIX",
+    "dimension": "application"
+  }
+}

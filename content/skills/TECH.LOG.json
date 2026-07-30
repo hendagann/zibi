@@ -1,0 +1,14 @@
+{
+  "id": "TECH.LOG",
+  "topic": "TECH/web",
+  "titleHe": "קריאת לוגים",
+  "titleEn": "Reading logs",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Locates the entries relevant to a failure in a log excerpt, and states what they establish and what remains unknown.",
+  "prerequisites": [
+    "TECH.DEV"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-requirements.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/requirements",
+  "skills": {
+    "primary": "DOC.REQ"
+  },
+  "title": "שאלה טובה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו שאלת הבהרה יעילה יותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-requirements.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"מה בדיוק אתם רוצים?\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"האם הייצוא מוגבל למנהלים, או שגם משתמש רגיל מייצא את הדוחות שלו?\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הדרישה לא ברורה\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"תכתבו מחדש\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שאלה שממסגרת החלטה מקבלת תשובה מהר יותר.",
+    "skillId": "DOC.REQ",
+    "dimension": "application"
+  }
+}

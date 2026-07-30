@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "תעדוף אזורים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שונה מנוע הרשאות; ארבעה אזורים מושפעים ויש יומיים. מה נכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "charter לכל אזור"
+      },
+      {
+        "id": "b",
+        "labelHe": "להתמקד באזורים שבהם כשל קריטי — למשל חשיפת מידע — ולהצהיר על השאר"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק לפי סדר אלפביתי"
+      },
+      {
+        "id": "d",
+        "labelHe": "לדחות את השחרור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תעדוף לפי סיכון, עם הצהרה על מה שנשאר.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

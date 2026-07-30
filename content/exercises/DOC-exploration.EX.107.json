@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "\"לחקור באגים\"",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה ב-charter \"לחקור באגים\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "כל בדיקה מחפשת באגים — זה אינו ממקד אזור או סוג מידע"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא צר מדי"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא ארוך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "charter חייב לצמצם משהו.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

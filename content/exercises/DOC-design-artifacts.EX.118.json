@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.RTM"
+  },
+  "title": "השאלה הנכונה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו שאלה לשאול על בדיקה יתומה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"למה יש כאן בדיקה מיותרת?\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"האם ההתנהגות הזו נדרשת, ומדוע לא תועדה?\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"מי כתב אותה?\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"כמה זמן היא לוקחת?\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המסגור קובע אם יתגלה פער תיעוד או שתימחק הגנה.",
+    "skillId": "DOC.RTM",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "אחוז כיסוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע \"הכיסוי 92%\" אינו מסקנה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא נמוך"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא ממוצע שמסתיר אם ה-8% שלא כוסו שוליים או קריטיים"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא לא מדויק"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מדד מיושן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ההתפלגות, לא הממוצע, קובעת את הסיכון.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

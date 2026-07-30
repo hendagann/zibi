@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "המלצה מפורשת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע ההמלצה חייבת להיות מפורשת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כדי לקצר את הדוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "\"הנתונים לפניכם\" מעביר החלטה למי שאין לו את התמונה המקצועית"
+      },
+      {
+        "id": "c",
+        "labelHe": "כדי להגן על הבודקת"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה לא נדרש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "ההמלצה היא תרומה מקצועית, לא נטילת סמכות.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

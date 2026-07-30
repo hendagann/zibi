@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "האם ההמלצה מחייבת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "האם המלצת הבודקת מחייבת את מקבל ההחלטה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא — היא תרומה מקצועית להחלטה שנשארת אצלו"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אם המנהל מאשר"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק ברגולציה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו בדיוק הסיבה שאין סיבה להימנע ממנה.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

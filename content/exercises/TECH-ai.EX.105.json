@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "אי-הכללה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי בדיקת אי-הכללה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שהפלט קצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "שהפלט אינו מכיל תוכן אסור — למשל מספרי כרטיס אשראי"
+      },
+      {
+        "id": "c",
+        "labelHe": "שהפלט בעברית"
+      },
+      {
+        "id": "d",
+        "labelHe": "שהפלט מהיר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "גם אם המידע הופיע בקלט, אין לשכפלו לפלט.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

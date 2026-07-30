@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "401 מול 403",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע ההבחנה בין 401 ל-403 חשובה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא לא"
+      },
+      {
+        "id": "b",
+        "labelHe": "הן מצביעות על שני באגים שונים — התחברות מול הרשאות — עם אותו סימפטום במסך"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק לתיעוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק ב-API"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "האבחון מכוון למקום אחר לגמרי בכל אחד מהם.",
+    "skillId": "TECH.WEB",
+    "dimension": "application"
+  }
+}

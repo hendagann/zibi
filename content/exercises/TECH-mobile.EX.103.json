@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "הרשאה שבוטלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע המצב \"בוטלה אחרי שאושרה\" קריטי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא נדיר"
+      },
+      {
+        "id": "b",
+        "labelHe": "האפליקציה מניחה שההרשאה קיימת ועלולה לקרוס"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא רק ב-iOS"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין לו חשיבות"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הנחת הרשאה שכבר בוטלה היא באג שכיח.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

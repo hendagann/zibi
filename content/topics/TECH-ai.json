@@ -1,0 +1,50 @@
+{
+  "id": "TECH/ai",
+  "nameHe": "תכונות מבוססות בינה מלאכותית",
+  "nameEn": "AI-based features",
+  "domain": "TECH",
+  "description": "הגדרת \"נכון\" לפלט לא-דטרמיניסטי, ותכנון בדיקות שסובלות שונות בלי לקבל תשובות שגויות. התחום החדש שכל בודקת תיתקל בו.",
+  "learningObjectives": [
+    "להגדיר מה נחשב פלט נכון בתכונה לא-דטרמיניסטית",
+    "לתכנן בדיקות מבוססות תכונות במקום השוואה לערך יחיד",
+    "לזהות מתי היעדר אורקל דורש שינוי בשאלת הבדיקה",
+    "לבדוק גבולות בטיחות ומדיניות בפלט מחולל"
+  ],
+  "prerequisites": [
+    "TD/adequacy",
+    "TECH/api"
+  ],
+  "difficulty": 5,
+  "estimatedMinutes": 80,
+  "measuredSkills": [
+    "TECH.AI"
+  ],
+  "summaryRef": "TECH-ai.SUM.001",
+  "lessonRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "exerciseRefs": [
+    "TECH-ai.EX.100",
+    "TECH-ai.EX.101",
+    "TECH-ai.EX.102",
+    "TECH-ai.EX.103",
+    "TECH-ai.EX.104",
+    "TECH-ai.EX.105",
+    "TECH-ai.EX.106",
+    "TECH-ai.EX.107",
+    "TECH-ai.EX.108",
+    "TECH-ai.EX.109",
+    "TECH-ai.EX.110",
+    "TECH-ai.EX.111",
+    "TECH-ai.EX.112",
+    "TECH-ai.EX.113",
+    "TECH-ai.EX.114",
+    "TECH-ai.EX.115"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

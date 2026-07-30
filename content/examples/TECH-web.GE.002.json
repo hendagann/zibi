@@ -1,0 +1,75 @@
+{
+  "id": "TECH-web.GE.002",
+  "type": "guided_example",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.LOG"
+  },
+  "cognitiveLevel": "K2",
+  "difficulty": 4,
+  "title": "מה הלוג מבסס ומה לא",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 360,
+  "source": [
+    {
+      "sourceId": "SRC-ISTQB-CTFL-SYL",
+      "derivation": "original",
+      "note": "מושגי הקשר טכני כידע מקצועי"
+    },
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original",
+      "note": "מבנה, טעויות שטח, זווית מבחן"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  },
+  "version": 1,
+  "status": "active",
+  "lesson": "TECH-web.LE.001",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מקטע לוג סביב כשל שמירת הזמנה: \"14:32:07 INFO request abc123 POST /orders received; 14:32:07 INFO abc123 validating payload; 14:32:08 ERROR abc123 NullPointerException at OrderService.save line 88; 14:32:08 INFO abc123 response 500 sent\". יש לדווח מה הוכח ומה לא."
+    }
+  ],
+  "steps": [
+    {
+      "action": "לאתר לפי מזהה הבקשה ולא לפי \"ERROR\".",
+      "reasoning": "המזהה abc123 מקשר את ארבע השורות לאותה בקשה. בלוג עמוס, חיפוש \"ERROR\" יביא שגיאות של בקשות אחרות ויערבב בין תרחישים."
+    },
+    {
+      "action": "לקרוא את ההקשר לפני השגיאה.",
+      "reasoning": "הבקשה התקבלה והוולידציה החלה — כלומר הבקשה הגיעה תקינה עד לשלב השמירה. השגיאה אינה בקליטה או באימות אלא בשמירה עצמה."
+    },
+    {
+      "action": "לנסח מה הוכח.",
+      "reasoning": "\"בשעה 14:32:08, בבקשה abc123, נזרקה NullPointerException ב-OrderService.save שורה 88, והוחזר 500. הבקשה עברה בהצלחה קליטה ותחילת ולידציה.\" כל אמירה כאן נשענת על שורה בלוג."
+    },
+    {
+      "action": "לנסח מה נותר לא ידוע — החלק שמדלגים עליו.",
+      "reasoning": "\"לא ניתן לדעת מהלוג אם בוצעה פנייה למסד הנתונים — אין רשומה על כך. לא ידוע איזה שדה היה null. לא ידוע אם התרחיש משתחזר בכל בקשה או רק בתנאים מסוימים.\""
+    }
+  ],
+  "outcome": [
+    {
+      "kind": "paragraph",
+      "text": "הדיווח מפריד בין ארבע עובדות מבוססות לשלושה דברים שאינם ידועים. ההפרדה הזו היא מה שמונע מהמפתח לרדוף אחרי כיוון שגוי — והיא גם מה שמכוון אותו מיד לשורה 88."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "לכתוב \"נראה שהמסד נפל\".",
+      "whyTempting": "זו השערה סבירה לחלוטין כשרואים שגיאת שמירה. אבל אין בלוג אף רשומה על המסד — הצגת ניחוש כעובדה שולחת את המפתח לבדוק תשתית תקינה."
+    },
+    {
+      "mistake": "לחפש \"ERROR\" ולהעתיק את השורה שנמצאה.",
+      "whyTempting": "זה מהיר ומוצא את השגיאה. אבל בלי מזהה הבקשה עלולה להיתפס שגיאה של תרחיש אחר לגמרי, ובלי ההקשר לא יידע איפה בזרימה זה נשבר."
+    }
+  ]
+}

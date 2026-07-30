@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "מבנה שנראה תקין",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "אילו פגמי מבנה עוברים \"JSON חוקי\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין כאלה"
+      },
+      {
+        "id": "b",
+        "labelHe": "שדה חובה שמוחזר null, מערך ריק במקום פריטים, מספר שמוחזר כמחרוזת"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק שדה חסר"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק סוגר חסר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כולם חוקיים תחבירית ושבורים סמנטית.",
+    "skillId": "TECH.APIV",
+    "dimension": "application"
+  }
+}

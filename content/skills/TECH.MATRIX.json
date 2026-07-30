@@ -1,0 +1,15 @@
+{
+  "id": "TECH.MATRIX",
+  "topic": "TECH/mobile",
+  "titleHe": "מטריצת כיסוי",
+  "titleEn": "Coverage matrix",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Defines a browser and device coverage matrix under a stated budget, and justifies each exclusion by the risk accepted.",
+  "prerequisites": [
+    "TECH.MOBUX",
+    "MGMT.RBT"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

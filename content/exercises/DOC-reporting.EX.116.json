@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.STAKE"
+  },
+  "title": "תגובה מקצועית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי התגובה המקצועית לתיגר על ההמלצה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להתקפל"
+      },
+      {
+        "id": "b",
+        "labelHe": "לחזור לראיות, להפריד ידוע מהערכה, ולהציע חלופות עם המחיר של כל אחת"
+      },
+      {
+        "id": "c",
+        "labelHe": "לפנות למנהל בכיר"
+      },
+      {
+        "id": "d",
+        "labelHe": "לחזור על ההמלצה בקול רם"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו התגובה ששומרת גם על הממצא וגם על הדיון.",
+    "skillId": "DOC.STAKE",
+    "dimension": "application"
+  }
+}

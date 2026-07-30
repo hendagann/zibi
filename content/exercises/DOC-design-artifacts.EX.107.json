@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "title": "צעד חד-משמעי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הפגם ב\"להיכנס למערכת\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין פגם"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא צוין לאיזו כתובת ובאיזה דפדפן — נדרשת פרשנות"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא ארוך"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא ראשון"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "צעד חייב להיות פעולה אחת שאפשר לבצע בלי פרשנות.",
+    "skillId": "DOC.TC",
+    "dimension": "application"
+  }
+}

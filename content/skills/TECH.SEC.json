@@ -1,0 +1,15 @@
+{
+  "id": "TECH.SEC",
+  "topic": "TECH/quality-attributes",
+  "titleHe": "יסודות אבטחה לבודק",
+  "titleEn": "Security basics for testers",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Tests whether a user can reach data or actions outside their authorisation, and reports what was accessed and by what path.",
+  "prerequisites": [
+    "TECH.API",
+    "TECH.WEB"
+  ],
+  "sourceCoverage": "none",
+  "status": "active"
+}

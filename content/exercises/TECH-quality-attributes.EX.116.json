@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.SEC"
+  },
+  "title": "גישה אנכית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי בדיקת גישה אנכית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "נתוני משתמש אחר"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם משתמש רגיל מבצע פעולה השמורה למנהל"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקת רשת"
+      },
+      {
+        "id": "d",
+        "labelHe": "בדיקת תאריך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הסלמת הרשאות היא הסיכון כאן.",
+    "skillId": "TECH.SEC",
+    "dimension": "knowledge"
+  }
+}

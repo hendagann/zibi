@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOBUX"
+  },
+  "title": "פיצ׳ר שנשבר בשדרוג",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "פיצ׳ר עובד בהתקנה נקייה ונשבר בשדרוג. מה סביר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "באג בממשק"
+      },
+      {
+        "id": "b",
+        "labelHe": "מיגרציית נתונים או הגדרות שלא טופלה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בעיית רשת"
+      },
+      {
+        "id": "d",
+        "labelHe": "הרשאה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "נתונים קיימים הם ההבדל בין שני התרחישים.",
+    "skillId": "TECH.MOBUX",
+    "dimension": "application"
+  }
+}

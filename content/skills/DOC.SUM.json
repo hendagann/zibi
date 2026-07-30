@@ -1,0 +1,15 @@
+{
+  "id": "DOC.SUM",
+  "topic": "DOC/reporting",
+  "titleHe": "דוח סיכום והמלצת שחרור",
+  "titleEn": "Summary and release recommendation",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Writes a test summary that supports a release decision, stating residual risk in terms a non-tester can act on.",
+  "prerequisites": [
+    "MGMT.MON",
+    "DOC.RTM"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "תרגום",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה ניסוח שימושי יותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"12 מקרי בדיקה לא הורצו\""
+      },
+      {
+        "id": "b",
+        "labelHe": "\"ייצוא חשבוניות לא נבדק; תקלה שם תחסום הפקת חשבונית ל-200 לקוחות\""
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הכיסוי 92%\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"הבדיקות הסתיימו בזמן\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הניסוח מציין מה, מה יקרה, ולמי.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

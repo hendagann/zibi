@@ -1,0 +1,67 @@
+{
+  "id": "DOC-reporting.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/reporting",
+  "skills": {
+    "primary": "DOC.SUM"
+  },
+  "title": "סיכון שיורי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד מנוסח סיכון שיורי שימושי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-reporting.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"12 מקרים לא הורצו\""
+      },
+      {
+        "id": "b",
+        "labelHe": "מה לא נבדק + מה עלול לקרות + למי"
+      },
+      {
+        "id": "c",
+        "labelHe": "\"הכיסוי 92%\""
+      },
+      {
+        "id": "d",
+        "labelHe": "\"נמצאו 14 באגים\""
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "רק התרגום להשפעה הופך את הנתון למידע.",
+    "skillId": "DOC.SUM",
+    "dimension": "application"
+  }
+}

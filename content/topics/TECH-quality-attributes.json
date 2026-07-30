@@ -1,0 +1,60 @@
+{
+  "id": "TECH/quality-attributes",
+  "nameHe": "מאפייני איכות",
+  "nameEn": "Quality attributes",
+  "domain": "TECH",
+  "description": "נגישות במקלדת ובקורא מסך, לוקליזציה ו-RTL בממשק עברי-אנגלי, יסודות אבטחה לבודקת — גישה מעבר להרשאה — ופרשנות תוצאת ביצועים מול ציפייה. ארבעת התחומים שהשוק הישראלי דורש ורוב הבודקים אינם מכסים.",
+  "learningObjectives": [
+    "להעריך ממשק מול קריטריוני נגישות במקלדת ובקורא מסך ולצטט את הקריטריון בכל ממצא",
+    "לזהות היכן ממשק דו-לשוני עברי-אנגלי נשבר — כיוון, יישור, מחרוזות מעורבות, תאריכים ומספרים",
+    "לבדוק אם משתמש מגיע לנתונים או לפעולות מעבר להרשאתו ולדווח את הנתיב",
+    "לפרש תוצאת ביצועים מול ציפייה מוצהרת ולציין את הסיכון למשתמש"
+  ],
+  "prerequisites": [
+    "TECH/web"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 100,
+  "measuredSkills": [
+    "TECH.A11Y",
+    "TECH.I18N",
+    "TECH.SEC",
+    "TECH.PERF"
+  ],
+  "summaryRef": "TECH-quality-attributes.SUM.001",
+  "lessonRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "exerciseRefs": [
+    "TECH-quality-attributes.EX.100",
+    "TECH-quality-attributes.EX.101",
+    "TECH-quality-attributes.EX.102",
+    "TECH-quality-attributes.EX.103",
+    "TECH-quality-attributes.EX.104",
+    "TECH-quality-attributes.EX.105",
+    "TECH-quality-attributes.EX.106",
+    "TECH-quality-attributes.EX.107",
+    "TECH-quality-attributes.EX.108",
+    "TECH-quality-attributes.EX.109",
+    "TECH-quality-attributes.EX.110",
+    "TECH-quality-attributes.EX.111",
+    "TECH-quality-attributes.EX.112",
+    "TECH-quality-attributes.EX.113",
+    "TECH-quality-attributes.EX.114",
+    "TECH-quality-attributes.EX.115",
+    "TECH-quality-attributes.EX.116",
+    "TECH-quality-attributes.EX.117",
+    "TECH-quality-attributes.EX.118",
+    "TECH-quality-attributes.EX.119",
+    "TECH-quality-attributes.EX.120",
+    "TECH-quality-attributes.EX.121",
+    "TECH-quality-attributes.EX.122",
+    "TECH-quality-attributes.EX.123"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

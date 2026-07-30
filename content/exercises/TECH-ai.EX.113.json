@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "מדוע לא לדלג",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע לא לדלג על בדיקת חוסר זמינות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אפשר לדלג"
+      },
+      {
+        "id": "b",
+        "labelHe": "המשתמש עובד מול המסך; קריסה או נעילה שם הן פגם מוצר"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק ברגולציה"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק במובייל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זמינות תשתית מתבטאת בחוויית משתמש.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

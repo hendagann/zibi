@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "עקביות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד בודקים עקביות בפלט מחולל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "דורשים תוצאה זהה"
+      },
+      {
+        "id": "b",
+        "labelHe": "מריצים אותו קלט פעמיים ובודקים שהתשובות אינן סותרות"
+      },
+      {
+        "id": "c",
+        "labelHe": "לא בודקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "משווים למודל אחר"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דרישת זהות תיכשל; דרישת אי-סתירה סבירה.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

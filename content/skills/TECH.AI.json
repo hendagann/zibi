@@ -1,0 +1,15 @@
+{
+  "id": "TECH.AI",
+  "topic": "TECH/ai",
+  "titleHe": "בדיקת פלט לא־דטרמיניסטי",
+  "titleEn": "Testing non-deterministic output",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Defines what \"correct\" means for a non-deterministic feature output, and designs checks that tolerate variation without accepting wrong answers.",
+  "prerequisites": [
+    "TD.COV",
+    "TECH.APIV"
+  ],
+  "sourceCoverage": "partial",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "POST",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה עושה POST?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "קורא"
+      },
+      {
+        "id": "b",
+        "labelHe": "יוצר משאב חדש"
+      },
+      {
+        "id": "c",
+        "labelHe": "מוחק"
+      },
+      {
+        "id": "d",
+        "labelHe": "מחליף"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "POST הוא שיטת היצירה.",
+    "skillId": "TECH.API",
+    "dimension": "knowledge"
+  }
+}

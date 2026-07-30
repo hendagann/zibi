@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "מה לא בדרישה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע תנאי מובייל אינם מופיעים בדרישות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הם לא חשובים"
+      },
+      {
+        "id": "b",
+        "labelHe": "הדרישה מתארת את הזרימה התקינה; תנאי הסביבה הם ידע מקצועי של הבודקת"
+      },
+      {
+        "id": "c",
+        "labelHe": "הם טכניים מדי"
+      },
+      {
+        "id": "d",
+        "labelHe": "הם מופיעים תמיד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו בדיוק התרומה של טכניקות מבוססות ניסיון.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

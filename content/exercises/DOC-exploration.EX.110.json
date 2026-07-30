@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "למה סדרה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה היתרון בפירוק לסדרה על פני סשן אחד ארוך?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא קצר"
+      },
+      {
+        "id": "b",
+        "labelHe": "כל סשן מדווח בנפרד, וכך אפשר לדעת מה נחקר ומה נשאר"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא זול"
+      },
+      {
+        "id": "d",
+        "labelHe": "אין יתרון"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דיווח יחיד על אזור שלם מטשטש את הכיסוי.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

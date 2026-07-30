@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.I18N"
+  },
+  "title": "דיווח RTL",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד לדווח ממצא RTL?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "\"הטקסט מבולגן\""
+      },
+      {
+        "id": "b",
+        "labelHe": "לצטט את המחרוזת המדויקת, מה הוצג ומה היה אמור להיות"
+      },
+      {
+        "id": "c",
+        "labelHe": "\"יש בעיה בעברית\""
+      },
+      {
+        "id": "d",
+        "labelHe": "צילום מסך בלבד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בלי המחרוזת המפתח לא ידע אם זה בידוד, יישור או פורמט.",
+    "skillId": "TECH.I18N",
+    "dimension": "application"
+  }
+}

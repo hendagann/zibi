@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.A11Y"
+  },
+  "title": "הודעת שגיאה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע צבע אדום לבדו אינו מספיק להודעת שגיאה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הוא לא בולט"
+      },
+      {
+        "id": "b",
+        "labelHe": "הוא אינו נגיש למי שאינו רואה — ההודעה חייבת להיות מוכרזת"
+      },
+      {
+        "id": "c",
+        "labelHe": "הוא לא יפה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הוא מספיק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מידע שמועבר בצבע בלבד אינו נגיש.",
+    "skillId": "TECH.A11Y",
+    "dimension": "application"
+  }
+}

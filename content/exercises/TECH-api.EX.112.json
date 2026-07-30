@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.APIV"
+  },
+  "title": "שלושה ממדים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באילו שלושה ממדים מאמתים תגובת API?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "ערכים, מבנה, סטטוס"
+      },
+      {
+        "id": "b",
+        "labelHe": "מהירות, גודל, פורמט"
+      },
+      {
+        "id": "c",
+        "labelHe": "קלט, פלט, שגיאה"
+      },
+      {
+        "id": "d",
+        "labelHe": "GET, POST, DELETE"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "שלושתם יחד מרכיבים אימות מלא.",
+    "skillId": "TECH.APIV",
+    "dimension": "knowledge"
+  }
+}

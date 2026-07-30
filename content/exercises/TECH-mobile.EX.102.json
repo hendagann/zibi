@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MOB"
+  },
+  "title": "שלושה מצבי הרשאה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באילו שלושה מצבים בודקים הרשאה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אושרה בלבד"
+      },
+      {
+        "id": "b",
+        "labelHe": "אושרה, נדחתה, ובוטלה בהגדרות אחרי אישור"
+      },
+      {
+        "id": "c",
+        "labelHe": "אושרה ונדחתה"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בהתקנה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המצב השלישי הוא הנשכח והוא מקור קריסות.",
+    "skillId": "TECH.MOB",
+    "dimension": "application"
+  }
+}

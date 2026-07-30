@@ -1,0 +1,55 @@
+{
+  "id": "TECH/mobile",
+  "nameHe": "מובייל וכיסוי מכשירים",
+  "nameEn": "Mobile and device coverage",
+  "domain": "TECH",
+  "description": "התנאים שקיימים רק במובייל — הפרעות, הרשאות, קישוריות ומחזור חיי אפליקציה — התקנה ושדרוג, ובניית מטריצת כיסוי מכשירים תחת תקציב עם הצדקה לכל החרגה.",
+  "learningObjectives": [
+    "לבדוק פיצ׳ר מובייל מול הפרעה, הרשאה, קישוריות ומחזור חיים",
+    "לזהות אילו תנאי התקנה, שדרוג והבדלי מכשיר משפיעים על פיצ׳ר",
+    "לבנות מטריצת כיסוי מכשירים תחת תקציב נתון",
+    "להצדיק כל החרגה מהמטריצה בסיכון שמתקבל"
+  ],
+  "prerequisites": [
+    "LIFE/levels-types"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 85,
+  "measuredSkills": [
+    "TECH.MOB",
+    "TECH.MOBUX",
+    "TECH.MATRIX"
+  ],
+  "summaryRef": "TECH-mobile.SUM.001",
+  "lessonRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "exerciseRefs": [
+    "TECH-mobile.EX.100",
+    "TECH-mobile.EX.101",
+    "TECH-mobile.EX.102",
+    "TECH-mobile.EX.103",
+    "TECH-mobile.EX.104",
+    "TECH-mobile.EX.105",
+    "TECH-mobile.EX.106",
+    "TECH-mobile.EX.107",
+    "TECH-mobile.EX.108",
+    "TECH-mobile.EX.109",
+    "TECH-mobile.EX.110",
+    "TECH-mobile.EX.111",
+    "TECH-mobile.EX.112",
+    "TECH-mobile.EX.113",
+    "TECH-mobile.EX.114",
+    "TECH-mobile.EX.115",
+    "TECH-mobile.EX.116",
+    "TECH-mobile.EX.117",
+    "TECH-mobile.EX.118",
+    "TECH-mobile.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

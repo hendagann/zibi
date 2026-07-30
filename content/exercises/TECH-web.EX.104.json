@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "500",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מציין קוד 500?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הקלט שגוי"
+      },
+      {
+        "id": "b",
+        "labelHe": "שגיאה בצד השרת"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין הרשאה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הצליח"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "5xx מצביע על כשל בעיבוד בשרת.",
+    "skillId": "TECH.WEB",
+    "dimension": "knowledge"
+  }
+}

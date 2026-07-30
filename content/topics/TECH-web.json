@@ -1,0 +1,57 @@
+{
+  "id": "TECH/web",
+  "nameHe": "רשת ואבחון",
+  "nameEn": "Web and diagnosis",
+  "domain": "TECH",
+  "description": "מה קורה בין לחיצה לתוצאה, שימוש בכלי המפתחים כדי להפריד סיבה בצד לקוח מסיבה בצד שרת, וקריאת לוגים — לומר מה הוכח ומה עדיין לא ידוע.",
+  "learningObjectives": [
+    "לתאר מה מתרחש בין פעולת משתמש לתוצאה מוצגת ולציין היכן סימפטום יכול להיווצר",
+    "להשתמש בכלי המפתחים כדי לאסוף את הראיה שמפרידה סיבה בצד לקוח מסיבה בצד שרת",
+    "לאתר בלוג את הרשומות הרלוונטיות לכשל",
+    "לומר מה הלוג מבסס ומה נותר לא ידוע"
+  ],
+  "prerequisites": [
+    "FUND/process"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 90,
+  "measuredSkills": [
+    "TECH.WEB",
+    "TECH.DEV",
+    "TECH.LOG"
+  ],
+  "summaryRef": "TECH-web.SUM.001",
+  "lessonRefs": [
+    "TECH-web.LE.001"
+  ],
+  "exerciseRefs": [
+    "TECH-web.EX.100",
+    "TECH-web.EX.101",
+    "TECH-web.EX.102",
+    "TECH-web.EX.103",
+    "TECH-web.EX.104",
+    "TECH-web.EX.105",
+    "TECH-web.EX.106",
+    "TECH-web.EX.107",
+    "TECH-web.EX.108",
+    "TECH-web.EX.109",
+    "TECH-web.EX.110",
+    "TECH-web.EX.111",
+    "TECH-web.EX.112",
+    "TECH-web.EX.113",
+    "TECH-web.EX.114",
+    "TECH-web.EX.115",
+    "TECH-web.EX.116",
+    "TECH-web.EX.117",
+    "TECH-web.EX.118",
+    "TECH-web.EX.119",
+    "TECH-web.EX.120",
+    "TECH-web.EX.121"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

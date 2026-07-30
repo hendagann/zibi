@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MATRIX"
+  },
+  "title": "מגוון מול נפח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה בפיזור מכשירים על גרסאות שוליות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אם הנפח הגדול אינו מכוסה, תקלה שם תפגע ברוב המשתמשים"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה יקר"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה איטי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מגוון אינו תחליף לכיסוי היכן שהמשתמשים נמצאים.",
+    "skillId": "TECH.MATRIX",
+    "dimension": "application"
+  }
+}

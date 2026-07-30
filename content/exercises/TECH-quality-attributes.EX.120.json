@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.120",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.PERF"
+  },
+  "title": "מספר לבד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "האם \"טעינה לקחה 4 שניות\" הוא ממצא?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לא — בלי ציפייה מוצהרת אי אפשר לדעת אם זה טוב או רע"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק אם איטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בייצור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מדידה הופכת לממצא רק מול ציפייה.",
+    "skillId": "TECH.PERF",
+    "dimension": "application"
+  }
+}

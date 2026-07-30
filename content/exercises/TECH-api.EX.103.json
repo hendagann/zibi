@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "PUT מול PATCH",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין PUT ל-PATCH?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "PUT מחליף משאב שלם; PATCH מעדכן חלקית"
+      },
+      {
+        "id": "c",
+        "labelHe": "PATCH מוחק"
+      },
+      {
+        "id": "d",
+        "labelHe": "PUT קורא"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היקף העדכון הוא ההבדל.",
+    "skillId": "TECH.API",
+    "dimension": "knowledge"
+  }
+}

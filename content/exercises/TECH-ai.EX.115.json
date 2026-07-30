@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "מיקוד שגוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה בהתמקדות רק באיכות הפלט?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הפגמים החמורים הם הזרקת הוראות ודליפת מידע — לא ניסוח לא מוצלח"
+      },
+      {
+        "id": "c",
+        "labelHe": "זה איטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה מספיק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "תכונת מודל דורשת גם בדיקת הרשאות ומדיניות.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

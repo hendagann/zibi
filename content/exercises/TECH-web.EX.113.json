@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.DEV"
+  },
+  "title": "שתי לשוניות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע לבדוק גם Network וגם Console?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להארכת הבדיקה"
+      },
+      {
+        "id": "b",
+        "labelHe": "נתונים תקינים יכולים להגיע ושגיאת JS תעצור את הרינדור"
+      },
+      {
+        "id": "c",
+        "labelHe": "אין צורך"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק בשגיאת שרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקת אחת מהן בלבד מפספסת מחלקת תקלות שלמה.",
+    "skillId": "TECH.DEV",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "שלושה מרכיבים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם מרכיבי charter?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מה נחקר, באילו משאבים, ואיזה מידע מחפשים"
+      },
+      {
+        "id": "b",
+        "labelHe": "מי, מתי, כמה"
+      },
+      {
+        "id": "c",
+        "labelHe": "חומרה, עדיפות, סטטוס"
+      },
+      {
+        "id": "d",
+        "labelHe": "קלט, פלט, תוצאה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "שלושת המרכיבים יחד הופכים משימה עמומה לברת-ביצוע.",
+    "skillId": "DOC.CHART",
+    "dimension": "knowledge"
+  }
+}

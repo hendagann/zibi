@@ -1,0 +1,67 @@
+{
+  "id": "DOC-exploration.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/exploration",
+  "skills": {
+    "primary": "DOC.CHART"
+  },
+  "title": "מבחן 90 דקות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו המבחן ל-charter תקין?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-exploration.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אורכו"
+      },
+      {
+        "id": "b",
+        "labelHe": "האם אפשר לעבוד לפיו 90 דקות ולדעת בסוף אם המשימה הושגה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מי אישר"
+      },
+      {
+        "id": "d",
+        "labelHe": "כמה באגים נמצאו"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זהו המבחן המעשי לצר/רחב מדי.",
+    "skillId": "DOC.CHART",
+    "dimension": "application"
+  }
+}

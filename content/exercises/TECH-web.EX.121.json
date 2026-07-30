@@ -1,0 +1,67 @@
+{
+  "id": "TECH-web.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/web",
+  "skills": {
+    "primary": "TECH.WEB"
+  },
+  "title": "היכן להתחיל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו הצעד הראשון באבחון \"הכפתור לא עובד\"?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-web.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לפתוח באג"
+      },
+      {
+        "id": "b",
+        "labelHe": "לפתוח Network ולבדוק אם נשלחה בקשה ומה חזר"
+      },
+      {
+        "id": "c",
+        "labelHe": "לשאול את המפתח"
+      },
+      {
+        "id": "d",
+        "labelHe": "לרענן"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שתי השאלות האלה מכריעות את מיקום הכשל.",
+    "skillId": "TECH.WEB",
+    "dimension": "application"
+  }
+}

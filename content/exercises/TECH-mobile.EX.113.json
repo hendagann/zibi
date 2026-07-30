@@ -1,0 +1,67 @@
+{
+  "id": "TECH-mobile.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/mobile",
+  "skills": {
+    "primary": "TECH.MATRIX"
+  },
+  "title": "בסיס המטריצה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "ממה נבנית מטריצת כיסוי מכשירים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-mobile.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "מהמכשירים שיש במשרד"
+      },
+      {
+        "id": "b",
+        "labelHe": "מנתוני שימוש אמיתיים, מסיכון, ומכיסוי ממדים כגודל מסך וגרסת מערכת"
+      },
+      {
+        "id": "c",
+        "labelHe": "מהמכשירים החדשים ביותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "באקראי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הנתונים והסיכון קובעים, לא הזמינות.",
+    "skillId": "TECH.MATRIX",
+    "dimension": "application"
+  }
+}

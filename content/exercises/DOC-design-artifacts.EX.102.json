@@ -1,0 +1,67 @@
+{
+  "id": "DOC-design-artifacts.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/design-artifacts",
+  "skills": {
+    "primary": "DOC.TC"
+  },
+  "title": "תוצאה גרועה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"ללחוץ שמור\" ⇐ \"הכפתור נלחץ\". מה הפגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-design-artifacts.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין פגם"
+      },
+      {
+        "id": "b",
+        "labelHe": "התוצאה חוזרת על הצעד ואינה מתארת תוצאה נצפית"
+      },
+      {
+        "id": "c",
+        "labelHe": "הצעד שגוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "חסר תאריך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אין למה להשוות — כל התנהגות תתאים לניסוח.",
+    "skillId": "DOC.TC",
+    "dimension": "application"
+  }
+}

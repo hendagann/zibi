@@ -1,0 +1,67 @@
+{
+  "id": "TECH-quality-attributes.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/quality-attributes",
+  "skills": {
+    "primary": "TECH.SEC"
+  },
+  "title": "הפגם החמור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו הפגם החמור ביותר בהרשאות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-quality-attributes.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כפתור לא יפה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הרשאה שנאכפת רק בתצוגה בעוד השרת מבצע את הפעולה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הודעה לא ברורה"
+      },
+      {
+        "id": "d",
+        "labelHe": "טעינה איטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל מי ששולח בקשה ישירה עוקף אותה.",
+    "skillId": "TECH.SEC",
+    "dimension": "application"
+  }
+}

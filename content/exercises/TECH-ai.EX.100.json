@@ -1,0 +1,67 @@
+{
+  "id": "TECH-ai.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/ai",
+  "skills": {
+    "primary": "TECH.AI"
+  },
+  "title": "הבעיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע השוואה לערך מצופה אינה עובדת בפלט לא-דטרמיניסטי?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-ai.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "היא איטית"
+      },
+      {
+        "id": "b",
+        "labelHe": "אין ערך יחיד נכון — פלט תקין ייכשל בהשוואה לערך קבוע"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא יקרה"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא עובדת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שתי תשובות שונות יכולות להיות שתיהן תקינות.",
+    "skillId": "TECH.AI",
+    "dimension": "application"
+  }
+}

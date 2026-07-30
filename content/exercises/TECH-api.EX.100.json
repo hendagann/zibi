@@ -1,0 +1,67 @@
+{
+  "id": "TECH-api.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/api",
+  "skills": {
+    "primary": "TECH.API"
+  },
+  "title": "GET",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מאפיין את השיטה GET?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-api.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "יוצרת משאב"
+      },
+      {
+        "id": "b",
+        "labelHe": "קוראת בלי לשנות מצב"
+      },
+      {
+        "id": "c",
+        "labelHe": "מוחקת"
+      },
+      {
+        "id": "d",
+        "labelHe": "מעדכנת חלקית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "GET חייב להיות בטוח — קריאה שאינה משנה דבר.",
+    "skillId": "TECH.API",
+    "dimension": "knowledge"
+  }
+}

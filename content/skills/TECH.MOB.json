@@ -1,0 +1,14 @@
+{
+  "id": "TECH.MOB",
+  "topic": "TECH/mobile",
+  "titleHe": "בדיקות מובייל ידניות",
+  "titleEn": "Manual mobile testing",
+  "tier": "applied",
+  "cognitiveLevel": "K3",
+  "behaviour": "Tests a mobile feature against interruption, permission, connectivity and lifecycle conditions, and reports device-specific behaviour.",
+  "prerequisites": [
+    "LIFE.TYPE"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}
