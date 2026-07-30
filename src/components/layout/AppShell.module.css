@@ -34,8 +34,10 @@
   gap: var(--space-3);
   block-size: var(--topbar-height);
   padding-inline: var(--space-4);
-  background-color: var(--color-surface-raised);
-  border-block-end: 1px solid var(--color-border);
+  background-color: var(--glass-surface-dense);
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  backdrop-filter: blur(var(--glass-blur-strong));
+  border-block-end: 1px solid var(--glass-border);
 }
 
 .menuButton {
@@ -70,8 +72,12 @@
   flex-direction: column;
   gap: var(--space-5);
   padding: var(--space-5) var(--space-4);
-  background-color: var(--color-surface-raised);
-  border-inline-end: 1px solid var(--color-border);
+  /* Glass rail. Denser than a content card because it sits above scrolling
+   * content and must stay readable over whatever passes behind it. */
+  background-color: var(--glass-surface-dense);
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  backdrop-filter: blur(var(--glass-blur-strong));
+  border-inline-end: 1px solid var(--glass-border);
   overflow-y: auto;
   transform: var(--offcanvas-hidden);
   /*
@@ -155,13 +161,19 @@
 }
 
 .navLink:hover {
-  background-color: var(--color-surface-hover);
+  background-color: var(--glass-surface-hover);
   color: var(--color-text);
 }
 
-.navLinkActive {
-  background-color: var(--color-primary-soft);
-  color: var(--color-primary);
+/* The active pill: a solid accent block with dark text, the one place in the
+ * navigation where the accent is used at full strength. It carries the state in
+ * three ways at once — fill, text colour and weight — so it is not conveyed by
+ * colour alone, and `aria-current` in the markup states it for a screen reader. */
+.navLinkActive,
+.navLinkActive:hover {
+  background-color: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-weight: var(--weight-semibold);
 }
 
 .navIcon {

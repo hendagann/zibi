@@ -1,9 +1,16 @@
+/* The glass panel — the product's primary surface.
+ *
+ * `backdrop-filter` is progressive: where it is unsupported the card falls back
+ * to a flat translucent fill over the dark ground, which still separates it from
+ * the background. The fill is therefore never fully transparent. */
 .card {
-  background-color: var(--color-surface-raised);
-  border: 1px solid var(--color-border);
+  background-color: var(--glass-surface);
+  -webkit-backdrop-filter: blur(var(--glass-blur));
+  backdrop-filter: blur(var(--glass-blur));
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   padding: var(--space-5);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
 }
 
 .flush {
@@ -14,4 +21,22 @@
 .quiet {
   box-shadow: none;
   background-color: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* For cards carrying long Hebrew prose: denser fill, stronger blur, so the
+ * gradient behind them cannot reduce the contrast of body text. */
+.dense {
+  background-color: var(--glass-surface-dense);
+  -webkit-backdrop-filter: blur(var(--glass-blur-strong));
+  backdrop-filter: blur(var(--glass-blur-strong));
+}
+
+/* For code, editors and result tables: opaque. Glass behind a monospace grid
+ * hurts legibility and the brief forbids it. */
+.solid {
+  background-color: var(--color-surface);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
