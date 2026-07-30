@@ -19,8 +19,9 @@ import {
   type ExerciseItem,
 } from '@/content/exercise';
 import type { DefectReportAnswer } from '@/content/blocks';
-import { getDataset, getItem } from '@/content/loader';
-import { attemptsForItem, LOCAL_USER } from '@/storage/attempts';
+import { ExerciseNav } from '@/components/practice/ExerciseNav';
+import { getDataset, getItem, getPracticeExercises } from '@/content/loader';
+import { attemptsForItem, attemptsForUser, LOCAL_USER } from '@/storage/attempts';
 import { t } from '@/i18n';
 
 // Attempts accumulate at runtime; this page always reads the store.
@@ -46,6 +47,17 @@ export default async function ExercisePage({ params }: PageProps) {
   const latest = attempts[attempts.length - 1];
   const previous = attempts[attempts.length - 2];
   const topicId = exercise.topic ?? '';
+
+  // Where this exercise sits in the queue, and what comes next. The queue is
+  // the same ordered list the practice index renders, so "next" here and the
+  // order there can never disagree.
+  const [queue, allAttempts] = await Promise.all([
+    getPracticeExercises(),
+    attemptsForUser(LOCAL_USER),
+  ]);
+  const index = queue.findIndex((e) => e.id === itemId);
+  const answeredIds = new Set(allAttempts.map((a) => a.item_id));
+  const answeredInQueue = queue.filter((e) => answeredIds.has(e.id)).length;
 
   const isSql = exercise.questionType === 'sql_query';
   const isMcq = exercise.questionType === 'mcq_single';
@@ -149,6 +161,15 @@ export default async function ExercisePage({ params }: PageProps) {
           )}
         </Card>
       </Section>
+
+      <ExerciseNav
+        position={index >= 0 ? index + 1 : 1}
+        total={queue.length}
+        previousId={index > 0 ? (queue[index - 1]?.id ?? null) : null}
+        nextId={index >= 0 ? (queue[index + 1]?.id ?? null) : null}
+        answered={answeredInQueue}
+        isAnswered={Boolean(latest)}
+      />
     </>
   );
 }

@@ -121,6 +121,15 @@ export const he = {
     sessionTitle: 'מפגש תרגול',
     queueLabel: 'תור התרגול',
     queueEmpty: 'התור ריק.',
+    next: 'לתרגיל הבא',
+    previous: 'לתרגיל הקודם',
+    backToList: 'חזרה לתור התרגול',
+    positionLabel: 'תרגיל',
+    positionOf: 'מתוך',
+    answeredLabel: 'נענו',
+    lastScoreLabel: 'ציון אחרון',
+    notAnsweredYet: 'טרם נענה',
+    navLabel: 'ניווט בין תרגילים',
   },
 
   exam: {

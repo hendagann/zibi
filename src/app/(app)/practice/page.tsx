@@ -31,7 +31,7 @@ export default async function PracticePage() {
 
       <Section
         title={t.practice.queueLabel}
-        aside={`${t.common.count}: ${exercises.length}`}
+        aside={`${t.practice.answeredLabel}: ${latestByItem.size} ${t.practice.positionOf} ${exercises.length}`}
       >
         {exercises.length ? (
           <ul className={styles.list} role="list">
