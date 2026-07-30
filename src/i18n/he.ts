@@ -101,6 +101,10 @@ export const he = {
     topicsLabel: 'נושאים',
     skillsLabel: 'מיומנויות',
     openTopic: 'פתיחת נושא',
+    progressLabel: 'התקדמות בנושא',
+    exercisesShort: 'תרגילים',
+    masteredLabel: 'כל התרגילים עברו',
+    noExercises: 'אין תרגילים',
   },
 
   topic: {
