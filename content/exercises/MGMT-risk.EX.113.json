@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "ההצהרה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע חשוב להצהיר במפורש מה לא ייבדק?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כדי להתנער מאחריות"
+      },
+      {
+        "id": "b",
+        "labelHe": "כדי להפוך סיכון נסתר לסיכון מנוהל שבעל ההחלטה מאשר"
+      },
+      {
+        "id": "c",
+        "labelHe": "כדי לקצר את הדוח"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה לא חשוב"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הצהרה מעבירה את ההחלטה למי שאמור לקבל אותה, ומתעדת סיכון שהתקבל ביודעין.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

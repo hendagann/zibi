@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "הבחנה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין הפחתת סיכון לתוכנית מגירה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "הפחתה פועלת מראש להקטין את הסיכון; מגירה מופעלת אם הוא בכל זאת התממש"
+      },
+      {
+        "id": "c",
+        "labelHe": "מגירה תמיד עדיפה"
+      },
+      {
+        "id": "d",
+        "labelHe": "הפחתה מבטלת את הצורך במגירה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "השתיים משלימות: אחת מקטינה סיכוי/נזק, השנייה מטפלת במימוש בפועל.",
+    "skillId": "MGMT.RISK",
+    "dimension": "application"
+  }
+}

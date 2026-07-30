@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "מי משתתף בזיהוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מדוע נכון לזהות סיכונים יחד עם מפתחים, מוצר ותמיכה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כדי לחלוק אחריות"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי אף תפקיד לבדו אינו רואה את כל הסיכונים — טכני, עסקי ותלונות לקוח"
+      },
+      {
+        "id": "c",
+        "labelHe": "כדי לקצר פגישות"
+      },
+      {
+        "id": "d",
+        "labelHe": "זה לא נדרש"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כל תפקיד רואה זווית אחרת; זיהוי משותף מונע נקודות עיוורון.",
+    "skillId": "MGMT.RISK",
+    "dimension": "application"
+  }
+}

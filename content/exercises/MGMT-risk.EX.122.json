@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.122",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "נימוק לדירוג",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה חייב ללוות דירוג סיכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אישור הלקוח"
+      },
+      {
+        "id": "b",
+        "labelHe": "נימוק מפורש להסתברות ולהשפעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מספר הבאגים"
+      },
+      {
+        "id": "d",
+        "labelHe": "שם הבודק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דירוג בלי נימוק אינו ניתן להגנה ואינו ניתן לעדכון כשהנתונים משתנים.",
+    "skillId": "MGMT.RISK",
+    "dimension": "application"
+  }
+}

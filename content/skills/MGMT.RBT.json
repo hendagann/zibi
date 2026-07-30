@@ -1,0 +1,15 @@
+{
+  "id": "MGMT.RBT",
+  "topic": "MGMT/risk",
+  "titleHe": "בדיקות מבוססות סיכון",
+  "titleEn": "Risk-based testing",
+  "tier": "advanced",
+  "cognitiveLevel": "K4",
+  "behaviour": "Orders a test effort by risk under a stated constraint, and states explicitly what will not be tested and what that leaves exposed.",
+  "prerequisites": [
+    "MGMT.RISK",
+    "TD.SEL"
+  ],
+  "sourceCoverage": "adequate",
+  "status": "active"
+}

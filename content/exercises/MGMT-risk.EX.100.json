@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "הגדרת סיכון",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כיצד מוגדרת רמת סיכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לפי מספר הבאגים שנמצאו"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסתברות ההתרחשות כפול חומרת ההשפעה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לפי כמות הקוד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לפי מספר הבודקים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סיכון = הסתברות × השפעה. שני הגורמים נחוצים; אחד מהם לבדו מטעה.",
+    "skillId": "MGMT.RISK",
+    "dimension": "knowledge"
+  }
+}

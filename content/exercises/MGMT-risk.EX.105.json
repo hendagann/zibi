@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "שלבי ניתוח",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם שלבי ניתוח הסיכונים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "זיהוי הסיכונים והערכתם לפי הסתברות והשפעה"
+      },
+      {
+        "id": "b",
+        "labelHe": "כתיבת קוד ובדיקתו"
+      },
+      {
+        "id": "c",
+        "labelHe": "תכנון ותיעוד בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "סקירה ואישור"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "ניתוח סיכונים = זיהוי (עם בעלי עניין שונים) + הערכה לפי הסתברות והשפעה.",
+    "skillId": "MGMT.RISK",
+    "dimension": "knowledge"
+  }
+}

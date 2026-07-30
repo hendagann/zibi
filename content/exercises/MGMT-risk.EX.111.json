@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "תשובה לאילוץ",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "נשארו יומיים ו-40 בדיקות. מהי התשובה המקצועית?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להריץ לפי הסדר עד שייגמר הזמן"
+      },
+      {
+        "id": "b",
+        "labelHe": "לדרג סיכון, לתעדף לפיו, ולהצהיר מה לא ייבדק"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבקש לדחות תמיד"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבדוק הכול שטחית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אילוץ זמן נפתר בתעדוף מנומק והצהרה, לא בהרצה שרירותית.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

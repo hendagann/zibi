@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "צמצום ולא ויתור",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "העברה בנקאית משמשת 5% מהלקוחות ונוגעת בכסף. מה נכון תחת אילוץ?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לוותר לגמרי"
+      },
+      {
+        "id": "b",
+        "labelHe": "לצמצם לבדיקת שפיות אחת מקצה לקצה"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק בעומק מלא כמו הזרימה הראשית"
+      },
+      {
+        "id": "d",
+        "labelHe": "לדחות את השחרור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "אזור בינוני מקבל צמצום ולא ויתור — הוא נוגע בכסף, אך אינו מצדיק עומק מלא.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

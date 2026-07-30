@@ -1,0 +1,58 @@
+{
+  "id": "MGMT/risk",
+  "nameHe": "סיכון ובדיקות מבוססות סיכון",
+  "nameEn": "Risk and risk-based testing",
+  "domain": "MGMT",
+  "description": "סיכון כמכפלה של הסתברות בהשפעה, ההבחנה בין סיכון מוצר לסיכון פרויקט, מטריצת סיכונים, ותעדוף מאמץ הבדיקה לפי סיכון — כולל ההצהרה המפורשת על מה לא ייבדק. הליבה של פרק 5 (22.5%) והמיומנות שמבדילה בודקת בכירה.",
+  "learningObjectives": [
+    "לדרג סיכון מוצר לפי הסתברות והשפעה עם נימוק מפורש",
+    "להבחין בין סיכון מוצר לסיכון פרויקט",
+    "לבנות ולפרש מטריצת סיכונים עם קריטריונים מדידים",
+    "לתעדף מאמץ בדיקה תחת אילוץ נתון ולהצהיר במפורש מה לא ייבדק ואיזה סיכון מתקבל"
+  ],
+  "prerequisites": [
+    "LIFE/levels-types"
+  ],
+  "difficulty": 4,
+  "estimatedMinutes": 95,
+  "measuredSkills": [
+    "MGMT.RISK",
+    "MGMT.RBT"
+  ],
+  "summaryRef": "MGMT-risk.SUM.001",
+  "lessonRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "exerciseRefs": [
+    "MGMT-risk.EX.100",
+    "MGMT-risk.EX.101",
+    "MGMT-risk.EX.102",
+    "MGMT-risk.EX.103",
+    "MGMT-risk.EX.104",
+    "MGMT-risk.EX.105",
+    "MGMT-risk.EX.106",
+    "MGMT-risk.EX.107",
+    "MGMT-risk.EX.108",
+    "MGMT-risk.EX.109",
+    "MGMT-risk.EX.110",
+    "MGMT-risk.EX.111",
+    "MGMT-risk.EX.112",
+    "MGMT-risk.EX.113",
+    "MGMT-risk.EX.114",
+    "MGMT-risk.EX.115",
+    "MGMT-risk.EX.116",
+    "MGMT-risk.EX.117",
+    "MGMT-risk.EX.118",
+    "MGMT-risk.EX.119",
+    "MGMT-risk.EX.120",
+    "MGMT-risk.EX.121",
+    "MGMT-risk.EX.122",
+    "MGMT-risk.EX.123"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

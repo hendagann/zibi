@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "סיכון מוצר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהו סיכון מוצר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חריגה מלוח זמנים"
+      },
+      {
+        "id": "b",
+        "labelHe": "אפשרות לכשל במערכת עצמה — קריסה, אובדן נתונים, חישוב שגוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "מחסור בבודקים"
+      },
+      {
+        "id": "d",
+        "labelHe": "עיכוב של ספק"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סיכון מוצר נוגע לכשל אפשרי במוצר; סיכוני זמנים ומשאבים הם סיכוני פרויקט.",
+    "skillId": "MGMT.RISK",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.123",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "עקביות עם התרחיש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בשאלת תעדוף, מה נבדק בעיקר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שהתשובה זהה לפתרון המומלץ"
+      },
+      {
+        "id": "b",
+        "labelHe": "איכות הנימוק ועקביותו עם הנתונים שבתרחיש"
+      },
+      {
+        "id": "c",
+        "labelHe": "אורך התשובה"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר הבדיקות שנבחרו"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בשאלות תעדוף שתי החלטות מנוגדות יכולות לקבל ציון מלא אם שתיהן מנומקות ועקביות.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

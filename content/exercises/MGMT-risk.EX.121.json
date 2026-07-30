@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.121",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "מיקוד ולא קיצוץ",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי המשמעות של RBT מבחינת היקף העבודה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "עובדים פחות שעות"
+      },
+      {
+        "id": "b",
+        "labelHe": "אותן שעות מכוונות לאזורים שבהם כשל יעלה הכי הרבה"
+      },
+      {
+        "id": "c",
+        "labelHe": "מבטלים בדיקות"
+      },
+      {
+        "id": "d",
+        "labelHe": "בודקים רק אוטומטית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "RBT היא מיקוד המאמץ, לא הפחתתו — לבדוק את הדברים הנכונים לעומק.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

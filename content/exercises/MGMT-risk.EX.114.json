@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "בלי הצהרה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "תעדפת נכון אך לא הצהרת מה לא נבדק. מה הסיכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין סיכון"
+      },
+      {
+        "id": "b",
+        "labelHe": "כולם יניחו שנבדק הכול, ותקלה באזור שוויתרת עליו תיראה כמחדל של הבדיקות"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבדיקות יאטו"
+      },
+      {
+        "id": "d",
+        "labelHe": "הדוח יהיה ארוך"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סיכון שלא נאמר נשאר נסתר; רק הצהרה הופכת אותו להחלטה מודעת.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

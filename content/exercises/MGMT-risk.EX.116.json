@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "מי מכריע",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מנהל המוצר קובע ש-IE11 קריטי ללקוח מסוים. מה נכון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "להתעקש על התעדוף המקורי"
+      },
+      {
+        "id": "b",
+        "labelHe": "לעדכן את התעדוף — תפקיד הבודקת להציג סיכון ומחיר, לא להכריע לבד על חשיפה עסקית"
+      },
+      {
+        "id": "c",
+        "labelHe": "להתעלם"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבטל את השחרור"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "החלטת חשיפה עסקית שייכת לבעל ההחלטה; הבודקת מספקת את הסיכון והמחיר.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

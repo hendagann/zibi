@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "מה מקבל עומק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שונה מנוע התשלומים. איזה אזור מקבל את מרב עומק הבדיקה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תרגום מסך ההגדרות"
+      },
+      {
+        "id": "b",
+        "labelHe": "תשלום בכרטיס אשראי — נגע בו השינוי וכשל בו עולה כסף"
+      },
+      {
+        "id": "c",
+        "labelHe": "ייצוא לאקסל"
+      },
+      {
+        "id": "d",
+        "labelHe": "תמיכה ב-IE11"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מה שהשינוי נגע בו ושכשל בו יקר מקבל את העומק — זו ליבת RBT.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

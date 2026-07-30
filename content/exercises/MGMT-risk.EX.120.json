@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.120",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RBT"
+  },
+  "title": "סיכון גבוה מאוד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "באיזה מצב הסיכון הוא הגבוה ביותר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הסתברות גבוהה, השפעה זניחה"
+      },
+      {
+        "id": "b",
+        "labelHe": "הסתברות נמוכה, השפעה זניחה"
+      },
+      {
+        "id": "c",
+        "labelHe": "הסתברות גבוהה, השפעה קריטית"
+      },
+      {
+        "id": "d",
+        "labelHe": "הסתברות נמוכה, השפעה נמוכה"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "המכפלה מקסימלית כששני הגורמים גבוהים — סביר שיקרה וגם הרסני אם יקרה.",
+    "skillId": "MGMT.RBT",
+    "dimension": "application"
+  }
+}

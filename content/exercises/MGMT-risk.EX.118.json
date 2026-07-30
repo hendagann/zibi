@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "תוכנית מגירה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי תוכנית מגירה (contingency)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "פעולה שמונעת את הסיכון"
+      },
+      {
+        "id": "b",
+        "labelHe": "מה שעושים אם הסיכון התממש — חזרה לאחור, צוות כוננות, מתג כיבוי"
+      },
+      {
+        "id": "c",
+        "labelHe": "דוח סיכום"
+      },
+      {
+        "id": "d",
+        "labelHe": "מטריצה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מגירה נכנסת לפעולה אחרי שהסיכון קרה, ומיטיגציה אינה מייתרת אותה.",
+    "skillId": "MGMT.RISK",
+    "dimension": "knowledge"
+  }
+}

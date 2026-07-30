@@ -1,0 +1,67 @@
+{
+  "id": "MGMT-risk.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "MGMT/risk",
+  "skills": {
+    "primary": "MGMT.RISK"
+  },
+  "title": "מטריצה סובייקטיבית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה הבעיה במטריצה שבה \"השפעה גבוהה\" אינה מוגדרת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "MGMT-risk.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה"
+      },
+      {
+        "id": "b",
+        "labelHe": "שני אנשים ידרגו את אותו סיכון אחרת, וההחלטה אינה ניתנת להגנה"
+      },
+      {
+        "id": "c",
+        "labelHe": "היא איטית"
+      },
+      {
+        "id": "d",
+        "labelHe": "היא צבעונית מדי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "היעדר קריטריון מדיד הופך את המטריצה לתחושה שנראית אובייקטיבית.",
+    "skillId": "MGMT.RISK",
+    "dimension": "application"
+  }
+}
