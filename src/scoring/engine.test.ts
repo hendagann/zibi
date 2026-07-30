@@ -25,10 +25,13 @@ async function loadExercises() {
       items.push(JSON.parse(await readFile(join(CONTENT, dir, f), 'utf8')));
     }
   }
+  // The defect-report engine only. Other families have their own engines
+  // and their own golden tests — see sqlEngine.test.ts and mcqEngine.test.ts.
   return items.filter(
     (i) =>
       (i.type === 'exercise' || i.type === 'exam_item') &&
-      i.questionType !== 'sql_query',
+      i.questionType !== 'sql_query' &&
+      i.questionType !== 'mcq_single',
   );
 }
 

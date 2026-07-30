@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "title": "כותרת שאפשר להחליט לפיה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזו כותרת מאפשרת למפתח להחליט אם לפתוח את הבאג בלי לקרוא את הפרטים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "בעיה בעגלת הקניות"
+      },
+      {
+        "id": "b",
+        "labelHe": "תקלה בפרודקשן"
+      },
+      {
+        "id": "c",
+        "labelHe": "מחיר הפריט השני בעגלה מוצג כאפס"
+      },
+      {
+        "id": "d",
+        "labelHe": "שאלה בקשר למחשבון"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "כותרת טובה מציינת אזור, פעולה ותוצאה שגויה בסלנג המוצר. \"בעיה בעגלת הקניות\" מציינת אזור בלבד — זו הטעות MIS.BUG.TITLE_AREA_ONLY. מפתח שקורא 50 באגים ביום צריך להחליט מהכותרת אם הוא נוגע בזה עכשיו.",
+    "skillId": "DOC.BUG",
+    "dimension": "reasoning"
+  }
+}

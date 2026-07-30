@@ -1,0 +1,9 @@
+{
+  "id": "SRC-GENERATED-CLAUDE",
+  "title": "שאלות בחירה שנוצרו על ידי Claude מתוך ידע QA מקצועי",
+  "publisher": "TestReady content generation",
+  "language": "he",
+  "format": "dataset",
+  "imported": false,
+  "notes": "תוכן מקורי שנכתב מהיסוד — לא הועתק מאתר כלשהו. מבוסס על מושגים סטנדרטיים בתחום QA ידני, כפי שהם מוגדרים ב-syllabi של ISTQB CTFL v4 ובחומר המקצועי הקנוני."
+}

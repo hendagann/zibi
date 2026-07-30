@@ -369,6 +369,16 @@ export const he = {
     hiddenNote: 'ההערכה בודקת את השאילתה גם על נתונים מוסתרים שאינם מוצגים כאן.',
   },
 
+  mcq: {
+    chooseOption: 'בחרי תשובה אחת',
+    correctAnswerLabel: 'התשובה הנכונה',
+    explanationLabel: 'הסבר',
+    yourAnswerLabel: 'הבחירה שלך',
+    criterionName: 'בחירה נכונה',
+    missingCorrect: (optionId: string) => `נדרש: ${optionId}`,
+    wrongChoice: (optionId: string) => `נבחר: ${optionId}`,
+  },
+
   feedback: {
     title: 'משוב',
     scoreLabel: 'ציון',

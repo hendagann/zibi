@@ -1,0 +1,69 @@
+{
+  "id": "TECH-data.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV"
+  },
+  "title": "הממשק מציג אחרת מהמסד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הממשק מציג ללקוחה יתרה של 500₪, שאילתה על טבלת accounts מחזירה 350₪. מה הצעד הראשון של הבודקת?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TECH-data.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לפתוח באג על הממשק"
+      },
+      {
+        "id": "b",
+        "labelHe": "לפתוח באג על המסד"
+      },
+      {
+        "id": "c",
+        "labelHe": "לבדוק אם השאילתה שאילתה על אותה תקופה, אותה מטבע, ואותו סוג יתרה — לפני שקובעים מי שגוי"
+      },
+      {
+        "id": "d",
+        "labelHe": "להתעלם — אולי זה זמני"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "הבדל בין ממשק למסד יכול לנבוע מסינון שונה: הממשק מציג יתרה זמינה (כולל חיובים ממתינים) והשאילתה מציגה יתרה מנקה. לפני שמאשימים צד, מוודאים ששני הצדדים מסתכלים על אותו דבר.",
+    "skillId": "TECH.SQLV",
+    "dimension": "application"
+  }
+}

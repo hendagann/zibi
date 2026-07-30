@@ -1,3 +1,4 @@
+import type { McqAnswer, McqItemSpec } from '@/scoring/mcqEngine';
 import type { SqlSpec } from '@/scoring/sqlEngine';
 import type { Block, DefectReportAnswer } from './blocks';
 import type { ContentItem } from './types';
@@ -6,6 +7,8 @@ import type { ContentItem } from './types';
 export interface SqlAnswer {
   readonly sql: string;
 }
+
+export type { McqAnswer, McqItemSpec };
 
 /**
  * A common mistake declared on a SCORED item — docs/06 §6.3.
@@ -26,18 +29,24 @@ export interface ItemCommonMistake {
 
 /** Assessment fields an exercise or exam item adds to the envelope — docs/06 §6. */
 export interface ExerciseItem extends ContentItem {
-  readonly questionType: 'author_defect_report' | 'repair_defect_report' | 'sql_query';
+  readonly questionType:
+    | 'author_defect_report'
+    | 'repair_defect_report'
+    | 'sql_query'
+    | 'mcq_single';
   readonly requiresEvidence: boolean;
   readonly rubricRef: string;
   readonly scenario: readonly Block[];
   readonly prompt: readonly Block[];
-  readonly modelAnswer: DefectReportAnswer | SqlAnswer;
+  readonly modelAnswer: DefectReportAnswer | SqlAnswer | McqAnswer;
   readonly revisionRefs: readonly string[];
   /** docs/06 §6.3 — assessment metadata, validated by QM-07 and QM-16. */
   readonly commonMistakes?: readonly ItemCommonMistake[];
   readonly diagnosisOptions?: readonly { readonly id: string; readonly label: string }[];
   /** sql_query only. */
   readonly sqlSpec?: SqlSpec;
+  /** mcq_single only. */
+  readonly mcqSpec?: McqItemSpec;
 }
 
 export interface SummaryItem extends ContentItem {
@@ -64,7 +73,13 @@ export function isExercise(item: ContentItem): item is ExerciseItem {
 }
 
 export function isSqlAnswer(
-  answer: DefectReportAnswer | SqlAnswer,
+  answer: DefectReportAnswer | SqlAnswer | McqAnswer,
 ): answer is SqlAnswer {
   return typeof (answer as SqlAnswer).sql === 'string';
+}
+
+export function isMcqAnswer(
+  answer: DefectReportAnswer | SqlAnswer | McqAnswer,
+): answer is McqAnswer {
+  return typeof (answer as McqAnswer).selectedOptionId === 'string';
 }

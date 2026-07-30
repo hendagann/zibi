@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "title": "תיאור סיבה מול תיאור תצפית",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה משפט נכון לדוח פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "הכפתור לא עובד כי הסשן נופל"
+      },
+      {
+        "id": "b",
+        "labelHe": "לאחר לחיצה על \"שליחה\" מוצגת הודעת \"נכשל\" והפנייה אינה נוצרת בטבלת orders"
+      },
+      {
+        "id": "c",
+        "labelHe": "הבאג בטח קשור למטמון"
+      },
+      {
+        "id": "d",
+        "labelHe": "הפיצ׳ר שבור לגמרי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "דוח פגם מקצועי מתאר את מה שנצפה: פעולה, תגובה גלויה, ואם ידוע — מצב הנתונים. \"כי הסשן נופל\" היא השערה על סיבה שלא הוכחה — MIS.BUG.CAUSE_ASSERTED — והיא מכוונת את המפתח לכיוון שלא מבוסס.",
+    "skillId": "DOC.BUG",
+    "dimension": "reasoning"
+  }
+}

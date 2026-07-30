@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import type { ItemCommonMistake } from '@/content/exercise';
+import type { McqItemSpec } from '@/scoring/mcqEngine';
 import type { EvaluationResult } from '@/scoring/types';
 import { routes } from '@/lib/routes';
 import { Card } from '@/components/ui/Card';
@@ -45,6 +46,16 @@ interface FeedbackViewProps {
    * during an exam no feedback is released at all (docs/10 §7).
    */
   readonly commonMistakes?: readonly ItemCommonMistake[] | undefined;
+  /**
+   * MCQ post-attempt reveal: which option was correct, which the learner
+   * chose, and the item's explanation. Present only for `mcq_single` items
+   * with a stored attempt. The reveal itself IS the learning — an MCQ that
+   * scores without showing the explanation teaches nothing.
+   */
+  readonly mcqReveal?: {
+    readonly spec: McqItemSpec;
+    readonly selectedOptionId: string;
+  };
 }
 
 export function FeedbackView({
@@ -52,6 +63,7 @@ export function FeedbackView({
   previous,
   topicId,
   commonMistakes,
+  mcqReveal,
 }: FeedbackViewProps) {
   if (evaluation.unevaluable) {
     return (
@@ -230,6 +242,39 @@ export function FeedbackView({
               </li>
             ))}
           </ul>
+        </Card>
+      ) : null}
+
+      {mcqReveal ? (
+        <Card variant="quiet">
+          <h3>{t.mcq.correctAnswerLabel}</h3>
+          <ul className={styles.feedbackList}>
+            {mcqReveal.spec.options.map((option) => {
+              const isCorrect = option.id === mcqReveal.spec.correctOptionId;
+              const wasChosen = option.id === mcqReveal.selectedOptionId;
+              const marker = isCorrect ? '✓' : wasChosen ? '✗' : '·';
+              return (
+                <li
+                  key={option.id}
+                  className={
+                    isCorrect
+                      ? styles.feedbackGood
+                      : wasChosen
+                        ? styles.feedbackWrong
+                        : undefined
+                  }
+                >
+                  <strong>{marker}</strong> {option.labelHe}
+                  {isCorrect && wasChosen ? ` — ${t.mcq.yourAnswerLabel}` : ''}
+                  {isCorrect && !wasChosen ? ` — ${t.mcq.correctAnswerLabel}` : ''}
+                  {!isCorrect && wasChosen ? ` — ${t.mcq.yourAnswerLabel}` : ''}
+                </li>
+              );
+            })}
+          </ul>
+          <p>
+            <strong>{t.mcq.explanationLabel}:</strong> {mcqReveal.spec.explanationHe}
+          </p>
         </Card>
       ) : null}
 

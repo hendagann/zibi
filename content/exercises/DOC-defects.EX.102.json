@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "title": "מה עושים כשלא מצליחים לשחזר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בודקת דיווחה על באג, המפתח לא הצליח לשחזר. מה הפעולה הנכונה הראשונה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "לסגור את הבאג כ-Cannot Reproduce מיד"
+      },
+      {
+        "id": "b",
+        "labelHe": "לחזור לצעדי השחזור ולוודא שהם מפורטים ומדויקים"
+      },
+      {
+        "id": "c",
+        "labelHe": "לפתוח באג חדש עם אותה כותרת"
+      },
+      {
+        "id": "d",
+        "labelHe": "לבקש מהמפתח לנסות שוב בלי שינוי"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "חוסר שחזור אצל המפתח הוא לרוב תסמין של צעדים לא שלמים — תנאי מקדים שלא נרשם, נתון ספציפי שלא צוין. הפעולה המקצועית היא לחזור לדיווח, לא לסגור אותו או לשכפל.",
+    "skillId": "DOC.BUG",
+    "dimension": "application"
+  }
+}

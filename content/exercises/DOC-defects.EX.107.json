@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.ADV"
+  },
+  "title": "נימוק חומרה שעומד בביקורת",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה נימוק חומרה יעמוד בביקורת של מנהלת מוצר?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "קריטי — כי אני חושבת שזה חמור"
+      },
+      {
+        "id": "b",
+        "labelHe": "קריטי — כי חיוב כפול פוגע בכסף של לקוח אמיתי, פוגע באמון, ודורש החזר ידני"
+      },
+      {
+        "id": "c",
+        "labelHe": "בינוני — כי לא בטוח כמה משתמשים ייתקלו בזה"
+      },
+      {
+        "id": "d",
+        "labelHe": "קריטי בכל מקרה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "נימוק חומרה טוב מקשר לתוצאה קונקרטית: על מה הבאג משפיע, למי, ומה נדרש כדי לתקן את הנזק. חומרה בלי נימוק — MIS.BUG.SEVERITY_UNJUSTIFIED — לא תעמוד כשמנהלת מוצר תרצה להוריד עדיפות.",
+    "skillId": "DOC.ADV",
+    "dimension": "reasoning"
+  }
+}

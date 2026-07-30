@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "title": "ההבדל בין Actual ל-Expected",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "\"תוצאה מצופה\" בדוח פגם צריכה להיות:"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "חזרה על צעד השחזור האחרון"
+      },
+      {
+        "id": "b",
+        "labelHe": "הבעת דעה אישית של הבודקת"
+      },
+      {
+        "id": "c",
+        "labelHe": "תצפית אובייקטיבית שניתן לאמת מול הדרישה"
+      },
+      {
+        "id": "d",
+        "labelHe": "המשפט \"שזה יעבוד\""
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "התוצאה המצופה מגדירה מה נכון — לפי הדרישה, המפרט או ההיגיון העסקי. בלעדיה, לא ברור מדוע האמור שגוי. \"שזה יעבוד\" הוא הטעות הנפוצה MIS.BUG.EXPECTED_RESTATES_STEP במרשם שלנו.",
+    "skillId": "DOC.BUG",
+    "dimension": "knowledge"
+  }
+}

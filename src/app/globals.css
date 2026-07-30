@@ -126,88 +126,104 @@
  * without it the panel is just a semi-transparent background.
  * ==========================================================================*/
 :root {
-  /* ---- the two base colours ---- */
-  --color-cream: #fff0c9; /* app ground, ~70% of the screen */
-  --color-blueberry: #243b8f; /* action, navigation, progress, scores, ~30% */
-  --color-blueberry-dark: #1c2f75; /* primary-button hover */
+  /* ---- the two base colours — inverted 70/30 ----
+   * The handoff spec is cream 70 / blueberry 30. This override flips the ratio:
+   * midnight #040D12 is now the ground (~70%), cream is the accent (~30%).
+   * Every dependent value below — surfaces, text, glass fill, focus, code
+   * surface — is re-derived, not just the hex. Leaving a light "primary text"
+   * on a near-black ground would render Hebrew study prose unreadable, and a
+   * white-bevel glass on a dark ground reads chalky rather than translucent.
+   * The glass recipe therefore inverts too: light fill → dark fill,
+   * white bevel → subtle bright bevel. */
+  --color-cream: #fdf3d6; /* accent surface, ~30% of the screen */
+  --color-midnight: #040d12; /* ground, ~70% */
+  --color-midnight-raised: #0a1620; /* one step above ground */
+  --color-midnight-hover: #12212d;
+  --color-blueberry: #7ea3ff; /* lightened so it reads as action on midnight */
+  --color-blueberry-dark: #6b90e8;
 
   /* ---- surfaces ---- */
-  --color-surface-sunken: #fff0c9; /* ground */
-  --color-surface: #fffdf4; /* paper: tables, forms, opaque light surfaces */
-  --color-surface-raised: #fff7de; /* a card inside a card */
-  --color-surface-hover: rgb(36 59 143 / 0.06);
-  /* Code is ALWAYS dark, whatever the rest of the palette does. */
-  --color-code-surface: #182452;
+  --color-surface-sunken: #040d12; /* ground */
+  --color-surface: #0a1620; /* paper: tables, forms, opaque dark surfaces */
+  --color-surface-raised: #12212d; /* a card inside a card */
+  --color-surface-hover: rgb(253 243 214 / 0.06);
+  /* Code stays on its own reserved dark, distinct from the ground so the
+   * editor still visibly separates from the page around it. */
+  --color-code-surface: #01060a;
   --color-code-text: #efe9d8;
 
-  /* ---- glass, two tiers ----
-   * Regular: data, metric and list cards. Dense: long study prose, header,
-   * sidebar. `backdrop-filter` is applied only to LARGE surfaces (see the
-   * performance note in §6.4) — small cards get the same look from the gradient
-   * and bevel alone, without a compositing layer each. */
+  /* ---- glass, two tiers, dark palette ----
+   * Small dark fills look like plain panels, not like glass — the *bevel* is
+   * what carries the effect. On dark the bevel is a bright inset highlight
+   * rather than a white one, and the fill is a subtle radial away from black. */
   --glass-fill: radial-gradient(
     140% 150% at 50.22% 50.31%,
-    rgb(255 255 255 / 0.26) 0%,
-    rgb(255 255 255 / 0.66) 100%
+    rgb(253 243 214 / 0.05) 0%,
+    rgb(253 243 214 / 0.12) 100%
   );
   --glass-fill-dense: radial-gradient(
     150% 160% at 50.22% 50.31%,
-    rgb(255 255 255 / 0.56) 0%,
-    rgb(255 255 255 / 0.88) 100%
+    rgb(253 243 214 / 0.09) 0%,
+    rgb(253 243 214 / 0.18) 100%
   );
   --glass-fill-sidebar: radial-gradient(
     140% 150% at 50.22% 50.31%,
-    rgb(46 74 172 / 0.94) 0%,
-    rgb(26 44 108 / 0.96) 100%
+    rgb(20 34 46 / 0.94) 0%,
+    rgb(4 13 18 / 0.98) 100%
   );
-  --glass-border: rgb(36 59 143 / 0.12);
-  --glass-border-hover: rgb(36 59 143 / 0.22);
-  --glass-bevel: inset 2px 2px 4px 0 rgb(255 255 255 / 0.6);
+  --glass-border: rgb(253 243 214 / 0.14);
+  --glass-border-hover: rgb(253 243 214 / 0.26);
+  --glass-bevel: inset 1px 1px 0 0 rgb(253 243 214 / 0.14),
+    inset 0 -1px 0 0 rgb(0 0 0 / 0.4);
   --glass-blur: 14px;
   --glass-blur-sidebar: 8.8px;
 
-  --color-border: rgb(36 59 143 / 0.12);
-  --color-border-strong: rgb(36 59 143 / 0.22);
+  --color-border: rgb(253 243 214 / 0.14);
+  --color-border-strong: rgb(253 243 214 / 0.26);
 
-  /* ---- text ---- */
-  --color-text: #1b2450; /* ~12:1 on cream */
-  --color-text-muted: #55608f; /* ~5.6:1 */
-  --color-text-subtle: #8089ae; /* 14px and up only */
-  --color-text-inverse: #fff6dc; /* on blueberry */
+  /* ---- text — all contrast ratios re-checked against #040D12 ---- */
+  --color-text: #fdf3d6; /* ~16:1 on midnight */
+  --color-text-muted: #c9c1a7; /* ~9:1 */
+  --color-text-subtle: #9a927a; /* ~5.2:1 — 14px+ only, per the audit */
+  --color-text-inverse: #04101c; /* on cream */
 
-  /* ---- action: blueberry is the only one ---- */
-  --color-primary: #243b8f;
-  --color-primary-hover: #1c2f75;
-  --color-primary-soft: rgb(36 59 143 / 0.12);
-  --color-primary-contrast: #fff6dc;
-  --color-accent: #243b8f;
-  --color-accent-hover: #1c2f75;
-  --color-accent-soft: rgb(36 59 143 / 0.12);
-  --color-accent-contrast: #fff6dc;
+  /* ---- action: cream is now the emphasis colour ----
+   * With ~70% midnight in the frame, the accent that leads the eye is the
+   * warm cream — a lit block against a dark ground reads instantly. The
+   * button text goes to midnight for AA contrast on cream. */
+  --color-primary: #fdf3d6;
+  --color-primary-hover: #f6e7b6;
+  --color-primary-soft: rgb(253 243 214 / 0.14);
+  --color-primary-contrast: #04101c;
+  --color-accent: #fdf3d6;
+  --color-accent-hover: #f6e7b6;
+  --color-accent-soft: rgb(253 243 214 / 0.14);
+  --color-accent-contrast: #04101c;
 
-  /* ---- functional. Each pairs with an icon in the components, so state is
-   * never carried by colour alone. ---- */
-  --color-success: #237a4b;
-  --color-success-soft: rgb(35 122 75 / 0.12);
-  --color-warning: #a16a0b;
-  --color-warning-soft: rgb(161 106 11 / 0.12);
-  --color-danger: #be4438;
-  --color-danger-soft: rgb(190 68 56 / 0.12);
-  --color-info: #12808e;
-  --color-info-soft: rgb(18 128 142 / 0.12);
+  /* ---- functional. Each was lifted to stay legible on midnight; each still
+   * pairs with an icon in the components, so state is never carried by colour
+   * alone. ---- */
+  --color-success: #58c98b;
+  --color-success-soft: rgb(88 201 139 / 0.14);
+  --color-warning: #e6b34a;
+  --color-warning-soft: rgb(230 179 74 / 0.14);
+  --color-danger: #f28c82;
+  --color-danger-soft: rgb(242 140 130 / 0.14);
+  --color-info: #6fcedb;
+  --color-info-soft: rgb(111 206 219 / 0.14);
 
-  /* ---- the six topic statuses (§6.7) ---- */
-  --status-not-started: #7c86ac;
-  --status-started: #12808e;
-  --status-needs-review: #a16a0b;
-  --status-partial: #55608f;
-  --status-mastered: #237a4b;
-  --status-exam-ready: #243b8f;
+  /* ---- the six topic statuses, dark-palette equivalents ---- */
+  --status-not-started: #6d7791;
+  --status-started: #6fcedb;
+  --status-needs-review: #e6b34a;
+  --status-partial: #b8c0d8;
+  --status-mastered: #58c98b;
+  --status-exam-ready: #fdf3d6;
 
-  --color-focus: #243b8f;
-  --color-focus-on-dark: #fff0c9;
-  --color-skeleton: rgb(36 59 143 / 0.08);
-  --color-skeleton-sheen: rgb(255 255 255 / 0.7);
+  --color-focus: #fdf3d6;
+  --color-focus-on-dark: #fdf3d6;
+  --color-skeleton: rgb(253 243 214 / 0.06);
+  --color-skeleton-sheen: rgb(253 243 214 / 0.14);
 
   /* ---- radii: tags/fields, buttons, cards, modals. No others. ---- */
   --radius-sm: 8px;
@@ -256,14 +272,15 @@ html {
 body {
   min-height: 100dvh;
   background-color: var(--color-surface-sunken);
-  /* The ambient glow (handoff §6.3) — CSS, never a raster. This is what gives
-   * the glass something to refract; on a flat fill the panels read as plain
-   * translucency. `fixed` keeps it still while content scrolls, so the ground is
-   * one continuous surface across every route. */
+  /* The ambient glow — dark-palette version. On midnight the source blues are
+   * invisible, so the primary glow is a warm cream bloom that catches the eye
+   * and gives the glass panels something to refract. A cool cyan counter-glow
+   * echoes the reference's temperature contrast. `fixed` keeps the ground still
+   * while content scrolls, so it reads as one surface across every route. */
   background-image:
-    radial-gradient(760px 560px at 6% 94%, rgb(36 59 143 / 0.2), transparent 62%),
-    radial-gradient(680px 520px at 98% 4%, rgb(224 170 62 / 0.34), transparent 58%),
-    radial-gradient(440px 400px at 74% 44%, rgb(36 59 143 / 0.09), transparent 62%);
+    radial-gradient(760px 560px at 6% 94%, rgb(253 243 214 / 0.09), transparent 62%),
+    radial-gradient(680px 520px at 98% 4%, rgb(126 163 255 / 0.12), transparent 58%),
+    radial-gradient(440px 400px at 74% 44%, rgb(253 243 214 / 0.05), transparent 62%);
   background-attachment: fixed;
   background-repeat: no-repeat;
   color: var(--color-text);

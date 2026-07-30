@@ -16,6 +16,7 @@ import {
 import { planExam } from '@/exam/planner';
 import { computeProgress } from '@/progress/compute';
 import { evaluate } from '@/scoring/engine';
+import { evaluateMcq, type McqAnswer } from '@/scoring/mcqEngine';
 import { evaluateSql } from '@/scoring/sqlEngine';
 import type { EvaluationResult } from '@/scoring/types';
 import { executeSql } from '@/sql/executor';
@@ -202,6 +203,74 @@ export async function submitSqlAnswer(
   revalidatePath('/practice');
   revalidatePath('/progress');
   return { ok: true, evaluation };
+}
+
+/**
+ * Submit an MCQ answer. Deterministic scoring, no rubric detection — the
+ * engine is a set-equality check with a synthetic criterion so progress can
+ * still attribute the score to a skill and dimension (see mcqEngine.ts).
+ *
+ * The optional examSessionId routes the attempt as exam evidence when a
+ * sitting is active, exactly like the other question families.
+ */
+export async function submitMcqAnswer(
+  itemId: string,
+  answer: McqAnswer,
+  timeSpentSeconds?: number,
+  examSessionId?: string,
+): Promise<{ ok: boolean; error?: string }> {
+  const item = await getItem(itemId);
+  if (!item || !isExercise(item) || item.questionType !== 'mcq_single' || !item.mcqSpec) {
+    return { ok: false, error: 'mcq-item-not-found' };
+  }
+  const exercise = item as ExerciseItem;
+  // Local narrowing — the guard above proves it exists, but TS loses that
+  // between the closure and the passed field.
+  const mcqSpec = exercise.mcqSpec;
+  if (!mcqSpec) return { ok: false, error: 'mcq-item-not-found' };
+
+  // Exam mode: refuse repeats within a session (like the other engines), and
+  // stamp the attempt with context+session_id.
+  if (examSessionId) {
+    const prior = await attemptsForSession(LOCAL_USER, examSessionId);
+    if (prior.some((a) => a.item_id === itemId)) {
+      return { ok: false, error: 'already-answered' };
+    }
+  } else if (exercise.pool !== 'practice') {
+    return { ok: false, error: 'not-practicable' };
+  }
+
+  const previous = await attemptsForItem(LOCAL_USER, itemId);
+  const attemptId = randomUUID();
+  const submittedAt = new Date().toISOString();
+  const evaluation = evaluateMcq({
+    answer,
+    spec: mcqSpec,
+    questionId: exercise.id,
+    itemVersion: exercise.version,
+    attemptId,
+    attemptNumber: previous.length + 1,
+    userId: LOCAL_USER,
+    submittedAt,
+    timeSpentSeconds: sanitiseDuration(timeSpentSeconds),
+  });
+
+  await appendAttempt({
+    attempt_id: attemptId,
+    user_id: LOCAL_USER,
+    item_id: exercise.id,
+    item_version: exercise.version,
+    attempt_number: previous.length + 1,
+    submitted_at: submittedAt,
+    ...(examSessionId ? { context: 'exam' as const, session_id: examSessionId } : {}),
+    answer,
+    evaluation,
+  });
+
+  revalidatePath('/practice');
+  revalidatePath('/progress');
+  if (examSessionId) revalidatePath(`/exam/${examSessionId}`);
+  return { ok: true };
 }
 
 /* ---------------- exams — docs/10 ---------------- */

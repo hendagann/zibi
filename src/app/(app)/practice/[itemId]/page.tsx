@@ -8,8 +8,9 @@ import { BlockRenderer } from '@/components/content/BlockRenderer';
 import { ExerciseForm } from '@/components/practice/ExerciseForm';
 import { FeedbackView } from '@/components/practice/FeedbackView';
 import { SchemaView } from '@/components/practice/SchemaView';
+import { McqExerciseForm } from '@/components/practice/McqExerciseForm';
 import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
-import { isExercise, isSqlAnswer, type ExerciseItem } from '@/content/exercise';
+import { isExercise, isMcqAnswer, isSqlAnswer, type ExerciseItem } from '@/content/exercise';
 import { getDataset, getItem } from '@/content/loader';
 import { attemptsForItem, LOCAL_USER } from '@/storage/attempts';
 import { t } from '@/i18n';
@@ -39,6 +40,7 @@ export default async function ExercisePage({ params }: PageProps) {
   const topicId = exercise.topic ?? '';
 
   const isSql = exercise.questionType === 'sql_query';
+  const isMcq = exercise.questionType === 'mcq_single';
   const dataset =
     isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
 
@@ -74,13 +76,39 @@ export default async function ExercisePage({ params }: PageProps) {
             previous={previous?.evaluation}
             topicId={topicId}
             commonMistakes={exercise.commonMistakes}
+            {...(isMcq && exercise.mcqSpec && isMcqAnswer(latest.answer)
+              ? {
+                  mcqReveal: {
+                    spec: exercise.mcqSpec,
+                    selectedOptionId: latest.answer.selectedOptionId,
+                  },
+                }
+              : {})}
           />
         </Section>
       ) : null}
 
-      <Section title={latest ? t.report.revise : isSql ? t.sqlModule.queryLabel : t.report.formTitle}>
+      <Section
+        title={
+          latest
+            ? t.report.revise
+            : isMcq
+              ? t.mcq.chooseOption
+              : isSql
+                ? t.sqlModule.queryLabel
+                : t.report.formTitle
+        }
+      >
         <Card>
-          {isSql ? (
+          {isMcq && exercise.mcqSpec ? (
+            <McqExerciseForm
+              itemId={exercise.id}
+              spec={exercise.mcqSpec}
+              initialSelectedId={
+                latest && isMcqAnswer(latest.answer) ? latest.answer.selectedOptionId : undefined
+              }
+            />
+          ) : isSql ? (
             <SqlExerciseForm
               itemId={exercise.id}
               initialSql={
@@ -91,7 +119,9 @@ export default async function ExercisePage({ params }: PageProps) {
             <ExerciseForm
               itemId={exercise.id}
               initialAnswer={
-                latest && !isSqlAnswer(latest.answer) ? latest.answer : undefined
+                latest && !isSqlAnswer(latest.answer) && !isMcqAnswer(latest.answer)
+                  ? latest.answer
+                  : undefined
               }
               diagnosisOptions={exercise.diagnosisOptions}
             />

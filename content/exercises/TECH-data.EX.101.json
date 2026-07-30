@@ -1,0 +1,69 @@
+{
+  "id": "TECH-data.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "title": "למה LEFT JOIN במקום INNER JOIN",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צריך לספור כמה הזמנות יש לכל לקוח, כולל לקוחות ללא הזמנות בכלל. איזה JOIN מתאים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-data.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "INNER JOIN — הוא ברירת המחדל"
+      },
+      {
+        "id": "b",
+        "labelHe": "LEFT JOIN מטבלת הלקוחות אל טבלת ההזמנות, ואז COUNT על שדה מטבלת ההזמנות"
+      },
+      {
+        "id": "c",
+        "labelHe": "RIGHT JOIN מטבלת ההזמנות אל טבלת הלקוחות"
+      },
+      {
+        "id": "d",
+        "labelHe": "CROSS JOIN"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "INNER JOIN יסנן לקוחות ללא הזמנות — הם לא יופיעו כלל, ולא כ-0. LEFT מהלקוחות שומר את כולם, ו-COUNT על שדה מההזמנות (לא COUNT(*)) יחזיר 0 ללקוחות ללא התאמה. COUNT(*) היה מחזיר 1 לכל שורה, כולל שורות שהתעוררו מ-NULL של ה-LEFT.",
+    "skillId": "TECH.SQL",
+    "dimension": "reasoning"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "TECH-data.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "title": "ההבדל בין WHERE ל-HAVING",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מתי נשתמש ב-HAVING ולא ב-WHERE?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-data.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תמיד — HAVING הוא הגרסה החדשה של WHERE"
+      },
+      {
+        "id": "b",
+        "labelHe": "כשמסננים על תוצאה של פונקציית אגרגציה כמו COUNT או SUM"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק כשעובדים עם JOIN"
+      },
+      {
+        "id": "d",
+        "labelHe": "רק במסדי נתונים גדולים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "WHERE מסנן שורות לפני GROUP BY. HAVING מסנן קבוצות אחריו. כלל אצבע: אם התנאי מזכיר COUNT/SUM/AVG של הקבוצה — זה HAVING; אם התנאי הוא על ערך שורה — זה WHERE.",
+    "skillId": "TECH.SQL",
+    "dimension": "knowledge"
+  }
+}

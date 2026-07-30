@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "MGMT.CONF"
+  },
+  "title": "למה בכלל לציין סביבה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "למה חובה לציין את הסביבה בדוח פגם?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כדי שהמפתח יידע איזה שרת להאשים"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי אותו קוד מתנהג שונה בין דפדפנים, מערכות הפעלה וגרסאות — וסביבה שונה = באג שלא ניתן לשחזר"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי זה מקובל בתעשייה"
+      },
+      {
+        "id": "d",
+        "labelHe": "זו דרישה של ISTQB"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סביבה היא אחד המקורות התכופים ביותר לבאגים שלא משוחזרים. Chrome/Safari, Windows/Mac, גרסת iOS, רזולוציית מסך, קונפיגורציה של השרת — כל אחד עלול להיות ההבדל. תיעוד מדויק חוסך שעות של דיון.",
+    "skillId": "MGMT.CONF",
+    "dimension": "knowledge"
+  }
+}

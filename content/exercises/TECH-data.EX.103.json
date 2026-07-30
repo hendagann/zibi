@@ -1,0 +1,69 @@
+{
+  "id": "TECH-data.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV"
+  },
+  "title": "DISTINCT או GROUP BY",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 5,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "תוצאה של שאילתה מכילה שורות כפולות. מה ההפרש בפועל בין SELECT DISTINCT לבין GROUP BY?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TECH-data.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הפרש, הם זהים"
+      },
+      {
+        "id": "b",
+        "labelHe": "DISTINCT מסיר כפילויות מלאות בכל השורה; GROUP BY קובץ שורות לפי עמודות מוגדרות ומאפשר אגרגציה על השאר"
+      },
+      {
+        "id": "c",
+        "labelHe": "DISTINCT עובד רק על עמודה אחת"
+      },
+      {
+        "id": "d",
+        "labelHe": "GROUP BY איטי יותר תמיד"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שניהם מסירים כפילויות, אבל GROUP BY נותן לך גם אגרגציה — COUNT, SUM — על הכפילויות שהוסרו. DISTINCT הוא \"רשימה ייחודית\". אם השאלה היא \"כמה פעמים כל ערך הופיע\" — זה תמיד GROUP BY.",
+    "skillId": "TECH.SQLV",
+    "dimension": "reasoning"
+  }
+}

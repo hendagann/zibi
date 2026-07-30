@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "FUND.PSY"
+  },
+  "title": "ההודעה שהופכת דוח לבלתי-שמיש",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה משפט הופך דוח פגם מקצועי לבלתי-שמיש?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תוספת של צילום מסך"
+      },
+      {
+        "id": "b",
+        "labelHe": "ציון גרסת הבילד"
+      },
+      {
+        "id": "c",
+        "labelHe": "\"אני בטוחה שהיה כאן באג נוסף אבל שכחתי איפה\""
+      },
+      {
+        "id": "d",
+        "labelHe": "תיאור התנהגות שאלית"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "דוח פגם הוא הצהרה על מה שנצפה. הכללת חוסר-ודאות שאינה קשורה לבאג הנוכחי פוגעת באמון: המפתח כבר לא בטוח אם הוא מטפל בבאג אחד או בשני. אם יש חשד לבאג נוסף — פתחי דיווח נפרד או השאירי הערה ל־exploratory testing session נפרד.",
+    "skillId": "FUND.PSY",
+    "dimension": "application"
+  }
+}

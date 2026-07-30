@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG"
+  },
+  "title": "מה חייב להופיע בכל דוח פגם",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה מבין הבאים הוא הרכיב היחיד שבלעדיו דוח פגם אינו ניתן לשחזור?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שם הבודקת"
+      },
+      {
+        "id": "b",
+        "labelHe": "צעדי שחזור"
+      },
+      {
+        "id": "c",
+        "labelHe": "תיוג הפרויקט"
+      },
+      {
+        "id": "d",
+        "labelHe": "שם המנהל"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "צעדי שחזור הם החוזה עם המפתח: בלעדיהם אי אפשר לראות את הבאג שוב, ובלי לראות אותו שוב אי אפשר לתקן. מטא-דאטה על מי כתבה או מתי — עוזרת לניהול, לא לשחזור.",
+    "skillId": "DOC.BUG",
+    "dimension": "knowledge"
+  }
+}

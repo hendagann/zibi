@@ -1,0 +1,43 @@
+{
+  "rubric_id": "RUB.MCQ_SINGLE",
+  "version": 1,
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": ["mcq_single"],
+  "maxScore": 100,
+  "created_at": "2026-07-30",
+  "approved_at": "2026-07-30",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-30",
+  "change_reason": "מחוון סינתטי לשאלות בחירה יחידה. אין רכיבים אמיתיים לאמת — יש רק בחירה נכונה או שגויה. הרכיב 'must' קיים לצורך QM-13, וה-skill_ids הוא dispatched-per-item דרך mcqSpec.skillId ומועתק ל-CriterionResult בזמן ההערכה, לא נקרא מכאן. מבנה זה הכרחי כדי ש-mcq_single יזין את מד ההתקדמות דרך אותו CriterionResult ששאר המשפחות מזינות.",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "בחירה נכונה",
+      "description": "האם נבחרה התשובה הנכונה מבין האפשרויות. שאלת בחירה יחידה, ללא אשראי חלקי. הממד בפועל מוגדר per-item ב-mcqSpec.dimension ומועתק ל-CriterionResult בזמן ההערכה — הערך כאן הוא placeholder שמפזר תרומה על הממד הרחב ביותר עד שיש שכתוב מיוחד.",
+      "dimension": "application",
+      "weight": 100,
+      "max_points": 100,
+      "skill_ids": ["DOC.BUG"],
+      "full_examples": ["נבחרה התשובה המסומנת כנכונה במפרט הפריט"],
+      "partial_examples": [],
+      "missing_examples": ["נבחרה תשובה שאינה מסומנת כנכונה"],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.selected_correct",
+          "label": "בחירת האפשרות הנכונה",
+          "class": "must",
+          "weight": 100,
+          "detection": {
+            "kind": "selected_option",
+            "optionId": "__from_item__"
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-defects.LE.001"
+      }
+    }
+  ]
+}

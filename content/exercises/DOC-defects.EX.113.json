@@ -1,0 +1,69 @@
+{
+  "id": "DOC-defects.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "MGMT.CONF"
+  },
+  "title": "מה בדיוק לתעד בסביבה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "createdAt": "2026-07-30",
+  "updatedAt": "2026-07-30",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה מבין הבאים חייב להיכלל בשדה \"סביבה\" בדוח פגם על מוצר וב?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "רק שם המערכת"
+      },
+      {
+        "id": "b",
+        "labelHe": "הדפדפן, גרסת הדפדפן, מערכת ההפעלה, גרסת הבילד או הסביבה (staging/prod), ובאפליקציה — גם המכשיר"
+      },
+      {
+        "id": "c",
+        "labelHe": "תאריך ושעה בלבד"
+      },
+      {
+        "id": "d",
+        "labelHe": "שם השרת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "סביבה = כל הצירים שיכולים לגרום לקוד להתנהג שונה. במובייל מוסיפים גם את המכשיר וגרסת מערכת ההפעלה. מספרי גרסה חשובים כי באג יכול להתקיים ב-9.1.0 ולא ב-9.1.1.",
+    "skillId": "MGMT.CONF",
+    "dimension": "application"
+  }
+}

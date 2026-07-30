@@ -93,9 +93,13 @@ describe('the vertical slice', () => {
     const topics = await loader.getTopics();
     expect(topics.map((topic) => topic.id)).toContain('DOC/defects');
     const exercises = await loader.getPracticeExercises();
-    // Five bug-report exercises plus five SQL exercises.
-    expect(exercises).toHaveLength(10);
-    expect(exercises.filter((e) => e.topic === 'TECH/data')).toHaveLength(5);
+    // At least the five original defect-report exercises plus five SQL. MCQ
+    // items were added later and the test is relaxed to the invariant it
+    // actually cares about: the two topics both have content, not an exact
+    // count that couples the test to how often content is added.
+    expect(exercises.length).toBeGreaterThanOrEqual(10);
+    expect(exercises.filter((e) => e.topic === 'DOC/defects').length).toBeGreaterThanOrEqual(5);
+    expect(exercises.filter((e) => e.topic === 'TECH/data').length).toBeGreaterThanOrEqual(5);
     const summary = await loader.getItem('DOC-defects.SUM.001');
     expect(summary?.type).toBe('summary');
   });
