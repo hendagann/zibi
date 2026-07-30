@@ -37,3 +37,6 @@ yarn-error.log*
 
 # learner data (attempts) — user data, never committed
 /data/
+
+# design reference — licensed template assets, not redistributable
+/design-reference/*.fig

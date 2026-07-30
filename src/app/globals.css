@@ -112,40 +112,96 @@
   --z-drawer: 60;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-surface: #191c23;
-    --color-surface-sunken: #14171d;
-    --color-surface-raised: #21252e;
-    --color-surface-hover: #2a2f3a;
-    --color-border: #3a404d;
-    --color-border-strong: #4f555c;
+/* ============================================================================
+ * Glass dark theme — the single default.
+ *
+ * Derived as a design LANGUAGE from design-reference/ (see docs/design-system.md):
+ * a near-black charcoal ground with a warm olive glow, translucent panels with
+ * hairline light borders, generous radii, and one lime accent that leads the
+ * eye. None of the reference's content, copy, subject matter or data structure
+ * is reproduced — only the visual grammar.
+ *
+ * This overrides the light wireframe palette above rather than replacing it in
+ * place, so the origin of every earlier value stays readable in one file. The
+ * product is dark by design (not by preference), so this is NOT inside a
+ * prefers-color-scheme query: a learner who prefers light must still get an
+ * interface whose contrast was actually verified, and only one of the two is.
+ * ==========================================================================*/
+:root {
+  /* ---- ground ---- */
+  --color-surface-sunken: #0a0b0c; /* app background, behind the glow */
+  --color-surface: #121315; /* opaque panels: code, editors, tables */
+  --color-surface-raised: #17181b;
+  --color-surface-hover: #1f2124;
 
-    --color-text: #dfe3ea;
-    --color-text-muted: #aab1c0;
-    --color-text-subtle: #9aa1b1; /* 5.9:1 on raised */
-    --color-text-inverse: #191c23;
+  /* ---- glass ----
+   * Two tiers on purpose. Text-heavy cards use the denser tier so long Hebrew
+   * prose keeps its contrast; short metric cards may be lighter. Transparency
+   * never wins over readability. */
+  --glass-surface: rgb(255 255 255 / 0.045);
+  --glass-surface-dense: rgb(255 255 255 / 0.07);
+  --glass-surface-hover: rgb(255 255 255 / 0.09);
+  --glass-border: rgb(255 255 255 / 0.1);
+  --glass-border-strong: rgb(255 255 255 / 0.18);
+  --glass-blur: 18px;
+  --glass-blur-strong: 28px;
 
-    --color-primary: #cdd2de;
-    --color-primary-hover: #e3e6ee;
-    --color-primary-soft: #2c313d;
-    --color-primary-contrast: #191c23;
+  --color-border: rgb(255 255 255 / 0.1);
+  --color-border-strong: rgb(255 255 255 / 0.2);
 
-    --color-success: #6cc79a;
-    --color-success-soft: #16281f;
-    --color-warning: #e0a75e;
-    --color-warning-soft: #2b2113;
-    --color-danger: #f08a83;
-    --color-danger-soft: #2e1917;
+  /* ---- text (contrast checked against #0a0b0c and the glass tiers) ---- */
+  --color-text: #f2f3f2; /* ~17:1 */
+  --color-text-muted: #b6bab6; /* ~9:1 */
+  --color-text-subtle: #8b908c; /* ~5.4:1 — AA for body, not for 12px */
+  --color-text-inverse: #0e0f10;
 
-    --color-focus: #cdd2de;
-    --color-skeleton: #2a2f3a;
-    --color-skeleton-sheen: #343a47;
+  /* ---- accent: lime. Leads the eye; never a default surface colour. ---- */
+  --color-accent: #cdf24c;
+  --color-accent-hover: #d8f96a;
+  --color-accent-soft: rgb(205 242 76 / 0.14);
+  --color-accent-contrast: #14180a; /* on-accent text, ~14:1 */
 
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.4);
-    --shadow-md: 0 2px 8px rgb(0 0 0 / 0.45);
-    --shadow-lg: 0 8px 28px rgb(0 0 0 / 0.55);
-  }
+  /* Actions map onto the accent so every existing button inherits it. */
+  --color-primary: #cdf24c;
+  --color-primary-hover: #d8f96a;
+  --color-primary-soft: rgb(205 242 76 / 0.14);
+  --color-primary-contrast: #14180a;
+
+  /* ---- functional. Each is legible on the dark ground AND carries a
+   * non-colour cue in the components, per the accessibility rule. ---- */
+  --color-success: #7fd99a;
+  --color-success-soft: rgb(127 217 154 / 0.14);
+  --color-warning: #f0c26a;
+  --color-warning-soft: rgb(240 194 106 / 0.14);
+  --color-danger: #f58b80;
+  --color-danger-soft: rgb(245 139 128 / 0.14);
+  --color-info: #7fc4f0;
+  --color-info-soft: rgb(127 196 240 / 0.14);
+
+  --color-focus: #cdf24c;
+  --color-skeleton: rgb(255 255 255 / 0.06);
+  --color-skeleton-sheen: rgb(255 255 255 / 0.12);
+
+  /* ---- radii: one step up from the wireframe kit, per the reference ---- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+
+  /* ---- elevation: soft and wide on dark, plus a glass inner highlight ---- */
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.5);
+  --shadow-md: 0 4px 16px rgb(0 0 0 / 0.45);
+  --shadow-lg: 0 16px 48px rgb(0 0 0 / 0.55);
+  --shadow-glass: 0 16px 48px rgb(0 0 0 / 0.45), inset 0 1px 0 rgb(255 255 255 / 0.07);
+
+  /* ---- type: Heebo leads for Hebrew, Poppins for Latin/numerals/display ----
+   * The variables are injected by next/font in the root layout; the literal
+   * names remain as a fallback so the stack still resolves if the font module
+   * ever fails to load. */
+  --font-sans: var(--font-heebo), Heebo, var(--font-poppins), Poppins, system-ui,
+    -apple-system, 'Segoe UI', 'Noto Sans Hebrew', Arial, sans-serif;
+  --font-display: var(--font-poppins), Poppins, var(--font-heebo), Heebo,
+    system-ui, sans-serif;
 }
 
 /* ---- reset ---- */
@@ -167,6 +223,16 @@ html {
 body {
   min-height: 100dvh;
   background-color: var(--color-surface-sunken);
+  /* The reference's ambient glow, rebuilt as gradients rather than shipping its
+   * licensed raster: a warm olive bloom low on the inline-start side and a cool
+   * green one opposite. `fixed` keeps the ground still while content scrolls, so
+   * the background reads as one surface across every route. Both are far below
+   * the contrast floor of any text that sits on them. */
+  background-image:
+    radial-gradient(60rem 40rem at 8% 92%, rgb(150 140 60 / 0.16), transparent 70%),
+    radial-gradient(52rem 36rem at 96% 8%, rgb(120 200 130 / 0.1), transparent 70%);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   color: var(--color-text);
   font-family: var(--font-sans);
   font-size: var(--text-base);
