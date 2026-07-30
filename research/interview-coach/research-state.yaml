@@ -1,0 +1,24 @@
+project: interview-coach
+question: >
+  אילו ממצאי מחקר ושוק צריכים לעצב מאמן ראיונות דטרמיניסטי (ללא LLM)
+  עבור לירן — בודק QA המציג ~5 שנות ניסיון אצל 4 מעסיקים?
+phase: literature-survey-complete
+started: 2026-07-31
+owner_decisions:
+  - no-llm-no-tokens-at-runtime: answers and feedback are pre-authored content
+  - typing-only-v1: voice/transcription deferred
+  - coaching-only: never touches progress/ability/scoring (docs/07 boundary intact)
+inputs:
+  cv: received 2026-07-31, analysed in cv-analysis.md (LOCAL ONLY — gitignored)
+  target_job_posting: MISSING — blocks company-fit answers (Kristof-Brown 2005)
+verification:
+  academic: CrossRef (12/12 resolved with DOI)
+  market: web search (State of Testing, job-hopping surveys, MACH, Behroozi)
+next:
+  - obtain target job posting from owner
+  - round 2 (implement): author question bank + tailored model answers as content,
+    then the coach UI per the approved deterministic architecture
+artifacts:
+  - survey.md
+  - cv-analysis.md (local only)
+  - research-log.md

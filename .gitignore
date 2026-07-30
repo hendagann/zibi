@@ -38,5 +38,8 @@ yarn-error.log*
 # learner data (attempts) — user data, never committed
 /data/
 
+# personal data — the repo is public; CV-derived analysis stays local only
+/research/interview-coach/cv-analysis.md
+
 # design reference — licensed template assets, not redistributable
 /design-reference/*.fig
