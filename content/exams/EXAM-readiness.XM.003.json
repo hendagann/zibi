@@ -42,7 +42,7 @@
     }
   ],
   "sqlSpec": {
-    "datasetRef": "shop",
+    "datasetRef": "DS-SHOP",
     "referenceSql": "SELECT c.name FROM customers c LEFT JOIN orders o ON o.customer_id = c.id WHERE o.id IS NULL",
     "requiredColumns": [
       "name"

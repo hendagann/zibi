@@ -1,0 +1,140 @@
+{
+  "id": "TECH-data.EX.017",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "לקוחות שהזמינו אך מעולם לא השלימו — אנטי-חיבור על תת-קבוצה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 780,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "צוות השימור מחפש לקוחות שניסו להזמין אך אף הזמנה שלהם לא הושלמה — לא מי שלא הזמין כלל. ההבחנה הזו היא הלב של השאלה: קבוצה אחת נמצאת בתוך השנייה, וסינון תמים ב-WHERE יחזיר גם לקוחות שיש להם הזמנה שהושלמה לצד אחת שבוטלה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם הלקוח (name) ואת מספר ההזמנות שלו בעמודה בשם order_count, עבור לקוחות שיש להם לפחות הזמנה אחת אך אף אחת מהן אינה בסטטוס completed, ממוינת לפי שם בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT customers.name, COUNT(*) AS order_count FROM orders JOIN customers ON customers.id = orders.customer_id GROUP BY customers.id, customers.name HAVING SUM(CASE WHEN orders.status = 'completed' THEN 1 ELSE 0 END) = 0 ORDER BY customers.name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "customers",
+      "orders"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-mixed-customer",
+        "labelHe": "לקוח עם הזמנה שבוטלה ואחת שהושלמה — אסור שיופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "name": "אלון ריף",
+              "city": "רמת גן",
+              "joined_at": "2025-09-01"
+            }
+          ],
+          "orders": [
+            {
+              "id": 130,
+              "customer_id": 30,
+              "order_date": "2026-06-01",
+              "status": "cancelled",
+              "shipped_date": null
+            },
+            {
+              "id": 131,
+              "customer_id": 30,
+              "order_date": "2026-06-02",
+              "status": "completed",
+              "shipped_date": "2026-06-04"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-all-pending",
+        "labelHe": "לקוחה שכל הזמנותיה ממתינות — חייבת להופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 31,
+              "name": "אורנה גל",
+              "city": "כפר סבא",
+              "joined_at": "2025-10-01"
+            }
+          ],
+          "orders": [
+            {
+              "id": 132,
+              "customer_id": 31,
+              "order_date": "2026-06-05",
+              "status": "pending",
+              "shipped_date": null
+            },
+            {
+              "id": 133,
+              "customer_id": 31,
+              "order_date": "2026-06-06",
+              "status": "pending",
+              "shipped_date": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-no-orders",
+        "labelHe": "לקוח בלי אף הזמנה — אינו שייך לקבוצה ואסור שיופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 32,
+              "name": "רם אלקיים",
+              "city": "אשדוד",
+              "joined_at": "2025-11-01"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.name, COUNT(*) AS order_count FROM orders JOIN customers ON customers.id = orders.customer_id GROUP BY customers.id, customers.name HAVING SUM(CASE WHEN orders.status = 'completed' THEN 1 ELSE 0 END) = 0 ORDER BY customers.name ASC"
+  }
+}

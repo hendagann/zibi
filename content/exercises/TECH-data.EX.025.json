@@ -1,0 +1,99 @@
+{
+  "id": "TECH-data.EX.025",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "הלוואות שלא נגבה בהן דבר — אנטי-חיבור על תשלומים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 480,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "גבייה מבקשת לדעת אילו הלוואות לא נרשם בהן אף תשלום. חלקן חדשות ולגיטימיות, וחלקן עלולות להעיד על תקלה בהוראת הקבע — ובשלב הזה תפקידך רק לייצר את הרשימה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id) ואת הסטטוס (status) עבור הלוואות שאין להן אף רשומת תשלום. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT loans.id, loans.status FROM loans LEFT JOIN payments ON payments.loan_id = loans.id WHERE payments.id IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "loans",
+      "payments"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-unpaid",
+        "labelHe": "הלוואה חדשה בלי תשלומים — חייבת להופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 9,
+              "principal": 18000,
+              "interest_rate": 6.5,
+              "term_months": 12,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-now-paid",
+        "labelHe": "תשלום ראשון להלוואה שהייתה ברשימה — חייבת לצאת ממנה",
+        "extraRows": {
+          "payments": [
+            {
+              "id": 90100,
+              "loan_id": 5004,
+              "paid_at": "2026-01-10",
+              "amount": 1300,
+              "method": "direct_debit"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT loans.id, loans.status FROM loans LEFT JOIN payments ON payments.loan_id = loans.id WHERE payments.id IS NULL"
+  }
+}

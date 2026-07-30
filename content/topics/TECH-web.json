@@ -14,7 +14,7 @@
     "FUND/process"
   ],
   "difficulty": 3,
-  "estimatedMinutes": 90,
+  "estimatedMinutes": 64,
   "measuredSkills": [
     "TECH.WEB",
     "TECH.DEV",
@@ -47,7 +47,10 @@
     "TECH-web.EX.119",
     "TECH-web.EX.120",
     "TECH-web.EX.121",
-    "TECH-web.EX.200"
+    "TECH-web.EX.200",
+    "TECH-web.EX.201",
+    "TECH-web.EX.202",
+    "TECH-web.EX.203"
   ],
   "topicExamRef": null,
   "review": {

@@ -1,0 +1,100 @@
+{
+  "id": "TECH-data.EX.039",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "פניות שנפתחו בחודש מסוים — טווח תאריכים על טקסט",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לצורך דוח חודשי, מבקשים את כל הפניות שנפתחו במאי 2025. התאריכים שמורים כטקסט בפורמט YYYY-MM-DD, כך שהשוואת טווח פועלת עליהם ישירות."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id), את הנושא (subject) ואת תאריך הפתיחה (created_at) עבור פניות שנפתחו בין 2025-05-01 ל-2025-05-31 כולל, ממוינות לפי created_at בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT id, subject, created_at FROM tickets WHERE created_at >= '2025-05-01' AND created_at <= '2025-05-31' ORDER BY created_at ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-last-day",
+        "labelHe": "פנייה שנפתחה ב-31 במאי — הגבול העליון חייב להיכלל",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 3,
+              "agent_id": 103,
+              "subject": "בקשת ייצוא",
+              "priority": "normal",
+              "status": "open",
+              "created_at": "2025-05-31",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-june-first",
+        "labelHe": "פנייה מ-1 ביוני — מחוץ לטווח",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 3,
+              "agent_id": 103,
+              "subject": "שאלה על מסלול",
+              "priority": "low",
+              "status": "open",
+              "created_at": "2025-06-01",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, subject, created_at FROM tickets WHERE created_at >= '2025-05-01' AND created_at <= '2025-05-31' ORDER BY created_at ASC"
+  }
+}

@@ -46,7 +46,14 @@ export interface ExerciseItem extends ContentItem {
     | 'analyse_requirement'
     | 'investigate_failure'
     | 'prioritise_defects'
-    | 'professional_decision';
+    | 'professional_decision'
+    /**
+     * The classic manual-testing artifact: a test case another tester can run
+     * identically without asking a question (docs/03 `DOC.TC`). It was named
+     * as a rubric type in docs/06 §3 from the start but never implemented,
+     * which left the single most common deliverable of the job unpractisable.
+     */
+    | 'author_test_case';
   readonly requiresEvidence: boolean;
   readonly rubricRef: string;
   readonly scenario: readonly Block[];
@@ -89,6 +96,7 @@ export const STRUCTURED_FAMILIES = [
   'investigate_failure',
   'prioritise_defects',
   'professional_decision',
+  'author_test_case',
 ] as const;
 
 export function isStructuredFamily(questionType: string): boolean {

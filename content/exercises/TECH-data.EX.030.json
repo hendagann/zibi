@@ -1,0 +1,120 @@
+{
+  "id": "TECH-data.EX.030",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "הלוואה נסגרה אך לא נפרעה — התאמת סכומים מול קרן",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 660,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "הלוואה שסומנה כסגורה אמורה להיפרע במלואה. אם סך התשלומים שנרשמו בה קטן מהקרן, או שהתשלומים לא נקלטו או שההלוואה נסגרה בטעות — ובשני המקרים זה ממצא. זו בדיוק ההצלבה שבודק במערכת פיננסית מריץ לפני עלייה לגרסה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id), את הקרן (principal) ואת סך התשלומים בעמודה בשם total_paid, עבור הלוואות בסטטוס closed שסך התשלומים בהן קטן מהקרן, ממוינת לפי מזהה ההלוואה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT loans.id, loans.principal, SUM(payments.amount) AS total_paid FROM loans JOIN payments ON payments.loan_id = loans.id WHERE loans.status = 'closed' GROUP BY loans.id, loans.principal HAVING SUM(payments.amount) < loans.principal ORDER BY loans.id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "payments"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-fully-repaid",
+        "labelHe": "הלוואה סגורה שנפרעה במלואה — אסור שתופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 9,
+              "principal": 5000,
+              "interest_rate": 5,
+              "term_months": 6,
+              "status": "closed",
+              "opened_at": "2025-01-01",
+              "closed_at": "2025-07-01"
+            }
+          ],
+          "payments": [
+            {
+              "id": 90100,
+              "loan_id": 5100,
+              "paid_at": "2025-04-01",
+              "amount": 5000,
+              "method": "transfer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-underpaid",
+        "labelHe": "הלוואה סגורה שנפרעה חלקית — חייבת להופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 9,
+              "principal": 20000,
+              "interest_rate": 5,
+              "term_months": 12,
+              "status": "closed",
+              "opened_at": "2025-01-01",
+              "closed_at": "2026-01-01"
+            }
+          ],
+          "payments": [
+            {
+              "id": 90101,
+              "loan_id": 5101,
+              "paid_at": "2025-05-01",
+              "amount": 900,
+              "method": "transfer"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT loans.id, loans.principal, SUM(payments.amount) AS total_paid FROM loans JOIN payments ON payments.loan_id = loans.id WHERE loans.status = 'closed' GROUP BY loans.id, loans.principal HAVING SUM(payments.amount) < loans.principal ORDER BY loans.id ASC"
+  }
+}

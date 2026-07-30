@@ -1,0 +1,106 @@
+{
+  "id": "TECH-data.EX.048",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "נציגים בלי אף פנייה — בדיקה שעוברת על הנתונים הנוכחיים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "ראש הצוות רוצה לדעת אם יש נציג שלא שויכה לו אף פנייה — סימן אפשרי לתקלה בשיבוץ האוטומטי. על הנתונים שאת רואה כרגע לכל נציג יש פניות, ולכן התוצאה אמורה להיות ריקה; השאילתה נכתבת כדי לתפוס את המקרה כשהוא יופיע."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם הנציג (name) ואת הצוות (team) עבור נציגים שלא משויכת אליהם אף פנייה. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT agents.name, agents.team FROM agents LEFT JOIN tickets ON tickets.agent_id = agents.id WHERE tickets.id IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "agents",
+      "tickets"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-idle-agent",
+        "labelHe": "נציג חדש שלא שויכה לו פנייה — חייב להופיע",
+        "extraRows": {
+          "agents": [
+            {
+              "id": 106,
+              "name": "רותם ניר",
+              "team": "tier1",
+              "hired_at": "2026-01-02"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-agent-with-ticket",
+        "labelHe": "נציג חדש עם פנייה אחת — אסור שיופיע",
+        "extraRows": {
+          "agents": [
+            {
+              "id": 107,
+              "name": "עידן ברק",
+              "team": "tier2",
+              "hired_at": "2026-01-03"
+            }
+          ],
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 1,
+              "agent_id": 107,
+              "subject": "תקלת סנכרון",
+              "priority": "normal",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT agents.name, agents.team FROM agents LEFT JOIN tickets ON tickets.agent_id = agents.id WHERE tickets.id IS NULL"
+  }
+}

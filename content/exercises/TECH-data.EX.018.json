@@ -1,0 +1,100 @@
+{
+  "id": "TECH-data.EX.018",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "תיק ההלוואות הפעילות — סינון על סטטוס",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "בתחילת יום בדיקות במערכת ליבה בנקאית, את רוצה לראות את תיק ההלוואות הפעילות לפני שאת נוגעת במשהו. זו שאילתת ההיכרות הראשונה עם כל מערכת פיננסית."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id) ואת הקרן (principal) עבור הלוואות בסטטוס active, ממוינות לפי הקרן בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT id, principal FROM loans WHERE status = 'active' ORDER BY principal DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-active",
+        "labelHe": "הלוואה פעילה חדשה וגדולה — חייבת להופיע ראשונה",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 3,
+              "principal": 900000,
+              "interest_rate": 3.5,
+              "term_months": 84,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-defaulted",
+        "labelHe": "הלוואה בכשל פירעון — אינה active ואסור שתופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 5,
+              "principal": 700000,
+              "interest_rate": 6,
+              "term_months": 60,
+              "status": "defaulted",
+              "opened_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, principal FROM loans WHERE status = 'active' ORDER BY principal DESC"
+  }
+}

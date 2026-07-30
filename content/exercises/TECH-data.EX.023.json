@@ -1,0 +1,97 @@
+{
+  "id": "TECH-data.EX.023",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "הלוואות עם שם הלקוח — חיבור בין ליבה ללקוחות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "דוח שהופק בממשק מציג מזהי הלוואות בלי שמות, ואת צריכה לוודא מול מי כל הלוואה רשומה. השמות יושבים בטבלת הלקוחות, ולכן זו שאילתת חיבור."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id), את השם המלא של הלקוח (full_name) ואת הקרן (principal), עבור כל ההלוואות, ממוינת לפי מזהה ההלוואה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT loans.id, customers.full_name, loans.principal FROM loans JOIN customers ON customers.id = loans.customer_id ORDER BY loans.id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "customers"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-loan",
+        "labelHe": "הלוואה חדשה ללקוח קיים — חייבת להופיע עם שמו",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 9,
+              "principal": 33000,
+              "interest_rate": 5,
+              "term_months": 24,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-customer-no-loan",
+        "labelHe": "לקוח חדש בלי הלוואה — אסור שיופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020003333",
+              "full_name": "ניר אלימלך",
+              "branch": "רעננה",
+              "segment": "retail",
+              "opened_at": "2026-01-06"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT loans.id, customers.full_name, loans.principal FROM loans JOIN customers ON customers.id = loans.customer_id ORDER BY loans.id ASC"
+  }
+}

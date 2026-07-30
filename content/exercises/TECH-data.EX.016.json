@@ -1,0 +1,95 @@
+{
+  "id": "TECH-data.EX.016",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "קטגוריות מבוקשות — סינון אחרי צבירה על שלוש טבלאות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לקראת חידוש מלאי, הרכש מבקש רק את הקטגוריות שנמכרו בהן יותר משלוש יחידות סך הכול, ורק מהזמנות שהושלמו. הזמנות שבוטלו אינן מכירה, וזו הטעות שהכי קל לעשות בשאילתה הזו."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את הקטגוריה (category) ואת סך היחידות שנמכרו בה בעמודה בשם units_sold, בהתחשב רק בהזמנות בסטטוס completed, ורק עבור קטגוריות עם יותר משלוש יחידות, ממוינת לפי units_sold בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT products.category, SUM(order_items.quantity) AS units_sold FROM order_items JOIN products ON products.id = order_items.product_id JOIN orders ON orders.id = order_items.order_id WHERE orders.status = 'completed' GROUP BY products.category HAVING SUM(order_items.quantity) > 3 ORDER BY units_sold DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "orders",
+      "order_items",
+      "products"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-cancelled-excluded",
+        "labelHe": "כמות גדולה בהזמנה שבוטלה — אסור שתיספר",
+        "extraRows": {
+          "order_items": [
+            {
+              "id": 41,
+              "order_id": 104,
+              "product_id": 3,
+              "quantity": 20
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-crosses-threshold",
+        "labelHe": "כמות שמעלה קטגוריה מעל הסף — חייבת להיכנס",
+        "extraRows": {
+          "order_items": [
+            {
+              "id": 42,
+              "order_id": 101,
+              "product_id": 3,
+              "quantity": 4
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT products.category, SUM(order_items.quantity) AS units_sold FROM order_items JOIN products ON products.id = order_items.product_id JOIN orders ON orders.id = order_items.order_id WHERE orders.status = 'completed' GROUP BY products.category HAVING SUM(order_items.quantity) > 3 ORDER BY units_sold DESC"
+  }
+}

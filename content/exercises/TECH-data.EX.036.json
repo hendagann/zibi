@@ -1,0 +1,100 @@
+{
+  "id": "TECH-data.EX.036",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "פניות דחופות פתוחות על השולחן — סינון על עדיפות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "בתחילת משמרת, ראש צוות התמיכה רוצה לראות מה דחוף. זו שאילתת הפתיחה הפשוטה ביותר, והיא גם זו שתשמש אחר כך כבסיס להצלבות מורכבות יותר."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id) ואת הנושא (subject) עבור פניות בעדיפות urgent, ממוינות לפי מזהה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT id, subject FROM tickets WHERE priority = 'urgent' ORDER BY id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-urgent",
+        "labelHe": "פנייה דחופה חדשה — חייבת להופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 1,
+              "agent_id": 101,
+              "subject": "המערכת אינה זמינה",
+              "priority": "urgent",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-high-not-urgent",
+        "labelHe": "פנייה בעדיפות high — אינה urgent ואסור שתופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 1,
+              "agent_id": 101,
+              "subject": "איטיות בטעינה",
+              "priority": "high",
+              "status": "open",
+              "created_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, subject FROM tickets WHERE priority = 'urgent' ORDER BY id ASC"
+  }
+}

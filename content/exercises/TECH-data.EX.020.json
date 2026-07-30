@@ -1,0 +1,98 @@
+{
+  "id": "TECH-data.EX.020",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "בקשות אשראי שנדחו — לפי סכום מבוקש",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "ועדת האשראי מבקשת סקירה של הבקשות שנדחו בשנה האחרונה, מהגדולה לקטנה, כדי לבחון אם יש דפוס בסכומים."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הבקשה (id) ואת הסכום המבוקש (requested_amount) עבור בקשות בסטטוס rejected, ממוינות לפי הסכום בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT id, requested_amount FROM credit_applications WHERE status = 'rejected' ORDER BY requested_amount DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "credit_applications"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-rejected",
+        "labelHe": "בקשה שנדחתה בסכום בינוני — חייבת להיכנס במקום הנכון",
+        "extraRows": {
+          "credit_applications": [
+            {
+              "id": 7100,
+              "customer_id": 6,
+              "requested_amount": 200000,
+              "status": "rejected",
+              "submitted_at": "2026-01-02",
+              "decided_at": "2026-01-15",
+              "decided_by": "שרון בלס"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-pending-excluded",
+        "labelHe": "בקשה ממתינה בסכום גדול — אינה דחויה ואסור שתופיע",
+        "extraRows": {
+          "credit_applications": [
+            {
+              "id": 7101,
+              "customer_id": 6,
+              "requested_amount": 800000,
+              "status": "pending",
+              "submitted_at": "2026-01-03",
+              "decided_at": null,
+              "decided_by": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, requested_amount FROM credit_applications WHERE status = 'rejected' ORDER BY requested_amount DESC"
+  }
+}

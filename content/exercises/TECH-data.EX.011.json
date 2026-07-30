@@ -1,0 +1,94 @@
+{
+  "id": "TECH-data.EX.011",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "כמה יחידות נמכרו מכל מוצר — חיבור וקיבוץ",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לפני ספירת מלאי, המחסן מבקש כמה יחידות נמכרו מכל מוצר. הכמויות יושבות ב-order_items והשמות ב-products, ולכן צריך לחבר ביניהן."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם המוצר (name) ואת סך הכמויות שנמכרו ממנו בעמודה בשם total_units, עבור מוצרים שנמכרה מהם לפחות יחידה אחת, ממוינת לפי total_units בסדר יורד ואז לפי שם המוצר בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT products.name, SUM(order_items.quantity) AS total_units FROM order_items JOIN products ON products.id = order_items.product_id GROUP BY products.name ORDER BY total_units DESC, products.name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "products",
+      "order_items"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-big-quantity",
+        "labelHe": "פריט הזמנה בכמות גדולה למוצר קיים — משנה את הדירוג",
+        "extraRows": {
+          "order_items": [
+            {
+              "id": 40,
+              "order_id": 101,
+              "product_id": 3,
+              "quantity": 9
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-unsold-product",
+        "labelHe": "מוצר חדש שלא נמכר — אסור שיופיע",
+        "extraRows": {
+          "products": [
+            {
+              "id": 90,
+              "name": "מחצלת עכבר",
+              "category": "אביזרים",
+              "price": 45
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT products.name, SUM(order_items.quantity) AS total_units FROM order_items JOIN products ON products.id = order_items.product_id GROUP BY products.name ORDER BY total_units DESC, products.name ASC"
+  }
+}

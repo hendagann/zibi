@@ -14,7 +14,7 @@
     "DOC/requirements"
   ],
   "difficulty": 3,
-  "estimatedMinutes": 95,
+  "estimatedMinutes": 102,
   "measuredSkills": [
     "DOC.TC",
     "DOC.TS",
@@ -46,7 +46,14 @@
     "DOC-design-artifacts.EX.118",
     "DOC-design-artifacts.EX.119",
     "DOC-design-artifacts.EX.120",
-    "DOC-design-artifacts.EX.121"
+    "DOC-design-artifacts.EX.121",
+    "DOC-design-artifacts.EX.200",
+    "DOC-design-artifacts.EX.201",
+    "DOC-design-artifacts.EX.202",
+    "DOC-design-artifacts.EX.203",
+    "DOC-design-artifacts.EX.204",
+    "DOC-design-artifacts.EX.205",
+    "DOC-design-artifacts.EX.206"
   ],
   "topicExamRef": null,
   "review": {

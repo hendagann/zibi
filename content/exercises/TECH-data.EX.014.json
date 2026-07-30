@@ -1,0 +1,111 @@
+{
+  "id": "TECH-data.EX.014",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "לקוחות חוזרים — HAVING על ספירה מקובצת",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "צוות ה-CRM מגדיר \"לקוח חוזר\" כמי שיש לו יותר מהזמנה אחת שהושלמה. ההגדרה נשמעת פשוטה, אבל היא מחייבת לסנן לפני הקיבוץ ולסנן שוב אחריו — שני סוגי סינון שונים באותה שאילתה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם הלקוח (name) ואת מספר ההזמנות שהושלמו שלו בעמודה בשם completed_orders, עבור לקוחות עם יותר מהזמנה אחת בסטטוס completed, ממוינת לפי completed_orders בסדר יורד ואז לפי שם בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT customers.name, COUNT(*) AS completed_orders FROM orders JOIN customers ON customers.id = orders.customer_id WHERE orders.status = 'completed' GROUP BY customers.name HAVING COUNT(*) > 1 ORDER BY completed_orders DESC, customers.name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "customers",
+      "orders"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-cancelled-not-counted",
+        "labelHe": "שתי הזמנות מבוטלות ללקוח חדש — אסור שייחשב לקוח חוזר",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "name": "עדי חזן",
+              "city": "הרצליה",
+              "joined_at": "2025-09-01"
+            }
+          ],
+          "orders": [
+            {
+              "id": 130,
+              "customer_id": 30,
+              "order_date": "2026-06-01",
+              "status": "cancelled",
+              "shipped_date": null
+            },
+            {
+              "id": 131,
+              "customer_id": 30,
+              "order_date": "2026-06-02",
+              "status": "cancelled",
+              "shipped_date": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-becomes-repeat",
+        "labelHe": "הזמנה שהושלמה שנייה ללקוח שהיה עם אחת — חייב להיכנס לרשימה",
+        "extraRows": {
+          "orders": [
+            {
+              "id": 132,
+              "customer_id": 7,
+              "order_date": "2026-06-03",
+              "status": "completed",
+              "shipped_date": "2026-06-05"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.name, COUNT(*) AS completed_orders FROM orders JOIN customers ON customers.id = orders.customer_id WHERE orders.status = 'completed' GROUP BY customers.name HAVING COUNT(*) > 1 ORDER BY completed_orders DESC, customers.name ASC"
+  }
+}

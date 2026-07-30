@@ -1,0 +1,96 @@
+{
+  "id": "TECH-data.EX.037",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "משתמשים לא פעילים — דגל בוליאני כמספר",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לפני דיוור, השיווק חייב לסנן משתמשים לא פעילים. במסד הזה, \"פעיל\" שמור כמספר 1 ו\"לא פעיל\" כ-0 — ייצוג נפוץ שמבלבל כשמנסים להשוות אותו לערך אמת טקסטואלי."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא (full_name) ואת כתובת המייל (email) עבור משתמשים שאינם פעילים, כלומר is_active שווה 0. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT full_name, email FROM users WHERE is_active = 0",
+    "orderMatters": false,
+    "requiredTables": [
+      "users"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-another-inactive",
+        "labelHe": "משתמש לא פעיל נוסף — חייב להופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 30,
+              "email": "noa@zeta-labs.io",
+              "full_name": "נועה זילבר",
+              "plan": "free",
+              "signed_up_at": "2025-02-01",
+              "is_active": 0
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-active-user",
+        "labelHe": "משתמש פעיל — אסור שיופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 31,
+              "email": "omer@zeta-labs.io",
+              "full_name": "עומר זילבר",
+              "plan": "pro",
+              "signed_up_at": "2025-02-02",
+              "is_active": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT full_name, email FROM users WHERE is_active = 0"
+  }
+}

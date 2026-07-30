@@ -1,0 +1,103 @@
+{
+  "id": "TECH-data.EX.049",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "פניות שנסגרו באיחור — חישוב הפרש בין תאריכים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 780,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "ה-SLA מחייב סגירה בתוך חמישה ימים. כדי לאמת עמידה בו צריך לחשב את ההפרש בין הפתיחה לסגירה — ובמסד הזה התאריכים שמורים כטקסט, כך שנדרשת המרה לפני החישוב. פנייה שלא נסגרה כלל אינה נכללת: אין לה תאריך סגירה, וחישוב עליה יחזיר NULL."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id), את הנושא (subject) ואת מספר הימים עד הסגירה בעמודה בשם days_to_close, עבור פניות שנסגרו ביותר מחמישה ימים, ממוינת לפי days_to_close בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT id, subject, julianday(closed_at) - julianday(created_at) AS days_to_close FROM tickets WHERE closed_at IS NOT NULL AND julianday(closed_at) - julianday(created_at) > 5 ORDER BY days_to_close DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-very-late",
+        "labelHe": "פנייה שנסגרה אחרי 20 יום — חייבת להופיע ראשונה",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 3,
+              "agent_id": 103,
+              "subject": "העברת נתונים היסטוריים",
+              "priority": "normal",
+              "status": "closed",
+              "created_at": "2025-09-01",
+              "closed_at": "2025-09-21"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-exactly-five",
+        "labelHe": "פנייה שנסגרה בדיוק אחרי 5 ימים — עומדת ב-SLA ואסור שתופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 3,
+              "agent_id": 103,
+              "subject": "בקשת שדרוג",
+              "priority": "low",
+              "status": "closed",
+              "created_at": "2025-09-01",
+              "closed_at": "2025-09-06"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, subject, julianday(closed_at) - julianday(created_at) AS days_to_close FROM tickets WHERE closed_at IS NOT NULL AND julianday(closed_at) - julianday(created_at) > 5 ORDER BY days_to_close DESC"
+  }
+}

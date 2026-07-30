@@ -13,6 +13,7 @@ export const primaryNav: readonly NavItem[] = [
   { href: routes.dashboard, label: t.nav.dashboard, icon: 'dashboard' },
   { href: routes.topics, label: t.nav.topics, icon: 'topics' },
   { href: routes.practice, label: t.nav.practice, icon: 'practice' },
+  { href: routes.sandbox, label: t.nav.sandbox, icon: 'sandbox' },
   { href: routes.exam, label: t.nav.exam, icon: 'exam' },
   { href: routes.progress, label: t.nav.progress, icon: 'progress' },
   { href: routes.admin, label: t.nav.admin, icon: 'admin' },

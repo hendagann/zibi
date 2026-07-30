@@ -1,0 +1,98 @@
+{
+  "id": "TECH-data.EX.033",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "סך התשלומים לכל לקוח כולל מי שלא שילם — שרשרת LEFT JOIN",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 780,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "דוח גבייה חייב להציג גם לקוחות שלא שילמו כלום — הם בדיוק אלה שמעניינים את הגבייה. חיבור פנימי היה מעלים אותם בשקט, וזו הטעות הנפוצה ביותר בדוחות מהסוג הזה. הסכום עובר דרך שתי טבלאות: מלקוח להלוואה, ומהלוואה לתשלום."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא (full_name) ואת סך התשלומים שלו בעמודה בשם total_paid עבור כל הלקוחות, כאשר לקוח בלי תשלומים כלל מקבל 0, ממוינת לפי total_paid בסדר יורד ואז לפי שם בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT customers.full_name, COALESCE(SUM(payments.amount), 0) AS total_paid FROM customers LEFT JOIN loans ON loans.customer_id = customers.id LEFT JOIN payments ON payments.loan_id = loans.id GROUP BY customers.id, customers.full_name ORDER BY total_paid DESC, customers.full_name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "customers",
+      "loans",
+      "payments"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-customer-no-loan",
+        "labelHe": "לקוח חדש בלי הלוואות — חייב להופיע עם 0",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020007777",
+              "full_name": "אביב נחמיאס",
+              "branch": "חדרה",
+              "segment": "retail",
+              "opened_at": "2025-12-01"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-large-payment",
+        "labelHe": "תשלום גדול ללקוח קיים — חייב לשנות את הדירוג",
+        "extraRows": {
+          "payments": [
+            {
+              "id": 90100,
+              "loan_id": 5008,
+              "paid_at": "2026-01-10",
+              "amount": 39000,
+              "method": "transfer"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.full_name, COALESCE(SUM(payments.amount), 0) AS total_paid FROM customers LEFT JOIN loans ON loans.customer_id = customers.id LEFT JOIN payments ON payments.loan_id = loans.id GROUP BY customers.id, customers.full_name ORDER BY total_paid DESC, customers.full_name ASC"
+  }
+}

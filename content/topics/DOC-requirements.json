@@ -14,7 +14,7 @@
     "STAT/requirements"
   ],
   "difficulty": 3,
-  "estimatedMinutes": 75,
+  "estimatedMinutes": 59,
   "measuredSkills": [
     "DOC.REQ"
   ],
@@ -41,7 +41,10 @@
     "DOC-requirements.EX.115",
     "DOC-requirements.EX.116",
     "DOC-requirements.EX.117",
-    "DOC-requirements.EX.200"
+    "DOC-requirements.EX.200",
+    "DOC-requirements.EX.201",
+    "DOC-requirements.EX.202",
+    "DOC-requirements.EX.203"
   ],
   "topicExamRef": null,
   "review": {

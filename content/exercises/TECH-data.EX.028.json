@@ -1,0 +1,115 @@
+{
+  "id": "TECH-data.EX.028",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "לקוח שנוצר פעמיים — כפילות לפי מספר זהות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "תלונה מהסניף: לקוחה קיבלה שני מכתבים על אותה הלוואה. החשד הוא שנוצרו לה שתי רשומות לקוח נפרדות עם אותו מספר זהות. במערכת בנקאית זו תקלה חמורה — היא מפצלת את תמונת האשראי של אותו אדם לשניים."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מספר הזהות (national_id) ואת מספר הרשומות שנמצאו לו בעמודה בשם record_count, עבור מספרי זהות שמופיעים ביותר מרשומת לקוח אחת. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT national_id, COUNT(*) AS record_count FROM customers GROUP BY national_id HAVING COUNT(*) > 1",
+    "orderMatters": false,
+    "requiredTables": [
+      "customers"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-triplicate",
+        "labelHe": "מספר זהות שנוצר לו שלוש פעמים — חייב להופיע עם ספירה 3",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "070001111",
+              "full_name": "עמית שרון",
+              "branch": "חולון",
+              "segment": "retail",
+              "opened_at": "2025-01-01"
+            },
+            {
+              "id": 31,
+              "national_id": "070001111",
+              "full_name": "עמית שרון",
+              "branch": "חולון",
+              "segment": "retail",
+              "opened_at": "2025-06-01"
+            },
+            {
+              "id": 32,
+              "national_id": "070001111",
+              "full_name": "עמית שרון",
+              "branch": "בת ים",
+              "segment": "retail",
+              "opened_at": "2025-11-01"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-unique-customer",
+        "labelHe": "לקוח יחיד עם מספר זהות ייחודי — אסור שיופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 33,
+              "national_id": "070009999",
+              "full_name": "ליהי ברנס",
+              "branch": "חולון",
+              "segment": "retail",
+              "opened_at": "2025-12-01"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT national_id, COUNT(*) AS record_count FROM customers GROUP BY national_id HAVING COUNT(*) > 1"
+  }
+}

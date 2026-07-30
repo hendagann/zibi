@@ -1,0 +1,86 @@
+{
+  "id": "EXAM-readiness.XM.009",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "SQL — התפלגות פניות לפי עדיפות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.SQL",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מסד הנתונים מכיל את טבלת tickets. ראש הצוות מבקש לראות כמה פניות יש בכל רמת עדיפות."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את העדיפות (priority) ואת מספר הפניות בה בעמודה בשם ticket_count, ממוינת לפי ticket_count בסדר יורד ואז לפי priority בסדר עולה. במבחן לא יוצג משוב עד לסיום."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT priority, COUNT(*) AS ticket_count FROM tickets GROUP BY priority ORDER BY ticket_count DESC, priority ASC",
+    "requiredColumns": [
+      "priority",
+      "ticket_count"
+    ],
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-priority",
+        "labelHe": "פנייה בעדיפות חדשה — חייבת להופיע כשורה",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 1,
+              "agent_id": 101,
+              "subject": "בקשה זניחה",
+              "priority": "trivial",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT priority, COUNT(*) AS ticket_count FROM tickets GROUP BY priority ORDER BY ticket_count DESC, priority ASC",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-data.SUM.001"
+  ]
+}

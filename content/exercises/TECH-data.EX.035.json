@@ -1,0 +1,102 @@
+{
+  "id": "TECH-data.EX.035",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "סניפים בחשיפה גבוהה — צבירה, סף ודירוג יחד",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 780,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לפני ועדת סיכונים מבקשים רק את הסניפים שסך הקרן הפעילה בהם עולה על 100,000 שקלים, עם מספר ההלוואות בכל אחד. השאילתה מחייבת חיבור, צבירה, סינון אחרי הצבירה ודירוג — כל מה שנבדק בראיון על SQL, במשפט אחד."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את הסניף (branch), את מספר ההלוואות הפעילות בו בעמודה בשם active_loans ואת סך הקרן בעמודה בשם total_principal, רק עבור סניפים שסך הקרן הפעילה בהם גדול מ-100000, ממוינת לפי total_principal בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT customers.branch, COUNT(*) AS active_loans, SUM(loans.principal) AS total_principal FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' GROUP BY customers.branch HAVING SUM(loans.principal) > 100000 ORDER BY total_principal DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "customers"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-crosses-threshold",
+        "labelHe": "הלוואה פעילה שמעלה סניף מעל הסף — חייב להיכנס לרשימה",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 4,
+              "principal": 95000,
+              "interest_rate": 5,
+              "term_months": 36,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-defaulted-not-counted",
+        "labelHe": "הלוואה גדולה בכשל פירעון — אינה פעילה ואסור שתיספר",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 4,
+              "principal": 800000,
+              "interest_rate": 5,
+              "term_months": 60,
+              "status": "defaulted",
+              "opened_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.branch, COUNT(*) AS active_loans, SUM(loans.principal) AS total_principal FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' GROUP BY customers.branch HAVING SUM(loans.principal) > 100000 ORDER BY total_principal DESC"
+  }
+}

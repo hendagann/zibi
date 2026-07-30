@@ -1,0 +1,109 @@
+{
+  "id": "TECH-data.EX.026",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "חשיפת אשראי לפי סניף — צבירה אחרי חיבור",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 480,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לקראת דיון סיכונים, ההנהלה מבקשת את סך הקרן של ההלוואות הפעילות בכל סניף. הסניף שמור על הלקוח ולא על ההלוואה, ולכן צריך לחבר לפני שמקבצים."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את הסניף (branch) ואת סך הקרן של ההלוואות הפעילות בו בעמודה בשם total_exposure, ממוינת לפי total_exposure בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT customers.branch, SUM(loans.principal) AS total_exposure FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' GROUP BY customers.branch ORDER BY total_exposure DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "customers"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-closed-excluded",
+        "labelHe": "הלוואה סגורה גדולה — אינה חשיפה פעילה ואסור שתיספר",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 4,
+              "principal": 900000,
+              "interest_rate": 4,
+              "term_months": 60,
+              "status": "closed",
+              "opened_at": "2024-01-01",
+              "closed_at": "2026-01-01"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-new-branch",
+        "labelHe": "הלוואה פעילה ללקוח בסניף חדש — חייב להופיע כשורה נוספת",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020004444",
+              "full_name": "דור מזרחי",
+              "branch": "אילת",
+              "segment": "retail",
+              "opened_at": "2025-12-01"
+            }
+          ],
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 30,
+              "principal": 70000,
+              "interest_rate": 5.5,
+              "term_months": 36,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.branch, SUM(loans.principal) AS total_exposure FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' GROUP BY customers.branch ORDER BY total_exposure DESC"
+  }
+}

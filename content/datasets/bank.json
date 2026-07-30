@@ -1,0 +1,116 @@
+{
+  "id": "DS-BANK",
+  "titleHe": "מערכת אשראי והלוואות — לקוחות, הלוואות, תשלומים ובקשות",
+  "descriptionHe": "דאטהסט של מערכת ליבה בנקאית בתחום ההלוואות. הנתונים מכילים בכוונה את התקלות שבודק במערכת פיננסית פוגש באמת: הלוואה שסכום התשלומים בה אינו מסתדר עם היתרה, תשלום שמצביע על הלוואה שאינה קיימת (רשומה יתומה), לקוח כפול שנוצר פעמיים עם אותו מספר זהות, בקשת אשראי שאושרה בלי החלטה מתועדת, ריבית NULL, ותשלום עם סכום שלילי. כל אלה קיימים כדי שאפשר יהיה לתרגל אימות עקביות נתונים ולא רק כתיבת שאילתות.",
+  "schema": {
+    "tables": [
+      {
+        "name": "customers",
+        "he": "לקוחות",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "national_id", "type": "TEXT", "he": "מספר זהות" },
+          { "name": "full_name", "type": "TEXT", "he": "שם מלא" },
+          { "name": "branch", "type": "TEXT", "he": "סניף" },
+          { "name": "segment", "type": "TEXT", "he": "פלח (retail/business)" },
+          { "name": "opened_at", "type": "TEXT", "he": "תאריך פתיחת לקוח" }
+        ]
+      },
+      {
+        "name": "loans",
+        "he": "הלוואות",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה הלוואה" },
+          { "name": "customer_id", "type": "INTEGER", "he": "מזהה לקוח" },
+          { "name": "principal", "type": "REAL", "he": "קרן ההלוואה בש\"ח" },
+          { "name": "interest_rate", "type": "REAL", "he": "ריבית שנתית באחוזים (NULL = לא הוזנה)" },
+          { "name": "term_months", "type": "INTEGER", "he": "מספר תשלומים" },
+          { "name": "status", "type": "TEXT", "he": "סטטוס (active/closed/defaulted)" },
+          { "name": "opened_at", "type": "TEXT", "he": "תאריך העמדה" },
+          { "name": "closed_at", "type": "TEXT", "he": "תאריך סגירה (NULL אם פעילה)" }
+        ]
+      },
+      {
+        "name": "payments",
+        "he": "תשלומים",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה תשלום" },
+          { "name": "loan_id", "type": "INTEGER", "he": "מזהה הלוואה" },
+          { "name": "paid_at", "type": "TEXT", "he": "תאריך תשלום" },
+          { "name": "amount", "type": "REAL", "he": "סכום בש\"ח" },
+          { "name": "method", "type": "TEXT", "he": "אמצעי (transfer/direct_debit/cash)" }
+        ]
+      },
+      {
+        "name": "credit_applications",
+        "he": "בקשות אשראי",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה בקשה" },
+          { "name": "customer_id", "type": "INTEGER", "he": "מזהה לקוח" },
+          { "name": "requested_amount", "type": "REAL", "he": "סכום מבוקש" },
+          { "name": "status", "type": "TEXT", "he": "סטטוס (approved/rejected/pending)" },
+          { "name": "submitted_at", "type": "TEXT", "he": "תאריך הגשה" },
+          { "name": "decided_at", "type": "TEXT", "he": "תאריך החלטה (NULL אם טרם הוכרע)" },
+          { "name": "decided_by", "type": "TEXT", "he": "מי החליט (NULL אם טרם הוכרע)" }
+        ]
+      }
+    ]
+  },
+  "rows": {
+    "customers": [
+      { "id": 1, "national_id": "032145678", "full_name": "אורי בן חיים", "branch": "תל אביב מרכז", "segment": "retail", "opened_at": "2021-03-11" },
+      { "id": 2, "national_id": "045892310", "full_name": "שירה אלמוג", "branch": "חיפה", "segment": "retail", "opened_at": "2021-07-22" },
+      { "id": 3, "national_id": "029876543", "full_name": "מרכז הדפוס בע\"מ", "branch": "פתח תקווה", "segment": "business", "opened_at": "2020-01-30" },
+      { "id": 4, "national_id": "051234987", "full_name": "יעל דדון", "branch": "ירושלים", "segment": "retail", "opened_at": "2022-02-14" },
+      { "id": 5, "national_id": "038765412", "full_name": "רונן שפירא", "branch": "תל אביב מרכז", "segment": "retail", "opened_at": "2022-09-05" },
+      { "id": 6, "national_id": "045892310", "full_name": "שירה אלמוג", "branch": "חיפה", "segment": "retail", "opened_at": "2023-04-18" },
+      { "id": 7, "national_id": "060012345", "full_name": "טל אבידן", "branch": "באר שבע", "segment": "retail", "opened_at": "2023-06-01" },
+      { "id": 8, "national_id": "027654321", "full_name": "לוגיסטיקת הנגב בע\"מ", "branch": "באר שבע", "segment": "business", "opened_at": "2019-11-12" },
+      { "id": 9, "national_id": "049998877", "full_name": "נטע כרמלי", "branch": "רעננה", "segment": "retail", "opened_at": "2024-01-08" },
+      { "id": 10, "national_id": "055443322", "full_name": "אמיר לוין", "branch": "ירושלים", "segment": "retail", "opened_at": "2024-05-20" }
+    ],
+    "loans": [
+      { "id": 5001, "customer_id": 1, "principal": 60000.0, "interest_rate": 4.5, "term_months": 36, "status": "active", "opened_at": "2024-01-15", "closed_at": null },
+      { "id": 5002, "customer_id": 2, "principal": 25000.0, "interest_rate": 6.2, "term_months": 24, "status": "closed", "opened_at": "2023-02-01", "closed_at": "2025-02-01" },
+      { "id": 5003, "customer_id": 3, "principal": 480000.0, "interest_rate": 3.9, "term_months": 60, "status": "active", "opened_at": "2023-05-10", "closed_at": null },
+      { "id": 5004, "customer_id": 4, "principal": 15000.0, "interest_rate": null, "term_months": 12, "status": "active", "opened_at": "2025-01-20", "closed_at": null },
+      { "id": 5005, "customer_id": 5, "principal": 90000.0, "interest_rate": 5.1, "term_months": 48, "status": "defaulted", "opened_at": "2022-11-03", "closed_at": null },
+      { "id": 5006, "customer_id": 1, "principal": 12000.0, "interest_rate": 7.0, "term_months": 12, "status": "closed", "opened_at": "2024-03-01", "closed_at": "2025-03-01" },
+      { "id": 5007, "customer_id": 8, "principal": 320000.0, "interest_rate": 4.1, "term_months": 60, "status": "active", "opened_at": "2024-08-19", "closed_at": null },
+      { "id": 5008, "customer_id": 7, "principal": 40000.0, "interest_rate": 5.8, "term_months": 36, "status": "active", "opened_at": "2025-03-12", "closed_at": null },
+      { "id": 5009, "customer_id": 2, "principal": 8000.0, "interest_rate": 8.5, "term_months": 6, "status": "closed", "opened_at": "2025-04-02", "closed_at": "2025-10-02" },
+      { "id": 5010, "customer_id": 10, "principal": 55000.0, "interest_rate": 4.9, "term_months": 24, "status": "active", "opened_at": "2025-06-30", "closed_at": null }
+    ],
+    "payments": [
+      { "id": 90001, "loan_id": 5001, "paid_at": "2024-02-15", "amount": 1800.0, "method": "direct_debit" },
+      { "id": 90002, "loan_id": 5001, "paid_at": "2024-03-15", "amount": 1800.0, "method": "direct_debit" },
+      { "id": 90003, "loan_id": 5001, "paid_at": "2024-04-15", "amount": 1800.0, "method": "direct_debit" },
+      { "id": 90004, "loan_id": 5002, "paid_at": "2023-03-01", "amount": 1150.0, "method": "transfer" },
+      { "id": 90005, "loan_id": 5002, "paid_at": "2023-04-01", "amount": 1150.0, "method": "transfer" },
+      { "id": 90006, "loan_id": 5003, "paid_at": "2023-06-10", "amount": 8800.0, "method": "transfer" },
+      { "id": 90007, "loan_id": 5003, "paid_at": "2023-07-10", "amount": 8800.0, "method": "transfer" },
+      { "id": 90008, "loan_id": 5003, "paid_at": "2023-08-10", "amount": 8800.0, "method": "transfer" },
+      { "id": 90009, "loan_id": 5005, "paid_at": "2022-12-03", "amount": 2200.0, "method": "direct_debit" },
+      { "id": 90010, "loan_id": 5006, "paid_at": "2024-04-01", "amount": 1050.0, "method": "cash" },
+      { "id": 90011, "loan_id": 5006, "paid_at": "2024-05-01", "amount": 1050.0, "method": "cash" },
+      { "id": 90012, "loan_id": 5007, "paid_at": "2024-09-19", "amount": 6100.0, "method": "transfer" },
+      { "id": 90013, "loan_id": 5007, "paid_at": "2024-10-19", "amount": 6100.0, "method": "transfer" },
+      { "id": 90014, "loan_id": 5999, "paid_at": "2025-02-11", "amount": 3000.0, "method": "transfer" },
+      { "id": 90015, "loan_id": 5009, "paid_at": "2025-05-02", "amount": 1400.0, "method": "direct_debit" },
+      { "id": 90016, "loan_id": 5001, "paid_at": "2024-05-15", "amount": -1800.0, "method": "direct_debit" },
+      { "id": 90017, "loan_id": 5010, "paid_at": "2025-07-30", "amount": 2450.0, "method": "direct_debit" },
+      { "id": 90018, "loan_id": 5010, "paid_at": "2025-08-30", "amount": 2450.0, "method": "direct_debit" }
+    ],
+    "credit_applications": [
+      { "id": 7001, "customer_id": 1, "requested_amount": 60000.0, "status": "approved", "submitted_at": "2024-01-02", "decided_at": "2024-01-10", "decided_by": "מירי ג'ורנו" },
+      { "id": 7002, "customer_id": 4, "requested_amount": 15000.0, "status": "approved", "submitted_at": "2025-01-05", "decided_at": null, "decided_by": null },
+      { "id": 7003, "customer_id": 5, "requested_amount": 120000.0, "status": "rejected", "submitted_at": "2022-10-01", "decided_at": "2022-10-14", "decided_by": "אבנר קדוש" },
+      { "id": 7004, "customer_id": 7, "requested_amount": 40000.0, "status": "approved", "submitted_at": "2025-02-20", "decided_at": "2025-03-01", "decided_by": "מירי ג'ורנו" },
+      { "id": 7005, "customer_id": 9, "requested_amount": 30000.0, "status": "pending", "submitted_at": "2025-09-14", "decided_at": null, "decided_by": null },
+      { "id": 7006, "customer_id": 3, "requested_amount": 480000.0, "status": "approved", "submitted_at": "2023-04-20", "decided_at": "2023-05-02", "decided_by": "אבנר קדוש" },
+      { "id": 7007, "customer_id": 10, "requested_amount": 55000.0, "status": "approved", "submitted_at": "2025-06-11", "decided_at": "2025-06-25", "decided_by": "שרון בלס" },
+      { "id": 7008, "customer_id": 2, "requested_amount": 8000.0, "status": "approved", "submitted_at": "2025-03-19", "decided_at": "2025-03-28", "decided_by": "שרון בלס" },
+      { "id": 7009, "customer_id": 8, "requested_amount": 500000.0, "status": "rejected", "submitted_at": "2024-07-01", "decided_at": "2024-07-30", "decided_by": "אבנר קדוש" }
+    ]
+  }
+}

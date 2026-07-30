@@ -1,0 +1,97 @@
+{
+  "id": "TECH-data.EX.040",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "פניות עם שם הפונה — חיבור פניות למשתמשים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מסך הפניות מציג שם משתמש לצד כל פנייה. כדי לאמת שהשם הנכון מוצג לצד הפנייה הנכונה, את מפיקה את אותו צירוף ישירות מהמסד."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id), את השם המלא של הפונה (full_name) ואת הסטטוס (status), עבור כל הפניות, ממוינת לפי מזהה הפנייה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT tickets.id, users.full_name, tickets.status FROM tickets JOIN users ON users.id = tickets.user_id ORDER BY tickets.id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets",
+      "users"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-ticket",
+        "labelHe": "פנייה חדשה למשתמש קיים — חייבת להופיע עם שמו",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 9,
+              "agent_id": 101,
+              "subject": "בעיה בהתחברות",
+              "priority": "high",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-user-no-ticket",
+        "labelHe": "משתמש חדש בלי פניות — אסור שיופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 30,
+              "email": "lior@delta-works.co.il",
+              "full_name": "ליאור דלתא",
+              "plan": "free",
+              "signed_up_at": "2026-01-01",
+              "is_active": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT tickets.id, users.full_name, tickets.status FROM tickets JOIN users ON users.id = tickets.user_id ORDER BY tickets.id ASC"
+  }
+}

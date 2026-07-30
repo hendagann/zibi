@@ -1,0 +1,102 @@
+{
+  "id": "TECH-data.EX.046",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "פנייה המשויכת לנציג שאינו קיים — הפניה שבורה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "נציג עזב והרשומה שלו נמחקה, אך הפניות שטיפל בהן נשארו מצביעות על המזהה שלו. בממשק זה מופיע כשדה ריק או כשגיאה, ובנתונים זו הפניה שבורה. ההבחנה החשובה: פנייה שלא שויכה כלל היא מצב תקין, ופנייה שמצביעה על נציג שאינו קיים אינה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id) ואת מזהה הנציג שאליו היא מצביעה (agent_id), עבור פניות שיש להן agent_id שאינו NULL אך אין נציג מתאים בטבלת agents. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT tickets.id, tickets.agent_id FROM tickets LEFT JOIN agents ON agents.id = tickets.agent_id WHERE tickets.agent_id IS NOT NULL AND agents.id IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "tickets",
+      "agents"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-another-broken",
+        "labelHe": "פנייה נוספת המצביעה על נציג שאינו קיים — חייבת להופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 2,
+              "agent_id": 777,
+              "subject": "בקשה לשחזור נתונים",
+              "priority": "high",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-unassigned-ok",
+        "labelHe": "פנייה בלי שיוך כלל — מצב תקין, אסור שתופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 2,
+              "agent_id": null,
+              "subject": "שאלה כללית",
+              "priority": "low",
+              "status": "open",
+              "created_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT tickets.id, tickets.agent_id FROM tickets LEFT JOIN agents ON agents.id = tickets.agent_id WHERE tickets.agent_id IS NOT NULL AND agents.id IS NULL"
+  }
+}

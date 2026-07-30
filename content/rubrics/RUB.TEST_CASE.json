@@ -1,0 +1,375 @@
+{
+  "rubric_id": "RUB.TEST_CASE",
+  "version": 1,
+  "kind": "criteria",
+  "status": "active",
+  "appliesTo": [
+    "author_test_case"
+  ],
+  "maxScore": 100,
+  "created_at": "2026-07-31",
+  "approved_at": "2026-07-31",
+  "approved_by": "hendagan",
+  "effective_from": "2026-07-31",
+  "change_reason": "מימוש מחוון docs/07 §8.3 עם רשימות רכיבים מלאות, כדי שמשפחת author_test_case תוכל להיות active. עד כה המחוון היה טיוטה ולא ניתן היה לנקד בו — ולכן התוצר הידני הנפוץ ביותר במקצוע לא היה ניתן לתרגול.",
+  "criteria": [
+    {
+      "criterion_id": "c1",
+      "name": "תנאים מקדימים",
+      "description": "מצב המערכת והנתונים שחייבים להתקיים לפני הצעד הראשון, כולל משתמש והרשאה.",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "DOC.TC"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "משתמש מסוג מוגדר, מחובר, עם נתון קיים במצב מסוים — כל מה שנדרש כדי שהצעד הראשון יהיה אפשרי",
+        "מצוין גם מה אסור שיתקיים, כשזה משנה את התוצאה"
+      ],
+      "partial_examples": [
+        "\"משתמש מחובר\" בלי לומר איזה סוג משתמש או אילו נתונים קיימים",
+        "תנאי מקדים שמתאר את המסך במקום את מצב הנתונים"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "\"אין תנאים מקדימים\" במקרה שברור שנדרש משתמש מחובר"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c1.k1",
+          "label": "תנאי מקדים מפורש",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "preconditions",
+            "n": 25
+          }
+        },
+        {
+          "component_id": "c1.k2",
+          "label": "פירוט מצב הנתונים וההרשאה",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "preconditions",
+            "n": 80
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    },
+    {
+      "criterion_id": "c2",
+      "name": "צעדים ברורים וניתנים לביצוע",
+      "description": "רצף פעולות שבודק אחר יכול לבצע זהה, בלי לשאול שאלה ובלי להשלים פרטים מדעתו.",
+      "weight": 25,
+      "max_points": 25,
+      "skill_ids": [
+        "DOC.TC"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "צעדים ממוספרים, כל אחד פעולה אחת, עם המסך והשדה המדויקים",
+        "רצף שאפשר למסור לבודק חדש והוא יגיע לאותה נקודה"
+      ],
+      "partial_examples": [
+        "\"לבצע את התהליך\" — פעולה מורכבת דחוסה לצעד אחד",
+        "צעדים נכונים אך בלי לציין היכן הם מתבצעים"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "תיאור כללי של התרחיש במקום צעדים"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c2.k1",
+          "label": "רצף צעדים מפורט",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "testSteps",
+            "n": 60
+          }
+        },
+        {
+          "component_id": "c2.k2",
+          "label": "צעדים ברמת פירוט שמאפשרת ביצוע זהה",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "testSteps",
+            "n": 150
+          }
+        },
+        {
+          "component_id": "c2.k3",
+          "label": "ניסוח מדיד ולא כללי",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "not_generic",
+            "field": "testSteps",
+            "banned": [
+              "לבצע את התהליך",
+              "כרגיל",
+              "וכולי",
+              "וכו'",
+              "לבדוק שהכל תקין"
+            ]
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    },
+    {
+      "criterion_id": "c3",
+      "name": "נתוני בדיקה",
+      "description": "הערכים הקונקרטיים שבהם הבדיקה מתבצעת, כולל מקורם וכיצד מחזירים את המצב לקדמותו.",
+      "weight": 15,
+      "max_points": 15,
+      "skill_ids": [
+        "MGMT.DATA"
+      ],
+      "dimension": "application",
+      "full_examples": [
+        "ערכים מפורשים — סכום, תאריך, מזהה — ולא \"נתון תקין\"",
+        "מצוין מאיפה הנתון מגיע והאם צריך לאפס אותו אחרי הריצה"
+      ],
+      "partial_examples": [
+        "\"להזין נתונים תקינים\" בלי לומר אילו",
+        "ערך אחד מצוין והשאר נותרים מרומזים"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "הפניה כללית ל\"נתוני הבדיקה במערכת\""
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c3.k1",
+          "label": "נתוני בדיקה מפורשים",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "testData",
+            "n": 25
+          }
+        },
+        {
+          "component_id": "c3.k2",
+          "label": "ערכים קונקרטיים ולא תיאור כללי",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "not_generic",
+            "field": "testData",
+            "banned": [
+              "נתונים תקינים",
+              "נתון כלשהו",
+              "מה שיש במערכת",
+              "לא רלוונטי"
+            ]
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    },
+    {
+      "criterion_id": "c4",
+      "name": "תוצאה מצופה",
+      "description": "מה המערכת אמורה להציג או לעשות — תוצאה נצפית שנגזרת מהדרישה, ולא חזרה על הצעד.",
+      "weight": 25,
+      "max_points": 25,
+      "skill_ids": [
+        "DOC.TC"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "הודעה מדויקת, ערך מדויק או מצב מדויק שאפשר להשוות אליו",
+        "תוצאה שנגזרת מהדרישה ולא מהתנהגות המערכת כפי שהיא"
+      ],
+      "partial_examples": [
+        "\"המערכת מגיבה כמצופה\" — נכון אך אינו בר-השוואה",
+        "תוצאה נכונה שמנוסחת חלקית"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "חזרה על הצעד במקום ציון מה אמור לקרות"
+      ],
+      "critical_errors": [
+        {
+          "kind": "contains_phrases",
+          "fields": [
+            "expected"
+          ],
+          "phrases": [
+            "המערכת מגיבה כרגיל",
+            "הכל תקין",
+            "עובד כמצופה",
+            "כפי שתואר בצעד"
+          ],
+          "labelHe": "התוצאה המצופה חוזרת על הצעד או מנוסחת כאמירה כללית, ולכן אינה ניתנת להשוואה"
+        }
+      ],
+      "expected_components": [
+        {
+          "component_id": "c4.k1",
+          "label": "תוצאה מצופה מפורשת",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "min_length",
+            "field": "expected",
+            "n": 30
+          }
+        },
+        {
+          "component_id": "c4.k2",
+          "label": "התוצאה שונה מנוסח הצעדים",
+          "class": "must",
+          "weight": 3,
+          "detection": {
+            "kind": "differs_from",
+            "field": "expected",
+            "other": "testSteps"
+          }
+        },
+        {
+          "component_id": "c4.k3",
+          "label": "תוצאה נצפית וברת-השוואה",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "expected",
+            "n": 90
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    },
+    {
+      "criterion_id": "c5",
+      "name": "עקיבות לדרישה",
+      "description": "איזו דרישה או קריטריון קבלה המקרה מכסה, וכיצד הוא מכסה אותה.",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "DOC.RTM"
+      ],
+      "dimension": "reasoning",
+      "full_examples": [
+        "הפניה לדרישה מסוימת עם הסבר איזה חלק ממנה נבדק כאן",
+        "ציון מפורש של מה המקרה הזה אינו מכסה מהדרישה"
+      ],
+      "partial_examples": [
+        "הפניה לדרישה בלי לומר איזה חלק ממנה נבדק",
+        "ציון שם הפיצ'ר במקום הדרישה"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "\"לפי האפיון\" בלי הפניה"
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c5.k1",
+          "label": "הפניה לדרישה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "traceability",
+            "n": 20
+          }
+        },
+        {
+          "component_id": "c5.k2",
+          "label": "הסבר איזה חלק מהדרישה מכוסה",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "traceability",
+            "n": 60
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    },
+    {
+      "criterion_id": "c6",
+      "name": "כותרת ובהירות",
+      "description": "כותרת שמאפשרת לזהות את המקרה ברשימה בלי לפתוח אותו.",
+      "weight": 10,
+      "max_points": 10,
+      "skill_ids": [
+        "DOC.TC"
+      ],
+      "dimension": "knowledge",
+      "full_examples": [
+        "כותרת שאומרת מה נבדק ובאילו תנאים",
+        "כותרת שמבדילה בין המקרה הזה למקרה השכן ברשימה"
+      ],
+      "partial_examples": [
+        "כותרת שמציינת רק את האזור — \"מסך התחברות\"",
+        "כותרת נכונה אך ארוכה ומעורפלת"
+      ],
+      "missing_examples": [
+        "הסעיף נותר ריק",
+        "\"בדיקה 1\""
+      ],
+      "critical_errors": [],
+      "expected_components": [
+        {
+          "component_id": "c6.k1",
+          "label": "כותרת מזהה",
+          "class": "must",
+          "weight": 2,
+          "detection": {
+            "kind": "min_length",
+            "field": "title",
+            "n": 12
+          }
+        },
+        {
+          "component_id": "c6.k2",
+          "label": "כותרת שאומרת מה נבדק ובאילו תנאים",
+          "class": "should",
+          "weight": 2,
+          "detection": {
+            "kind": "not_generic",
+            "field": "title",
+            "banned": [
+              "בדיקה",
+              "טסט",
+              "מקרה בדיקה",
+              "בדיקה כללית"
+            ]
+          }
+        }
+      ],
+      "remediation": {
+        "ref": "DOC-design-artifacts.LE.001"
+      }
+    }
+  ]
+}

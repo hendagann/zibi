@@ -1,0 +1,103 @@
+{
+  "id": "TECH-data.EX.041",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "פניות שלא שויכו לאף נציג — NULL כמצב עסקי",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 420,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "פנייה שלא שויכה לנציג לא מופיעה בשום תור אישי, ולכן היא נופלת בין הכיסאות. במסד היא מזוהה בכך ש-agent_id שלה ריק — וזה בדיוק סוג הבדיקה שמגלה למה לקוח לא קיבל מענה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id), את הנושא (subject) ואת העדיפות (priority) עבור פניות שבהן agent_id הוא NULL, ממוינת לפי מזהה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT id, subject, priority FROM tickets WHERE agent_id IS NULL ORDER BY id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-unassigned",
+        "labelHe": "פנייה דחופה חדשה בלי נציג — חייבת להופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 8,
+              "agent_id": null,
+              "subject": "תשלום נכשל",
+              "priority": "urgent",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-assigned",
+        "labelHe": "פנייה חדשה עם נציג משויך — אסור שתופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 8,
+              "agent_id": 102,
+              "subject": "שאלה כללית",
+              "priority": "low",
+              "status": "open",
+              "created_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, subject, priority FROM tickets WHERE agent_id IS NULL ORDER BY id ASC"
+  }
+}

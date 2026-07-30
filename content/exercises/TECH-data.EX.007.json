@@ -1,0 +1,97 @@
+{
+  "id": "TECH-data.EX.007",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "הזמנות שטרם נשלחו — IS NULL ולא שווה לריק",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לקוח מתלונן שההזמנה שלו לא הגיעה. לפני שבודקים מקרה יחיד, רוצים לראות את כל ההזמנות שעדיין לא יצאו למשלוח. במסד, הזמנה שטרם נשלחה מסומנת בכך ש-shipped_date ריק — כלומר NULL."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההזמנה (id) ואת תאריך ההזמנה (order_date) עבור כל ההזמנות שבהן shipped_date הוא NULL. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT id, order_date FROM orders WHERE shipped_date IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "orders"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-unshipped",
+        "labelHe": "הזמנה חדשה שטרם נשלחה — חייבת להופיע",
+        "extraRows": {
+          "orders": [
+            {
+              "id": 130,
+              "customer_id": 4,
+              "order_date": "2026-06-01",
+              "status": "pending",
+              "shipped_date": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-empty-string",
+        "labelHe": "הזמנה עם מחרוזת ריקה במקום NULL — אינה NULL ואסור שתופיע",
+        "extraRows": {
+          "orders": [
+            {
+              "id": 131,
+              "customer_id": 4,
+              "order_date": "2026-06-02",
+              "status": "completed",
+              "shipped_date": ""
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, order_date FROM orders WHERE shipped_date IS NULL"
+  }
+}

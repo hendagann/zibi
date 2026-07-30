@@ -1,0 +1,123 @@
+{
+  "id": "TECH-data.EX.032",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "הלוואה בלי בקשה מאושרת — פער בין תהליך לתוצאה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 780,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "התהליך התקין הוא בקשת אשראי שמאושרת ואז הלוואה שמועמדת. אם קיימת הלוואה ללקוח שאין לו אף בקשה מאושרת, אחת משתיים: או שההלוואה הועמדה בעקיפת התהליך, או שהבקשה לא נשמרה. שתי האפשרויות הן ממצא, וההצלבה חוצה שתי טבלאות שאין ביניהן מפתח זר ישיר."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id) ואת השם המלא של הלקוח (full_name), עבור הלוואות של לקוחות שאין להם אף בקשת אשראי בסטטוס approved, ממוינת לפי מזהה ההלוואה בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT loans.id, customers.full_name FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.customer_id NOT IN (SELECT customer_id FROM credit_applications WHERE status = 'approved') ORDER BY loans.id ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "customers",
+      "credit_applications"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-approval-added",
+        "labelHe": "בקשה מאושרת שנוספה ללקוח שהיה ברשימה — הלוואותיו חייבות לצאת ממנה",
+        "extraRows": {
+          "credit_applications": [
+            {
+              "id": 7100,
+              "customer_id": 5,
+              "requested_amount": 90000,
+              "status": "approved",
+              "submitted_at": "2022-10-01",
+              "decided_at": "2022-10-20",
+              "decided_by": "מירי ג'ורנו"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-loan-without-approval",
+        "labelHe": "הלוואה חדשה ללקוח עם בקשה דחויה בלבד — חייבת להופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020006666",
+              "full_name": "קרן אביטן",
+              "branch": "ירושלים",
+              "segment": "retail",
+              "opened_at": "2025-12-01"
+            }
+          ],
+          "credit_applications": [
+            {
+              "id": 7101,
+              "customer_id": 30,
+              "requested_amount": 25000,
+              "status": "rejected",
+              "submitted_at": "2025-12-05",
+              "decided_at": "2025-12-20",
+              "decided_by": "אבנר קדוש"
+            }
+          ],
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 30,
+              "principal": 25000,
+              "interest_rate": 6,
+              "term_months": 24,
+              "status": "active",
+              "opened_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT loans.id, customers.full_name FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.customer_id NOT IN (SELECT customer_id FROM credit_applications WHERE status = 'approved') ORDER BY loans.id ASC"
+  }
+}

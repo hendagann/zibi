@@ -1,0 +1,112 @@
+{
+  "id": "TECH-data.EX.031",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "לקוחות עם יותר מהלוואה אחת — ריכוז חשיפה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מדיניות האשראי מחייבת בחינה נפרדת של לקוחות שמחזיקים יותר מהלוואה אחת במקביל או ברצף. את מפיקה את הרשימה כדי להצליב אותה מול דוח הריכוזיות שהמערכת מייצרת."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא (full_name), את מספר ההלוואות בעמודה בשם loan_count ואת סך הקרן בעמודה בשם total_principal, עבור לקוחות עם יותר מהלוואה אחת, ממוינת לפי loan_count בסדר יורד ואז לפי שם בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT customers.full_name, COUNT(*) AS loan_count, SUM(loans.principal) AS total_principal FROM loans JOIN customers ON customers.id = loans.customer_id GROUP BY customers.id, customers.full_name HAVING COUNT(*) > 1 ORDER BY loan_count DESC, customers.full_name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "loans",
+      "customers"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-third-loan",
+        "labelHe": "הלוואה שלישית ללקוח קיים — חייבת לשנות את הדירוג",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 1,
+              "principal": 30000,
+              "interest_rate": 5,
+              "term_months": 24,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-single-loan",
+        "labelHe": "לקוח חדש עם הלוואה אחת — אסור שיופיע",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020005555",
+              "full_name": "סיון אדרי",
+              "branch": "רעננה",
+              "segment": "retail",
+              "opened_at": "2025-12-01"
+            }
+          ],
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 30,
+              "principal": 10000,
+              "interest_rate": 6,
+              "term_months": 12,
+              "status": "active",
+              "opened_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.full_name, COUNT(*) AS loan_count, SUM(loans.principal) AS total_principal FROM loans JOIN customers ON customers.id = loans.customer_id GROUP BY customers.id, customers.full_name HAVING COUNT(*) > 1 ORDER BY loan_count DESC, customers.full_name ASC"
+  }
+}

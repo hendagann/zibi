@@ -68,12 +68,12 @@ const draftExercise = (id: string, status = 'ai_generated') => ({
 describe('content import', () => {
   it('writes each entity type into its directory', async () => {
     const { root, bundleAt } = await setup();
-    const bundle = await bundleAt({ items: [draftExercise('DOC-defects.EX.006')] });
+    const bundle = await bundleAt({ items: [draftExercise('DOC-defects.EX.900')] });
     const { code, out } = await importBundle(root, bundle);
     expect(code).toBe(0);
-    expect(out).toContain('DOC-defects.EX.006');
+    expect(out).toContain('DOC-defects.EX.900');
     const written = JSON.parse(
-      await readFile(join(root, 'exercises', 'DOC-defects.EX.006.json'), 'utf8'),
+      await readFile(join(root, 'exercises', 'DOC-defects.EX.900.json'), 'utf8'),
     );
     expect(written.review.status).toBe('ai_generated');
     expect(written.version).toBe(1);
@@ -82,13 +82,13 @@ describe('content import', () => {
   it('a bundle cannot arrive approved or published', async () => {
     const { root, bundleAt } = await setup();
     const bundle = await bundleAt({
-      items: [draftExercise('DOC-defects.EX.007', 'published')],
+      items: [draftExercise('DOC-defects.EX.901', 'published')],
     });
     const { code, out } = await importBundle(root, bundle);
     expect(code).toBe(0);
     expect(out).toContain('needs_professional_review');
     const written = JSON.parse(
-      await readFile(join(root, 'exercises', 'DOC-defects.EX.007.json'), 'utf8'),
+      await readFile(join(root, 'exercises', 'DOC-defects.EX.901.json'), 'utf8'),
     );
     expect(written.review.status).toBe('needs_professional_review');
     expect(written.review.reviewedBy).toBeUndefined();

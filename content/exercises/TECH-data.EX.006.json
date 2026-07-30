@@ -1,0 +1,92 @@
+{
+  "id": "TECH-data.EX.006",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "מוצרי שמע לפי מחיר יורד — סינון על ערך בעברית",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "צוות השיווק מכין באנר לקטגוריית השמע ומבקש את רשימת המוצרים בקטגוריה, מהיקר לזול. הקטגוריות במסד שמורות בעברית, בדיוק כפי שהן מוצגות בממשק."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם המוצר (name) ואת המחיר (price) עבור מוצרים בקטגוריה \"שמע\", ממוינים לפי מחיר בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT name, price FROM products WHERE category = 'שמע' ORDER BY price DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "products"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-audio",
+        "labelHe": "מוצר שמע חדש ויקר — חייב להופיע ראשון",
+        "extraRows": {
+          "products": [
+            {
+              "id": 90,
+              "name": "מגבר שולחני",
+              "category": "שמע",
+              "price": 1450
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-other-category",
+        "labelHe": "מוצר בקטגוריה אחרת — אסור שייכלל",
+        "extraRows": {
+          "products": [
+            {
+              "id": 91,
+              "name": "מסך נייד",
+              "category": "מסכים",
+              "price": 990
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT name, price FROM products WHERE category = 'שמע' ORDER BY price DESC"
+  }
+}

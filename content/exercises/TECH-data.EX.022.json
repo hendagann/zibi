@@ -1,0 +1,97 @@
+{
+  "id": "TECH-data.EX.022",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "סך התשלומים לכל הלוואה — צבירה על שדה כספי",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 360,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לפני התאמת יתרות, את רוצה לראות כמה שולם בפועל בכל הלוואה. שימי לב שהצבירה סוכמת את כל השורות כפי שהן — כולל תיקוני זיכוי בסכום שלילי, אם קיימים."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (loan_id) ואת סך התשלומים בעמודה בשם total_paid, ממוינת לפי total_paid בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT loan_id, SUM(amount) AS total_paid FROM payments GROUP BY loan_id ORDER BY total_paid DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "payments"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-refund",
+        "labelHe": "זיכוי בסכום שלילי — חייב להקטין את הסכום הנצבר",
+        "extraRows": {
+          "payments": [
+            {
+              "id": 90100,
+              "loan_id": 5003,
+              "paid_at": "2026-01-10",
+              "amount": -8800,
+              "method": "transfer"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-new-loan-payment",
+        "labelHe": "תשלום להלוואה שלא היו לה תשלומים — חייבת להופיע בקיבוץ",
+        "extraRows": {
+          "payments": [
+            {
+              "id": 90101,
+              "loan_id": 5004,
+              "paid_at": "2026-01-11",
+              "amount": 1300,
+              "method": "direct_debit"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT loan_id, SUM(amount) AS total_paid FROM payments GROUP BY loan_id ORDER BY total_paid DESC"
+  }
+}

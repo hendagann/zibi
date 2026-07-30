@@ -33,8 +33,8 @@ async function readAll(dir) {
   }
 }
 
-const [domains, topics, skills, rubrics, sources, misconceptions, ...itemDirs] = await Promise.all(
-  ['domains', 'topics', 'skills', 'rubrics', 'sources', 'misconceptions',
+const [domains, topics, skills, rubrics, sources, misconceptions, datasets, ...itemDirs] = await Promise.all(
+  ['domains', 'topics', 'skills', 'rubrics', 'sources', 'misconceptions', 'datasets',
    'lessons', 'examples', 'exercises', 'exams'].map(readAll),
 );
 const items = itemDirs.flat();
@@ -49,6 +49,9 @@ const skillIds = new Set(skills.map((s) => s.data.id));
 const sourceIds = new Set(sources.map((s) => s.data.id));
 const rubricIds = new Set(rubrics.map((r) => r.data.rubric_id));
 const domainIds = new Set(domains.map((d) => d.data.id));
+/* מפתח לפי השדה id שבתוך הקובץ — בדיוק כפי ש-getDataset מחפש (loader.ts).
+   מיפוי לפי שם הקובץ היה מסתיר את התקלה ש-QM-19 נוסף כדי לתפוס. */
+const datasetById = new Map(datasets.map((d) => [d.data.id, d.data]));
 
 /* ---- CM-02: id pattern, uniqueness, type-code agreement ---- */
 const TYPE_CODE = {
@@ -161,6 +164,30 @@ for (const { file, data } of items.filter((i) => ['exercise', 'exam_item'].inclu
       fail('QM-12', `${file}: קישור חזרה לפריט לא מאושר: ${ref}`);
   }
   if (!data.modelAnswer) fail('QM-09', `${file}: חסרה תשובת מופת`);
+
+  /* QM-19: פריט SQL חייב דאטהסט שנפתר בפועל, וטבלאות שקיימות בו.
+     נוסף אחרי שנמצא ש-EXAM-readiness.XM.003 הצהיר datasetRef בשם הקובץ
+     ("shop") ולא במזהה ("DS-SHOP"). getDataset מחפש לפי id, החזיר null,
+     וההגשה של מקטע ה-SQL במבחן נכשלה ב-dataset-not-found — בלי ששום בדיקה
+     תפסה זאת, כי אף אחד לא השלים את המקטע מאז. */
+  if (data.questionType === 'sql_query') {
+    if (!data.sqlSpec) fail('QM-19', `${file}: פריט sql_query בלי sqlSpec`);
+    else {
+      const dataset = datasetById.get(data.sqlSpec.datasetRef);
+      if (!dataset) {
+        fail('QM-19', `${file}: דאטהסט לא קיים: ${data.sqlSpec.datasetRef}`);
+      } else {
+        const tableNames = new Set((dataset.schema?.tables ?? []).map((t) => t.name));
+        for (const table of data.sqlSpec.requiredTables ?? [])
+          if (!tableNames.has(table))
+            fail('QM-19', `${file}: טבלה נדרשת שאינה בדאטהסט: ${table}`);
+      }
+      if (!data.sqlSpec.referenceSql?.trim())
+        fail('QM-19', `${file}: אין שאילתת ייחוס`);
+      if (data.modelAnswer?.sql !== data.sqlSpec.referenceSql)
+        fail('QM-09', `${file}: תשובת המופת אינה זהה לשאילתת הייחוס`);
+    }
+  }
 
   /* QM-07 + QM-16 (docs/06 §6.3): טעויות נפוצות על פריט מנוקד הן מטא-דאטה
      להערכה, ולכן כל שדה חובה — משוב נוצר מהן. זו אינה אותה שדה כמו

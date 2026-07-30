@@ -14,7 +14,7 @@
     "MGMT/control"
   ],
   "difficulty": 5,
-  "estimatedMinutes": 80,
+  "estimatedMinutes": 56,
   "measuredSkills": [
     "DOC.SUM",
     "DOC.STAKE"
@@ -42,7 +42,10 @@
     "DOC-reporting.EX.115",
     "DOC-reporting.EX.116",
     "DOC-reporting.EX.117",
-    "DOC-reporting.EX.200"
+    "DOC-reporting.EX.200",
+    "DOC-reporting.EX.201",
+    "DOC-reporting.EX.202",
+    "DOC-reporting.EX.203"
   ],
   "topicExamRef": null,
   "review": {

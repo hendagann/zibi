@@ -1,0 +1,98 @@
+{
+  "id": "EXAM-readiness.XM.011",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "SQL — משתמשים שפנו יותר מפעם אחת",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.SQL",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מסד הנתונים מכיל את הטבלאות users ו-tickets. צוות המוצר מחפש משתמשים חוזרים בתמיכה — סימן אפשרי לבעיה שלא נפתרה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא (full_name) ואת מספר הפניות שלו בעמודה בשם ticket_count, עבור משתמשים שפתחו יותר מפנייה אחת, ממוינת לפי ticket_count בסדר יורד ואז לפי full_name בסדר עולה. במבחן לא יוצג משוב עד לסיום."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT users.full_name, COUNT(*) AS ticket_count FROM tickets JOIN users ON users.id = tickets.user_id GROUP BY users.id, users.full_name HAVING COUNT(*) > 1 ORDER BY ticket_count DESC, users.full_name ASC",
+    "requiredColumns": [
+      "full_name",
+      "ticket_count"
+    ],
+    "orderMatters": true,
+    "requiredTables": [
+      "tickets",
+      "users"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-single-ticket",
+        "labelHe": "משתמש חדש עם פנייה אחת — אסור שיופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 30,
+              "email": "one@case-lab.io",
+              "full_name": "ניצן בודד",
+              "plan": "free",
+              "signed_up_at": "2026-01-01",
+              "is_active": 1
+            }
+          ],
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 30,
+              "agent_id": 101,
+              "subject": "שאלה יחידה",
+              "priority": "low",
+              "status": "open",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT users.full_name, COUNT(*) AS ticket_count FROM tickets JOIN users ON users.id = tickets.user_id GROUP BY users.id, users.full_name HAVING COUNT(*) > 1 ORDER BY ticket_count DESC, users.full_name ASC",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-data.SUM.001"
+  ]
+}

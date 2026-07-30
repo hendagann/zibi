@@ -1,0 +1,103 @@
+{
+  "id": "TECH-data.EX.047",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "הלוג אומר נסגרה, הסטטוס אומר פתוחה — סתירה בין טבלאות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 660,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "לוג האירועים מתעד שהפנייה נסגרה, אבל שדה הסטטוס בטבלת הפניות עדיין אומר שהיא פתוחה. אחד משני המקורות שגוי, והבודק שמוצא זאת הוא שמאפשר להכריע איזה מהם. זו ההצלבה שמבדילה בין \"המסך נראה תקין\" ל\"הנתונים עקביים\"."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id) ואת הסטטוס שלה (status), עבור פניות שיש להן לפחות אירוע אחד מסוג closed אך הסטטוס שלהן אינו closed. כל פנייה פעם אחת בלבד. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT DISTINCT tickets.id, tickets.status FROM tickets JOIN ticket_events ON ticket_events.ticket_id = tickets.id WHERE ticket_events.event_type = 'closed' AND tickets.status <> 'closed'",
+    "orderMatters": false,
+    "requiredTables": [
+      "tickets",
+      "ticket_events"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-contradiction",
+        "labelHe": "פנייה ממתינה עם אירוע סגירה — חייבת להופיע",
+        "extraRows": {
+          "ticket_events": [
+            {
+              "id": 40100,
+              "ticket_id": 3009,
+              "event_type": "closed",
+              "occurred_at": "2025-06-25",
+              "actor": "agent"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-two-closed-events",
+        "labelHe": "שני אירועי סגירה לאותה פנייה פתוחה — חייבת להופיע פעם אחת בלבד",
+        "extraRows": {
+          "ticket_events": [
+            {
+              "id": 40101,
+              "ticket_id": 3003,
+              "event_type": "closed",
+              "occurred_at": "2025-04-10",
+              "actor": "agent"
+            },
+            {
+              "id": 40102,
+              "ticket_id": 3003,
+              "event_type": "closed",
+              "occurred_at": "2025-04-11",
+              "actor": "system"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT DISTINCT tickets.id, tickets.status FROM tickets JOIN ticket_events ON ticket_events.ticket_id = tickets.id WHERE ticket_events.event_type = 'closed' AND tickets.status <> 'closed'"
+  }
+}

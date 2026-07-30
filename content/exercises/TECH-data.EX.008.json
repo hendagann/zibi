@@ -1,0 +1,106 @@
+{
+  "id": "TECH-data.EX.008",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "טווח מחירים לקטלוג — גבולות כלולים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מנהלת המוצר מבקשת רשימת מוצרים לקטלוג \"מתנות\" בטווח 100 עד 500 שקלים כולל. הגבולות עצמם צריכים להיכלל — זו הדרישה כפי שנוסחה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את שם המוצר (name) ואת המחיר (price) עבור מוצרים שמחירם בין 100 ל-500 כולל, ממוינים לפי מחיר בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT name, price FROM products WHERE price >= 100 AND price <= 500 ORDER BY price ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "products"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-lower-bound",
+        "labelHe": "מוצר במחיר 100 בדיוק — הגבול התחתון חייב להיכלל",
+        "extraRows": {
+          "products": [
+            {
+              "id": 90,
+              "name": "מארז כבלים",
+              "category": "אביזרים",
+              "price": 100
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-upper-bound",
+        "labelHe": "מוצר במחיר 500 בדיוק — הגבול העליון חייב להיכלל",
+        "extraRows": {
+          "products": [
+            {
+              "id": 91,
+              "name": "תיק למחשב",
+              "category": "אביזרים",
+              "price": 500
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-just-outside",
+        "labelHe": "מוצר במחיר 500.5 — מחוץ לטווח",
+        "extraRows": {
+          "products": [
+            {
+              "id": 92,
+              "name": "כננת מסך",
+              "category": "מסכים",
+              "price": 500.5
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT name, price FROM products WHERE price >= 100 AND price <= 500 ORDER BY price ASC"
+  }
+}

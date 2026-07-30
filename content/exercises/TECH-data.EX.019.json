@@ -1,0 +1,103 @@
+{
+  "id": "TECH-data.EX.019",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "הלוואות בלי ריבית מוזנת — שדה חובה שנשאר ריק",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "במערכת אשראי, הלוואה בלי שיעור ריבית היא תקלה ולא מקרה קצה: אי אפשר לחשב לוח סילוקין בלעדיה. במסד, שדה שלא הוזן שמור כ-NULL, ולא כאפס ולא כמחרוזת ריקה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id) ואת הקרן (principal) עבור הלוואות שבהן interest_rate הוא NULL. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT id, principal FROM loans WHERE interest_rate IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "loans"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-another-null",
+        "labelHe": "הלוואה נוספת בלי ריבית — חייבת להופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 9,
+              "principal": 22000,
+              "interest_rate": null,
+              "term_months": 18,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-zero-rate",
+        "labelHe": "הלוואה בריבית 0 — ערך שהוזן, אינו NULL ואסור שיופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 9,
+              "principal": 5000,
+              "interest_rate": 0,
+              "term_months": 6,
+              "status": "active",
+              "opened_at": "2026-01-06",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, principal FROM loans WHERE interest_rate IS NULL"
+  }
+}

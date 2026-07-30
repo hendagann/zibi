@@ -1,0 +1,101 @@
+{
+  "id": "TECH-data.EX.029",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "בקשה שאושרה בלי החלטה מתועדת — פער בקרה רגולטורי",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "ביקורת פנים דורשת שלכל בקשת אשראי שאושרה יהיה תיעוד של מי החליט ומתי. בקשה שסטטוסה approved אך שדות ההחלטה שלה ריקים היא ממצא ביקורת, לא אי-נוחות: אין דרך לדעת מי אישר אשראי."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הבקשה (id), את מזהה הלקוח (customer_id) ואת הסכום המבוקש (requested_amount), עבור בקשות בסטטוס approved שבהן decided_at הוא NULL או decided_by הוא NULL. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT id, customer_id, requested_amount FROM credit_applications WHERE status = 'approved' AND (decided_at IS NULL OR decided_by IS NULL)",
+    "orderMatters": false,
+    "requiredTables": [
+      "credit_applications"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-missing-approver",
+        "labelHe": "בקשה מאושרת עם תאריך אך בלי שם מאשר — חייבת להופיע",
+        "extraRows": {
+          "credit_applications": [
+            {
+              "id": 7100,
+              "customer_id": 6,
+              "requested_amount": 45000,
+              "status": "approved",
+              "submitted_at": "2026-01-02",
+              "decided_at": "2026-01-09",
+              "decided_by": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-pending-ok",
+        "labelHe": "בקשה ממתינה בלי החלטה — תקינה ואסור שתופיע",
+        "extraRows": {
+          "credit_applications": [
+            {
+              "id": 7101,
+              "customer_id": 6,
+              "requested_amount": 12000,
+              "status": "pending",
+              "submitted_at": "2026-01-03",
+              "decided_at": null,
+              "decided_by": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, customer_id, requested_amount FROM credit_applications WHERE status = 'approved' AND (decided_at IS NULL OR decided_by IS NULL)"
+  }
+}

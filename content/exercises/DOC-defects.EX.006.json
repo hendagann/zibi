@@ -1,0 +1,98 @@
+{
+  "id": "DOC-defects.EX.006",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "DOC/defects",
+  "skills": {
+    "primary": "DOC.BUG",
+    "secondary": [
+      "DOC.ADV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "תיקון דיווח — \"האפליקציה נתקעת כל הזמן\"",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 720,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "repair_defect_report",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.BUG_REPAIR",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "התקבל הדיווח הבא מבודק אחר: \"כותרת: האפליקציה נתקעת כל הזמן. תיאור: פותחים את האפליקציה, נכנסים לפרופיל וזה נתקע. ברור שהבעיה בקוד החדש שהעלו אתמול, מישהו שם לא בדק כלום. חומרה: נמוכה.\""
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "זהי מה חסר או שגוי בדיווח, ואז כתבי אותו מחדש כדיווח שמפתח יכול לשחזר לפיו בלי לשאול שאלה."
+    }
+  ],
+  "diagnosisOptions": [
+    {
+      "id": "missing-expected",
+      "label": "חסרה תוצאה מצופה"
+    },
+    {
+      "id": "vague-steps",
+      "label": "צעדי השחזור מעורפלים ולא ניתנים לביצוע"
+    },
+    {
+      "id": "no-environment",
+      "label": "סביבת הבדיקה חסרה"
+    },
+    {
+      "id": "blame-language",
+      "label": "ניסוח מאשים וקביעת סיבה ללא ראיות"
+    },
+    {
+      "id": "too-many-screenshots",
+      "label": "צורפו יותר מדי צילומי מסך"
+    },
+    {
+      "id": "severity-too-low",
+      "label": "החומרה שנבחרה נמוכה מדי"
+    }
+  ],
+  "modelAnswer": {
+    "title": "מסך הפרופיל נתקע ואינו נטען אחרי כניסה מהמסך הראשי — אנדרואיד, גרסה 4.2.1",
+    "environment": "אפליקציית אנדרואיד גרסה 4.2.1 (build 4210), מכשיר Samsung Galaxy S21, Android 14, סביבת Staging, רשת Wi-Fi יציבה.",
+    "preconditions": "משתמש רשום ומחובר לחשבון בדיקה שיש בו לפחות פריט היסטוריה אחד בפרופיל. האפליקציה הותקנה מחדש לפני הבדיקה כדי לשלול מטמון ישן.",
+    "steps": [
+      "לפתוח את האפליקציה ולהתחבר עם משתמש הבדיקה.",
+      "מהמסך הראשי ללחוץ על אייקון הפרופיל בפינה העליונה.",
+      "להמתין 30 שניות במסך הפרופיל בלי לגעת במסך."
+    ],
+    "actual": "מסך הפרופיל נשאר עם חיווי טעינה מסתובב ואינו נטען. אחרי 30 שניות אין תוכן ואין הודעת שגיאה, והאפליקציה אינה מגיבה ללחיצות עד סגירה ידנית.",
+    "expected": "מסך הפרופיל נטען תוך פחות מ-3 שניות ומציג את פרטי המשתמש ואת רשימת ההיסטוריה, או לחלופין מציג הודעת שגיאה מפורשת אם הטעינה נכשלה.",
+    "evidence": "הקלטת מסך של 40 שניות מרגע הלחיצה, לוג Logcat מסונן לחבילת האפליקציה סביב חותמת הזמן, ומזהה הבקשה מלשונית הרשת.",
+    "severity": "high",
+    "severityJustification": "המסך אינו נטען כלל והאפליקציה מפסיקה להגיב עד סגירה ידנית, כלומר חסימה מלאה של תרחיש מרכזי בלי מעקף. החומרה שנרשמה במקור כנמוכה אינה תואמת את ההתנהגות שתוארה באותו דיווח עצמו.",
+    "diagnosis": [
+      "missing-expected",
+      "vague-steps",
+      "no-environment",
+      "blame-language"
+    ]
+  },
+  "revisionRefs": [
+    "DOC-defects.SUM.001",
+    "DOC-defects.LE.001"
+  ]
+}

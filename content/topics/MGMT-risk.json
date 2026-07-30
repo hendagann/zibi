@@ -14,7 +14,7 @@
     "LIFE/levels-types"
   ],
   "difficulty": 4,
-  "estimatedMinutes": 95,
+  "estimatedMinutes": 65,
   "measuredSkills": [
     "MGMT.RISK",
     "MGMT.RBT"
@@ -48,7 +48,10 @@
     "MGMT-risk.EX.121",
     "MGMT-risk.EX.122",
     "MGMT-risk.EX.123",
-    "MGMT-risk.EX.200"
+    "MGMT-risk.EX.200",
+    "MGMT-risk.EX.201",
+    "MGMT-risk.EX.202",
+    "MGMT-risk.EX.203"
   ],
   "topicExamRef": null,
   "review": {

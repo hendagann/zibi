@@ -31,9 +31,24 @@ async function loadSqlExercises() {
   }[];
 }
 
+/**
+ * Resolve a dataset by the `id` field inside it, exactly as `getDataset` does
+ * — not by filename. An earlier version of this file loaded `shop.json` for
+ * every exercise, which silently scored items against the wrong database the
+ * moment a second dataset existed.
+ */
+async function loadDatasetById(datasetId: string): Promise<SqlDataset> {
+  const files = (await readdir(join(CONTENT, 'datasets'))).filter((f) => f.endsWith('.json'));
+  for (const file of files) {
+    const parsed = await loadJson<SqlDataset & { id: string }>('datasets', file);
+    if (parsed.id === datasetId) return parsed;
+  }
+  throw new Error(`dataset not found: ${datasetId}`);
+}
+
 async function evalSql(sql: string, exercise: Awaited<ReturnType<typeof loadSqlExercises>>[number]) {
   const rubric = await loadJson<RubricDoc>('rubrics', 'RUB.SQL.json');
-  const dataset = await loadJson<SqlDataset>('datasets', 'shop.json');
+  const dataset = await loadDatasetById(exercise.sqlSpec.datasetRef);
   return evaluateSql({
     sql,
     spec: exercise.sqlSpec,
@@ -49,9 +64,12 @@ async function evalSql(sql: string, exercise: Awaited<ReturnType<typeof loadSqlE
 }
 
 describe('golden: every SQL model answer scores 100 (QM-09)', () => {
-  it('holds for all five SQL exercises, hidden fixtures included', async () => {
+  // Discovered, not counted: pinning an exact number turns every new exercise
+  // into a failing test for the wrong reason, and tempts whoever sees it to
+  // bump the number instead of checking the item.
+  it('holds for every SQL exercise in the library, hidden fixtures included', async () => {
     const exercises = await loadSqlExercises();
-    expect(exercises).toHaveLength(5);
+    expect(exercises.length).toBeGreaterThanOrEqual(50);
     for (const exercise of exercises) {
       const result = await evalSql(exercise.modelAnswer.sql, exercise);
       expect(result.final_score, exercise.id).toBe(100);

@@ -96,10 +96,22 @@ export function CloseIcon(props: IconProps) {
   );
 }
 
+/** A database cylinder — the sandbox is free querying against a dataset. */
+export function SandboxIcon(props: IconProps) {
+  return (
+    <Base {...props}>
+      <ellipse cx="12" cy="6" rx="7" ry="3" />
+      <path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6" />
+      <path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6" />
+    </Base>
+  );
+}
+
 export const navIcons = {
   dashboard: DashboardIcon,
   topics: TopicsIcon,
   practice: PracticeIcon,
+  sandbox: SandboxIcon,
   exam: ExamIcon,
   progress: ProgressIcon,
   admin: AdminIcon,

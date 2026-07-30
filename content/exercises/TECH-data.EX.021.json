@@ -1,0 +1,96 @@
+{
+  "id": "TECH-data.EX.021",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 2,
+  "title": "לקוחות עסקיים לפי סניף — סינון על פלח",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מנהל הסניפים מבקש רשימה של הלקוחות העסקיים, מסודרת לפי סניף, לקראת פנייה יזומה. במסד, הפלח שמור בשדה segment."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא (full_name) ואת הסניף (branch) עבור לקוחות בפלח business, ממוינת לפי סניף בסדר עולה ואז לפי שם בסדר עולה."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT full_name, branch FROM customers WHERE segment = 'business' ORDER BY branch ASC, full_name ASC",
+    "orderMatters": true,
+    "requiredTables": [
+      "customers"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-business",
+        "labelHe": "לקוח עסקי חדש בסניף קיים — חייב להופיע במקום הנכון",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 30,
+              "national_id": "020001111",
+              "full_name": "אבן גבירול השקעות בע\"מ",
+              "branch": "חיפה",
+              "segment": "business",
+              "opened_at": "2026-01-04"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-retail-excluded",
+        "labelHe": "לקוח פרטי — אסור שייכלל",
+        "extraRows": {
+          "customers": [
+            {
+              "id": 31,
+              "national_id": "020002222",
+              "full_name": "גיל אשרוב",
+              "branch": "חיפה",
+              "segment": "retail",
+              "opened_at": "2026-01-05"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT full_name, branch FROM customers WHERE segment = 'business' ORDER BY branch ASC, full_name ASC"
+  }
+}

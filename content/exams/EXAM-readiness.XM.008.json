@@ -1,0 +1,85 @@
+{
+  "id": "EXAM-readiness.XM.008",
+  "type": "exam_item",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL"
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "SQL — אשראי פעיל ללקוחות עסקיים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 240,
+  "pool": "exam",
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.SQL",
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מסד הנתונים מכיל את הטבלאות customers ו-loans. ועדת האשראי מבקשת את ההלוואות הפעילות של הלקוחות העסקיים בלבד."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את השם המלא של הלקוח (full_name) ואת הקרן (principal), עבור הלוואות בסטטוס active של לקוחות בפלח business. הסדר אינו חשוב. במבחן לא יוצג משוב עד לסיום."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT customers.full_name, loans.principal FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' AND customers.segment = 'business'",
+    "requiredColumns": [
+      "full_name",
+      "principal"
+    ],
+    "orderMatters": false,
+    "requiredTables": [
+      "loans",
+      "customers"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-retail-excluded",
+        "labelHe": "הלוואה פעילה ללקוח פרטי — אסור שתופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 1,
+              "principal": 50000,
+              "interest_rate": 5,
+              "term_months": 24,
+              "status": "active",
+              "opened_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT customers.full_name, loans.principal FROM loans JOIN customers ON customers.id = loans.customer_id WHERE loans.status = 'active' AND customers.segment = 'business'",
+    "releasePolicy": "after_exam"
+  },
+  "revisionRefs": [
+    "TECH-data.SUM.001"
+  ]
+}

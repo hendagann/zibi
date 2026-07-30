@@ -179,6 +179,30 @@ export async function getAllTopicsForAdmin(): Promise<Topic[]> {
   return readCollection<Topic>('topics');
 }
 
+/**
+ * Every educational SQL dataset, ordered by id.
+ *
+ * The sandbox needs the list, not one entry; `getDataset` resolves a single id
+ * and would force the caller to know the ids in advance, which is exactly the
+ * content-specific knowledge in code that docs/05 §2 forbids.
+ */
+export async function getDatasets(): Promise<
+  (import('@/sql/executor').SqlDataset & { id: string; titleHe: string; descriptionHe: string })[]
+> {
+  const dir = join(CONTENT_ROOT, 'datasets');
+  let entries: string[];
+  try {
+    entries = await readdir(dir);
+  } catch {
+    return [];
+  }
+  const out = [];
+  for (const file of entries.filter((f) => f.endsWith('.json'))) {
+    out.push(JSON.parse(await readFile(join(dir, file), 'utf8')));
+  }
+  return out.sort((a, b) => a.id.localeCompare(b.id));
+}
+
 /** Educational SQL datasets, by id (content/datasets/). */
 export async function getDataset(
   datasetId: string,

@@ -114,12 +114,19 @@ describe('the vertical slice', () => {
     const mods = await slice();
     const { loader, storage } = mods;
 
-    const items: readonly string[] = [
-      'DOC-requirements.EX.200',
-      'TECH-web.EX.200',
-      'MGMT-risk.EX.200',
-      'DOC-reporting.EX.200',
-    ];
+    // Every structured-family exercise in the library, discovered rather than
+    // listed. QM-09 — a model answer must score maxScore against its own
+    // rubric — is the most common authoring error and is only detectable by
+    // running the engine, so a hand-maintained list would silently stop
+    // covering each new item the moment someone forgot to extend it.
+    const { STRUCTURED_FAMILIES } = await import('@/content/exercise');
+    const families = new Set<string>(STRUCTURED_FAMILIES);
+    const all = (await loader.getPracticeExercises()) as import('@/content/exercise').ExerciseItem[];
+    const items: readonly string[] = all
+      .filter((e) => families.has(e.questionType))
+      .map((e) => e.id)
+      .sort();
+    expect(items.length).toBeGreaterThanOrEqual(19);
 
     for (const id of items) {
       const item = (await loader.getItem(id)) as import('@/content/exercise').ExerciseItem;
@@ -142,7 +149,30 @@ describe('the vertical slice', () => {
       expect(stored, id).toHaveLength(1);
       expect(stored[0]?.evaluation.final_score, id).toBe(100);
     }
-  });
+    // Every item is scored and persisted for real, so the budget scales with
+    // the library rather than with the default 5s.
+  }, 60000);
+
+  // The defect-report families answer through the nine-field report shape
+  // rather than through essaySpec, so they need their own sweep — but the
+  // rule being enforced is the same one (QM-09).
+  it('every defect-report model answer scores full marks against its own rubric', async () => {
+    const mods = await slice();
+    const { loader } = mods;
+
+    const families = new Set<string>(['author_defect_report', 'repair_defect_report']);
+    const items = ((await loader.getPracticeExercises()) as import('@/content/exercise').ExerciseItem[])
+      .filter((e) => families.has(e.questionType))
+      .map((e) => e.id)
+      .sort();
+    expect(items.length).toBeGreaterThanOrEqual(6);
+
+    for (const id of items) {
+      const item = (await loader.getItem(id)) as import('@/content/exercise').ExerciseItem;
+      const result = await submit(mods, id, item.modelAnswer as DefectReportAnswer);
+      expect(result.final_score, id).toBe(100);
+    }
+  }, 60000);
 
   it('an empty structured answer fails the universal gate at zero', async () => {
     const mods = await slice();

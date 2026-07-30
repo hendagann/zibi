@@ -1,0 +1,104 @@
+{
+  "id": "TECH-data.EX.013",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQL",
+    "secondary": [
+      "TECH.SQLV"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 3,
+  "title": "ערך כספי לכל הזמנה — חיבור שלוש טבלאות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 480,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "הנהלת החשבונות מבקשת את הערך הכספי של כל הזמנה. המחיר נמצא ב-products, הכמות ב-order_items, וההזמנה עצמה ב-orders — שלוש טבלאות שצריך לחבר כדי לקבל מספר אחד."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההזמנה (id) ואת הערך הכספי הכולל שלה בעמודה בשם order_total, מחושב כסכום של מחיר המוצר כפול הכמות, ממוינת לפי order_total בסדר יורד."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SHOP",
+    "referenceSql": "SELECT orders.id, SUM(products.price * order_items.quantity) AS order_total FROM orders JOIN order_items ON order_items.order_id = orders.id JOIN products ON products.id = order_items.product_id GROUP BY orders.id ORDER BY order_total DESC",
+    "orderMatters": true,
+    "requiredTables": [
+      "orders",
+      "order_items",
+      "products"
+    ],
+    "notApplicableCriteria": [],
+    "hiddenFixtures": [
+      {
+        "id": "hf-expensive-order",
+        "labelHe": "הזמנה חדשה יקרה — חייבת להופיע ראשונה",
+        "extraRows": {
+          "orders": [
+            {
+              "id": 130,
+              "customer_id": 1,
+              "order_date": "2026-06-01",
+              "status": "completed",
+              "shipped_date": "2026-06-03"
+            }
+          ],
+          "order_items": [
+            {
+              "id": 41,
+              "order_id": 130,
+              "product_id": 3,
+              "quantity": 4
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-quantity-matters",
+        "labelHe": "פריט נוסף בכמות 3 להזמנה קיימת — הסכום חייב לגדול בהתאם לכמות",
+        "extraRows": {
+          "order_items": [
+            {
+              "id": 42,
+              "order_id": 102,
+              "product_id": 5,
+              "quantity": 3
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT orders.id, SUM(products.price * order_items.quantity) AS order_total FROM orders JOIN order_items ON order_items.order_id = orders.id JOIN products ON products.id = order_items.product_id GROUP BY orders.id ORDER BY order_total DESC"
+  }
+}

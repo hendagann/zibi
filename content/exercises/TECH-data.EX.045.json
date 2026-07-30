@@ -1,0 +1,107 @@
+{
+  "id": "TECH-data.EX.045",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "אותה כתובת מייל לשני חשבונות — כפילות שמפצלת היסטוריה",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "משתמשת מדווחת שהיא לא רואה את הפניות הישנות שלה. החשד: נוצר לה חשבון שני עם אותה כתובת מייל, וההיסטוריה התפצלה בין שני מזהים. בדיקת ייחודיות היא אחת הבדיקות הראשונות שבודק מריץ על טבלת משתמשים."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את כתובת המייל (email) ואת מספר החשבונות שנמצאו לה בעמודה בשם account_count, עבור כתובות שמופיעות ביותר מחשבון אחד. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT email, COUNT(*) AS account_count FROM users GROUP BY email HAVING COUNT(*) > 1",
+    "orderMatters": false,
+    "requiredTables": [
+      "users"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-new-duplicate",
+        "labelHe": "זוג חשבונות נוסף עם אותו מייל — חייב להופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 30,
+              "email": "shared@nova-team.io",
+              "full_name": "צוות נובה",
+              "plan": "pro",
+              "signed_up_at": "2025-02-01",
+              "is_active": 1
+            },
+            {
+              "id": 31,
+              "email": "shared@nova-team.io",
+              "full_name": "צוות נובה",
+              "plan": "free",
+              "signed_up_at": "2025-08-01",
+              "is_active": 1
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-unique-email",
+        "labelHe": "משתמש יחיד עם מייל ייחודי — אסור שיופיע",
+        "extraRows": {
+          "users": [
+            {
+              "id": 32,
+              "email": "solo@nova-team.io",
+              "full_name": "ניר סולו",
+              "plan": "free",
+              "signed_up_at": "2025-09-01",
+              "is_active": 1
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT email, COUNT(*) AS account_count FROM users GROUP BY email HAVING COUNT(*) > 1"
+  }
+}

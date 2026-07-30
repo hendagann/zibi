@@ -12,11 +12,42 @@
   ],
   "prerequisites": [],
   "difficulty": 2,
-  "estimatedMinutes": 90,
-  "measuredSkills": ["DOC.BUG", "DOC.ADV"],
+  "estimatedMinutes": 93,
+  "measuredSkills": [
+    "DOC.BUG",
+    "DOC.ADV"
+  ],
   "summaryRef": "DOC-defects.SUM.001",
-  "lessonRefs": ["DOC-defects.LE.001"],
-  "exerciseRefs": ["DOC-defects.EX.001", "DOC-defects.EX.002", "DOC-defects.EX.003", "DOC-defects.EX.004", "DOC-defects.EX.005"],
+  "lessonRefs": [
+    "DOC-defects.LE.001"
+  ],
+  "exerciseRefs": [
+    "DOC-defects.EX.001",
+    "DOC-defects.EX.002",
+    "DOC-defects.EX.003",
+    "DOC-defects.EX.004",
+    "DOC-defects.EX.005",
+    "DOC-defects.EX.006",
+    "DOC-defects.EX.007",
+    "DOC-defects.EX.100",
+    "DOC-defects.EX.101",
+    "DOC-defects.EX.102",
+    "DOC-defects.EX.103",
+    "DOC-defects.EX.104",
+    "DOC-defects.EX.105",
+    "DOC-defects.EX.106",
+    "DOC-defects.EX.107",
+    "DOC-defects.EX.108",
+    "DOC-defects.EX.109",
+    "DOC-defects.EX.110",
+    "DOC-defects.EX.111",
+    "DOC-defects.EX.112",
+    "DOC-defects.EX.113"
+  ],
   "topicExamRef": "DOC-defects.BP.001",
-  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-29" }
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-29"
+  }
 }

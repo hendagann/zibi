@@ -1,0 +1,118 @@
+{
+  "id": "DS-SUPPORT",
+  "titleHe": "מערכת תמיכה SaaS — משתמשים, פניות, נציגים ואירועים",
+  "descriptionHe": "דאטהסט של מערכת ניהול פניות במוצר SaaS. כמו במערכת אמיתית, יש כאן פנייה שסומנה סגורה בלי תאריך סגירה, פנייה שמצביעה על נציג שכבר אינו במערכת, שני משתמשים עם אותה כתובת מייל, אירועים שמתעדים סגירה של פנייה שעדיין פתוחה, ופניות בלי אף אירוע. הנתונים בנויים לתרגול אימות עקביות בין מה שהממשק מציג לבין מה שהמסד מחזיק.",
+  "schema": {
+    "tables": [
+      {
+        "name": "users",
+        "he": "משתמשים",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה" },
+          { "name": "email", "type": "TEXT", "he": "כתובת מייל" },
+          { "name": "full_name", "type": "TEXT", "he": "שם מלא" },
+          { "name": "plan", "type": "TEXT", "he": "מסלול (free/pro/enterprise)" },
+          { "name": "signed_up_at", "type": "TEXT", "he": "תאריך הרשמה" },
+          { "name": "is_active", "type": "INTEGER", "he": "פעיל (1/0)" }
+        ]
+      },
+      {
+        "name": "agents",
+        "he": "נציגים",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה נציג" },
+          { "name": "name", "type": "TEXT", "he": "שם" },
+          { "name": "team", "type": "TEXT", "he": "צוות (tier1/tier2/billing)" },
+          { "name": "hired_at", "type": "TEXT", "he": "תאריך תחילת עבודה" }
+        ]
+      },
+      {
+        "name": "tickets",
+        "he": "פניות",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה פנייה" },
+          { "name": "user_id", "type": "INTEGER", "he": "מזהה משתמש" },
+          { "name": "agent_id", "type": "INTEGER", "he": "מזהה נציג מטפל (NULL אם לא שויך)" },
+          { "name": "subject", "type": "TEXT", "he": "נושא" },
+          { "name": "priority", "type": "TEXT", "he": "עדיפות (low/normal/high/urgent)" },
+          { "name": "status", "type": "TEXT", "he": "סטטוס (open/pending/closed)" },
+          { "name": "created_at", "type": "TEXT", "he": "תאריך פתיחה" },
+          { "name": "closed_at", "type": "TEXT", "he": "תאריך סגירה (NULL אם לא נסגרה)" }
+        ]
+      },
+      {
+        "name": "ticket_events",
+        "he": "אירועי פנייה",
+        "columns": [
+          { "name": "id", "type": "INTEGER", "he": "מזהה אירוע" },
+          { "name": "ticket_id", "type": "INTEGER", "he": "מזהה פנייה" },
+          { "name": "event_type", "type": "TEXT", "he": "סוג (created/assigned/replied/closed/reopened)" },
+          { "name": "occurred_at", "type": "TEXT", "he": "מועד האירוע" },
+          { "name": "actor", "type": "TEXT", "he": "מי ביצע (user/agent/system)" }
+        ]
+      }
+    ]
+  },
+  "rows": {
+    "users": [
+      { "id": 1, "email": "dana@northwind.co.il", "full_name": "דנה אורן", "plan": "pro", "signed_up_at": "2024-02-11", "is_active": 1 },
+      { "id": 2, "email": "eli@brightline.io", "full_name": "אלי ברוך", "plan": "free", "signed_up_at": "2024-04-03", "is_active": 1 },
+      { "id": 3, "email": "office@gadot-tech.com", "full_name": "גדות טכנולוגיות", "plan": "enterprise", "signed_up_at": "2023-09-19", "is_active": 1 },
+      { "id": 4, "email": "dana@northwind.co.il", "full_name": "דנה אורן", "plan": "free", "signed_up_at": "2025-01-27", "is_active": 1 },
+      { "id": 5, "email": "roni@peleg-group.co.il", "full_name": "רוני פלג", "plan": "pro", "signed_up_at": "2024-06-08", "is_active": 0 },
+      { "id": 6, "email": "shai@vector-apps.com", "full_name": "שי ולדמן", "plan": "free", "signed_up_at": "2025-03-14", "is_active": 1 },
+      { "id": 7, "email": "tamar@lev-medical.co.il", "full_name": "תמר לב", "plan": "enterprise", "signed_up_at": "2023-11-30", "is_active": 1 },
+      { "id": 8, "email": "guy@orbit-studio.io", "full_name": "גיא אורבך", "plan": "pro", "signed_up_at": "2025-05-22", "is_active": 1 },
+      { "id": 9, "email": "maya@kadmon.co.il", "full_name": "מאיה קדמון", "plan": "free", "signed_up_at": "2025-07-04", "is_active": 1 },
+      { "id": 10, "email": "info@shaked-logistics.com", "full_name": "שקד לוגיסטיקה", "plan": "enterprise", "signed_up_at": "2024-08-16", "is_active": 1 }
+    ],
+    "agents": [
+      { "id": 101, "name": "נועם ריכטר", "team": "tier1", "hired_at": "2023-01-15" },
+      { "id": 102, "name": "ליאור בן דוד", "team": "tier1", "hired_at": "2023-06-01" },
+      { "id": 103, "name": "אורית שגב", "team": "tier2", "hired_at": "2022-03-20" },
+      { "id": 104, "name": "יונתן מור", "team": "billing", "hired_at": "2024-02-05" },
+      { "id": 105, "name": "הדס פלד", "team": "tier2", "hired_at": "2024-09-11" }
+    ],
+    "tickets": [
+      { "id": 3001, "user_id": 1, "agent_id": 101, "subject": "לא מצליחה להתחבר אחרי איפוס סיסמה", "priority": "high", "status": "closed", "created_at": "2025-03-02", "closed_at": "2025-03-04" },
+      { "id": 3002, "user_id": 2, "agent_id": 102, "subject": "הדוח החודשי יוצא ריק", "priority": "normal", "status": "closed", "created_at": "2025-03-08", "closed_at": null },
+      { "id": 3003, "user_id": 3, "agent_id": 103, "subject": "שגיאת 500 בייצוא נתונים", "priority": "urgent", "status": "open", "created_at": "2025-04-01", "closed_at": null },
+      { "id": 3004, "user_id": 5, "agent_id": null, "subject": "בקשה לשדרוג מסלול", "priority": "low", "status": "open", "created_at": "2025-04-15", "closed_at": null },
+      { "id": 3005, "user_id": 7, "agent_id": 104, "subject": "חיוב כפול בחשבונית מרץ", "priority": "urgent", "status": "closed", "created_at": "2025-04-20", "closed_at": "2025-04-22" },
+      { "id": 3006, "user_id": 1, "agent_id": 199, "subject": "התראות לא נשלחות במייל", "priority": "normal", "status": "pending", "created_at": "2025-05-05", "closed_at": null },
+      { "id": 3007, "user_id": 8, "agent_id": 101, "subject": "הרשאות משתמש לא נשמרות", "priority": "high", "status": "closed", "created_at": "2025-05-19", "closed_at": "2025-05-27" },
+      { "id": 3008, "user_id": 10, "agent_id": 105, "subject": "האפליקציה קורסת במסך הדוחות", "priority": "urgent", "status": "open", "created_at": "2025-06-02", "closed_at": null },
+      { "id": 3009, "user_id": 3, "agent_id": 103, "subject": "סנכרון API נתקע באמצע", "priority": "high", "status": "pending", "created_at": "2025-06-18", "closed_at": null },
+      { "id": 3010, "user_id": 9, "agent_id": 102, "subject": "שאלה על מגבלת הרשומות במסלול החינמי", "priority": "low", "status": "closed", "created_at": "2025-07-09", "closed_at": "2025-07-09" },
+      { "id": 3011, "user_id": 6, "agent_id": null, "subject": "טקסט בעברית מוצג הפוך בייצוא ל-PDF", "priority": "normal", "status": "open", "created_at": "2025-07-21", "closed_at": null },
+      { "id": 3012, "user_id": 7, "agent_id": 104, "subject": "לא מקבלת חשבונית מס למייל", "priority": "normal", "status": "closed", "created_at": "2025-08-03", "closed_at": "2025-08-06" }
+    ],
+    "ticket_events": [
+      { "id": 40001, "ticket_id": 3001, "event_type": "created", "occurred_at": "2025-03-02", "actor": "user" },
+      { "id": 40002, "ticket_id": 3001, "event_type": "assigned", "occurred_at": "2025-03-02", "actor": "system" },
+      { "id": 40003, "ticket_id": 3001, "event_type": "replied", "occurred_at": "2025-03-03", "actor": "agent" },
+      { "id": 40004, "ticket_id": 3001, "event_type": "closed", "occurred_at": "2025-03-04", "actor": "agent" },
+      { "id": 40005, "ticket_id": 3002, "event_type": "created", "occurred_at": "2025-03-08", "actor": "user" },
+      { "id": 40006, "ticket_id": 3002, "event_type": "closed", "occurred_at": "2025-03-11", "actor": "agent" },
+      { "id": 40007, "ticket_id": 3003, "event_type": "created", "occurred_at": "2025-04-01", "actor": "user" },
+      { "id": 40008, "ticket_id": 3003, "event_type": "assigned", "occurred_at": "2025-04-01", "actor": "system" },
+      { "id": 40009, "ticket_id": 3003, "event_type": "replied", "occurred_at": "2025-04-02", "actor": "agent" },
+      { "id": 40010, "ticket_id": 3005, "event_type": "created", "occurred_at": "2025-04-20", "actor": "user" },
+      { "id": 40011, "ticket_id": 3005, "event_type": "closed", "occurred_at": "2025-04-22", "actor": "agent" },
+      { "id": 40012, "ticket_id": 3006, "event_type": "created", "occurred_at": "2025-05-05", "actor": "user" },
+      { "id": 40013, "ticket_id": 3007, "event_type": "created", "occurred_at": "2025-05-19", "actor": "user" },
+      { "id": 40014, "ticket_id": 3007, "event_type": "closed", "occurred_at": "2025-05-24", "actor": "agent" },
+      { "id": 40015, "ticket_id": 3007, "event_type": "reopened", "occurred_at": "2025-05-25", "actor": "user" },
+      { "id": 40016, "ticket_id": 3007, "event_type": "closed", "occurred_at": "2025-05-27", "actor": "agent" },
+      { "id": 40017, "ticket_id": 3008, "event_type": "created", "occurred_at": "2025-06-02", "actor": "user" },
+      { "id": 40018, "ticket_id": 3008, "event_type": "closed", "occurred_at": "2025-06-05", "actor": "system" },
+      { "id": 40019, "ticket_id": 3009, "event_type": "created", "occurred_at": "2025-06-18", "actor": "user" },
+      { "id": 40020, "ticket_id": 3009, "event_type": "assigned", "occurred_at": "2025-06-19", "actor": "system" },
+      { "id": 40021, "ticket_id": 3010, "event_type": "created", "occurred_at": "2025-07-09", "actor": "user" },
+      { "id": 40022, "ticket_id": 3010, "event_type": "closed", "occurred_at": "2025-07-09", "actor": "agent" },
+      { "id": 40023, "ticket_id": 3012, "event_type": "created", "occurred_at": "2025-08-03", "actor": "user" },
+      { "id": 40024, "ticket_id": 3012, "event_type": "replied", "occurred_at": "2025-08-04", "actor": "agent" },
+      { "id": 40025, "ticket_id": 3012, "event_type": "closed", "occurred_at": "2025-08-06", "actor": "agent" }
+    ]
+  }
+}

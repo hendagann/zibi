@@ -150,6 +150,33 @@ export async function runSqlQuery(itemId: string, sql: string): Promise<SqlRunVi
   };
 }
 
+/**
+ * Free-form execution against a dataset, outside any exercise.
+ *
+ * This is the sandbox: nothing is scored, nothing is stored, and no item is
+ * involved. It runs through the same executor as everything else, so the same
+ * safety gates apply — read-only, single statement, timeout, throwaway
+ * database (docs/06 §4). Hidden fixtures never exist here; there is no
+ * reference answer to hide anything from.
+ */
+export async function runSandboxQuery(
+  datasetId: string,
+  sql: string,
+): Promise<SqlRunView> {
+  const dataset = await getDataset(datasetId);
+  if (!dataset) {
+    return { ok: false, columns: [], rows: [], truncated: false, errorHe: t.sqlErrors.datasetNotFound };
+  }
+  const result = await executeSql(sql, dataset);
+  return {
+    ok: result.ok,
+    columns: result.columns,
+    rows: result.rows,
+    truncated: result.truncated,
+    errorHe: result.errorHe,
+  };
+}
+
 /** Submit a SQL answer: evaluate against the rubric (visible + hidden), store, return. */
 export async function submitSqlAnswer(
   itemId: string,

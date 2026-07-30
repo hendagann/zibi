@@ -1,0 +1,103 @@
+{
+  "id": "TECH-data.EX.044",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 4,
+  "title": "פנייה סגורה בממשק אך פתוחה בנתונים — סתירה בין שדות",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 600,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "מדד זמן הטיפול מחושב מתאריך הסגירה. פנייה שסטטוסה closed אך אין לה תאריך סגירה תיספר כסגורה במונה ותיעלם מחישוב הזמן — כלומר המדד ישתפר מבלי שדבר השתפר. זה סוג התקלה שמנהלים מגלים רק כשמישהו מצליב."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה הפנייה (id), את הנושא (subject) ואת תאריך הפתיחה (created_at) עבור פניות שסטטוסן closed אך closed_at שלהן הוא NULL. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-SUPPORT",
+    "referenceSql": "SELECT id, subject, created_at FROM tickets WHERE status = 'closed' AND closed_at IS NULL",
+    "orderMatters": false,
+    "requiredTables": [
+      "tickets"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-another-violation",
+        "labelHe": "פנייה סגורה נוספת בלי תאריך סגירה — חייבת להופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3100,
+              "user_id": 7,
+              "agent_id": 104,
+              "subject": "שאלה על חשבונית",
+              "priority": "low",
+              "status": "closed",
+              "created_at": "2026-01-05",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-properly-closed",
+        "labelHe": "פנייה שנסגרה כראוי עם תאריך — אסור שתופיע",
+        "extraRows": {
+          "tickets": [
+            {
+              "id": 3101,
+              "user_id": 7,
+              "agent_id": 104,
+              "subject": "עדכון פרטי תשלום",
+              "priority": "low",
+              "status": "closed",
+              "created_at": "2026-01-06",
+              "closed_at": "2026-01-08"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, subject, created_at FROM tickets WHERE status = 'closed' AND closed_at IS NULL"
+  }
+}

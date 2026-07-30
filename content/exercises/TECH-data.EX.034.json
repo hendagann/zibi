@@ -1,0 +1,121 @@
+{
+  "id": "TECH-data.EX.034",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": {
+    "primary": "TECH.SQLV",
+    "secondary": [
+      "TECH.SQL"
+    ]
+  },
+  "cognitiveLevel": "K3",
+  "difficulty": 5,
+  "title": "סטטוס מול תאריך סגירה — סתירה בשני הכיוונים",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 720,
+  "pool": "practice",
+  "questionType": "sql_query",
+  "requiresEvidence": false,
+  "source": [
+    {
+      "sourceId": "SRC-RESEARCH-WORK",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-31"
+  },
+  "version": 1,
+  "status": "active",
+  "rubricRef": "RUB.SQL",
+  "revisionRefs": [
+    "TECH-data.LE.001",
+    "TECH-data.GE.001"
+  ],
+  "scenario": [
+    {
+      "kind": "paragraph",
+      "text": "שני כללים עסקיים חלים על אותו שדה: הלוואה סגורה חייבת לשאת תאריך סגירה, והלוואה פעילה אסור שיהיה לה תאריך סגירה. בודק מנוסה כותב את שתי ההפרות בשאילתה אחת, כי בדיקה שמכסה כיוון אחד בלבד מפספסת בדיוק את התקלה ההפוכה. על הנתונים שאת רואה התוצאה אמורה להיות ריקה."
+    }
+  ],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "כתבי שאילתה שמחזירה את מזהה ההלוואה (id), את הסטטוס (status) ואת תאריך הסגירה (closed_at), עבור הלוואות שסטטוסן closed אך closed_at ריק, או שסטטוסן active אך closed_at אינו ריק. הסדר אינו חשוב."
+    }
+  ],
+  "sqlSpec": {
+    "datasetRef": "DS-BANK",
+    "referenceSql": "SELECT id, status, closed_at FROM loans WHERE (status = 'closed' AND closed_at IS NULL) OR (status = 'active' AND closed_at IS NOT NULL)",
+    "orderMatters": false,
+    "requiredTables": [
+      "loans"
+    ],
+    "notApplicableCriteria": [
+      "c3"
+    ],
+    "hiddenFixtures": [
+      {
+        "id": "hf-closed-no-date",
+        "labelHe": "הלוואה סגורה בלי תאריך סגירה — הפרה בכיוון הראשון",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5100,
+              "customer_id": 9,
+              "principal": 14000,
+              "interest_rate": 5,
+              "term_months": 12,
+              "status": "closed",
+              "opened_at": "2025-01-01",
+              "closed_at": null
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-active-with-date",
+        "labelHe": "הלוואה פעילה עם תאריך סגירה — הפרה בכיוון ההפוך",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5101,
+              "customer_id": 9,
+              "principal": 16000,
+              "interest_rate": 5,
+              "term_months": 12,
+              "status": "active",
+              "opened_at": "2025-01-01",
+              "closed_at": "2025-11-01"
+            }
+          ]
+        }
+      },
+      {
+        "id": "hf-defaulted-with-date",
+        "labelHe": "הלוואה בכשל פירעון עם תאריך סגירה — אינה אף אחד מהמקרים ואסור שתופיע",
+        "extraRows": {
+          "loans": [
+            {
+              "id": 5102,
+              "customer_id": 9,
+              "principal": 17000,
+              "interest_rate": 5,
+              "term_months": 12,
+              "status": "defaulted",
+              "opened_at": "2025-01-01",
+              "closed_at": "2025-12-01"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "modelAnswer": {
+    "sql": "SELECT id, status, closed_at FROM loans WHERE (status = 'closed' AND closed_at IS NULL) OR (status = 'active' AND closed_at IS NOT NULL)"
+  }
+}
