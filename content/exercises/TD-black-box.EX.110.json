@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.110",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "גבול נסתר",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 5,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "טבלת הזמנות מציגה 50 שורות בעמוד. הדרישה לא מזכירה זאת. אילו ערכי בדיקה נגזרים מכאן, ולמה זה בכלל עניין של ערכי גבול?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין מה לבדוק — זה לא כתוב בדרישה"
+      },
+      {
+        "id": "b",
+        "labelHe": "49, 50, 51 הזמנות — כי גודל העמוד הוא גבול נסתר: מגבלה טכנית שהקוד אוכף גם כשהדרישה שותקת"
+      },
+      {
+        "id": "c",
+        "labelHe": "רק 50 — הערך המדויק"
+      },
+      {
+        "id": "d",
+        "labelHe": "1 ו-1000 — הקצוות של כל טבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "גבולות נסתרים — גודל עמוד, אורך שדה במסד, גודל קובץ — הם המקום שבו באגים חיים בלי שאף דרישה תצביע עליהם. המעבר מ-50 ל-51 מפעיל את מנגנון הדפדוף בפעם הראשונה, וזה בדיוק סוג הקצה ששווה בדיקה: 49 (לפני), 50 (על), 51 (אחרי).",
+    "skillId": "TD.BVA",
+    "dimension": "reasoning"
+  }
+}

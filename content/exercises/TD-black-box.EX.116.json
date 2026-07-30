@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.116",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.ST"
+  },
+  "title": "מתי הטכניקה מתאימה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "לאיזה רכיב הכי מתאימה בדיקת מעברי מצבים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שדה חיפוש חופשי"
+      },
+      {
+        "id": "b",
+        "labelHe": "הזמנה שעוברת בין נוצרה, שולמה, נשלחה ובוטלה — רכיב שהתגובה שלו תלויה במצב הנוכחי"
+      },
+      {
+        "id": "c",
+        "labelHe": "דף אודות סטטי"
+      },
+      {
+        "id": "d",
+        "labelHe": "רשימת צבעים לבחירה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הטכניקה נועדה לרכיבים עם זיכרון: אותה פעולה (\"בטלי\") חוקית במצב אחד ואסורה באחר. כשאין מצבים — אין מה למדל, וטכניקות אחרות מתאימות יותר. זיהוי \"מתי להשתמש\" הוא עצמו שאלת מבחן.",
+    "skillId": "TD.ST",
+    "dimension": "knowledge"
+  }
+}

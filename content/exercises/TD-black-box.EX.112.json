@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.112",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.DT"
+  },
+  "title": "גודל הטבלה המלאה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "דרישה עם שלושה תנאים בוליאניים (כן/לא). כמה עמודות בטבלת ההחלטה המלאה, לפני צמצום?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "3"
+      },
+      {
+        "id": "b",
+        "labelHe": "6"
+      },
+      {
+        "id": "c",
+        "labelHe": "8"
+      },
+      {
+        "id": "d",
+        "labelHe": "9"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "2 בחזקת מספר התנאים: 2³ = 8 צירופים. מי שענה 6 כפל 2×3 — אבל הצירופים מוכפלים, לא מחוברים. החישוב הזה הוא שאלת מבחן שכיחה, וגם צעד העבודה הראשון אחרי חילוץ התנאים.",
+    "skillId": "TD.DT",
+    "dimension": "application"
+  }
+}

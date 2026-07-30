@@ -1,0 +1,14 @@
+{
+  "id": "TD.DT",
+  "topic": "TD/black-box",
+  "titleHe": "טבלאות החלטה",
+  "titleEn": "Decision table testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Builds a decision table from stated business rules, collapses infeasible and redundant combinations, and derives one test per remaining rule.",
+  "prerequisites": [
+    "TD.CAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

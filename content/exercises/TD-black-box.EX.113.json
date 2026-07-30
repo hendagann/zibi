@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.113",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.DT"
+  },
+  "title": "מתי מותר לאחד עמודות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מתי מותר לאחד שתי עמודות בטבלת החלטה לכלל אחד עם מקף (—)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כשהן נראות דומות"
+      },
+      {
+        "id": "b",
+        "labelHe": "כשהפעולה זהה בשתיהן וההבדל היחיד הוא בתנאי שערכו אינו משנה את התוצאה — והדבר אומת מול הדרישה"
+      },
+      {
+        "id": "c",
+        "labelHe": "כשרוצים לחסוך בדיקות"
+      },
+      {
+        "id": "d",
+        "labelHe": "תמיד מותר — המקף הוא קיצור כתיבה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "המקף הוא טענה: \"התוצאה זהה בכל ערך של התנאי הזה\". איחוד בלי לאמת את הטענה מול הדרישה מוחק כיסוי בשקט — אם בפועל התנאי כן משנה, ההתנהגות השנייה לא תיבדק לעולם. החיסכון הוא תוצר לוואי של איחוד נכון, לא הנימוק שלו.",
+    "skillId": "TD.DT",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.106",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "גישת שני הערכים — חישוב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "טווח תקף: 1 עד 100 (שלמים). כמה ערכים כולל סט הבדיקה בגישת שני הערכים (2-value)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "2"
+      },
+      {
+        "id": "b",
+        "labelHe": "4"
+      },
+      {
+        "id": "c",
+        "labelHe": "6"
+      },
+      {
+        "id": "d",
+        "labelHe": "8"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שני ערכים לכל גבול: הגבול עצמו והשכן שמעבר לו. גבול תחתון: 1 ו-0. גבול עליון: 100 ו-101. סה\"כ ארבעה: {0, 1, 100, 101}. מי שענה 6 חשב על גישת שלושת הערכים — שמוסיפה גם את השכן הפנימי.",
+    "skillId": "TD.BVA",
+    "dimension": "application"
+  }
+}

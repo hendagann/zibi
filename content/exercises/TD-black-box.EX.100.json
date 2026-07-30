@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.100",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.EP"
+  },
+  "title": "מהי מחלקת שקילות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהי מחלקת שקילות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "קבוצת ערכים שהמערכת אמורה לטפל בכולם באותו אופן"
+      },
+      {
+        "id": "b",
+        "labelHe": "קבוצת הערכים שמופיעים בדרישה כדוגמאות"
+      },
+      {
+        "id": "c",
+        "labelHe": "הערכים שנמצאים בדיוק על הגבול"
+      },
+      {
+        "id": "d",
+        "labelHe": "כל הערכים הבלתי-תקפים של שדה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "מחלקה מוגדרת לפי ההתנהגות המצופה: כל ערך בתוכה אמור לעבור את אותו מסלול. לכן נציג אחד ממנה מייצג את כולם — זה כל הרעיון. דוגמאות מהדרישה וערכי גבול הם דברים אחרים.",
+    "skillId": "TD.EP",
+    "dimension": "knowledge"
+  }
+}

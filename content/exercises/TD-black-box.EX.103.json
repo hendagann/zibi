@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.103",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.EP"
+  },
+  "title": "שני שדות שגויים בטופס אחד",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בודקת מילאה טופס עם אימייל שגוי וגם טלפון שגוי, קיבלה הודעת שגיאה אחת על האימייל, וסימנה שגם בדיקת הטלפון עברה. מה הבעיה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין בעיה — שני הערכים השגויים נבדקו"
+      },
+      {
+        "id": "b",
+        "labelHe": "המערכת עצרה על השגיאה הראשונה, כך שבדיקת הטלפון השגוי כלל לא קרתה — שגיאה אחת הסתירה את השנייה"
+      },
+      {
+        "id": "c",
+        "labelHe": "היה צריך לבדוק גם אימייל תקין"
+      },
+      {
+        "id": "d",
+        "labelHe": "הודעת השגיאה צריכה להיות באנגלית"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זה defect masking: כשמשלבים כמה ערכים בלתי-תקפים, אין דרך לדעת אם המערכת דחתה כל אחד מהם או רק את הראשון. הכלל: מחלקה בלתי-תקפה אחת בכל בדיקה. מחלקות תקפות דווקא מותר ומקובל לשלב.",
+    "skillId": "TD.EP",
+    "dimension": "reasoning"
+  }
+}

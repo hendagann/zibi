@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.104",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.EP"
+  },
+  "title": "מחלקות לשדה טקסט",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שדה \"שם מלא\" מקבל 1 עד 50 תווים. איזו רשימת מחלקות נכונה ושלמה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "שם קצר, שם ארוך"
+      },
+      {
+        "id": "b",
+        "labelHe": "ריק (0 תווים), 1 עד 50 תווים, מעל 50 תווים"
+      },
+      {
+        "id": "c",
+        "labelHe": "שם בעברית, שם באנגלית"
+      },
+      {
+        "id": "d",
+        "labelHe": "1 תו, 50 תווים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הציר הוא אורך המחרוזת: מתחת למינימום (ריק), בטווח, ומעל. חלוקה לפי שפה היא ציר אחר (תוכן, לא אורך) ואינה נגזרת מהדרישה הזאת; \"1 תו ו-50 תווים\" הם ערכי גבול — לא מחלקות.",
+    "skillId": "TD.EP",
+    "dimension": "application"
+  }
+}

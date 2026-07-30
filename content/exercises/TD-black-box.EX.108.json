@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.108",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "קריאת ניסוח הדרישה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "הדרישה: \"העברה מותרת לסכום של פחות מ-100 ש\"ח\". מה מעמדו של הערך 100?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תקף — הוא בטווח"
+      },
+      {
+        "id": "b",
+        "labelHe": "בלתי-תקף — \"פחות מ-100\" אינו כולל את 100, ולכן 100 הוא הערך הבלתי-תקף הראשון והגבול נבדק דרכו"
+      },
+      {
+        "id": "c",
+        "labelHe": "לא רלוונטי לבדיקה"
+      },
+      {
+        "id": "d",
+        "labelHe": "תלוי במטבע"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "\"פחות מ-\" הוא אי-שוויון חד: הערך התקף האחרון הוא 99, ו-100 הוא בדיוק הנקודה שבה ההתנהגות מתהפכת — הערך החשוב ביותר בסט. קריאה מדויקת של מילות היחס בדרישה היא חצי מהטכניקה.",
+    "skillId": "TD.BVA",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "SRC-ISTQB-EXAM-STRUCT",
+  "title": "ISTQB Exam Structures & Rules Tables v1.18",
+  "publisher": "International Software Testing Qualifications Board (ISTQB)",
+  "year": 2026,
+  "url": "https://istqb.org/?sdm_process_download=1&download_id=3832",
+  "language": "en",
+  "format": "pdf",
+  "imported": true,
+  "licence": {
+    "status": "proprietary",
+    "name": "ISTQB copyright",
+    "commercialUse": false,
+    "derivativesAllowed": false,
+    "attributionRequired": true,
+    "verifiedAt": "2026-07-30",
+    "verifiedBy": "research/סיכום מנהלים.pdf"
+  },
+  "attribution": {
+    "text": "© International Software Testing Qualifications Board, Exam Structures & Rules v1.18",
+    "placement": "item"
+  },
+  "notes": "מקור נתוני מבנה המבחן: 40 שאלות, 60 דקות, ציון עובר 26 (65%). פרק 4: 11 שאלות (27.5%), תתי-פרקים 4.2.x ברמה K3."
+}

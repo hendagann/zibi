@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.101",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.EP"
+  },
+  "title": "כמה מחלקות לטווח גיל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "שדה גיל מקבל ערכים 18 עד 65. כמה מחלקות שקילות יש על ציר הגיל?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אחת — הטווח התקף"
+      },
+      {
+        "id": "b",
+        "labelHe": "שתיים — תקף ובלתי-תקף"
+      },
+      {
+        "id": "c",
+        "labelHe": "שלוש — מתחת ל-18, בין 18 ל-65, מעל 65"
+      },
+      {
+        "id": "d",
+        "labelHe": "ארבע — כולל מחלקה לגבולות עצמם"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "שתי מחלקות בלתי-תקפות (מתחת ומעל) ומחלקה תקפה אחת ביניהן. מי שעונה \"שתיים\" מאחד את שני הצדדים הבלתי-תקפים — אבל הם התנהגויות שונות שנכשלות מסיבות שונות. הגבולות אינם מחלקה נפרדת — הם קצוות של המחלקות.",
+    "skillId": "TD.EP",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.102",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.EP"
+  },
+  "title": "למה נציג אחד מספיק",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "למה מספיק לבדוק ערך אחד מכל מחלקת שקילות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כי אין זמן לבדוק יותר"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי לפי הגדרת המחלקה, כל הערכים בה אמורים להתנהג זהה — אם הנציג עובר, ההנחה היא שכולם עוברים"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי המבחן דורש בדיקה אחת לכל מחלקה"
+      },
+      {
+        "id": "d",
+        "labelHe": "כי הערכים האחרים נבדקים בערכי הגבול"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "זו הנחת היסוד של הטכניקה — והיא גם הגבול שלה: אם החלוקה שגויה והמחלקה מכילה שתי התנהגויות, הנציג מכסה רק אחת. לכן איכות החלוקה קודמת לבחירת הנציג. חיסכון בזמן הוא תוצאה, לא הנימוק.",
+    "skillId": "TD.EP",
+    "dimension": "application"
+  }
+}

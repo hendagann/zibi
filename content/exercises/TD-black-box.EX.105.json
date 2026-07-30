@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.105",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "למה דווקא הגבולות",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "למה ניתוח ערכי גבול מתמקד בקצוות של הטווחים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "כי שם הערכים הכי גדולים"
+      },
+      {
+        "id": "b",
+        "labelHe": "כי טעויות קידוד כמו החלפת > ב->= קורות בדיוק שם — הבאגים מתרכזים בקצוות"
+      },
+      {
+        "id": "c",
+        "labelHe": "כי קל יותר לחשב אותם"
+      },
+      {
+        "id": "d",
+        "labelHe": "כי המשתמשים מזינים בעיקר ערכי קצה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הטכניקה נשענת על עובדה אמפירית: שגיאת ה-off-by-one — סטייה של אחד בתנאי — היא ממחלקות הבאגים הנפוצות ביותר, והיא חיה בדיוק על הגבול. לכן ערך אחד על הגבול שווה יותר מעשרה באמצע הטווח.",
+    "skillId": "TD.BVA",
+    "dimension": "knowledge"
+  }
+}

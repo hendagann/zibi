@@ -1,0 +1,14 @@
+{
+  "id": "TD.ST",
+  "topic": "TD/black-box",
+  "titleHe": "מעברי מצבים",
+  "titleEn": "State transition testing",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Derives the state model implied by a specification and produces paths covering valid transitions plus at least one invalid transition.",
+  "prerequisites": [
+    "TD.CAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

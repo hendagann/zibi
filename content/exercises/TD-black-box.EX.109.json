@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.109",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "על מה BVA לא חלה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "על איזה מהשדות הבאים אי אפשר להפעיל ניתוח ערכי גבול?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תאריך לידה"
+      },
+      {
+        "id": "b",
+        "labelHe": "אורך סיסמה"
+      },
+      {
+        "id": "c",
+        "labelHe": "בחירת צבע מתוך רשימה: אדום / ירוק / כחול"
+      },
+      {
+        "id": "d",
+        "labelHe": "מספר פריטים בהזמנה"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "גבול קיים רק על מחלקה סדורה — ציר שיש בו \"לפני\" ו\"אחרי\": מספרים, אורכים, תאריכים. לרשימת צבעים אין סדר טבעי, ולכן יש בה מחלקות (כל ערך חוקי, ערך שאינו ברשימה) אבל אין גבולות.",
+    "skillId": "TD.BVA",
+    "dimension": "knowledge"
+  }
+}

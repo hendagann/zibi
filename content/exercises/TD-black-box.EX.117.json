@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.117",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.ST"
+  },
+  "title": "מרכיבי המודל",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מהם שלושת המרכיבים הבסיסיים של מודל מעברי מצבים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "קלט, פלט, עיבוד"
+      },
+      {
+        "id": "b",
+        "labelHe": "מצבים, אירועים, מעברים"
+      },
+      {
+        "id": "c",
+        "labelHe": "תנאים, פעולות, כללים"
+      },
+      {
+        "id": "d",
+        "labelHe": "משתמשים, מסכים, כפתורים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מצב — היכן המערכת נמצאת; אירוע — מה קורה; מעבר — לאן זה מוביל. \"תנאים, פעולות, כללים\" הם המרכיבים של טבלת החלטה — בלבול שהמבחן מנצל במסיחים.",
+    "skillId": "TD.ST",
+    "dimension": "knowledge"
+  }
+}

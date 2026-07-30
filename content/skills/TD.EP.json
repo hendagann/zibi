@@ -1,0 +1,14 @@
+{
+  "id": "TD.EP",
+  "topic": "TD/black-box",
+  "titleHe": "מחלקות שקילות",
+  "titleEn": "Equivalence partitioning",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Partitions the input domain of a given specification into valid and invalid classes with no gaps or overlaps, and selects one representative per class.",
+  "prerequisites": [
+    "TD.CAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "MIS.TD.EP_MULTI_INVALID",
+  "titleHe": "כמה ערכים בלתי-תקפים בבדיקה אחת",
+  "descriptionHe": "מזינים בטופס אחד כמה שדות שגויים יחד; המערכת עוצרת על השגיאה הראשונה, והבדיקה של השאר לא קרתה באמת (defect masking).",
+  "whyTempting": "זה חוסך בדיקות לכאורה — טופס אחד במקום ארבעה. אבל הכיסוי המדווח גדול מהכיסוי האמיתי.",
+  "skillIds": [
+    "TD.EP"
+  ],
+  "remediationRef": "TD-black-box.LE.001",
+  "anchor": "sec-ep-invalid",
+  "status": "active"
+}

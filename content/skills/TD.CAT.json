@@ -1,0 +1,14 @@
+{
+  "id": "TD.CAT",
+  "topic": "TD/framing",
+  "titleHe": "קטגוריות טכניקות",
+  "titleEn": "Technique categories",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Classifies a technique as specification-based, structure-based or experience-based, and states what each category can and cannot reveal.",
+  "prerequisites": [
+    "FUND.PROC"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

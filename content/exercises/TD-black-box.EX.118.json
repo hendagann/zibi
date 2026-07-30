@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.118",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.ST"
+  },
+  "title": "רמות כיסוי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "מה ההבדל בין כיסוי כל המצבים (all states) לכיסוי כל המעברים (all transitions)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אין הבדל — אם עברת בכל המצבים עברת בכל המעברים"
+      },
+      {
+        "id": "b",
+        "labelHe": "כיסוי מעברים חזק יותר: אפשר לבקר בכל המצבים ועדיין לא להפעיל כל מעבר, כי לאותו מצב מגיעים ביותר מדרך אחת"
+      },
+      {
+        "id": "c",
+        "labelHe": "כיסוי מצבים חזק יותר"
+      },
+      {
+        "id": "d",
+        "labelHe": "תלוי בגודל המערכת"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "מסלול אחד יכול לעבור בכל המצבים ולהשאיר מעברים שלא הופעלו — למשל שני מעברים שונים שמובילים לאותו מצב. לכן הסטנדרט המקצועי הוא כיסוי כל המעברים החוקיים, וכל מעבר שלא הופעל הוא התנהגות שלא נבדקה.",
+    "skillId": "TD.ST",
+    "dimension": "application"
+  }
+}

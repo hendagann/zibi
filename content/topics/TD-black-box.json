@@ -1,0 +1,56 @@
+{
+  "id": "TD/black-box",
+  "nameHe": "טכניקות מבוססות מפרט",
+  "nameEn": "Specification-based techniques",
+  "domain": "TD",
+  "description": "ארבע הטכניקות שגוזרות בדיקות מתוך הדרישה: מחלקות שקילות, ערכי גבול, טבלאות החלטה ומעברי מצבים. הפרק הכבד ביותר במבחן ההסמכה — 11 מתוך 40 שאלות, רובן ברמת יישום (K3): נדרש לחשב מחלקות, למנות ערכי גבול ולצמצם טבלאות, לא רק לזהות מושגים.",
+  "learningObjectives": [
+    "לחלק מרחב קלט למחלקות שקילות תקפות ובלתי-תקפות, בלי חורים ובלי חפיפות",
+    "לגזור סט ערכי גבול מלא בגישת שני הערכים ובגישת שלושת הערכים, כולל הצד הבלתי-תקף",
+    "לבנות טבלת החלטה מכללים עסקיים, לצמצם אותה בנימוק ולגזור בדיקה מכל כלל",
+    "לגזור ממפרט מודל מצבים ולכסות את כל המעברים החוקיים ולפחות מעבר בלתי-חוקי אחד"
+  ],
+  "prerequisites": [
+    "TD/framing"
+  ],
+  "difficulty": 3,
+  "estimatedMinutes": 120,
+  "measuredSkills": [
+    "TD.EP",
+    "TD.BVA",
+    "TD.DT",
+    "TD.ST"
+  ],
+  "summaryRef": "TD-black-box.SUM.001",
+  "lessonRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "exerciseRefs": [
+    "TD-black-box.EX.100",
+    "TD-black-box.EX.101",
+    "TD-black-box.EX.102",
+    "TD-black-box.EX.103",
+    "TD-black-box.EX.104",
+    "TD-black-box.EX.105",
+    "TD-black-box.EX.106",
+    "TD-black-box.EX.107",
+    "TD-black-box.EX.108",
+    "TD-black-box.EX.109",
+    "TD-black-box.EX.110",
+    "TD-black-box.EX.111",
+    "TD-black-box.EX.112",
+    "TD-black-box.EX.113",
+    "TD-black-box.EX.114",
+    "TD-black-box.EX.115",
+    "TD-black-box.EX.116",
+    "TD-black-box.EX.117",
+    "TD-black-box.EX.118",
+    "TD-black-box.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

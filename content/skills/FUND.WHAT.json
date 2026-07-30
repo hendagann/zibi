@@ -1,0 +1,12 @@
+{
+  "id": "FUND.WHAT",
+  "topic": "FUND/purpose",
+  "titleHe": "מטרות הבדיקה",
+  "titleEn": "Test objectives",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "States what a described testing activity is intended to achieve in a specific project situation, and distinguishes objectives testing can meet from ones it cannot.",
+  "prerequisites": [],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

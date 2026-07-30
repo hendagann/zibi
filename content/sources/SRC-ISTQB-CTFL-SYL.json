@@ -1,0 +1,24 @@
+{
+  "id": "SRC-ISTQB-CTFL-SYL",
+  "title": "ISTQB CTFL Syllabus v4.0.1",
+  "publisher": "International Software Testing Qualifications Board (ISTQB)",
+  "year": 2024,
+  "url": "https://istqb.org/?sdm_process_download=1&download_id=3345",
+  "language": "en",
+  "format": "pdf",
+  "imported": true,
+  "licence": {
+    "status": "proprietary",
+    "name": "ISTQB copyright",
+    "commercialUse": false,
+    "derivativesAllowed": false,
+    "attributionRequired": true,
+    "verifiedAt": "2026-07-30",
+    "verifiedBy": "research/סיכום מנהלים.pdf — ציטוט שורת הרישיון במלואה"
+  },
+  "attribution": {
+    "text": "מבוסס רעיונית על ISTQB® CTFL Syllabus v4.0.1 © International Software Testing Qualifications Board",
+    "placement": "item"
+  },
+  "notes": "שורת הרישיון כלשונה: \"All rights reserved. The authors hereby transfer the copyright to the ISTQB®. ... Any other use of this syllabus is prohibited without first obtaining the approval in writing of the ISTQB®.\" — לכן derivation מותר רק original: מושגים כידע מקצועי, לעולם לא טקסט. חמור מהסיווג permitted-attribution שנרשם ב-docs/14 — הכרעת ההרצה: המחמיר גובר."
+}

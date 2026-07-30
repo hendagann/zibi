@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.115",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.DT"
+  },
+  "title": "כמה בדיקות אחרי צמצום",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 3,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "טבלה מלאה של 8 צירופים צומצמה: 4 עמודות התאחדו לכלל אחד, והשאר נותרו כמות שהן. כמה בדיקות נגזרות?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "8 — תמיד בודקים את הטבלה המלאה"
+      },
+      {
+        "id": "b",
+        "labelHe": "5 — כלל אחד מאוחד ועוד 4 כללים"
+      },
+      {
+        "id": "c",
+        "labelHe": "4 — רק הכללים שלא התאחדו"
+      },
+      {
+        "id": "d",
+        "labelHe": "1 — בדיקה אחת לטבלה"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "בדיקה אחת לכל כלל שנשאר: הכלל המאוחד (1) ועוד ארבע העמודות שנותרו — חמש. הצמצום הוא שהופך את הטכניקה לכלכלית: מכסים את כל הכללים העסקיים בלי לשלם על צירופים שאינם מוסיפים דבר.",
+    "skillId": "TD.DT",
+    "dimension": "application"
+  }
+}

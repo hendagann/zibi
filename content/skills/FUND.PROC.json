@@ -1,0 +1,14 @@
+{
+  "id": "FUND.PROC",
+  "topic": "FUND/process",
+  "titleHe": "פעילויות התהליך",
+  "titleEn": "Test process activities",
+  "tier": "foundation",
+  "cognitiveLevel": "K2",
+  "behaviour": "Places a described activity in the correct test process stage and names the work product it should produce.",
+  "prerequisites": [
+    "FUND.WHAT"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.BVA"
+  },
+  "title": "גישת שלושת הערכים — חישוב",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 4,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "טווח תקף: 20 עד 5,000 (שקלים שלמים). כמה ערכים בסט המלא בגישת שלושת הערכים (3-value), ומהם בגבול התחתון?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "4 ערכים; בתחתון: 19, 20"
+      },
+      {
+        "id": "b",
+        "labelHe": "6 ערכים; בתחתון: 19, 20, 21"
+      },
+      {
+        "id": "c",
+        "labelHe": "6 ערכים; בתחתון: 18, 19, 20"
+      },
+      {
+        "id": "d",
+        "labelHe": "8 ערכים; בתחתון: 19, 20, 21, 22"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "שלושה ערכים לכל גבול: השכן החיצוני, הגבול, השכן הפנימי. תחתון: 19, 20, 21; עליון: 4999, 5000, 5001 — שישה סה\"כ. תשובה c לוקחת שני שכנים חיצוניים — אבל 18 לא מוסיף דבר על 19: שניהם באותה מחלקה.",
+    "skillId": "TD.BVA",
+    "dimension": "application"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.111",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.DT"
+  },
+  "title": "מה מייצגת עמודה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 1,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בטבלת החלטה, מה מייצגת כל עמודה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "c"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "תנאי אחד"
+      },
+      {
+        "id": "b",
+        "labelHe": "פעולה אחת"
+      },
+      {
+        "id": "c",
+        "labelHe": "כלל — צירוף מסוים של ערכי תנאים והפעולה שנובעת ממנו"
+      },
+      {
+        "id": "d",
+        "labelHe": "משתמש אחד"
+      }
+    ],
+    "correctOptionId": "c",
+    "explanationHe": "השורות הן התנאים והפעולות; העמודות הן הכללים. כל עמודה קוראת: \"כשהתנאים בערכים האלה — זו הפעולה\". ומכל כלל נגזרת בדיקה אחת. זו האנטומיה של הטבלה, והמבחן אוהב לבדוק אותה ישירות.",
+    "skillId": "TD.DT",
+    "dimension": "knowledge"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.119",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.ST"
+  },
+  "title": "למה מעבר בלתי-חוקי",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 5,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "צוות כיסה את כל המעברים החוקיים של רכיב ההזמנות. איזו בדיקה קריטית עדיין חסרה, ולמה?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "אף אחת — הכיסוי מלא"
+      },
+      {
+        "id": "b",
+        "labelHe": "ניסיון מעבר בלתי-חוקי, כמו משלוח הזמנה שכבר בוטלה: המפרט מתאר מה אמור לקרות, אבל הנזק הגדול הוא במה שאסור שיקרה — ואם המערכת מרשה, אף בדיקת מסלול חוקי לא תגלה זאת"
+      },
+      {
+        "id": "c",
+        "labelHe": "בדיקת עומסים על המעברים"
+      },
+      {
+        "id": "d",
+        "labelHe": "חזרה על כל המעברים פעמיים"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "כיסוי המעברים החוקיים בודק שהמערכת עושה את הנכון; מעבר בלתי-חוקי בודק שהיא חוסמת את האסור. משלוח הזמנה מבוטלת, תשלום כפול, ביטול אחרי משלוח — אלה הבאגים היקרים, והם חיים בדיוק במשבצות שהמפרט לא הגדיר.",
+    "skillId": "TD.ST",
+    "dimension": "reasoning"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "TD.BVA",
+  "topic": "TD/black-box",
+  "titleHe": "ערכי גבול",
+  "titleEn": "Boundary value analysis",
+  "tier": "foundation",
+  "cognitiveLevel": "K3",
+  "behaviour": "Produces the complete boundary set for a bounded input — including the invalid side of each bound — and states which requirement each value exercises.",
+  "prerequisites": [
+    "TD.EP"
+  ],
+  "sourceCoverage": "strong",
+  "status": "active"
+}

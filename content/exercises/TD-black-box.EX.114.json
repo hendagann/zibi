@@ -1,0 +1,67 @@
+{
+  "id": "TD-black-box.EX.114",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "TD/black-box",
+  "skills": {
+    "primary": "TD.DT"
+  },
+  "title": "שני כללים סותרים",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 5,
+  "estimatedSeconds": 75,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "בטבלה שנבנתה מדרישה התגלו שתי עמודות עם אותם ערכי תנאים בדיוק אך פעולות שונות. מה זה אומר ומה עושים?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "b"
+  },
+  "revisionRefs": [
+    "TD-black-box.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "טעות הקלדה בטבלה — מוחקים אחת מהן לפי שיקול דעת"
+      },
+      {
+        "id": "b",
+        "labelHe": "סתירה בדרישה עצמה: אותו מצב מוביל לשתי תוצאות — מחזירים את השאלה למנסחת הדרישה לפני שנכתב קוד"
+      },
+      {
+        "id": "c",
+        "labelHe": "המערכת תבחר אקראית — בודקים את שתיהן"
+      },
+      {
+        "id": "d",
+        "labelHe": "משאירים את שתיהן לכיסוי מלא"
+      }
+    ],
+    "correctOptionId": "b",
+    "explanationHe": "הטבלה לא יצרה את הסתירה — היא חשפה אותה. זה הערך הגדול של הטכניקה: היא מוצאת דרישות סותרות וחסרות לפני שהן הופכות לקוד. הכרעה עצמאית של הבודקת (מחיקה \"לפי היגיון\") מסתירה את הממצא החשוב ביותר.",
+    "skillId": "TD.DT",
+    "dimension": "reasoning"
+  }
+}
