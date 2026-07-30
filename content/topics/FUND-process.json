@@ -1,0 +1,54 @@
+{
+  "id": "FUND/process",
+  "nameHe": "תהליך הבדיקה",
+  "nameEn": "The test process",
+  "domain": "FUND",
+  "description": "שבע פעילויות תהליך הבדיקה, תוצר העבודה (testware) של כל אחת, מעקב (traceability) בין הדרישות לבדיקות, והשפעת ההקשר על אופן הביצוע. חלק מפרק 1 של מבחן ההסמכה.",
+  "learningObjectives": [
+    "למקם פעילות בדיקה מתוארת בשלב הנכון מבין שבע פעילויות התהליך",
+    "לציין את תוצר העבודה (testware) שכל פעילות אמורה לייצר",
+    "להבחין בין ניתוח בדיקה (\"מה נבדוק\") לעיצוב בדיקה (\"איך נבדוק\")",
+    "להסביר מה מאפשר מעקב (traceability) בין דרישות לבדיקות",
+    "להסביר כיצד מודל הפיתוח והסיכון משנים את אופן ביצוע התהליך"
+  ],
+  "prerequisites": [
+    "FUND/purpose"
+  ],
+  "difficulty": 2,
+  "estimatedMinutes": 70,
+  "measuredSkills": [
+    "FUND.PROC"
+  ],
+  "summaryRef": "FUND-process.SUM.001",
+  "lessonRefs": [
+    "FUND-process.LE.001"
+  ],
+  "exerciseRefs": [
+    "FUND-process.EX.100",
+    "FUND-process.EX.101",
+    "FUND-process.EX.102",
+    "FUND-process.EX.103",
+    "FUND-process.EX.104",
+    "FUND-process.EX.105",
+    "FUND-process.EX.106",
+    "FUND-process.EX.107",
+    "FUND-process.EX.108",
+    "FUND-process.EX.109",
+    "FUND-process.EX.110",
+    "FUND-process.EX.111",
+    "FUND-process.EX.112",
+    "FUND-process.EX.113",
+    "FUND-process.EX.114",
+    "FUND-process.EX.115",
+    "FUND-process.EX.116",
+    "FUND-process.EX.117",
+    "FUND-process.EX.118",
+    "FUND-process.EX.119"
+  ],
+  "topicExamRef": null,
+  "review": {
+    "status": "approved",
+    "reviewedBy": "hendagan",
+    "reviewedAt": "2026-07-30"
+  }
+}

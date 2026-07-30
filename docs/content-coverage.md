@@ -1,7 +1,7 @@
 # פנקס כיסוי תוכן — מצב מול תוצרי המחקר
 
 מתעדכן בכל הרצת הטמעה. שורת פער = עבודה שנותרה; אסור למחוק שורה בלי לכסות אותה.
-עודכן: 2026-07-30 (הרצה 2 — יסודות הבדיקות, פרק A–C).
+עודכן: 2026-07-30 (הרצה 3 — יסודות הבדיקות, פרק D תהליך הבדיקה; פרק E האדם הבודק).
 
 ## יסודות הבדיקות — פרק 1 (מחקר: research/יסודות הבדיקות (CTFL פרק 1).pdf)
 
@@ -13,8 +13,8 @@
 | A | QA מול QC מול בדיקות | sec-qa / sec-qa-consequence | 8 | TESTING_IS_QA | ✓ מכוסה |
 | B | 7 העקרונות (נוכחות, ממצה, מוקדם, צבירה, קוטל חרקים, הקשר, אשליית היעדר) | FUND-principles.LE.001 sec-presence…sec-absence | 12 | EXHAUSTIVE, ABSENCE_FALLACY | ✓ מכוסה |
 | C | שגיאה→פגם→כשל, גורם שורש, כשל בלי פגם, false pos/neg | sec-err / sec-root / sec-nofault / sec-falsepn | 8 | FAILURE_ALWAYS_DEFECT, ERROR_DEFECT_CONFUSION | ✓ מכוסה |
-| D | תהליך הבדיקה (7 פעילויות, traceability, השפעת הקשר) | — | 0 | — | **פער: נושא FUND/process (FUND.PROC קיים כשלד)** |
-| E | האדם הבודק (skills, biases, תקשורת, עצמאות, whole-team) | — | 0 | — | **פער: נושא FUND/people (FUND.PSY קיים כשלד)** |
+| D | תהליך הבדיקה (7 פעילויות, testware, traceability, הקשר) | FUND-process.LE.001 sec-activities…sec-context | 20 | ANALYSIS_VS_DESIGN, PROCESS_SEQUENTIAL, NO_TRACEABILITY | ✓ מכוסה |
+| E | האדם הבודק (skills, biases, תקשורת, עצמאות, whole-team) | — | 0 | — | **פער: נושא FUND/people (FUND.PSY קיים כשלד; הרצה זו, מיד אחרי D)** |
 
 
 

@@ -1,0 +1,67 @@
+{
+  "id": "FUND-process.EX.107",
+  "type": "exercise",
+  "schemaVersion": 1,
+  "topic": "FUND/process",
+  "skills": {
+    "primary": "FUND.PROC"
+  },
+  "title": "תוצר ההשלמה",
+  "lang": "he",
+  "dir": "rtl",
+  "difficulty": 2,
+  "estimatedSeconds": 60,
+  "pool": "practice",
+  "source": [
+    {
+      "sourceId": "SRC-GENERATED-CLAUDE",
+      "derivation": "original"
+    }
+  ],
+  "review": {
+    "status": "approved",
+    "reviewedBy": "generated"
+  },
+  "version": 1,
+  "status": "active",
+  "questionType": "mcq_single",
+  "requiresEvidence": false,
+  "rubricRef": "RUB.MCQ_SINGLE",
+  "scenario": [],
+  "prompt": [
+    {
+      "kind": "paragraph",
+      "text": "איזה תוצר עיקרי נוצר בפעילות השלמת הבדיקות (Test Completion)?"
+    }
+  ],
+  "modelAnswer": {
+    "selectedOptionId": "a"
+  },
+  "revisionRefs": [
+    "FUND-process.LE.001"
+  ],
+  "mcqSpec": {
+    "options": [
+      {
+        "id": "a",
+        "labelHe": "דוח סיכום בדיקות"
+      },
+      {
+        "id": "b",
+        "labelHe": "מקרי בדיקה"
+      },
+      {
+        "id": "c",
+        "labelHe": "תוכנית בדיקות"
+      },
+      {
+        "id": "d",
+        "labelHe": "סקריפט אוטומציה"
+      }
+    ],
+    "correctOptionId": "a",
+    "explanationHe": "ההשלמה מסכמת אילו פגמים נמצאו ומדדי כיסוי; התוצר הוא דוח סיכום בדיקות.",
+    "skillId": "FUND.PROC",
+    "dimension": "knowledge"
+  }
+}

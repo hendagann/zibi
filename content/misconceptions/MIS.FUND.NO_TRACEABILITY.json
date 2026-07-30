@@ -1,0 +1,12 @@
+{
+  "id": "MIS.FUND.NO_TRACEABILITY",
+  "titleHe": "מעקב הוא תיעוד מיותר",
+  "descriptionHe": "ויתור על מעקב (traceability) בין דרישות לבדיקות, מתוך הנחה שכל דרישה ממילא מכוסה ושהמטריצה היא בירוקרטיה חסרת ערך.",
+  "whyTempting": "בניית מטריצת מעקב נראית כמו עבודת תיעוד שמאטה. אבל בלעדיה אי אפשר לדעת אילו דרישות נותרו ללא בדיקה, ודרישה חשובה עלולה להשתחרר בלי שנבדקה כלל.",
+  "skillIds": [
+    "FUND.PROC"
+  ],
+  "remediationRef": "FUND-process.LE.001",
+  "anchor": "sec-trace",
+  "status": "active"
+}
