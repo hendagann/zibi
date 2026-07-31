@@ -198,14 +198,36 @@ function runChild(
 
 /* ---- result comparison (docs/07 §9.1) ---- */
 
+/**
+ * Known limit: the null sentinel is a printable character, so a result set
+ * containing the literal U+2400 would compare equal to one containing NULL in
+ * that position. No fixture contains it, and normalisation is deliberately not
+ * changed to close a gap that cannot be reached — docs/07 §19 makes this
+ * function part of the reproducibility guarantee, and altering it would change
+ * what stored scores mean.
+ */
 function normaliseCell(value: unknown): string {
   if (value === null || value === undefined) return '␀';
   if (typeof value === 'number') return Number.isInteger(value) ? String(value) : value.toFixed(6);
   return String(value);
 }
 
+/**
+ * A row as one comparable string.
+ *
+ * The separator is load-bearing: joining with `''` would make `['ab', 'c']`
+ * and `['a', 'bc']` normalise identically, so two different result sets would
+ * compare equal and a wrong query could score 100. U+0001 is used because it
+ * cannot appear in text SQLite returns, so no cell value can forge a boundary.
+ *
+ * Written as an escape rather than the literal byte. The literal is invisible
+ * in most editors and in file readers, and it has already been misread twice
+ * as an empty string — once while auditing this very function.
+ */
+const CELL_SEPARATOR = '\u0001';
+
 function normaliseRow(row: readonly unknown[]): string {
-  return row.map(normaliseCell).join('');
+  return row.map(normaliseCell).join(CELL_SEPARATOR);
 }
 
 /**
