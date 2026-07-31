@@ -1,0 +1,35 @@
+{
+  "id": "TECH-data.GE.005",
+  "type": "guided_example",
+  "schemaVersion": 1,
+  "topic": "TECH/data",
+  "skills": { "primary": "TECH.SQL" },
+  "cognitiveLevel": "K3",
+  "difficulty": 1,
+  "title": "דוגמה מודרכת — מבקשה בעברית לתנאי מדויק",
+  "lang": "he",
+  "dir": "rtl",
+  "estimatedSeconds": 300,
+  "source": [{ "sourceId": "SRC-ITCB-CTFL-HE", "derivation": "original" }],
+  "review": { "status": "approved", "reviewedBy": "hendagan", "reviewedAt": "2026-07-31" },
+  "version": 1,
+  "status": "active",
+  "lesson": "TECH-data.LE.003",
+  "scenario": [
+    { "kind": "paragraph", "text": "בבדיקה של מסך \"הזמנות ממתינות\" את רואה שתי הזמנות. את רוצה לוודא מול המסד שזה באמת המספר הנכון — ולא שהמסך מסנן משהו בטעות." }
+  ],
+  "steps": [
+    { "action": "מתרגמים את המילה 'ממתינות' לערך שקיים בעמודה. מסתכלים תחילה אילו סטטוסים בכלל יש: completed, pending, cancelled.", "reasoning": "זו ההכרעה הראשונה וגם זו שהכי קל להחמיץ. 'ממתינה' היא מילה בעברית; במסד יש ערך מסוים באנגלית. לנחש 'waiting' או 'Pending' באות גדולה ייתן אפס שורות — ואפס שורות נראה כמו תשובה, לא כמו טעות." },
+    { "action": "בונים את התנאי: WHERE status = 'pending', במרכאות בודדות.", "reasoning": "טקסט תמיד במרכאות בודדות. בלעדיהן המסד יחשוב ש-pending הוא שם של עמודה ויחזיר שגיאה — וזו דווקא טעות ידידותית, כי היא נופלת מיד." },
+    { "action": "בוחרים מה להחזיר: SELECT id, order_date.", "reasoning": "המטרה היא להשוות למסך, ולכן צריך מזהה שאפשר לחפש לפיו. עמודות נוספות רק יקשו על ההשוואה." },
+    { "action": "מריצים וסופרים: שתי שורות — 106 ו-108.", "reasoning": "המספר תואם למסך, וגם המזהים ניתנים להצלבה אחד־אחד. שני מספרים שווים אינם הוכחה שאלו אותן שורות; ההצלבה לפי מזהה כן." }
+  ],
+  "outcome": [
+    { "kind": "code", "lang": "sql", "text": "SELECT id, order_date\nFROM orders\nWHERE status = 'pending';" },
+    { "kind": "paragraph", "text": "שתי שורות: הזמנה 106 מ‑15.03.2026 והזמנה 108 מ‑22.04.2026. המסך מציג שתיים, והמזהים תואמים — הבדיקה עברה, ועכשיו יש לך ראיה ולא רק תחושה." }
+  ],
+  "commonMistakes": [
+    { "mistake": "WHERE status = 'ממתין' או 'Pending'", "whyTempting": "התרגום מהמשימה נראה ישיר — והתוצאה, אפס שורות, נראית כמו תשובה לגיטימית ולא כמו שגיאה" },
+    { "mistake": "להסתפק בכך שהמספר תואם, בלי להשוות מזהים", "whyTempting": "שתיים ושתיים נראה כמו התאמה — גם כשמדובר בשתי הזמנות אחרות לגמרי" }
+  ]
+}

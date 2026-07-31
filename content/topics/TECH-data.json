@@ -12,14 +12,16 @@
   ],
   "prerequisites": [],
   "difficulty": 2,
-  "estimatedMinutes": 417,
+  "estimatedMinutes": 451,
   "measuredSkills": [
     "TECH.SQL",
     "TECH.SQLV"
   ],
   "summaryRef": "TECH-data.SUM.001",
   "lessonRefs": [
-    "TECH-data.LE.001"
+    "TECH-data.LE.001",
+    "TECH-data.LE.002",
+    "TECH-data.LE.003"
   ],
   "exerciseRefs": [
     "TECH-data.EX.001",
