@@ -12,10 +12,10 @@ import { McqExerciseForm } from '@/components/practice/McqExerciseForm';
 import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
 import { StructuredAnswerForm } from '@/components/practice/StructuredAnswerForm';
 import {
+  answerSurfaceFor,
   isExercise,
   isMcqAnswer,
   isSqlAnswer,
-  isStructuredFamily,
   type ExerciseItem,
 } from '@/content/exercise';
 import type { DefectReportAnswer } from '@/content/blocks';
@@ -59,11 +59,12 @@ export default async function ExercisePage({ params }: PageProps) {
   const answeredIds = new Set(allAttempts.map((a) => a.item_id));
   const answeredInQueue = queue.filter((e) => answeredIds.has(e.id)).length;
 
-  const isSql = exercise.questionType === 'sql_query';
-  const isMcq = exercise.questionType === 'mcq_single';
-  // The open families render one shared multi-field form, driven by the
-  // item's own essaySpec — see StructuredAnswerForm.
-  const isStructured = isStructuredFamily(exercise.questionType) && !!exercise.essaySpec;
+  // One shared decision with the exam sitting page — see answerSurfaceFor.
+  // These were two hand-written branch chains and they drifted.
+  const surface = answerSurfaceFor(exercise);
+  const isSql = surface === 'sql';
+  const isMcq = surface === 'mcq';
+  const isStructured = surface === 'structured';
   const dataset =
     isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
 

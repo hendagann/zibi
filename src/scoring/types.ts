@@ -43,6 +43,21 @@ export type DetectionRule =
   | { readonly kind: 'differs_from'; readonly field: AnswerField; readonly other: AnswerField }
   | { readonly kind: 'not_generic'; readonly field: AnswerField; readonly banned: readonly string[] }
   | { readonly kind: 'not_contains'; readonly fields: readonly AnswerField[]; readonly phrases: readonly string[] }
+  /**
+   * The answer names a specific professional concept — the mirror of
+   * `not_contains`, and the only positive detection here that is about meaning
+   * rather than shape. Every other rule asks "did they write something
+   * substantive"; this one asks "did they identify the right thing".
+   *
+   * Authoring rule, because this is the rule most able to mark a good answer
+   * wrong: list every reasonable wording, Hebrew and English both, and attach
+   * it to a `should` component rather than a `must`. A learner who diagnoses
+   * correctly in words the author did not think of then loses some coverage
+   * instead of being capped, which is the right way round for a detector that
+   * cannot read. docs/07 §13 forbids keyword matching as the *sole* mechanism,
+   * so a criterion using this must also carry a structural component.
+   */
+  | { readonly kind: 'mentions_any'; readonly fields: readonly AnswerField[]; readonly phrases: readonly string[] }
   | { readonly kind: 'severity_selected' }
   | { readonly kind: 'selected_option'; readonly optionId: string };
 

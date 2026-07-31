@@ -164,6 +164,15 @@ export function detect(rule: DetectionRule, answer: ScorableAnswer): Detection {
       const hit = rule.phrases.find((p) => joined.includes(p));
       return { detected: !hit, evidence: hit ? t.detect.found(hit) : t.detect.clean };
     }
+    case 'mentions_any': {
+      const joined = rule.fields.map((f) => fieldText(answer, f)).join(' ');
+      // Case-folded so an answer written in lower case still counts; SQL
+      // keywords are the main thing being looked for and nobody types them
+      // consistently.
+      const haystack = joined.toLowerCase();
+      const hit = rule.phrases.find((p) => haystack.includes(p.toLowerCase()));
+      return { detected: Boolean(hit), evidence: hit ? t.detect.found(hit) : excerpt(joined) };
+    }
     case 'severity_selected':
       return { detected: asReport(answer).severity !== undefined && asReport(answer).severity !== '', evidence: asReport(answer).severity || '—' };
     case 'selected_option':

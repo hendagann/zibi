@@ -103,6 +103,35 @@ export function isStructuredFamily(questionType: string): boolean {
   return (STRUCTURED_FAMILIES as readonly string[]).includes(questionType);
 }
 
+/** Which answer form an item needs. */
+export type AnswerSurface = 'mcq' | 'sql' | 'structured' | 'defect_report';
+
+/**
+ * The one place that decides which form an item is answered with.
+ *
+ * It exists because the practice page and the exam sitting page each carried
+ * their own hand-written chain of the same decision, and they drifted: the
+ * exam page had no multiple-choice branch at all, so every `mcq_single`
+ * segment fell through to the defect-report form. Seven approved blueprints
+ * are ten MCQ segments each, which made seventy exam questions unanswerable
+ * and scored every one of them zero — a learner sitting a domain exam would
+ * have been marked wrong for a defect this product introduced.
+ *
+ * `defect_report` is deliberately the fallback rather than a listed family:
+ * the two report families are the original shape, and a new family that
+ * forgets to declare its surface should land on a form that at least renders
+ * text, not crash. The test for this function enumerates every member of the
+ * `questionType` union, so a family added without a surface fails there first.
+ */
+export function answerSurfaceFor(
+  exercise: Pick<ExerciseItem, 'questionType' | 'mcqSpec' | 'sqlSpec' | 'essaySpec'>,
+): AnswerSurface {
+  if (exercise.questionType === 'mcq_single' && exercise.mcqSpec) return 'mcq';
+  if (exercise.questionType === 'sql_query') return 'sql';
+  if (isStructuredFamily(exercise.questionType) && exercise.essaySpec) return 'structured';
+  return 'defect_report';
+}
+
 export function isExercise(item: ContentItem): item is ExerciseItem {
   return item.type === 'exercise' || item.type === 'exam_item';
 }

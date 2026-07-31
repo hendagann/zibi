@@ -8,9 +8,10 @@ import { Card } from '@/components/ui/Card';
 import { BlockRenderer } from '@/components/content/BlockRenderer';
 import { ExerciseForm } from '@/components/practice/ExerciseForm';
 import { SchemaView } from '@/components/practice/SchemaView';
+import { McqExerciseForm } from '@/components/practice/McqExerciseForm';
 import { SqlExerciseForm } from '@/components/practice/SqlExerciseForm';
 import { StructuredAnswerForm } from '@/components/practice/StructuredAnswerForm';
-import { isExercise, isStructuredFamily, type ExerciseItem } from '@/content/exercise';
+import { answerSurfaceFor, isExercise, type ExerciseItem } from '@/content/exercise';
 import { getDataset, getItem } from '@/content/loader';
 import { answeredCount, computeExamResult, currentSegment } from '@/exam/session';
 import { attemptsForSession, LOCAL_USER } from '@/storage/attempts';
@@ -114,8 +115,8 @@ export default async function ExamSittingPage({ params }: PageProps) {
   if (!item || !isExercise(item)) notFound();
   const exercise = item as ExerciseItem;
 
-  const isSql = exercise.questionType === 'sql_query';
-  const isStructured = isStructuredFamily(exercise.questionType) && !!exercise.essaySpec;
+  const surface = answerSurfaceFor(exercise);
+  const isSql = surface === 'sql';
   const dataset =
     isSql && exercise.sqlSpec ? await getDataset(exercise.sqlSpec.datasetRef) : null;
 
@@ -156,11 +157,25 @@ export default async function ExamSittingPage({ params }: PageProps) {
         </Section>
       ) : null}
 
-      <Section title={isSql ? t.sqlModule.queryLabel : t.report.formTitle}>
+      <Section
+        title={
+          surface === 'mcq'
+            ? t.mcq.chooseOption
+            : surface === 'sql'
+              ? t.sqlModule.queryLabel
+              : t.report.formTitle
+        }
+      >
         <Card>
-          {isSql ? (
+          {surface === 'mcq' && exercise.mcqSpec ? (
+            <McqExerciseForm
+              itemId={exercise.id}
+              spec={exercise.mcqSpec}
+              examSessionId={sessionId}
+            />
+          ) : surface === 'sql' ? (
             <SqlExerciseForm itemId={exercise.id} examSessionId={sessionId} />
-          ) : isStructured && exercise.essaySpec ? (
+          ) : surface === 'structured' && exercise.essaySpec ? (
             <StructuredAnswerForm
               itemId={exercise.id}
               spec={exercise.essaySpec}
