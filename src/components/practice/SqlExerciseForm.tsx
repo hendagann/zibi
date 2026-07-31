@@ -36,26 +36,38 @@ export function SqlExerciseForm({ itemId, initialSql, examSessionId }: SqlExerci
   const [pending, startTransition] = useTransition();
   const elapsed = useElapsedSeconds();
 
+  // Both handlers catch, because a rejected server action otherwise leaves the
+  // button stuck on "running" with nothing said. The usual cause is not the
+  // query at all: a restarted server invalidates the action ids the loaded page
+  // is holding, and every click then fails silently until a reload.
   function run() {
     setError(null);
     startTransition(async () => {
-      const result = await runSqlQuery(itemId, sql);
-      setRunResult(result);
+      try {
+        setRunResult(await runSqlQuery(itemId, sql));
+      } catch {
+        setRunResult(null);
+        setError(t.sqlModule.runFailed);
+      }
     });
   }
 
   function submit() {
     setError(null);
     startTransition(async () => {
-      const result = examSessionId
-        ? await submitExamAnswer(examSessionId, itemId, { sql }, elapsed())
-        : await submitSqlAnswer(itemId, sql, elapsed());
-      if (!result.ok) {
-        setError(t.report.submitError);
-        return;
+      try {
+        const result = examSessionId
+          ? await submitExamAnswer(examSessionId, itemId, { sql }, elapsed())
+          : await submitSqlAnswer(itemId, sql, elapsed());
+        if (!result.ok) {
+          setError(t.report.submitError);
+          return;
+        }
+        setRunResult(null);
+        router.refresh();
+      } catch {
+        setError(t.sqlModule.runFailed);
       }
-      setRunResult(null);
-      router.refresh();
     });
   }
 

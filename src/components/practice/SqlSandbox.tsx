@@ -32,13 +32,29 @@ export function SqlSandbox({ datasets }: SqlSandboxProps) {
   const [datasetId, setDatasetId] = useState(datasets[0]?.id ?? '');
   const [sql, setSql] = useState('');
   const [result, setResult] = useState<SqlRunView | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [pending, startTransition] = useTransition();
 
   const dataset = datasets.find((d) => d.id === datasetId);
 
+  /**
+   * The catch is the whole point.
+   *
+   * A server action can reject for reasons that have nothing to do with the
+   * query — most often because the server restarted and the page still holds
+   * action ids from the previous build. Without a catch the rejection escapes,
+   * `setResult` never runs, and the button stays on "running" for ever: the
+   * learner sees a hang and has no way to know a reload would fix it.
+   */
   function run() {
+    setError(null);
     startTransition(async () => {
-      setResult(await runSandboxQuery(datasetId, sql));
+      try {
+        setResult(await runSandboxQuery(datasetId, sql));
+      } catch {
+        setResult(null);
+        setError(t.sqlModule.runFailed);
+      }
     });
   }
 
@@ -100,6 +116,12 @@ export function SqlSandbox({ datasets }: SqlSandboxProps) {
           {pending ? t.sqlModule.running : t.sqlModule.run}
         </button>
       </div>
+
+      {error ? (
+        <p className={styles.error} role="alert">
+          {error}
+        </p>
+      ) : null}
 
       {result ? (
         <div className={sqlStyles.resultArea} aria-live="polite">
